@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function () {
     return view('html.UserLogin');
 });
+
+Route::get('/UserInput',function () {
+    return view('html.UserInput');
+});

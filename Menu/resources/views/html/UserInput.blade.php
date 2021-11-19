@@ -1,3 +1,4 @@
+@extends('html.MOBILEbase')
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -5,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/MOBILEbase.css">
-  <title>顧客情報入力</title>
+  @section('title','顧客情報入力')
 </head>
 
 
@@ -43,7 +44,7 @@
 
 
     <!--テキストサンプル-->
-    <div class = "contents">
+    @section('contents')
      <form action="#" method="post"> 
        <h1>顧客情報</h1>
         <p>苗字<br>
@@ -133,7 +134,7 @@
     
     <button type="button" onclick=history.back()>戻る</button>
     <!--/テキストサンプル-->
-
+    @endsection
 
     <!--footer-->
     <footer>

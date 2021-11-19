@@ -44,7 +44,7 @@
 
     <!--テキストサンプル-->
     <div class = "contents">
-     @yield('content')
+     @yield('contents')
     </div>
     <!--/テキストサンプル-->
 
