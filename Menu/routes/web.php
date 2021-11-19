@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function () {
     return view('html.UserLogin');
 });
+
+
+
+
+
+
+
+
+
+Route::get('/Register',function () {
+    return view('html.UserRegister');
+});
+
+Route::get('/RegisterInput',function () {
+    return view('html.UserInput');
+});
+
