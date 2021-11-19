@@ -57,7 +57,7 @@
           <li class="form_input"><input type="text" name="email" placeholder="メールアドレス"></li>
         </ul>
         <ul>
-          <li class="form_input"><input type="text" name="email" placeholder="確認用メールアドレス"></li>
+          <li class="form_input"><input type="text" name="reemail" placeholder="確認用メールアドレス"></li>
         </ul>
         <center>
         <input type="submit" value="登録">
