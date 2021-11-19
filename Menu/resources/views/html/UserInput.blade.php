@@ -2,16 +2,14 @@
 
 
   
-  @section('title','顧客情報入力')
+@section('title','顧客情報入力')
 
 
 
-<body>
-  <div class="footerFixed">
+
     <!--header-->
     
     <!--/header-->
-
 
     <!--テキストサンプル-->
     @section('contents')
@@ -110,6 +108,5 @@
     
     <!--/footer-->
 
-  </div>
 
   
