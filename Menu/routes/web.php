@@ -20,3 +20,11 @@ Route::get('/',function () {
 Route::get('/UserInput',function () {
     return view('html.UserInput');
 });
+
+Route::get('/Category',function () {
+    return view('html.Category');
+});
+
+Route::get('/Category/Menu',function () {
+    return view('html.Menu');
+});
