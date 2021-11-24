@@ -7,9 +7,7 @@
 
     <!--テキストサンプル-->
     @section('contents')
-    <div class = "contents">
-      <h2 class="complete">メールの送信が完了しました。</h2>
-    </div>
+      <div class="complete">メールの送信が完了しました。</div>
     <!--/テキストサンプル-->
     @endsection
 
