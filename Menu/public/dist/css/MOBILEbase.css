@@ -90,7 +90,7 @@ nav {
   position: fixed;
   top: 75px;
   right: 100%;
-  z-index: auto;
+  z-index: 80;
   background-color: #8eb0f9; /* ハンバーガーメニュー背景色 */
   transition: all 0.5s;
 }
@@ -127,6 +127,18 @@ nav ul li a:hover {
   -o-transition: all 0.3s ease;
   transition: all  0.3s ease;
   color: #000; /* ホバー時の文字色 */
+}
+
+nav li.has-child::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:130px;
+  top:243px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
 }
 
 nav li.has-child ul { /* 下の階層を持っているulの指定 */
@@ -180,4 +192,5 @@ nav li.has-child ul ul {
 	text-align: center;
 	position: absolute; /* 絶対位置 */
 	bottom: 0; /* 下に固定 */
+  z-index: 10;
 }
