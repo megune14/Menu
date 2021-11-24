@@ -25,6 +25,6 @@ Route::get('/Category',function () {
     return view('html.Category');
 });
 
-Route::get('/Category/Menu',function () {
+Route::get('/Category/{id}/Menu','MenuController@create',function () {
     return view('html.Menu');
-});
+})->name('detail');

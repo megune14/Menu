@@ -7,13 +7,18 @@ $items = \DB::table('test')->get();
 
 
   @section('title','メール送信完了')
-  @foreach ($items as $item)
-    <p>{{ $item->category}}</p>
 
-  @endforeach
+  <!--テキストサンプル-->
+  @section('contents')
+    @foreach ($items as $item)
+    <div class="card">
+       <a href="{{ route('detail', ['id' => $loop->index + 1]) }}">
+         <img src="/images/test.png">
+         <p>{{ $item->category}}</p>
+       </a>
+    </div>
 
-    <!--テキストサンプル-->
-    @section('contents')
+    @endforeach
 
     <!--/テキストサンプル-->
-    @endsection
+  @endsection
