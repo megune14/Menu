@@ -19,4 +19,4 @@
     @endsection
     <!--/footer-->
 
-  </div>
+  
