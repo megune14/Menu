@@ -1,5 +1,8 @@
 @extends('html.MOBILEbase')
+<?php
+$items = \DB::table('goods')->get();
 
+?>
 
 
 
@@ -8,12 +11,10 @@
 
   <!--テキストサンプル-->
   @section('contents')
-
+    @foreach ($items as $item)
     <div class="card">
-        <p>{{ $id }}</p>
+         <img src="/images/test.png">
+         <p>{{ $item->name}}</p>
     </div>
 
-
-
-    <!--/テキストサンプル-->
-  @endsection
+    @endforeach
