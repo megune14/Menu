@@ -5,18 +5,14 @@
   @section('title','注文完了')
     <!--テキストサンプル-->
     @section('contents')
-    <div class = "contents">
       <form action="#" method="post"> 
-        <h2 class="OrderComplete">注文を完了しました。</h2>
+        <div class="OrderComplete">注文を完了しました。</div>
       </form>
-    </div>
     <button type="button" onclick="">メニューに戻る</button>
 
     <!--/テキストサンプル-->
 
 
-    <!--footer-->
     @endsection
-    <!--/footer-->
 
   

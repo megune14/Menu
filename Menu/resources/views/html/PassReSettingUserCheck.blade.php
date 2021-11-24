@@ -5,7 +5,7 @@
   @section('title','パスワード再設定時確認')
     <!--テキストサンプル ここがアタイの仕事-->
     @section('contents')
-    <div class="contents">
+
       <div class="PassReSetting">
       
         <form action="" method="post">
@@ -21,7 +21,7 @@
   
         </form>          
       </div>
-    </div>
+
      
 
       
