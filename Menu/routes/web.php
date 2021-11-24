@@ -28,3 +28,7 @@ Route::get('/Category',function () {
 Route::get('/Category/Menu',function () {
     return view('html.Menu');
 });
+
+Route::get('/UserInfo',function () {
+    return view('html.UserInfo');
+});
