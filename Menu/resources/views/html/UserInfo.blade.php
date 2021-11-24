@@ -12,7 +12,7 @@
   
     echo '<p>名前：' . $info->name   ."</p>\n";
     echo '<p>メールアドレス：' . $info->email   ."</p>\n";
-    SELECT date_format(now(), '%Y/%m/%d');
+    
     echo '<p>生年月日：' . $info->birthday  ."</p>\n";
     echo '<p>現在のポイント：' . $info->point   .'pt'."</p>\n";
     ?>
