@@ -32,3 +32,7 @@ Route::get('/Category/{id}/Menu','MenuController@create',function () {
 Route::get('/UserInfo',function () {
     return view('html.UserInfo');
 });
+
+Route::get('/OrderList',function () {
+    return view('html.OrderList');
+});
