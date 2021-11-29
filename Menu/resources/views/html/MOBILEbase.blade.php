@@ -26,11 +26,11 @@
             <li><a href="/Category">メニュー表</a></li>
             <li><a href="#">マイページ</a></li>
             <li><a href="#">お問い合わせ</a></li>
-            <li class="has-child"><a href="#">設定</a>
+            <li class="has-child"><a href="#">　設定</a>
              <ul>
-              <li><a href="#">メールアドレス変更</a></li>
-              <li><a href="#">パスワード変更</a></li>
-              <li><a href="#">アカウント削除</a></li>
+              <li><a href="#">　メールアドレス変更</a></li>
+              <li><a href="#">　パスワード変更</a></li>
+              <li><a href="#">　アカウント削除</a></li>
              </ul>
             </li>
            <li><a href="#">ログアウト</a></li>         
