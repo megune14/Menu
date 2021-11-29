@@ -25,6 +25,14 @@ Route::get('/Category',function () {
     return view('html.Category');
 });
 
-Route::get('/Category/Menu',function () {
+Route::get('/Category/{id}/Menu','MenuController@create',function () {
     return view('html.Menu');
+});
+
+Route::get('/UserInfo',function () {
+    return view('html.UserInfo');
+});
+
+Route::get('/OrderList',function () {
+    return view('html.OrderList');
 });
