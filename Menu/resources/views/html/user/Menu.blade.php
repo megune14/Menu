@@ -1,4 +1,4 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 <?php
 $items = \DB::table('goods')->get();
 

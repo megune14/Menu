@@ -1,7 +1,7 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 
-  
+
   @section('title','データ削除')
 
 

@@ -1,4 +1,4 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 @section('title','注文商品一覧')
 
@@ -14,7 +14,7 @@
       <span class="m-price">800円</span><br>
       <input type="number" value="1" min="1" max="10" step="1">
       <button type="submit" name="delete_btn" value="1">削除</button>
-  </li> 
+  </li>
 </ul>
 
 
