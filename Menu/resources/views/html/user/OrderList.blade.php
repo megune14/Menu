@@ -16,7 +16,6 @@
     </a>  
       <input type="position:absolute;" value="1">
       <button type="submit" name="delete_btn" value="1">削除</button>
-<<<<<<< HEAD:Menu/resources/views/html/OrderList.blade.php
   </th> <br>
 
   <th>
@@ -50,10 +49,3 @@ echo '<p>合計金額'. '：' . "円</p>\n";
   <input type="submit"  value="注文を送信する">
 </a>
 @endsection
-=======
-  </li>
-</ul>
-
-
-@endsection
->>>>>>> 626954e2bb2ecf1fc75ac1b1daefa93769f10862:Menu/resources/views/html/user/OrderList.blade.php

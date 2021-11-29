@@ -99,13 +99,8 @@
 
         <input type="button" value="確定" id="button3"></p>
     </div>
-<<<<<<< HEAD:Menu/resources/views/html/UserInput.blade.php
     
     <button type="submit" onclick=history.back()>戻る</button>
-=======
-
-    <button type="button" onclick=history.back()>戻る</button>
->>>>>>> 626954e2bb2ecf1fc75ac1b1daefa93769f10862:Menu/resources/views/html/user/UserInput.blade.php
     <!--/テキストサンプル-->
     <?php
     $items = \DB::table('test03')->get();
