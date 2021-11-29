@@ -14,25 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function () {
-    return view('html.UserLogin');
+    return view('html/user.UserLogin');
 });
 
 Route::get('/UserInput',function () {
-    return view('html.UserInput');
+    return view('html/user.UserInput');
 });
 
 Route::get('/Category',function () {
-    return view('html.Category');
+    return view('html/user.Category');
 });
 
 Route::get('/Category/{id}/Menu','MenuController@create',function () {
-    return view('html.Menu');
+    return view('html/user.Menu');
 });
 
 Route::get('/UserInfo',function () {
-    return view('html.UserInfo');
+    return view('html/user.UserInfo');
 });
 
 Route::get('/OrderList',function () {
-    return view('html.OrderList');
+    return view('html/user.OrderList');
 });

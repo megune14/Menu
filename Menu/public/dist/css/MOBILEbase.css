@@ -183,7 +183,7 @@ nav li.has-child ul ul {
 /*----------UserLogin----------*/
 .loginform {
   padding-top: 60px;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   margin: 2em;
   margin-top: 50px;
   border: solid 1px #000000;
@@ -206,41 +206,41 @@ nav li.has-child ul ul {
   font-family:'HelveticaNeue','Arial', sans-serif;
   font-size: 110%;
   letter-spacing: .8px;
-  margin-top: 0;
   margin-bottom: 30px;
 }
 
 .loginform_text {
-  padding-left: 24px;
+  padding-left: 10px;
   line-height: 26px;
   font-size: 20px;
 }
 
-.checkbox01 {
-  
-  cursor: pointer;
-    
-  padding: 5px 30px;
-    
-  width: auto;
-}
-
 .loginform_text a {
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: 30px;
 }
 
 .loginform_text button {
   width: 85%;
   height: 60px;
   padding: 5px 5%;
-  margin:  0;
-  margin-left: 8px;
+  margin: 0;
+  margin-left: 16px;
   border:1px solid #ccc;
   border-radius: 10px;
   background-clip: padding-box;
   background-color: rgba(30,144,255,0.65);
 }
 /*----------/UserLogin----------*/
+
+/*----------UserInput----------*/
+
+
+
+
+
+/*----------/UserInput----------*/
+
 
 /*----------Orderlist----------*/
 .menu-list li a { 
@@ -251,6 +251,7 @@ nav li.has-child ul ul {
   width: 100px;
   height: 250px;
 }
+/*----------/Orderlist----------*/
 
 /*----------フッター----------*/
 .footer {

@@ -13,7 +13,7 @@ class CreateArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('test02s', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name'); // 追加
         });
@@ -26,6 +26,6 @@ class CreateArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('test02s');
     }
 }

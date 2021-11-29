@@ -1,8 +1,9 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 <?php
-$items = \DB::table('test')->get();
+$items = \DB::table('goods')->get();
 
 ?>
+
 
 
 
@@ -12,13 +13,8 @@ $items = \DB::table('test')->get();
   @section('contents')
     @foreach ($items as $item)
     <div class="card">
-       <a href="{{ route('detail', ['id' => $loop->index + 1]) }}">
          <img src="/images/test.png">
-         <p>{{ $item->category}}</p>
-       </a>
+         <p>{{ $item->name}}</p>
     </div>
 
     @endforeach
-
-    <!--/テキストサンプル-->
-  @endsection

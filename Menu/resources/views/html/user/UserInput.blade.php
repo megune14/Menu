@@ -1,19 +1,19 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 
-  
+
 @section('title','顧客情報入力')
 
 
 
 
     <!--header-->
-    
+
     <!--/header-->
 
     <!--テキストサンプル-->
     @section('contents')
-     <form action="#" method="post"> 
+     <form action="#" method="post">
        <h1>顧客情報</h1>
         <p>苗字<br>
         <input type="text" name="userlastname">
@@ -36,7 +36,7 @@
             <option value="2009">2009</option>
             <option value="2010">2010</option>
             </select>年
-            
+
             <select name="month">
               <option value="">-</option>
               <option value="jan">1月</option>
@@ -52,7 +52,7 @@
               <option value="nov">11月</option>
               <option value="dec">12月</option>
               </select>月
-  
+
               <select name="day">
                 <option value="">-</option>
                 <option value="1">1</option>
@@ -91,36 +91,40 @@
         <p>パスワード<br>
           <input type="text" name="password">
         </p>
-  
+
         <p>確認用パスワード<br>
           <input type="text" name="password">
         </p>
-  
-        
+
+
         <input type="button" value="確定" id="button3"></p>
     </div>
+<<<<<<< HEAD:Menu/resources/views/html/UserInput.blade.php
     
     <button type="submit" onclick=history.back()>戻る</button>
+=======
+
+    <button type="button" onclick=history.back()>戻る</button>
+>>>>>>> 626954e2bb2ecf1fc75ac1b1daefa93769f10862:Menu/resources/views/html/user/UserInput.blade.php
     <!--/テキストサンプル-->
     <?php
-    $items = \DB::table('test03')->get();    
+    $items = \DB::table('test03')->get();
    foreach ($items as $item) {
 
     echo '<p>' . $item->name . ':' .  "</p>\n";  // 各データの名前を表示
 
 }
-    
-    
+
+
     echo '<p>' . $items . ':' .  "</p>\n";
 
     ?>
 
-    
+
     @endsection
 
     <!--footer-->
-    
+
     <!--/footer-->
 
 
-  

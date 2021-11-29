@@ -1,7 +1,7 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 
-  
+
   @section('title','会員登録完了')
 
     <!--テキストサンプル-->
