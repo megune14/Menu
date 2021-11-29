@@ -1,4 +1,4 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 
   
@@ -14,7 +14,8 @@
             <input type="text" name="name" placeholder="メールアドレス"></p>
           
             <input type="password" name="textbox" placeholder="パスワード" size="30" maxlength="8">
-          </div>          
+          </div>
+
 
           <div class="loginform_text">
             <input type="checkbox" id="01" name=“checkbox01” value="1">
