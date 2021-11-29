@@ -6,8 +6,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/PCbase.css">
-  <title>PCベース</title>
+  <link rel="stylesheet" href="{{ asset('dist/css/PCbase.css') }}">
+  <title>@yield('title')</title>
 
 </head>
 
@@ -31,7 +31,6 @@
         <li class="right"><a href="#">受注商品</a></li>
         <li class="right"><a href="#">クーポン</a></li>
         <li class="right"><a href="#">メニュー一覧</a></li>
-        <li class="right"><a href="#">ログイン</a></li>
       </div>
     </div>
 
@@ -70,6 +69,7 @@
 
   <!--テキストサンプル-->
   <div class = "contents">
+  @yield('contents')
   </div>
   <!--/テキストサンプル-->
 
@@ -77,7 +77,6 @@
   <!--footer-->
   <footer>
     <div class="footer">
-      <li><a href="#">ログイン</a></li>
       <li><a href="#">メニュー一覧</a></li>
       <li><a href="#">クーポン</a></li>
       <li><a href="#">受注商品</a></li>
