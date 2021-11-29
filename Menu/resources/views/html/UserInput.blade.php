@@ -100,7 +100,7 @@
         <input type="button" value="確定" id="button3"></p>
     </div>
     
-    <button type="button" onclick=history.back()>戻る</button>
+    <button type="submit" onclick=history.back()>戻る</button>
     <!--/テキストサンプル-->
     <?php
     $items = \DB::table('test03')->get();    
