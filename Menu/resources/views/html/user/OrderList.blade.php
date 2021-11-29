@@ -1,4 +1,4 @@
-@extends('html.MOBILEbase')
+@extends('html/user.MOBILEbase')
 
 @section('title','注文商品一覧')
 
