@@ -26,12 +26,12 @@
             <li><a href="#">メールアドレス変更</a></li>
             <li><a href="#">パスワード変更</a></li>
             <li><a href="#">店舗情報</a></li>
-          </ul>        
+          </ul>
         </li>
         <li class="right"><a href="#">受注商品</a></li>
         <li class="right"><a href="#">クーポン</a></li>
         <li class="right"><a href="#">メニュー一覧</a></li>
-        <li class="right"><a href="#">ログイン</a></li>    
+        <li class="right"><a href="#">ログイン</a></li>
       </div>
     </div>
 
@@ -58,7 +58,7 @@
                 <li><a href="#">　店舗情報</a></li>
               </ul>
             </li>
-            <li><a href="#">ログアウト</a></li>         
+            <li><a href="#">ログアウト</a></li>
           </ul>
         </nav>
 
@@ -70,7 +70,6 @@
 
   <!--テキストサンプル-->
   <div class = "contents">
-    <p>ういういういういうい<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>あ<br>どらららららら</p>
   </div>
   <!--/テキストサンプル-->
 
@@ -91,11 +90,10 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../JavaScript/PCbase.js"></script>
-    
+
 </body>
 
 </html>
 
 
 
- 
