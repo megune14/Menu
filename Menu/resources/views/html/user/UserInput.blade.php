@@ -109,9 +109,6 @@
             <input type="submit" value="確定" id="button3">
           </div>
           
-          
-      
-          
 
         </from>
 
@@ -119,7 +116,18 @@
 
       </div>
       <!--/テキストサンプル-->
+      <?php
+    $items = \DB::table('test03')->get();
+   foreach ($items as $item) {
 
+    echo '<p>' . $item->name . ':' .  "</p>\n";  // 各データの名前を表示
+
+}
+
+
+    echo '<p>' . $items . ':' .  "</p>\n";
+
+    ?>
       
 
 
