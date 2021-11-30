@@ -234,7 +234,14 @@ nav li.has-child ul ul {
 /*----------/UserLogin----------*/
 
 /*----------UserInput----------*/
-
+.userinput ul li {
+  width: auto;
+  float: left;
+  margin: 0 3px 0 0;
+  padding: 0;
+  height: 35px;
+  line-height: 35px;
+}
 
 
 
@@ -244,7 +251,7 @@ nav li.has-child ul ul {
 
 /*----------Orderlist----------*/
 .menu-list li a { 
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .menu-list li a input { 
