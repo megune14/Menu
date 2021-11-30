@@ -27,7 +27,7 @@ Route::get('/Category',function () {
 
 Route::get('/Category/{id}/Menu','MenuController@create',function () {
     return view('html/user.Menu');
-});
+})->name('detail');
 
 Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');

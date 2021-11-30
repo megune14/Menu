@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
 
     public function create($id) {
-        return view('html.Menu', ['id' => $id]);
+        $item = Menu::find($id);
+        return view('html/user.Menu', ['id' => $id]);
     }
 }
