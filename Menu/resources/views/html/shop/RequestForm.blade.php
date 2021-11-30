@@ -6,8 +6,8 @@
     <!--テキストサンプル-->
     @section('contents')
     <form action="#" method="post"> 
-      <div class="Request">申請フォーム</div> 
-      <p>店舗名/by>
+      <h2 class="Request">申請フォーム</h2> 
+      <p>店舗名</br>
         <input type="text"  size="30">
       </p>
       <p>住所</br>
@@ -19,7 +19,7 @@
       <p>電話番号</br>
         <input type="tel" maxlength="12" size="30">
       </p>
-      <input type="button" onclick=history.back()>閉じる</button>
+      <button type="button" onclick=history.back()>戻る</button>
       <input type="submit">
     </form>
     <!--/テキストサンプル-->
