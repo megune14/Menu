@@ -36,3 +36,11 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
+
+Route::get('/RequestForm',function () {
+    return view('html/shop.RequestForm');
+});
+
+Route::get('/RequestComplete',function () {
+    return view('html/shop/RequestComplete');
+});
