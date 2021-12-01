@@ -14,7 +14,7 @@
         <form action="#" method="post">
           <h1>顧客情報</h1>
             
-
+          
           <ul>
             <li>苗字<br>
               <input type="text" name="userlastname">
@@ -23,8 +23,9 @@
             <li>名前<br>
               <input type="text" name="username">
             </li>
-          </ul>
-
+          </ul><br><br><br><br>
+  
+          
           <p>生年月日<br>
             <select name="year">
               <option value="">-</option>
@@ -102,15 +103,19 @@
             <input type="text" name="password">
           </p>
 
-          <input type="button" value="確定" id="button3"></p>
+          
+          <div class="confirm">
+            <button type="button" onclick=history.back()>戻る</button>
+            <input type="submit" value="確定" id="button3">
+          </div>
+          
 
         </from>
 
+        
+
       </div>
-
-      <button type="button" onclick=history.back()>戻る</button>
       <!--/テキストサンプル-->
-
       <?php
     $items = \DB::table('test03')->get();
    foreach ($items as $item) {
@@ -123,6 +128,7 @@
     echo '<p>' . $items . ':' .  "</p>\n";
 
     ?>
+      
 
 
       @endsection
