@@ -317,7 +317,7 @@ nav li.has-child ul ul {
 /*----------/UserInput----------*/
 
 
-/*----------Category----------*/
+/*----------Category,Menu----------*/
 .category h1 {
   text-align: center;
   margin-bottom: 0;
@@ -335,18 +335,22 @@ nav li.has-child ul ul {
   border-radius: 10px;
 }
 
-.card a img {
+.card img {
   display: flex;
   width: 165px;
   border-radius: 10px 10px 0 0;
+  margin-bottom: 8px;
 }
 
-.card a p {
+.card p {
   text-align: center;
   font-size: 20px;
+  margin: 0;
 }
 
-/*----------Category終わり----------*/
+/*----------Category,Menu終わり----------*/
+
+
 
 
 /*----------Orderlist----------*/
