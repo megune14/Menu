@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUsersToUser extends Migration
+class AddUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,9 @@ class AddUsersToUser extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->date('birthday');
+            $table->string('firstname'); //苗字を追加
+            $table->string('lastname'); //名前を追加
+            $table->date('birthday'); //誕生日を追加
         });
     }
 

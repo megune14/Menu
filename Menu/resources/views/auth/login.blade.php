@@ -1,16 +1,21 @@
-@extends('html/user.MOBILEbase')
+@extends('layouts.app')
 
-@section('contents')
-<div class="loginform">
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Login') }}</div>
 
+                <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="loginform_btm">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="メールアドレス">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -20,11 +25,11 @@
                             </div>
                         </div>
 
-                        <div class="loginform_btm">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -40,31 +45,29 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        {{ __('ログイン状態を保持する') }}
+                                        {{ __('Remember Me') }}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="loginform_text">
+                        <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-
-                                <a href="#">新規登録</a><br>
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('パスワードを忘れた場合') }}
-                                    </a><br>
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
                                 @endif
-
-                                <a href="#">店舗用</a><br>
-
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('ログイン') }}
-                                </button>
                             </div>
                         </div>
                     </form>
-
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
