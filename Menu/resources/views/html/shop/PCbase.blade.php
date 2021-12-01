@@ -21,6 +21,8 @@
       <div class="pc-dsp">
         <li class="active">デジタルメニュー表</li>
 
+
+        <li class="right"><a href="#">ログアウト</a></li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="#">メールアドレス変更</a></li>
@@ -48,9 +50,9 @@
 
         <nav>
           <ul>
-            <li><a href="#">メニュー表</a></li>
-            <li><a href="#">マイページ</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">メニュー一覧</a></li>
+            <li><a href="#">クーポン</a></li>
+            <li><a href="#">受注商品</a></li>
             <li class="has-child"><a href="#">　設定</a>
               <ul>
                 <li><a href="#">　メールアドレス変更</a></li>
