@@ -5,9 +5,7 @@
   @section('title','注文完了')
     <!--テキストサンプル-->
     @section('contents')
-      <form action="#" method="post">
-        <div class="OrderComplete">注文を完了しました。</div>
-      </form>
+    <div class="complete">注文を完了しました。</div>
     <button type="button" onclick="">メニューに戻る</button>
 
     <!--/テキストサンプル-->
