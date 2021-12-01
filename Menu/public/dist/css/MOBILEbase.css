@@ -195,7 +195,7 @@ nav li.has-child ul ul {
 
 .loginform_btm {
   text-align: center;
-  margin-top: 30px;
+  color:#fff;
 }
 
 .loginform_btm input {
@@ -206,17 +206,20 @@ nav li.has-child ul ul {
   border:1px solid #ccc;
   border-radius: 10px;
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: rgba(128,128,128,0.1);
   font-family:'HelveticaNeue','Arial', sans-serif;
   font-size: 110%;
   letter-spacing: .8px;
   margin-bottom: 30px;
 }
 
+.form-check-label {
+  font-size: 20px;
+}
+
 .loginform_text {
   padding-left: 10px;
   line-height: 26px;
-  font-size: 20px;
 }
 
 .loginform_text a {
