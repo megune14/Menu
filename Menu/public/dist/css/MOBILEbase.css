@@ -10,6 +10,9 @@ body {
 	box-sizing: border-box;/* ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
 }
 
+a {
+  text-decoration: none;
+}
 
 /*----------ヘッダー----------*/
 .header {
@@ -176,8 +179,8 @@ nav li.has-child ul ul {
 
 /*----------テキスト----------*/
 .contents {
-	padding-top: 60px;
-  padding-left: 5px;
+	padding-top: 70px;
+  
 }
 
 /*----------UserLogin----------*/
@@ -187,32 +190,36 @@ nav li.has-child ul ul {
   margin: 2em;
   margin-top: 50px;
   border: solid 1px #000000;
+  border-radius: 15px;
 }
 
 .loginform_btm {
   text-align: center;
-  margin-top: 30px;
+  color:#fff;
 }
 
 .loginform_btm input {
-  width: 85%;
+  width: 90%;
   height: 44px;
   padding: 5px 5%;
   margin: 0;
   border:1px solid #ccc;
   border-radius: 10px;
   background-clip: padding-box;
-  background-color: #fff;
+  background-color: rgba(128,128,128,0.1);
   font-family:'HelveticaNeue','Arial', sans-serif;
   font-size: 110%;
   letter-spacing: .8px;
   margin-bottom: 30px;
 }
 
+.form-check-label {
+  font-size: 20px;
+}
+
 .loginform_text {
   padding-left: 10px;
   line-height: 26px;
-  font-size: 20px;
 }
 
 .loginform_text a {
@@ -231,22 +238,119 @@ nav li.has-child ul ul {
   background-clip: padding-box;
   background-color: rgba(30,144,255,0.65);
 }
-/*----------/UserLogin----------*/
+/*----------UserLogin終わり----------*/
+
 
 /*----------UserInput----------*/
-.userinput ul li {
-  width: auto;
-  float: left;
-  margin: 0 3px 0 0;
-  padding: 0;
-  height: 35px;
-  line-height: 35px;
+.userinput {
+  padding: 1em 1em;
+  margin: 2em;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border: solid 1px #000000;
+  border-radius: 15px;
 }
 
+.userinput h1 {
+  font-size: 22px;
+  margin-top: 0;
+}
 
+.userinput ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+.userinput ul li {
+  float: left;
+  height: 70px;
+  width: 150px;
+}
 
+.userinput ul li input {
+  display: flex;
+  width: 55%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+
+.userinput p {
+  margin-top: 20px;
+}
+
+.userinput p select {
+  height: 20px;
+  width: 60px;
+  background: linear-gradient(90deg, #fff 0%, #fff 67%, #87cefa 50%, #87cefa 100%);;
+}
+
+.userinput p input {
+  margin-left: 5px;
+  width: 50%;
+  height: 25px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+
+.userinput .confirm button {
+  margin-left: 85px;
+  height: 45px;
+  width: 75px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.userinput .confirm input {
+  margin-left: 20px;
+  background-color: #0000ff;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
 /*----------/UserInput----------*/
+
+
+/*----------Category,Menu----------*/
+.category h1 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 5px;
+}
+
+.card {
+  float: left;
+  margin-top: 30px;
+  width: 165px;
+  height: 180px;
+  margin-left: 25px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+}
+
+.card img {
+  display: flex;
+  width: 165px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 8px;
+}
+
+.card p {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+
+/*----------Category,Menu終わり----------*/
+
+
 
 
 /*----------Orderlist----------*/
@@ -259,6 +363,7 @@ nav li.has-child ul ul {
   height: 250px;
 }
 /*----------/Orderlist----------*/
+
 
 /*----------フッター----------*/
 .footer {
