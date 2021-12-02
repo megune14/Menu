@@ -49,7 +49,7 @@
                         <div class="loginform_text">
                             <div class="col-md-8 offset-md-4">
 
-                                <a href="#">新規登録</a><br>
+                                <a href="/register">新規登録</a><br>
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">

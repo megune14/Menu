@@ -50,11 +50,11 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'firstname' => ['required', 'string', 'max:255'],
-            'lasename' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'birthday' => ['required', 'date', 'max:11'],
+            'firstname' => ['required', 'string', 'max:11'],//電話番号を追加
+            'lastname' => ['required', 'string', 'max:11'],//電話番号を追加
+            'birthday' => ['required', 'date', 'max:30'],//電話番号を追加
         ]);
     }
 
@@ -67,12 +67,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
+            'email' => $data['email'],
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
             'birthday' => $data['birthday'],
+            'password' => Hash::make($data['password']),
         ]);
-        return redirect('/home');
     }
 }

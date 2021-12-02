@@ -1,7 +1,6 @@
 @extends('html/user.MOBILEbase')
 
 
-
   @section('title','パスワード再設定時確認')
     <!--テキストサンプル ここがアタイの仕事-->
     @section('contents')
