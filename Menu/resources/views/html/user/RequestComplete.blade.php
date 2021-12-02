@@ -1,7 +1,6 @@
 @extends('html/user.MOBILEbase')
 
 
-  
   @section('title','申請完了')
 
     <!--テキストサンプル-->
@@ -15,4 +14,3 @@
 
 
 
- 

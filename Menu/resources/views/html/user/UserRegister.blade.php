@@ -1,7 +1,6 @@
 @extends('html/user.MOBILEbase')
 
 
-  
   @section('title','顧客新規登録')
 
 

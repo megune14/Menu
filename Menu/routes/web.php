@@ -14,25 +14,60 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function () {
-    return view('html/user.UserLogin');
+    return view('auth.login');
 });
 
+Route::get('/register',function () {
+    return view('auth.register');
+});
 Route::get('/UserInput',function () {
-    return view('html.UserInput');
+    return view('html/user.UserInput');
 });
 
 Route::get('/Category',function () {
-    return view('html.Category');
+    return view('html/user.Category');
 });
 
 Route::get('/Category/{id}/Menu','MenuController@create',function () {
-    return view('html.Menu');
-});
+    return view('html/user.Menu');
+})->name('detail');
 
 Route::get('/UserInfo',function () {
-    return view('html.UserInfo');
+    return view('html/user.UserInfo');
 });
 
 Route::get('/OrderList',function () {
-    return view('html.OrderList');
+    return view('html/user.OrderList');
 });
+
+
+Route::get('/RequestComplete',function () {
+    return view('html/shop/RequestComplete');
+});
+
+
+
+
+Route::middleware(['verified'])->group(function(){
+
+    Route::get('/RequestForm',function () {
+        return view('html/shop.RequestForm');
+    });
+
+
+});
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
