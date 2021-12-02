@@ -40,9 +40,6 @@ Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
 
-Route::get('/RequestForm',function () {
-    return view('html/shop.RequestForm');
-});
 
 Route::get('/RequestComplete',function () {
     return view('html/shop/RequestComplete');
@@ -50,14 +47,27 @@ Route::get('/RequestComplete',function () {
 
 
 
-Auth::routes();
+
+Route::middleware(['verified'])->group(function(){
+
+    Route::get('/RequestForm',function () {
+        return view('html/shop.RequestForm');
+    });
+
+
+});
+
+Auth::routes(['verify' => true]);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
