@@ -180,7 +180,6 @@ nav li.has-child ul ul {
 /*----------テキスト----------*/
 .contents {
 	padding-top: 70px;
-  
 }
 
 /*----------UserLogin----------*/
@@ -238,6 +237,8 @@ nav li.has-child ul ul {
   background-clip: padding-box;
   background-color: rgba(30,144,255,0.65);
 }
+
+
 /*----------UserLogin終わり----------*/
 
 
@@ -314,7 +315,9 @@ nav li.has-child ul ul {
   font-size: 16px;
   color: #fff;
 }
-/*----------/UserInput----------*/
+
+
+/*----------UserInput終わり----------*/
 
 
 /*----------Category,Menu----------*/
@@ -348,9 +351,8 @@ nav li.has-child ul ul {
   margin: 0;
 }
 
+
 /*----------Category,Menu終わり----------*/
-
-
 
 
 /*----------Orderlist----------*/
@@ -362,7 +364,20 @@ nav li.has-child ul ul {
   width: 100px;
   height: 250px;
 }
-/*----------/Orderlist----------*/
+
+
+/*----------Orderlist終わり----------*/
+
+
+/*----------RegisterComplete----------*/
+.complete {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 225px;
+}
+
+
+/*----------RegisterComplete終わり----------*/
 
 
 /*----------フッター----------*/
