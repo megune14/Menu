@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
 
-    public function create($id) {
-        $item = Menu::find($id);
-        return view('html/user.Menu', ['id' => $id]);
+    public function create(Request $request,$id) {
+        $shopid = $request->shopid;
+        return view('html/user.Menu', ['menuid' => $id], ['shopid' => $shopid]);
     }
 }
