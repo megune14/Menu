@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class DropColumnNameColumn extends Migration
+class CreateOrderListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class DropColumnNameColumn extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('name');
+        Schema::create('order_lists', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
         });
     }
 
@@ -25,8 +26,6 @@ class DropColumnNameColumn extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('order_lists');
     }
 }

@@ -293,6 +293,18 @@ nav li.has-child ul ul {
 }
 
 
+/*---------------------RequestComplete--------------------*/
+.complete {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 400px;
+  margin-bottom: 300px;
+}
+
+
+/*---------------------RequestComplete終わり--------------------*/
+
+
 /*---------------------フッター--------------------*/
 footer {
 	width: 100%;

@@ -1,7 +1,6 @@
 @extends('html/user.MOBILEbase')
 
 
-
   @section('title','メール送信完了')
 
 

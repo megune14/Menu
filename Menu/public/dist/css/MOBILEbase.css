@@ -242,60 +242,62 @@ nav li.has-child ul ul {
 /*----------UserLogin終わり----------*/
 
 
-/*----------UserInput----------*/
-.userinput {
+/*----------UserInput(register)----------*/
+.container {
   padding: 1em 1em;
   margin: 2em;
-  margin-top: 30px;
+  margin-top: 90px;
   padding-bottom: 20px;
   border: solid 1px #000000;
   border-radius: 15px;
 }
 
-.userinput h1 {
+.register-header {
   font-size: 22px;
   margin-top: 0;
 }
 
-.userinput ul {
-  list-style: none;
+.form-group {
+  float: left;
   margin: 0;
   padding: 0;
+  width: 50%;
 }
 
-.userinput ul li {
+.form-group .col-md-4 {
+  width: 60%;
+}
+
+.form-group .col-md-6 {
   float: left;
-  height: 70px;
-  width: 150px;
+  width: 100%;
 }
 
-.userinput ul li input {
+.form-group .col-md-6 input {
   display: flex;
-  width: 55%;
+  width: 60%;
   height: 35px;
+  margin-bottom: 20px;
   border:1px solid #ccc;
   border-radius: 5px;
 }
 
-.userinput p {
+.row.mb-3 {
   margin-top: 20px;
 }
 
-.userinput p select {
-  height: 20px;
-  width: 60px;
-  background: linear-gradient(90deg, #fff 0%, #fff 67%, #87cefa 50%, #87cefa 100%);;
-}
-
-.userinput p input {
+.col-md-7 input {
   margin-left: 5px;
-  width: 50%;
   height: 25px;
   border:1px solid #ccc;
   border-radius: 5px;
 }
 
-.userinput .confirm button {
+.row.mb-0 {
+  margin-top: 20px;
+}
+
+.row.mb-0 .col-md-8 .back {
   margin-left: 85px;
   height: 45px;
   width: 75px;
@@ -305,7 +307,7 @@ nav li.has-child ul ul {
   color: #fff;
 }
 
-.userinput .confirm input {
+.row.mb-0 .col-md-8 .btn.btn-primary {
   margin-left: 20px;
   background-color: #0000ff;
   height: 45px;
@@ -317,7 +319,7 @@ nav li.has-child ul ul {
 }
 
 
-/*----------UserInput終わり----------*/
+/*----------UserInput(register)終わり----------*/
 
 
 /*----------Category,Menu----------*/
@@ -369,15 +371,39 @@ nav li.has-child ul ul {
 /*----------Orderlist終わり----------*/
 
 
-/*----------RegisterComplete----------*/
+/*----------RegisterComplete,ProvisionalRegister,OrderComplete----------*/
 .complete {
   text-align: center;
   font-size: 30px;
   margin-top: 225px;
 }
 
+.complete button {
+  margin-top: 110px;
+  background-color: #87ceeb;
+  height: 70px;
+  width: 220px;
+  border:1px solid #696969;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: bolder;
+  color: #fff;
+}
 
-/*----------RegisterComplete終わり----------*/
+
+/*----------RegisterComplete,ProvisionalRegister,OrderComplete終わり----------*/
+
+
+/*---------MOBILEMailSendComplete-----------*/
+.complete_send {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 225px;
+  margin-left: 10px;
+}
+
+
+/*---------MOBILEMailSendComplete終わり-----------*/
 
 
 /*----------フッター----------*/
