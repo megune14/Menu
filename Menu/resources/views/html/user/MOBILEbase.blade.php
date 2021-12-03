@@ -12,15 +12,15 @@
 <body>
   <div class="footerFixed">
     <!--header-->
-    <header> 
+    <header>
       <div class="header">
        <li>デジタルメニュー表</li>
       </div>
- 
+
       <div class="menu">
         <input type="checkbox" id="menu-btn-check">
         <label for="menu-btn-check" class="menu-btn"><span ></span></label>
- 
+
         <nav>
           <ul>
             <li><a href="/Category">メニュー表</a></li>
@@ -33,10 +33,14 @@
               <li><a href="#">　アカウント削除</a></li>
              </ul>
             </li>
-           <li><a href="#">ログアウト</a></li>         
+            @if( Auth::check() )
+            <li><a href="/logout">ログアウト</a></li>
+            @else
+            <li><a href="/">ログイン</a></li>
+            @endif
           </ul>
         </nav>
- 
+
       </div>
     </header>
     <!--/header-->

@@ -24,13 +24,6 @@ Route::get('/UserInput',function () {
     return view('html/user.UserInput');
 });
 
-Route::get('/Category',function () {
-    return view('html/user.Category');
-});
-
-Route::get('/Category/{id}/Menu','MenuController@create',function () {
-    return view('html/user.Menu');
-})->name('detail');
 
 Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
@@ -45,16 +38,23 @@ Route::get('/RequestComplete',function () {
     return view('html/shop/RequestComplete');
 });
 
-
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::middleware(['verified'])->group(function(){
 
-    Route::get('/RequestForm',function () {
-        return view('html/shop.RequestForm');
+    Route::get('/Category','CategoryController@create',function () {
+        return view('html/user.Category');
     });
 
+    Route::get('/Category/{menuid}?shopid={shopid}','MenuController@create',function () {
+        return view('html/user.Menu');
+    })->name('detail');
 
+
+});
+Route::get('/RequestForm',function () {
+    return view('html/shop.RequestForm');
 });
 
 Auth::routes(['verify' => true]);

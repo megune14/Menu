@@ -1,7 +1,7 @@
 @extends('html/user.MOBILEbase')
 <?php
 use App\Models\Menu;
-$item = Menu::find($id);
+$items = Menu::where('id',$menuid)->where('shopid',$shopid)->get();
 
 ?>
 
@@ -16,11 +16,12 @@ $item = Menu::find($id);
     <div class="category">
       <h1>メニュー一覧</h1>
     </div>
-
-    <div class="card">
-         <img src="/images/test2.png">
-         <p>{{ $item->name}}</p>
-         <p>{{ $item->price}}円</p>
-    </div>
+@foreach ($items as $item)
+<div class="card">
+     <img src="/images/test2.png">
+     <p>{{ $item->name}}</p>
+     <p>{{ $item->price}}円</p>
+</div>
+@endforeach
 
   @endsection
