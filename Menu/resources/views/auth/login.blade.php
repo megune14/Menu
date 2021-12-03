@@ -57,7 +57,7 @@
                                     </a><br>
                                 @endif
 
-                                <a href="#">店舗用</a><br>
+                                <a href="/RequestForm">店舗用</a><br>
 
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('ログイン') }}
