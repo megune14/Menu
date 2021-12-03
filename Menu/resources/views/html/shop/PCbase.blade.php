@@ -21,11 +21,14 @@
       <div class="pc-dsp">
         <li class="active">デジタルメニュー表</li>
 
+
+        <li class="right"><a href="#">ログアウト</a></li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="#">メールアドレス変更</a></li>
             <li><a href="#">パスワード変更</a></li>
-            <li><a href="#">店舗情報</a></li>
+            <li><a href="#">ポイント設定</a></li>
+            <li><a href="#">　店舗情報</a></li>
           </ul>
         </li>
         <li class="right"><a href="#">受注商品</a></li>
@@ -47,13 +50,14 @@
 
         <nav>
           <ul>
-            <li><a href="#">メニュー表</a></li>
-            <li><a href="#">マイページ</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">メニュー一覧</a></li>
+            <li><a href="#">クーポン</a></li>
+            <li><a href="#">受注商品</a></li>
             <li class="has-child"><a href="#">　設定</a>
               <ul>
                 <li><a href="#">　メールアドレス変更</a></li>
                 <li><a href="#">　パスワード変更</a></li>
+                <li><a href="#">　ポイント設定</a></li>
                 <li><a href="#">　店舗情報</a></li>
               </ul>
             </li>
@@ -77,10 +81,6 @@
   <!--footer-->
   <footer>
     <div class="footer">
-      <li><a href="#">メニュー一覧</a></li>
-      <li><a href="#">クーポン</a></li>
-      <li><a href="#">受注商品</a></li>
-      <li><a href="#">設定</a></li>
       <p>© menu</p>
     </div>
   </footer>

@@ -1,4 +1,4 @@
-@extends('html/shop.PCbase')
+@extends('html/user.MOBILEbase')
 
 
   
@@ -26,4 +26,4 @@
       <input type="submit">
     </form>
     <!--/テキストサンプル-->
-    @endsection
+  @endsection

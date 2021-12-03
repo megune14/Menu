@@ -14,9 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',function () {
-    return view('html/user.UserLogin');
+    return view('auth.login');
 });
 
+Route::get('/register',function () {
+    return view('auth.register');
+});
 Route::get('/UserInput',function () {
     return view('html/user.UserInput');
 });
@@ -37,10 +40,34 @@ Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
 
-Route::get('/RequestForm',function () {
-    return view('html/shop.RequestForm');
-});
 
 Route::get('/RequestComplete',function () {
     return view('html/shop/RequestComplete');
 });
+
+
+
+
+Route::middleware(['verified'])->group(function(){
+
+    Route::get('/RequestForm',function () {
+        return view('html/shop.RequestForm');
+    });
+
+
+});
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes(['verify' => true]);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
