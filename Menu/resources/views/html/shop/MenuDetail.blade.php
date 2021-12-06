@@ -18,7 +18,8 @@
 	<input type="number"  value="100" min="0" max="" step="10"></p>
 
   <p>アレルギー：</p><br>
-  <p>カロリー</p><br>
+  <p>カロリー:
+  </p><br>
 
   
   <div class="confirm">
