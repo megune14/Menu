@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
 
-    public function create($categoryid,$shopid) {
+    public function create(Request $request) {
+        $categoryid = $request->categoryid;
+        $shopid = $request->shopid;
         return view('html/user.Menu', ['categoryid' => $categoryid], ['shopid' => $shopid]);
     }
 }
