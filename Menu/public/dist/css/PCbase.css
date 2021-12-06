@@ -305,6 +305,43 @@ nav li.has-child ul ul {
 /*---------------------RequestComplete終わり--------------------*/
 
 
+/*---------------------Inquiry--------------------*/
+.Inquiry {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 0;
+  padding: 1em 1em;
+  padding-top: 60px;
+  border: solid 1px #000000;
+  border-radius: 15px;
+  width: 50%;
+  font-size: 24px;
+  
+}
+
+.inquiryform p {
+  font-size: 18px;
+}
+
+.inquiryform p input {
+  width: 90%;
+  height: 44px;
+  padding: 5px 5%;
+  margin: 0;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  margin-bottom: 30px;
+}
+
+
+
+/*---------------------Inquiry終わり--------------------*/
+
+
 /*---------------------フッター--------------------*/
 footer {
 	width: 100%;
