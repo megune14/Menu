@@ -17,8 +17,10 @@
           <p>使用OSのバージョン<br>
             <input type="text" maxlength="500" size="30">
           </p>
-          <input type="button" onclick=history.back()>閉じる</button>
-          <input type="submit">
+          <div class="formbutton">
+            <button type="button" onclick=history.back()>閉じる</button>
+            <input type="submit">
+          </div>
         </div>
 
       </div>

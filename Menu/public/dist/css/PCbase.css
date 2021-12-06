@@ -312,12 +312,10 @@ nav li.has-child ul ul {
   margin-right: auto; /* 中央揃え */
   margin-bottom: 0;
   padding: 1em 1em;
-  padding-top: 60px;
   border: solid 1px #000000;
   border-radius: 15px;
   width: 50%;
   font-size: 24px;
-  
 }
 
 .inquiryform p {
@@ -326,7 +324,7 @@ nav li.has-child ul ul {
 
 .inquiryform p input {
   width: 90%;
-  height: 44px;
+  height: 40px;
   padding: 5px 5%;
   margin: 0;
   border:1px solid #ccc;
@@ -337,6 +335,31 @@ nav li.has-child ul ul {
   margin-bottom: 30px;
 }
 
+.formbutton {
+  display: flex;
+  justify-content: flex-end;
+  margin-top:100px;
+}
+
+.formbutton button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.formbutton input {
+  margin-left: 20px;
+  background-color: #0000ff;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
 
 
 /*---------------------Inquiry終わり--------------------*/
