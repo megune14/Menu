@@ -75,3 +75,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
+
