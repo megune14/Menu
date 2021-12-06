@@ -3,10 +3,13 @@
 
 
 
-  @section('title','メール送信完了')
+  @section('title','商品詳細変更')
 
   <!--テキストサンプル-->
   @section('contents')
+
+
+  
 
     <!--/テキストサンプル-->
   @endsection
