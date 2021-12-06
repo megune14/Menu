@@ -25,6 +25,7 @@
 
         <button  type="button"><a href="#">戻る</a></button>
         <label class="open" for="pop-up">削除</label>
+
         <input type="checkbox" id="pop-up">
         <div class="overlay">
           <div class="window">
