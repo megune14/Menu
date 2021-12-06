@@ -47,7 +47,7 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Category');
     });
 
-    Route::get('/Category/{menuid}?shopid={shopid}','MenuController@create',function () {
+    Route::get('/Category/{categoryid}/{shopid}','MenuController@create',function () {
         return view('html/user.Menu');
     })->name('detail');
 
