@@ -4,6 +4,13 @@
 
 @section('contents')
 
+
+<?php 
+use App\Models\OrderList;
+$apple = OrderList::find(1);
+?>
+
+
 <?php
     
     $Order = \DB::table('OrderListdb')->get();//データベース取得    
@@ -20,18 +27,18 @@
       </span>
   </th>
       <?php 
-       echo '<th>' . $Order->name   ."</th>\n";//商品名の値
+       echo '<th>' . $apple->name   ."</th>\n";//商品名の値
        ?>
        <br>
        <?php
-       echo '<td>' . $Order->price   ."円</td>\n";//値段
+       echo '<td>' . $apple->price   ."円</td>\n";//値段
       ?><br>
     </a>  
 
     <td>
     <div class="form-box">
           <p class="buy_itemu_menu" data-price = "<?php
-       echo   $Order->price   ;//値段
+       echo   $apple->price   ;//値段
       ?>">
             <span class="kakaku"></span>
           </p>
@@ -65,17 +72,17 @@
    </th>
      
        
-       <th>{{$Order->name}}   </th> <!--商品名の値-->
+       <th>{{$apple->name}}   </th> <!--商品名の値-->
        
        <br>
        <?php
-       echo '<td>' . $Order->price   ."円</td>\n";//値段
+       echo '<td>' . $apple->price   ."円</td>\n";//値段
       ?><br>
     </a>  
     
     <div class="form-box">
           <p class="buy_itemu_menu" data-price = "<?php
-       echo   $Order->price   ;//値段
+       echo   $apple->price   ;//値段
       ?>">
             <span class="kakaku"></span>
           </p>
@@ -105,10 +112,11 @@
   <input type="button"  value="クーポンを選択"><!--クーポンボタン-->
 </a><br>
 
-<?php
-echo '<p>付与されるポイント'.            '：' . "pt</p>\n";//ポイント表示
 
-?>
+
+<label class="form-label">付与されるポイント</label>
+          <input id="total_point" class="" name="合計金額" value="0pt" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly><br>
+
 
 <label class="form-label">合計金額：</label>
           <input id="total_price" class="" name="合計金額" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
@@ -127,7 +135,7 @@ echo '<p>付与されるポイント'.            '：' . "pt</p>\n";//ポイン
   .form-box {
     margin-bottom: 1em;
   }
-#item_price_total, #postage_price,#total_price {
+#item_price_total, #postage_price,#total_price,#total_point {
   display: inline-block;
   width: auto;
   padding: 0;
@@ -194,10 +202,73 @@ $("select,#kaiinnkakaku").change(function() {
 
 </script>
 
+
+<!--ポイント-->
+
+
+<script>
+$(function() {
+
+$("select,#kaiinnkakaku").change(function() {
+
+  var hairetu = [];
+  for(var i = 0; i < $(".buy_itemu_menu").length; i++){
+
+    var item_price = $(".buy_itemu_menu").eq(i).data("price");
+    var item_select = $(".buy_itemu_menu").eq(i).next("select").find("option:selected").data("num");
+
+    
+
+    if( item_select > 0 ) {
+      hairetu.push(item_price * item_select);
+    } else {
+      0;
+    }
+  }
+
+  var total = 0;
+  for(var j = 0; j < hairetu.length; j++){
+    total += hairetu[j];
+  }
+
+ 
+ var totapoint = 0;
+     totapoint = total / 100;
+
+  $("#item_price_total").val(total + "円");
+  //$("#postage_price").val(postage + "円");
+  $("#total_point").val((totapoint) + "pt");
+
+});
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--データベースやってみた-->
+
 <?php 
-$Order = new \App\Item;
-$Order->name = '名前';
-$Order->save();
+dd($apple->toArray());
+
+
+echo $apple->name ?>
+
+
+<?php 
+
+OrderList::find(2)->delete();
 ?>
 
 
