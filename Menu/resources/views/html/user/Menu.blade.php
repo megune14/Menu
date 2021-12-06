@@ -1,7 +1,7 @@
 @extends('html/user.MOBILEbase')
 <?php
 use App\Models\Menu;
-$items = Menu::where('id',$menuid)->where('shopid',$shopid)->get();
+$items = Menu::where('category',$categoryid)->where('shopid',$shopid)->get();
 
 ?>
 
