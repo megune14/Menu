@@ -72,9 +72,20 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/MenuDetail',function () {
+    return view('html/shop.MenuDetail');
+});
+Route::get('/StoreCouponList',function () {
+    return view('html/shop.StoreCouponList');
+});
+
+Route::get('/CouponSetting',function () {
+    return view('html/shop.CouponSetting');
+});
 
 
 /* お試し用ルート */
 Route::get('/a',function () {
     return view('html/shop.Inquiry');
 });
+

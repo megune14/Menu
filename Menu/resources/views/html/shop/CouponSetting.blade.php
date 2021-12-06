@@ -3,10 +3,11 @@
 
 
 
-  @section('title','メール送信完了')
+  @section('title','クーポン設定')
 
   <!--テキストサンプル-->
   @section('contents')
 
+  
     <!--/テキストサンプル-->
   @endsection
