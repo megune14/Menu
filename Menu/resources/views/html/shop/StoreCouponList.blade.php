@@ -7,6 +7,12 @@
 
   <!--テキストサンプル-->
   @section('contents')
+  <div class = CouponList>
+  <h1>クーポン一覧</h1>
+
+  </div>
+
+
 
     <!--/テキストサンプル-->
   @endsection

@@ -79,3 +79,9 @@ Route::get('/a',function () {
     return view('html/shop.Inquiry');
 });
 
+Route::get('/MenuDetail',function () {
+    return view('html/shop.MenuDetail');
+});
+Route::get('/StoreCouponList',function () {
+    return view('html/shop.StoreCouponList');
+});

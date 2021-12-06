@@ -7,7 +7,8 @@
 
   <!--テキストサンプル-->
   @section('contents')
-  <form action="#" method="post">
+<div class="menudetail">
+  <form action="#" method="get">
   <span class="menudeta-img">
         <img src="/images/men1.jpg"><!--写真-->
   </span>
@@ -24,14 +25,14 @@
   
   <div class="confirm">
     <button type="button" onclick=history.back()>戻る</button>
-    <input type="submit" value="変更" id="button4">
-  </div>
+    
+  
 
-  <label class="open" for="pop-up">変更</label>
+  <label class="open" for="pop-up" >変更</label>
         <input type="checkbox" id="pop-up">
         <div class="overlay">
           <div class="window">
-            <label class="close" for="pop-up"></label>
+            <label class="close" for="pop-up">×</label>
             <p class="text">メニュー情報を変更します。<br>
             <font color="red">よろしいでしょうか？</font></p>            
             <button type="button" onclick="history.back()">戻る</button>
@@ -39,10 +40,11 @@
           </div>
           
         </div>
+  </div>
   </from>
 
 
-
+</div>
 
 
     <!--/テキストサンプル-->
