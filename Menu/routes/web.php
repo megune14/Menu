@@ -83,6 +83,10 @@ Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
 
+Route::get('/MenuDetail',function () {
+    return view('html/shop.MenuDetail');
+});
+
 
 /* お試し用ルート */
 Route::get('/a',function () {
