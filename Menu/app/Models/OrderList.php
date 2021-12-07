@@ -21,26 +21,8 @@ class OrderList extends Model
         ]);
       }
 
-      public  function updateAll() {
-        OrderList::where('name', '!=', 'null')->update([
-            'image' => 'banana',
-            'name' => 'yamade',
-            'price' => 200,
-            'quantity' => 300,
-            'point' => 2,
-            'total' => 300,
-        ]);
-    }
-
-    public function insert() {
-        $fruit = new OrderList();
+     
     
-        $fruit->image = 'grape';
-        $fruit->name = 'blue';
-        $fruit->price = 320;
-    
-        $fruit->save();
-    }
 
     
 }

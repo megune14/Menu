@@ -7,6 +7,7 @@
 
 <?php 
 use App\Models\OrderList;
+use App\Http\Controllers\OrderListController;
 $apple = \DB::table('order_lists')->get();
 foreach ($apple as $apple) {
 ?>

@@ -11,8 +11,8 @@ class OrderListController extends Controller
  public function store(Requestt $request){
      $data = $request->all();
      
-    /// return view('store', $data);
-     return redirect()->route('home');
+    
+    return view('html/user.OrderList', $data);
  }
 
 
