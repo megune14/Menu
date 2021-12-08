@@ -8,10 +8,15 @@ class OrderListController extends Controller
 {
     //
 
+ public function store(Requestt $request){
+     $data = $request->all();
+     
+    
+    return view('html/user.OrderList', $data);
+ }
 
 
-
-
+ 
 
     
 }

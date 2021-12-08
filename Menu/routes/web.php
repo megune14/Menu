@@ -33,6 +33,7 @@ Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
 
+Route::post('/store', 'OrderListController@store')->name('store');;
 
 Route::get('/RequestComplete',function () {
     return view('html/shop/RequestComplete');
@@ -47,10 +48,13 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Category');
     });
 
-    Route::get('/Category/{menuid}?shopid={shopid}','MenuController@create',function () {
+    Route::get('/Category/Menu?categoryid={categoryid}&shopid={shopid}','MenuController@create',function () {
         return view('html/user.Menu');
     })->name('detail');
 
+    Route::get('/Category/{categoryid}/{shopid}/detail','MenuController@create',function () {
+        return view('html/user.Menu');
+    })->name('menudetail');
 
 });
 Route::get('/RequestForm',function () {
@@ -81,6 +85,10 @@ Route::get('/StoreCouponList',function () {
 
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
+});
+
+Route::get('/MenuDetail',function () {
+    return view('html/shop.MenuDetail');
 });
 
 

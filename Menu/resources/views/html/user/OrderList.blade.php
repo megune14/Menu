@@ -7,16 +7,14 @@
 
 <?php 
 use App\Models\OrderList;
-$apple = OrderList::find(1);
+use App\Http\Controllers\OrderListController;
+$apple = \DB::table('order_lists')->get();
+foreach ($apple as $apple) {
 ?>
 
+<form method='POST' action="/store">
+@csrf
 
-<?php
-    
-    $Order = \DB::table('OrderListdb')->get();//データベース取得    
-   foreach ($Order as $Order) {
-   }
-   ?>
 <tr class="menu-list">
   <th>
   
@@ -62,52 +60,7 @@ $apple = OrderList::find(1);
     <td>  <input type="button" name="delete_btn" value="削除"> </td><!--削除ボタン-->
    <br>
 
-   <th>
-  
-    
-    <a id="menu1" href="">
-    <span class="menu-img">
-      <img src="/images/men1.jpg"><!--写真-->
-    </span>
-   </th>
-     
-       
-       <th>{{$apple->name}}   </th> <!--商品名の値-->
-       
-       <br>
-       <?php
-       echo '<td>' . $apple->price   ."円</td>\n";//値段
-      ?><br>
-    </a>  
-    
-    <div class="form-box">
-          <p class="buy_itemu_menu" data-price = "<?php
-       echo   $apple->price   ;//値段
-      ?>">
-            <span class="kakaku"></span>
-          </p>
-          <select name="塩ラーメン">
-            <option data-num="0" value="0個" selected>0個</option>
-            <option data-num="1" value="1個">1個</option>
-            <option data-num="2" value="2個">2個</option>
-            <option data-num="3" value="3個">3個</option>
-            <option data-num="4" value="4個">4個</option>
-            <option data-num="5" value="5個">5個</option>
-            <option data-num="6" value="6個">6個</option>
-            <option data-num="7" value="7個">7個</option>
-            <option data-num="8" value="8個">8個</option>
-            <option data-num="9" value="9個">9個</option>
-            <option data-num="10" value="10個">10個</option>
-            <option data-num="11" value="11個">11個</option>
-            <option data-num="12" value="12個">12個</option>
-            
-          </select>
-          
-        </div></td>
-    <td>  <input type="button" name="delete_btn" value="削除"> </td><!--削除ボタン-->
-  
-    <br>
-
+   <?php }?>
 <a id="coupon-Choice" href="">    
   <input type="button"  value="クーポンを選択"><!--クーポンボタン-->
 </a><br>
@@ -127,7 +80,7 @@ $apple = OrderList::find(1);
   <input type="submit"  value="注文を送信する"><!--送信ボタン-->
 </a>
 
-
+</form>
 <style>
   p {
     margin: 0;
@@ -260,16 +213,19 @@ $("select,#kaiinnkakaku").change(function() {
 <!--データベースやってみた-->
 
 <?php 
-dd($apple->toArray());
 
 
-echo $apple->name ?>
+
+
+//$apple->name  ='醤油ラーメン';
+//$apple->save();
+//?>
 
 
 <?php 
 
-OrderList::find(2)->delete();
-?>
+//OrderList::find(2)->delete();
+//?>
 
 
 @endsection
