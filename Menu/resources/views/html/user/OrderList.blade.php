@@ -13,6 +13,7 @@ foreach ($apple as $apple) {
 ?>
 
 <form method='POST' action="/store">
+<input type='hidden' name='id' value="5">
 @csrf
 
 <tr class="menu-list">
@@ -214,7 +215,9 @@ $("select,#kaiinnkakaku").change(function() {
 
 <?php 
 
-
+\DB::table('order_lists')->insert([
+  'name' => '名前'
+]);
 
 
 //$apple->name  ='醤油ラーメン';

@@ -10,8 +10,8 @@ class OrderList extends Model
     use HasFactory;
     protected $fillable = ['image', 'name', 'price','quantity','point','total'];
 
-    public function create() {
-        OrderList::create([
+    public function store() {
+        OrderList::store([
             'image' => 'apple',
             'name' => 'red',
             'price' => 900,
