@@ -98,7 +98,7 @@
                         </div>
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                            <button type="button" class="back" onclick=history.back()>戻る</button>
+                                <button type="button" class="back" onclick=history.back()>戻る</button>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('送信') }}
                                 </button>
