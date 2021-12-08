@@ -96,6 +96,6 @@ Route::get('/MenuDetail',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.Inquiry');
+    return view('html/shop.MenuDetail');
 });
 
