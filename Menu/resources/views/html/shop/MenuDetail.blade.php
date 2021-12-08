@@ -12,9 +12,11 @@
         <span class="menudeta-img">
           <img src="/images/men1.jpg"><!--写真-->
         </span>
-        <p>商品名：
-	        <input type="text" name="name" placeholder="変更前の商品名">
-        </p><br>
+        <div class="namechange">
+          <p>商品名：
+	          <input type="text" name="name" placeholder="変更前の商品名">
+          </p>
+        </div>
 
         <div class="pricebutton">
           <p>値段：
@@ -22,7 +24,7 @@
           </p>
         </div>
 
-        <p>アレルギー：</p><br>
+        <p>アレルギー：</p>
 
         <p>カロリー:</p><br>
 
