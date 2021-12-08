@@ -8,6 +8,7 @@
 <?php 
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
+
 $apple = \DB::table('order_lists')->get();
 foreach ($apple as $apple) {
 ?>
@@ -42,7 +43,8 @@ foreach ($apple as $apple) {
             <span class="kakaku"></span>
           </p>
           <select name="塩ラーメン">
-            <option data-num="0" value="0個" selected>0個</option>
+            <option data-num={{$apple->quantity}} value={{$apple->quantity}} selected>{{$apple->quantity}}個</option>
+            <option data-num="0" value="0個" >0個</option>
             <option data-num="1" value="1個">1個</option>
             <option data-num="2" value="2個">2個</option>
             <option data-num="3" value="3個">3個</option>
@@ -60,6 +62,25 @@ foreach ($apple as $apple) {
         </div></td>
     <td>  <input type="button" name="delete_btn" value="削除"> </td><!--削除ボタン-->
    <br>
+
+   <?php 
+
+\DB::table('order')->insert([
+  'id' => '1',
+ 
+ 'name' => $apple->name ,
+ 'price' =>  $apple->price,
+ 'quantity' => '5',
+ 
+
+]);
+
+
+
+
+//$apple->name  ='醤油ラーメン';
+//$apple->save();
+//?>
 
    <?php }?>
 <a id="coupon-Choice" href="">    
@@ -215,9 +236,17 @@ $("select,#kaiinnkakaku").change(function() {
 
 <?php 
 
-\DB::table('order_lists')->insert([
-  'name' => '名前'
+\DB::table('order')->insert([
+  'id' => '2',
+ 
+ 'name' => $apple->name ,
+ 'price' =>  $apple->price,
+ 'quantity' => '5',
+ 
+
 ]);
+
+
 
 
 //$apple->name  ='醤油ラーメン';
@@ -227,8 +256,10 @@ $("select,#kaiinnkakaku").change(function() {
 
 <?php 
 
-//OrderList::find(2)->delete();
-//?>
+order::find(1)->delete();
+//OrderList::find(6)->delete();
+//OrderList::find(5)->delete();
+////?>
 
 
 @endsection
