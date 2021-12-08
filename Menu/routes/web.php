@@ -90,6 +90,13 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+Route::get('/StoreInfoDelete',function () {
+    return view('html/shop.StoreInfoDelete');
+});
+
+Route::get('/StoreInfoDetail',function () {
+    return view('html/shop.StoreInfoDetail');
+});
 
 /* お試し用ルート */
 Route::get('/a',function () {
