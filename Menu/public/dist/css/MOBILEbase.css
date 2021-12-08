@@ -14,6 +14,10 @@ a {
   text-decoration: none;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
 /*----------ヘッダー----------*/
 .header {
   position: fixed;
@@ -242,34 +246,35 @@ nav li.has-child ul ul {
 /*----------UserLogin終わり----------*/
 
 
-/*----------UserInput----------*/
-.userinput {
+/*----------UserInput(register)----------*/
+.container {
   padding: 1em 1em;
   margin: 2em;
-  margin-top: 30px;
+  margin-top: 110px;
   padding-bottom: 20px;
   border: solid 1px #000000;
   border-radius: 15px;
 }
 
-.userinput h1 {
+.container .register-header {
   font-size: 22px;
   margin-top: 0;
 }
 
-.userinput ul {
-  list-style: none;
+.container .form-group {
+  display: inline-block;
   margin: 0;
   padding: 0;
+  width: 145px;
 }
 
-.userinput ul li {
-  float: left;
+.container .col-md-4 {
+  list-style: none;
   height: 70px;
   width: 150px;
 }
 
-.userinput ul li input {
+.container .col-md-6 input {
   display: flex;
   width: 55%;
   height: 35px;
@@ -277,17 +282,11 @@ nav li.has-child ul ul {
   border-radius: 5px;
 }
 
-.userinput p {
+.container .row.mb-3 {
   margin-top: 20px;
 }
 
-.userinput p select {
-  height: 20px;
-  width: 60px;
-  background: linear-gradient(90deg, #fff 0%, #fff 67%, #87cefa 50%, #87cefa 100%);;
-}
-
-.userinput p input {
+.container .row.mb-3 .col-md-7 input {
   margin-left: 5px;
   width: 50%;
   height: 25px;
@@ -295,7 +294,11 @@ nav li.has-child ul ul {
   border-radius: 5px;
 }
 
-.userinput .confirm button {
+.container .row.mb-0 {
+  margin-top: 50px;
+}
+
+.container .row.mb-0 .back {
   margin-left: 85px;
   height: 45px;
   width: 75px;
@@ -305,7 +308,7 @@ nav li.has-child ul ul {
   color: #fff;
 }
 
-.userinput .confirm input {
+.container .row.mb-0 .btn.btn-primary {
   margin-left: 20px;
   background-color: #0000ff;
   height: 45px;

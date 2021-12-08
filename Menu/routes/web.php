@@ -94,6 +94,6 @@ Route::get('/MenuDetail',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.MenuDetail');
+    return view('html/shop.StoreCouponList');
 });
 
