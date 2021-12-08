@@ -29,11 +29,13 @@ Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
 });
 
+Route::group(['OrderList'],function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-
 Route::post('/store', 'OrderListController@store')->name('store');;
+});
+
 
 Route::get('/RequestComplete',function () {
     return view('html/shop/RequestComplete');

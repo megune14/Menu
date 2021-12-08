@@ -15,13 +15,14 @@ class CreateOrderListsTable extends Migration
     {
         Schema::create('order_lists', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
+           
             $table->string('name');
             $table->integer('price');
             $table->integer('quantity');
             $table->integer('point');
             $table->integer('total');
-            $table->timestamps();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
 
         
