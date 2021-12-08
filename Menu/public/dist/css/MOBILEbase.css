@@ -344,7 +344,7 @@ nav li.has-child ul ul {
   margin-bottom: 5px;
 }
 
-.AccountDelete button { 
+.confirm button { 
   margin-left: 110px;
   height: 45px;
   width: 75px;
@@ -353,12 +353,12 @@ nav li.has-child ul ul {
   background-color: rgba(128,128,128,0.6);
 }
 
-.AccountDelete button a {
+.confirm button a {
   font-size: 20px;
   color: #fff;
 }
 
-.AccountDelete .open {
+.confirm .open {
   margin-left: 14px;
   padding: 6px 32px 6px 32px;
   background-color: #0000ff;
