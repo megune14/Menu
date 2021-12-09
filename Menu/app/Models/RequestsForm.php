@@ -11,11 +11,11 @@ class RequestsForm extends Model
     protected $fillable = ['name', 'adress', 'e-mail','tel','leader'];
     public function create() {
         Fruit::create([
-            'name' => '',
-            'adress' => '',
-            'e-mail' => '',
-            'tel' => '',
-            'leader' =>'',
+            'name' => 'yama',
+            'adress' => 'yama',
+            'e-mail' => 'yama',
+            'tel' => '080',
+            'leader' =>'ten',
         ]);
     }
 }
