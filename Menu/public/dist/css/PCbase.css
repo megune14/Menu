@@ -19,6 +19,10 @@ input[type=number]::-webkit-inner-spin-button {
   opacity: 1;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
 /* ---------------------全画面表示＋ヘッダー-------------------- */
 .header {
 	position: fixed;
@@ -326,9 +330,6 @@ margin-left: 25px;
   font-size: 20px;
 }
 
-
-
-
 .menudetail-pop {
   display: flex; /* 右揃え */
   justify-content: flex-end; /* 右揃え */
@@ -364,9 +365,11 @@ margin-left: 25px;
 #pop-up {
 	display: none; /* label でコントロールするので input は非表示に */
 }
+
 .overlay {
 	display: none; /* input にチェックが入るまでは非表示に */
 }
+
 #pop-up:checked + .overlay {
 	display: block;
 	z-index: 9999;
@@ -377,6 +380,7 @@ margin-left: 25px;
 	top: 0;
 	left: 0;
 }
+
 .window {
 	width: 150vw;
 	max-width: 500px;
@@ -398,7 +402,6 @@ margin-left: 25px;
   margin-bottom: 50px;
   text-align: center;
 }
-
 
 .window button {
   margin-left: 70px;
@@ -433,6 +436,66 @@ margin-left: 25px;
 
 
 /*---------------------MenuDetail終わり--------------------*/
+
+
+/*---------------------StoreCouponList--------------------*/
+.couponcard {
+  margin-top: 30px;
+  width: 220px;
+  height: 250px;
+  margin-left: 25px;
+  border: solid 1px #ccc;
+  margin-right: 0;
+}  
+
+.couponcard img {
+  width: 220px;
+  height: 150px;
+}
+
+
+
+.couponcheckbox {
+  margin-left: 15px;
+}
+
+.couponcard .couponcheckbox p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+}
+
+.coupon-btn {
+  display: inline-block;
+  margin-left: 90px;
+  height: 18px;
+}
+
+.coupon-btn span,
+.coupon-btn span:before,
+.coupon-btn span:after {
+  content: '';
+  display: flex;
+  height: 4px;
+  width: 4px;
+  border-radius: 3px;
+  background-color: red; /* 3本線の色 */
+  position: absolute;
+}
+
+.coupon-btn span:before {
+  left: 8px;
+}
+
+.coupon-btn span:after {
+  right: 8px;
+}
+
+
+
+
+/*---------------------StoreCouponList終わり--------------------*/
 
 
 /*---------------------RequestComplete--------------------*/

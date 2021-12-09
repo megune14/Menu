@@ -5,68 +5,67 @@
 
   @section('title','クーポン一覧')
 
-  <!--テキストサンプル-->
-  @section('contents')
-  <div class = CouponList>
-  <h1>クーポン一覧</h1>
+    <!--テキストサンプル-->
+    @section('contents')
+      <div class = CouponList>
+        <h1>クーポン一覧</h1>
   
-  <tr >
-    <td><img src="/images/men1.jpg"></th><br>
-    <td>商品名</th><br>
-    <td>必要ポイント数：</td>
-    <input type="checkbox" id="menu-btn-check">
-    <label for="menu-btn-check" class="menu-btn"><span ></span></label>
-    <div class="coupon">
-        <input type="checkbox" id="coupon-btn-check">
-        <label for="coupon-btn-check" class="coupon-btn"><span ></span></label>
+        <div class="couponcard">
+          
+          <img src="/images/men1.jpg"><br>
+          <div class="couponcheckbox">
+            <p>商品名</p>
+            <input type="checkbox" id="coupon-btn-check">
+            <label for="coupon-btn-check" class="coupon-btn"><span></span></label>
 
-        <nav>
-          <ul>
-            <li><a href="#">変更</a></li>
-            <li><a href="#">削除</a></li>
+              <nav>
+                <ul>
+                  <li><a href="#">変更</a></li>
+                  <li><a href="#">削除</a></li>
+                </ul>
+              </nav>
+
+            </div>
+          
+          <p>必要ポイント数：</p>
+          
             
-            
-            
-          </ul>
-        </nav>
 
-      </div>
+          
+          
+        </div>
+        
 
-  </tr>
+        <div class="couponcard">
+          <tr>
+            <td><img src="/images/men1.jpg"></th><br>
+            <td>商品名</th><br>
+            <td>必要ポイント数：</td>
+          
+            <div class="couponcheckbox">
+              <input type="checkbox" id="coupon-btn-check">
+              <label for="coupon-btn-check" class="coupon-btn"><span ></span></label>
 
-  <tr >
-    <td><img src="/images/men1.jpg"></th><br>
-    <td>商品名</th><br>
-    <td>必要ポイント数：</td>
-    <input type="checkbox" id="menu-btn-check">
-    <label for="menu-btn-check" class="menu-btn"><span ></span></label>
-    <div class="coupon">
-        <input type="checkbox" id="coupon-btn-check">
-        <label for="coupon-btn-check" class="coupon-btn"><span ></span></label>
+              <nav>
+                <ul>
+                  <li><a href="#">変更</a></li>
+                  <li><a href="#">削除</a></li>
+                </ul>
+              </nav>
 
-        <nav>
-          <ul>
-            <li><a href="#">変更</a></li>
-            <li><a href="#">削除</a></li>
-            
-            
-            
-          </ul>
-        </nav>
+            </div>
 
-      </div>
+          </tr>
 
-  </tr>
+        </div>
+        
 
+        <a id="coupon-send" href="">    
+          <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
+        </a>
 
-  <a id="coupon-send" href="">    
-  <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
-</a>
-
-
-  </div>
-
-
+      </div> 
 
     <!--/テキストサンプル-->
-  @endsection
+    @endsection
+

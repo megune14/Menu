@@ -33,7 +33,8 @@ Route::group(['OrderList'],function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::post('/store', 'OrderListController@store')->name('store');;
+Route::get('/delete', 'OrderListController@delete');
+Route::post('/delete', 'OrderListController@remove');
 });
 
 
@@ -106,6 +107,6 @@ Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.MenuDetail');
+    return view('html/shop.StoreCouponList');
 });
 
