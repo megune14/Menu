@@ -97,9 +97,12 @@ Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
 
-Route::get('/StoreInfoDetail',function () {
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
     return view('html/shop.StoreInfoDetail');
-});
+})->name('store');
+
+
 
 /* お試し用ルート */
 Route::get('/a',function () {
