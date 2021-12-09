@@ -280,6 +280,7 @@ nav li.has-child ul ul {
   height: 35px;
   border:1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(204,204,204,0.5);
 }
 
 .container .row.mb-3 {
@@ -292,6 +293,7 @@ nav li.has-child ul ul {
   height: 25px;
   border:1px solid #ccc;
   border-radius: 5px;
+  background-color: rgba(204,204,204,0.5);
 }
 
 .container .row.mb-0 {
