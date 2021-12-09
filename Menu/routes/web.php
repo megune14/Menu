@@ -89,6 +89,13 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/shop.PassChangeUserCheck');
+});
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/user.PassChangeUserCheck');
+});
+
 
 Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
@@ -102,9 +109,12 @@ Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
 
-Route::get('/StoreInfoDetail',function () {
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
     return view('html/shop.StoreInfoDetail');
-});
+})->name('store');
+
+
 
 /* お試し用ルート */
 Route::get('/a',function () {
