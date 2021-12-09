@@ -13,12 +13,10 @@
         <div class="couponcard">
           
           <img src="/images/men1.jpg"><br>
-            <p>商品名</p><br>
-            <p>必要ポイント数：</p></td>
-          
-            <div class="couponcheckbox">
-              <input type="checkbox" id="coupon-btn-check">
-              <label for="coupon-btn-check" class="coupon-btn"><span></span></label>
+          <div class="couponcheckbox">
+            <p>商品名</p>
+            <input type="checkbox" id="coupon-btn-check">
+            <label for="coupon-btn-check" class="coupon-btn"><span></span></label>
 
               <nav>
                 <ul>
@@ -28,8 +26,12 @@
               </nav>
 
             </div>
+          
+          <p>必要ポイント数：</p>
+          
+            
 
-          </tr>
+          
           
         </div>
         

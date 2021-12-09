@@ -440,58 +440,56 @@ margin-left: 25px;
 
 /*---------------------StoreCouponList--------------------*/
 .couponcard {
-  display: flex;
   margin-top: 30px;
-  width: 165px;
-  height: 180px;
+  width: 220px;
+  height: 250px;
   margin-left: 25px;
   border: solid 1px #ccc;
-  border-radius: 10px;
-  
+  margin-right: 0;
 }  
 
 .couponcard img {
-  width: 30px;
-  height: 30px;
+  width: 220px;
+  height: 150px;
 }
 
-.couponcard p {
-  
-  
-}
+
 
 .couponcheckbox {
-  
+  margin-left: 15px;
+}
+
+.couponcard .couponcheckbox p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
 }
 
 .coupon-btn {
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  
+  display: inline-block;
+  margin-left: 90px;
+  height: 18px;
 }
 
 .coupon-btn span,
 .coupon-btn span:before,
 .coupon-btn span:after {
-  margin-left: 60px;
   content: '';
-  display: block;
-  height: 10px;
-  width: 10px;
+  display: flex;
+  height: 4px;
+  width: 4px;
   border-radius: 3px;
   background-color: red; /* 3本線の色 */
   position: absolute;
 }
 
 .coupon-btn span:before {
-  left: 60px;
+  left: 8px;
 }
 
 .coupon-btn span:after {
-  right: 12px;
+  right: 8px;
 }
 
 
