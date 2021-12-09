@@ -60,18 +60,22 @@ foreach ($apple as $apple) {
             
           </select>
         </div></td>
-    <td>  <input type="button" name="delete_btn" value="削除"> </td><!--削除ボタン-->
+    <td>  
+    <form method='post' action="/delete" id='delete-form'>
+      @csrf  
+    <input type="submit" name="delete_btn" value="削除">
+    </form>
+    </td><!--削除ボタン-->
    <br>
 
    <?php 
 
-\DB::table('order')->insert([
-  'id' => '1',
- 
- 'name' => $apple->name ,
- 'price' =>  $apple->price,
+DB::table('order')->insert([
+ 'id' => '1',
+
+'name' => $apple->name ,
+'price' =>  $apple->price,
  'quantity' => '5',
- 
 
 ]);
 
@@ -236,15 +240,15 @@ $("select,#kaiinnkakaku").change(function() {
 
 <?php 
 
-\DB::table('order')->insert([
-  'id' => '2',
- 
- 'name' => $apple->name ,
- 'price' =>  $apple->price,
- 'quantity' => '5',
- 
-
-]);
+//\DB::table('order')->insert([
+//  'id' => '2',
+// 
+// 'name' => $apple->name ,
+// 'price' =>  $apple->price,
+// 'quantity' => '5',
+// 
+//
+//]);
 
 
 
@@ -256,7 +260,7 @@ $("select,#kaiinnkakaku").change(function() {
 
 <?php 
 
-order::find(1)->delete();
+//order::find(1)->delete();
 //OrderList::find(6)->delete();
 //OrderList::find(5)->delete();
 ////?>

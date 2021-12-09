@@ -33,7 +33,8 @@ Route::group(['OrderList'],function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::post('/store', 'OrderListController@store')->name('store');;
+Route::get('/delete', 'OrderListController@delete');
+Route::post('/delete', 'OrderListController@remove');
 });
 
 
