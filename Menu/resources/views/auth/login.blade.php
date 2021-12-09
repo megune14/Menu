@@ -51,6 +51,7 @@
 
                                 <a href="/register">新規登録</a><br>
 
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('パスワードを忘れた場合') }}

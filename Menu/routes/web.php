@@ -29,8 +29,12 @@ Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
 });
 
+Route::group(['OrderList'],function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
+});
+Route::get('/delete', 'OrderListController@delete');
+Route::post('/delete', 'OrderListController@remove');
 });
 
 
@@ -47,10 +51,13 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Category');
     });
 
-    Route::get('/Category/{menuid}?shopid={shopid}','MenuController@create',function () {
+    Route::get('/Category/Menu?categoryid={categoryid}&shopid={shopid}','MenuController@create',function () {
         return view('html/user.Menu');
     })->name('detail');
 
+    Route::get('/Category/{categoryid}/{shopid}/detail','MenuController@create',function () {
+        return view('html/user.Menu');
+    })->name('menudetail');
 
 });
 Route::get('/RequestForm',function () {
@@ -90,9 +97,23 @@ Route::get('/PassChangeUserCheck',function () {
 });
 
 
+Route::get('/MenuDetail',function () {
+    return view('html/shop.MenuDetail');
+});
+
+Route::get('/StoreInfoDelete',function () {
+    return view('html/shop.StoreInfoDelete');
+});
+
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
+    return view('html/shop.StoreInfoDetail');
+})->name('store');
+
+
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.Inquiry');
+    return view('html/shop.StoreCouponList');
 });
 
