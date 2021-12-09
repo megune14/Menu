@@ -82,6 +82,13 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/shop.PassChangeUserCheck');
+});
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/user.PassChangeUserCheck');
+});
+
 
 
 /* お試し用ルート */
