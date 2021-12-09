@@ -94,6 +94,10 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
+
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
