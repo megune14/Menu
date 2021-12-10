@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  
 }
 
 .pc-dsp { display: block; }
@@ -440,12 +441,13 @@ margin-left: 25px;
 
 /*---------------------StoreCouponList--------------------*/
 .couponcard {
+  display: inline-block;
   margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 60px;
   width: 220px;
-  height: 250px;
-  margin-left: 25px;
+  height: 290px;
   border: solid 1px #ccc;
-  margin-right: 0;
 }  
 
 .couponcard img {
@@ -453,23 +455,34 @@ margin-left: 25px;
   height: 150px;
 }
 
-
-
-.couponcheckbox {
+.couponcard p {
+  display: inline-block;
+  margin-top: 0;
   margin-left: 15px;
 }
 
-.couponcard .couponcheckbox p {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  font-size: 28px;
+.menuname {
+  font-size: 20px;
 }
+
+
+
+
+.couponcheckbox {
+  display: inline-block;
+  margin-left: 15px;
+  height: 6px;
+  width: 305px;
+}
+
+ 
 
 .coupon-btn {
   display: inline-block;
-  margin-left: 90px;
-  height: 18px;
+  margin-top: 0;
+  margin-left: 185px;
+  margin-bottom: 0;
+  height: 9px;
 }
 
 .coupon-btn span,
@@ -477,22 +490,67 @@ margin-left: 25px;
 .coupon-btn span:after {
   content: '';
   display: flex;
-  height: 4px;
-  width: 4px;
-  border-radius: 3px;
-  background-color: red; /* 3本線の色 */
+  height: 6px;
+  width: 6px;
+  border-radius: 10px;
+  background-color: #000000; /* 3本線の色 */
   position: absolute;
 }
 
 .coupon-btn span:before {
-  left: 8px;
+  left: 9px;
 }
 
 .coupon-btn span:after {
-  right: 8px;
+  right: 9px;
 }
 
+.couponcard ul {
+  opacity: 0;
+  pointer-events: none;
+  float: right;
+  width: 80px;
+  height:104px;
+  margin: 0;
+  padding:6px 10px 0;
+  background-color: rgba(0,0,0,0.8);
+}
 
+.couponcard ul li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.couponcard ul li a {
+  width: 100%;
+  font-size: 22px;
+  color:#ffffff;
+  padding: 10px 15px 10px 0;
+  
+}
+
+input[type="checkbox"]:checked ~ .abc ul{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.coupon-send {
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
+
+.coupon-send input {
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
 
 
 /*---------------------StoreCouponList終わり--------------------*/

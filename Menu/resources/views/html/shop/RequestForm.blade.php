@@ -39,7 +39,7 @@
 
         $leader = $_POST['leader'];
         $name = $_POST['name'];
-        $address = $_POST['address'];
+        $address = $_POST['adress'];
         $email = $_POST['email'];
         $tel = $_POST['tel'];
 

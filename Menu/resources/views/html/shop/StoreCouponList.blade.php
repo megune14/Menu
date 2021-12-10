@@ -13,56 +13,62 @@
         <div class="couponcard">
           
           <img src="/images/men1.jpg"><br>
+
           <div class="couponcheckbox">
-            <p>商品名</p>
             <input type="checkbox" id="coupon-btn-check">
             <label for="coupon-btn-check" class="coupon-btn"><span></span></label>
 
-              <nav>
-                <ul>
+              <div class="abc">
+              <ul>
                   <li><a href="#">変更</a></li>
                   <li><a href="#">削除</a></li>
                 </ul>
-              </nav>
 
-            </div>
+              </div>   
+              
+          </div>
           
-          <p>必要ポイント数：</p>
+          <div class="menuname">
+            <p>ハンバーガー</p>
+          </div>
           
-            
-
-          
+          <p>必要ポイント数: 30pt</p>
           
         </div>
         
 
         <div class="couponcard">
-          <tr>
-            <td><img src="/images/men1.jpg"></th><br>
-            <td>商品名</th><br>
-            <td>必要ポイント数：</td>
+
+          <img src="/images/men1.jpg"><br>
+
+          <div class="couponcheckbox">
+            <input type="checkbox" id="coupon-btn-check">
+            <label for="coupon-btn-check" class="coupon-btn"><span></span></label>
+
+            <div class="abc">
+              <ul>
+                <li><a href="#">変更</a></li>
+                <li><a href="#">削除</a></li>
+              </ul>
+
+            </div>   
+    
+          </div>
+
+          <div class="menuname">
+            <p>ハンバーガー</p>
+          </div>
+
+          <p>必要ポイント数: 30pt</p>
           
-            <div class="couponcheckbox">
-              <input type="checkbox" id="coupon-btn-check">
-              <label for="coupon-btn-check" class="coupon-btn"><span ></span></label>
-
-              <nav>
-                <ul>
-                  <li><a href="#">変更</a></li>
-                  <li><a href="#">削除</a></li>
-                </ul>
-              </nav>
-
-            </div>
-
-          </tr>
-
         </div>
         
-
-        <a id="coupon-send" href="">    
-          <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
-        </a>
+        <div class="coupon-send">
+          <a id="coupon-send-submit" href="">    
+            <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
+          </a>
+        </div>
+        
 
       </div> 
 

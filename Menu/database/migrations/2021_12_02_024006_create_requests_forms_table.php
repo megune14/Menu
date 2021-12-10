@@ -16,7 +16,7 @@ class CreateRequestsFormsTable extends Migration
         Schema::create('requests_forms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('address');
+            $table->string('adress');
             $table->string('email');
             $table->string('tel');
             $table->string('leader');

@@ -15,7 +15,7 @@
           <p>秘密の合言葉<br>
             <input type="text" name="name"></p>
 
-          <p><input type="submit" value="戻る">
+            <button type="button" onclick="history.back()">戻る</button>
           <input type="submit" class="ChangePass" value="送信">
 
         </form>

@@ -24,8 +24,8 @@
         <nav>
           <ul>
             <li><a href="/Category">メニュー表</a></li>
-            <li><a href="#">マイページ</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="/UserInfo">マイページ</a></li>
+            <li><a href="/Inquiry">お問い合わせ</a></li>
             <li class="has-child"><a href="#">　設定</a>
              <ul>
               <li><a href="#">　メールアドレス変更</a></li>
