@@ -89,6 +89,9 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('CouponSetting/add','CouponController@add');
+Route::post('CouponSetting/add','CouponController@create');
+
 Route::get('/PassChangeUserCheck',function () {
     return view('html/shop.PassChangeUserCheck');
 });
