@@ -116,6 +116,18 @@ Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
 
 
 
+Route::get('/MailChange',function () {
+    return view('html/shop.MailChange');
+});
+
+Route::get('/PassChangeCheck',function () {
+    return view('html/user.PassChangeCheck');
+});
+
+Route::get('/MailChange',function () {
+    return view('html/user.MailChange');
+});
+
 /* お試し用ルート */
 Route::get('/a',function () {
     return view('html/shop.StoreCouponList');
