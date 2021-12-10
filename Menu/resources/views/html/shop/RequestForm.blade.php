@@ -27,40 +27,6 @@
     </form>
     
     <!--/テキストサンプル-->
-    <?php
-      try {
-        //DB名、ユーザー名、パスワード
-        $dsn = 'mysql:dbname=menu;host=localhost;charset=utf8';
-        $user = 'yamada';
-        $password = 'o-hara';
-
-        $PDO = new PDO($dsn, $user, $password); //MySQLのデータベースに接続
-        $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //PDOのエラーレポートを表示
-
-        $leader = $_POST['leader'];
-        $name = $_POST['name'];
-        $address = $_POST['adress'];
-        $email = $_POST['email'];
-        $tel = $_POST['tel'];
-
-
-
-        $sql = "INSERT INTO contents (leader, name, address, email, tel) VALUES (:leader, :name, :address, :email, :tel)"; // INSERT文を変数に格納。:nameや:プレースホルダという、値を入れるための単なる空箱
-        $stmt = $PDO->prepare($sql); //挿入する値は空のまま、SQL実行の準備をする
-        $params = array(':leader' => $leader, ':name' => $name, ':address' => $address, ':email' => $email, ':tel' => $tel); // 挿入する値を配列に格納する
-        $stmt->execute($params); //挿入する値が入った変数をexecuteにセットしてSQLを実行
-
-
-        echo "<p>leader: ".$leader."</p>";
-        echo "<p>name: ".$name."</p>";
-        echo "<p>address: ".$address."</p>";
-        echo "<p>email: ".$email."</p>";
-        echo "<p>tel: ".$tel."</p>";
-        echo '<p>で登録しました。</p>'; // 登録完了のメッセージ
-      } catch (PDOException $e) {
-      exit('データベースに接続できませんでした。' . $e->getMessage());
-      }
-    ?>
 </body>
 </html>
   @endsection

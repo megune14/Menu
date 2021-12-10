@@ -134,6 +134,10 @@ Route::get('/UserLogin',function () {
     return view('html/user.UserLogin');
 });
 
+Route::get('/MailChange',function () {
+    return view('html/user.MailChange');
+});
+
 Route::get('/PassReSettingUserCheck',function () {
     return view('html/user.PassReSettingUserCheck');
 });
