@@ -106,7 +106,7 @@ Route::get('/MenuDetail',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.CouponSetting');
+    return view('html/shop.RequestForm');
 });
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
