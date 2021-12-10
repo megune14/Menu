@@ -101,6 +101,10 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
+
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
@@ -127,6 +131,18 @@ Route::get('/PassReSettingUserCheck',function () {
 });
 
 
+
+Route::get('/MailChange',function () {
+    return view('html/shop.MailChange');
+});
+
+Route::get('/PassChangeCheck',function () {
+    return view('html/user.PassChangeCheck');
+});
+
+Route::get('/MailChange',function () {
+    return view('html/user.MailChange');
+});
 
 /* お試し用ルート */
 Route::get('/a',function () {

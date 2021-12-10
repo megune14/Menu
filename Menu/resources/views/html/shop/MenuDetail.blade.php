@@ -7,26 +7,37 @@
 
   <!--テキストサンプル-->
   @section('contents')
+  <?php use App\Models\OrderList;
+        use App\Http\Controllers\MenuDetailController;
+        
+        $menudeta = \DB::table('_menu_detail')->get();
+        foreach ($menudeta as $menudeta) {
+        //dd($menudeta);
+        //echo $menudeta->name;
+        }
+  ?>
     <div class="menudetail">
-      <form action="#" method="get">
+      <form action="/MenuDetail/edit" method="post">
+      @csrf
+        <input type = "hidden" name = "id" value = "{{$menudeta->id}}">
         <span class="menudeta-img">
           <img src="/images/men1.jpg"><!--写真-->
         </span>
         <div class="namechange">
           <p>商品名：
-	          <input type="text" name="name" placeholder="変更前の商品名">
+	          <input type="text" name="name" value="{{$menudeta->name}}">
           </p>
         </div>
 
         <div class="pricebutton">
           <p>値段：
-	          <input type="number"  value="100" min="0" max="" step="10">
+	          <input type="number"   name="price" value="{{$menudeta->price}}" min="0" max="" step="10">
           </p>
         </div>
 
-        <p>アレルギー：</p>
+        <p>アレルギー：{{$menudeta->allergy}}</p>
 
-        <p>カロリー:</p><br>
+        <p>カロリー:{{$menudeta->calorie}}</p><br>
 
   
         <div class="menudetail-pop">
@@ -47,6 +58,25 @@
         </div>
       </from>
     </div>
+
+
+    <?php 
+
+//DB::table('_menu_detail')->insert([
+ //'id' => '2',
+
+//'name' =>  'くさいラーメン',
+///'price' => '800' ,
+ 
+
+///]);
+
+
+
+
+//$apple->name  ='醤油ラーメン';
+//$apple->save();
+//?>
 
 
     <!--/テキストサンプル-->
