@@ -441,8 +441,9 @@ margin-left: 25px;
 
 /*---------------------StoreCouponList--------------------*/
 .couponcard {
+  display: inline-block;
   margin-top: 30px;
-  margin-left: 25px;
+  margin-left: 35px;
   margin-right: 60px;
   width: 220px;
   height: 290px;
@@ -531,6 +532,24 @@ margin-left: 25px;
 input[type="checkbox"]:checked ~ .abc ul{
   opacity: 1;
   pointer-events: auto;
+}
+
+.coupon-send {
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
+
+.coupon-send input {
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
 }
 
 
