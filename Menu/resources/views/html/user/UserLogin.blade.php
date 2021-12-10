@@ -22,7 +22,7 @@
             <lavel for="01" class="checkbox01">ログイン状態を保持する<br></lavel>
             <a href="/UserRegister">新規登録</a><br>
             <a href="/PassReSettingUserCheck">パスワードを忘れた場合</a><br>
-            <a href="#">店舗申請</a><br>
+            <a href="/RequestForm">店舗申請</a><br>
 
             <button type="submit" onclick="location.href='/UserInfo'">ログイン</button>
           </div>

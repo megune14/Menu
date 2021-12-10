@@ -89,6 +89,9 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('CouponSetting/add','CouponController@add');
+Route::post('CouponSetting/add','CouponController@create');
+
 Route::get('/PassChangeUserCheck',function () {
     return view('html/shop.PassChangeUserCheck');
 });
@@ -124,7 +127,7 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
 })->name('store');
 
 Route::get('/UserRegister',function () {
-    return view('html/user./UserRegister');
+    return view('html/user.UserRegister');
 });
 
 Route::get('/UserLogin',function () {
@@ -135,7 +138,16 @@ Route::get('/PassReSettingUserCheck',function () {
     return view('html/user.PassReSettingUserCheck');
 });
 
+Route::get('/Inquiry',function () {
+    return view('html/user.Inquiry');
+});
+Route::get('/Category',function () {
+    return view('html/user.Category');
+});
 
+Route::get('/',function () {
+    return view('html/user.');
+});
 
 Route::get('/MailChange',function () {
     return view('html/shop.MailChange');
@@ -151,3 +163,6 @@ Route::get('/MailChange',function () {
 
 
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
