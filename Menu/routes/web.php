@@ -101,6 +101,11 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+/* お試し用ルート */
+Route::get('/a',function () {
+    return view('html/shop.CouponSetting');
+});
+
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
 return view('html/shop.MenuDetail');
@@ -144,8 +149,5 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-/* お試し用ルート */
-Route::get('/a',function () {
-    return view('html/shop.StoreCouponList');
-});
+
 
