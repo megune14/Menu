@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\coupon;
+use App\Models\Coupon;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -12,10 +12,14 @@ class CouponController extends Controller
 {
     public function index(Request $request){
         $items = DB::select ('select * from coupon');
-        return view('');
+        return view('CouponSetting.index',['items => $items']);
 
     }
 
+    public function post(Request $request){
+        $items = DB::select ('select * from coupon');
+        return view('CouponSetting.index',['items => $items']);
+    }
 
 
      public function add(Request $request)
@@ -26,7 +30,14 @@ class CouponController extends Controller
 
     public function create(Request $request)
     {
-      //$this->validate($request,coupon::$rules);
+
+        //$param = [
+        //    'name' => $request->name,
+        //    'point' => $request->point,
+        //];
+        //DB::insert('insert into coupon(name, point) values (:name, :point)',$param);
+        //return redirect('/CouponSetting');
+      //$this->validate($request,Coupon::$rules);
       $coupon = new Coupon;
       $form = $request->all();
       unset($form['token']);
