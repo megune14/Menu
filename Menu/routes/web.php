@@ -101,9 +101,15 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
+Route::get('/StoreInfoDelete',function () {
+    return view('html/shop.StoreInfoDelete');
+});
+
+Route::get('/StoreInfoDelete',function () {
+    return view('html/shop.StoreInfoDelete');
+});
+
+
 
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
@@ -119,7 +125,7 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
 })->name('store');
 
 Route::get('/UserRegister',function () {
-    return view('html/user./UserRegister');
+    return view('html/user.UserRegister');
 });
 
 Route::get('/UserLogin',function () {
@@ -149,3 +155,6 @@ Route::get('/a',function () {
     return view('html/shop.StoreCouponList');
 });
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
