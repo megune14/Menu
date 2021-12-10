@@ -20,10 +20,10 @@ Route::get('/',function () {
 Route::get('/register',function () {
     return view('auth.register');
 });
+
 Route::get('/UserInput',function () {
     return view('html/user.UserInput');
 });
-
 
 Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
@@ -109,6 +109,22 @@ Route::get('/StoreInfoDelete',function () {
 Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
     return view('html/shop.StoreInfoDetail');
 })->name('store');
+
+Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
+    return view('html/shop.StoreInfoSettings');
+})->name('store');
+
+Route::get('/UserRegister',function () {
+    return view('html/user./UserRegister');
+});
+
+Route::get('/UserLogin',function () {
+    return view('html/user.UserLogin');
+});
+
+Route::get('/PassReSettingUserCheck',function () {
+    return view('html/user.PassReSettingUserCheck');
+});
 
 
 
