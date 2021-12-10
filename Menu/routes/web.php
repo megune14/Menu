@@ -33,7 +33,8 @@ Route::group(['OrderList'],function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::post('/store', 'OrderListController@store')->name('store');;
+Route::get('/delete', 'OrderListController@delete');
+Route::post('/delete', 'OrderListController@remove');
 });
 
 
@@ -88,18 +89,32 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/shop.PassChangeUserCheck');
+});
+Route::get('/PassChangeUserCheck',function () {
+    return view('html/user.PassChangeUserCheck');
+});
+
 
 Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
+
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
 
-Route::get('/StoreInfoDetail',function () {
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
     return view('html/shop.StoreInfoDetail');
-});
+})->name('store');
+
+
 
 Route::get('/MailChange',function () {
     return view('html/shop.MailChange');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestsFormsTable extends Migration
+class CreateCouponTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateRequestsFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests_forms', function (Blueprint $table) {
+        Schema::create('coupon', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('address');
-            $table->string('email');
-            $table->string('tel');
-            $table->string('leader');
-            $table->timestamps();
+            $table->integer('point');
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
@@ -31,6 +29,6 @@ class CreateRequestsFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requests_forms');
+        Schema::dropIfExists('coupon');
     }
 }
