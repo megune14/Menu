@@ -13,7 +13,7 @@ $apple = \DB::table('order_lists')->get();
 foreach ($apple as $apple) {
 ?>
 
-<form method='POST' action="/store">
+<form  action="/store"　method='post'>
 <input type='hidden' name='id' value="5">
 @csrf
 
