@@ -92,6 +92,9 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('/CouponSetting/add','CouponController@add');
+Route::post('/CouponSetting/add','CouponController@create');
+
 Route::get('/PassChangeUserCheck',function () {
     return view('html/shop.PassChangeUserCheck');
 });
@@ -197,3 +200,5 @@ Route::get('/MailChange',function () {
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
 return view('html/shop.MenuDetail');
+
+
