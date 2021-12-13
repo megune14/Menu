@@ -18,6 +18,13 @@ input[type="checkbox"] {
   display: none;
 }
 
+textarea {
+  resize: none;
+  width:300px;
+  height:200px;
+}
+
+
 /*----------ヘッダー----------*/
 .header {
   position: fixed;
@@ -531,6 +538,80 @@ nav li.has-child ul ul {
 }
 
 /*---------MOBILEMailSendComplete終わり-----------*/
+
+
+/*---------------------Inquiry--------------------*/
+.Inquiry {
+  margin-top: 50px;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px #000000;
+  border-radius: 15px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.inquiryform p {
+  font-size: 18px;
+}
+
+.inquiryform p input {
+  width: 90%;
+  height: 30px;
+  padding: 5px 5%;
+  margin: 0;
+  margin-bottom: 30px;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  font-size: 20px;
+}
+
+.item-input textarea {
+  width: 90%;
+  height: 180px;
+  padding: 5px 5%;
+  margin: 0;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  font-size: 20px;
+}
+
+.formbutton {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.formbutton button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.formbutton input {
+  margin-left: 20px;
+  background-color: #1E90FF;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/*---------------------Inquiry終わり--------------------*/
 
 
 /*----------フッター----------*/
