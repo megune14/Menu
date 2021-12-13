@@ -197,7 +197,8 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-
+Route::get('/RequestForm/add','RequestForm@add');
+Route::post('/RequestForm/add','RequestForm@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
