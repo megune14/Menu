@@ -29,13 +29,13 @@ Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
 });
 
-Route::group(['OrderList'],function () {
+
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/delete', 'OrderListController@delete');
-Route::post('/delete', 'OrderListController@remove');
-});
+Route::get('/OrderList/add','OrderList@add');
+Route::post('/OrderList/add','OrderList@create');
+
 
 
 Route::get('/RequestComplete',function () {
