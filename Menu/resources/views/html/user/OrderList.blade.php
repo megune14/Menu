@@ -5,7 +5,7 @@
 @section('contents')
 
 
-<?php 
+<?php
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
 
@@ -19,21 +19,21 @@ foreach ($apple as $apple) {
 
 <tr class="menu-list">
   <th>
-  
-    
+
+
     <a id="menu1" href="">
       <span class="menu-img">
         <img src="/images/men1.jpg"><!--写真-->
       </span>
   </th>
-      <?php 
+      <?php
        echo '<th>' . $apple->name   ."</th>\n";//商品名の値
        ?>
        <br>
        <?php
        echo '<td>' . $apple->price   ."円</td>\n";//値段
       ?><br>
-    </a>  
+    </a>
 
     <td>
     <div class="form-box">
@@ -57,18 +57,18 @@ foreach ($apple as $apple) {
             <option data-num="10" value="10個">10個</option>
             <option data-num="11" value="11個">11個</option>
             <option data-num="12" value="12個">12個</option>
-            
+
           </select>
         </div></td>
-    <td>  
+    <td>
     <form method='post' action="/delete" id='delete-form'>
-      @csrf  
+      @csrf
     <input type="submit" name="delete_btn" value="削除">
     </form>
     </td><!--削除ボタン-->
    <br>
 
-   <?php 
+   <?php
 
 DB::table('order')->insert([
  'id' => '1',
@@ -87,7 +87,7 @@ DB::table('order')->insert([
 //?>
 
    <?php }?>
-<a id="coupon-Choice" href="">    
+<a id="coupon-Choice" href="">
   <input type="button"  value="クーポンを選択"><!--クーポンボタン-->
 </a><br>
 
@@ -102,7 +102,7 @@ DB::table('order')->insert([
 
 <br>
 
-<a id="order-send" href="">    
+<a id="order-send" href="">
   <input type="submit"  value="注文を送信する"><!--送信ボタン-->
 </a>
 
@@ -148,7 +148,7 @@ $("select,#kaiinnkakaku").change(function() {
     var item_price = $(".buy_itemu_menu").eq(i).data("price");
     var item_select = $(".buy_itemu_menu").eq(i).next("select").find("option:selected").data("num");
 
-    
+
 
     if( item_select > 0 ) {
       hairetu.push(item_price * item_select);
@@ -196,7 +196,7 @@ $("select,#kaiinnkakaku").change(function() {
     var item_price = $(".buy_itemu_menu").eq(i).data("price");
     var item_select = $(".buy_itemu_menu").eq(i).next("select").find("option:selected").data("num");
 
-    
+
 
     if( item_select > 0 ) {
       hairetu.push(item_price * item_select);
@@ -210,7 +210,7 @@ $("select,#kaiinnkakaku").change(function() {
     total += hairetu[j];
   }
 
- 
+
  var totapoint = 0;
      totapoint = total / 100;
 
@@ -238,15 +238,15 @@ $("select,#kaiinnkakaku").change(function() {
 
 <!--データベースやってみた-->
 
-<?php 
+<?php
 
 //\DB::table('order')->insert([
 //  'id' => '2',
-// 
+//
 // 'name' => $apple->name ,
 // 'price' =>  $apple->price,
 // 'quantity' => '5',
-// 
+//
 //
 //]);
 
@@ -258,7 +258,7 @@ $("select,#kaiinnkakaku").change(function() {
 //?>
 
 
-<?php 
+<?php
 
 //order::find(1)->delete();
 //OrderList::find(6)->delete();

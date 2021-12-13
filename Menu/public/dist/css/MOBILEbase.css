@@ -26,7 +26,7 @@ input[type="checkbox"] {
 	height: 75px;
 	width: 100%;
 	list-style-type: none;
-	background-color: #a9ceec; /* ヘッダー背景 */
+	background-color: rgba(30,144,255,0.65); /* ヘッダー背景 */
 }
 
 .header li {
@@ -312,7 +312,7 @@ nav li.has-child ul ul {
 
 .container .row.mb-0 .btn.btn-primary {
   margin-left: 20px;
-  background-color: #0000ff;
+  background-color: #1E90FF;
   height: 45px;
   width: 125px;
   border:1px solid #696969;
@@ -366,7 +366,7 @@ nav li.has-child ul ul {
 .confirm .open {
   margin-left: 14px;
   padding: 6px 32px 6px 32px;
-  background-color: #0000ff;
+  background-color: #1E90FF;
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -532,12 +532,13 @@ nav li.has-child ul ul {
 
 /*---------MOBILEMailSendComplete終わり-----------*/
 
+
 /*----------フッター----------*/
 .footer {
   position: fixed;
 	width: 100%;
 	height: 75px;
-	background-color: #a9ceec;
+	background-color: rgba(30,144,255,0.65);
 	color: black;
 	text-align: center;
 	position: absolute; /* 絶対位置 */

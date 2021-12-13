@@ -24,13 +24,13 @@
         <nav>
           <ul>
             <li><a href="/Category">メニュー表</a></li>
-            <li><a href="#">マイページ</a></li>
-            <li><a href="#">お問い合わせ</a></li>
-            <li class="has-child"><a href="#">　設定</a>
+            <li><a href="/UserInfo">マイページ</a></li>
+            <li><a href="/Inquiry">お問い合わせ</a></li>
+            <li class="has-child"><a href="#">設定</a>
              <ul>
-              <li><a href="#">　メールアドレス変更</a></li>
-              <li><a href="#">　パスワード変更</a></li>
-              <li><a href="#">　アカウント削除</a></li>
+              <li><a href="/MailChange">メールアドレス変更</a></li>
+              <li><a href="/PassChangeUserCheck">パスワード変更</a></li>
+              <li><a href="/UserDelete">アカウント削除</a></li>
              </ul>
             </li>
             @if( Auth::check() )
@@ -64,7 +64,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="../JavaScript/MOBILEbase.js"></script>
+  <script src="{{ asset('dist/js/MOBILEbase.js') }}"></script>
 
 </body>
 
