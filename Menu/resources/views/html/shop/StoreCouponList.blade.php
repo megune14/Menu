@@ -7,6 +7,7 @@
 
     <!--テキストサンプル-->
     @section('contents')
+    
    <?php  $coupon = \DB::table('coupons')->get();
   
   ?>
@@ -14,7 +15,8 @@
         <h1>クーポン一覧</h1>
         <?php foreach ($coupon as $coupon) { ?>
         <div class="couponcard">
-
+        <form action="/StoreCouponList/del"  method='post'  >
+                  @csrf
           <img src="/images/men1.jpg"><br>
 
           <div class="couponcheckbox">
@@ -24,24 +26,26 @@
               <div class="abc">
               <ul>
                   <li><a href="#">変更</a></li>
-                  <li><a href="#">削除</a></li>
+                  
+                  <li><input type="submit"  value="削除"></li>
+                  </form>
                 </ul>
 
               </div>
 
           </div>
-
-          <div class="menuname">
+          <input type="hidden"  name="id" value="{{$coupon->id}}">
+          <div class="menuname" name="name">
             <p>{{$coupon->name}}</p>
           </div>
-
+          <div class="menupoint" name="point">
           <p>必要ポイント数： {{$coupon->point}}pt</p>
-
+          </div>
         </div>
 
         <?php } ?>
         
-
+        </form>
          
 
 

@@ -6,6 +6,7 @@ use App\Models\Coupon;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class CouponController extends Controller
@@ -45,6 +46,33 @@ class CouponController extends Controller
       return redirect('/CouponSetting');
 
     }
+
+    public function delete(Request $request)
+    {
+        $coupon = coupons::find($request->id);
+        return view('StoreCouponList.del',['form => $coupon']);
+
+    }
+    public function remove(Request $request)
+    {
+        coupon::find($request->id)->delete();
+        return redirect('/StoreCouponList');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Display a listing of the resource.
