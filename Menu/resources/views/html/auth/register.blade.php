@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="user_register">
-                <div class="register-header">{{ __('会員登録') }}</div>
+                <div class="register-header">{{ __('顧客情報') }}</div>
                 <!--<div class="register-header">{{ __('Register') }}</div>-->
 
                 <div class="register-body">
@@ -16,6 +16,10 @@
 
 
                         <!--苗字-->
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         <div class="form-group">
                             <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('苗字') }}<br></label>
 
@@ -76,14 +80,6 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email-confirm" class="col-md-4 col-form-label text-md-right">{{ __('確認用メールアドレス') }}</label>
-
-                            <div class="col-md-7">
-                                <input id="email-confirm" type="text" class="form-control" name="email_confirmation" required autocomplete="new-email">
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-7">
@@ -104,10 +100,9 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="button" class="back" onclick=history.back()>戻る</button>
+                            <button type="button" class="back" onclick=history.back()>戻る</button>
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('送信') }}
                                 </button>
