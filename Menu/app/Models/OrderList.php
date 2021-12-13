@@ -8,20 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class OrderList extends Model
 {
     use HasFactory;
-    protected $fillable = ['image', 'name', 'price','quantity','point','total'];
+    protected $guarded = array('id');
 
-    public function store() {
-        OrderList::store([
-            'image' => 'apple',
-            'name' => 'red',
-            'price' => 900,
-            'quantity' => 100,
-            'point' => 100,
-            'total' => 100,
-        ]);
-      }
+    public static $rules = array(
+        'name' => 'required',
+        'price' => 'price',
+        'quantity' => 'quantity',
+    );
 
-     
+    public function getData(){
+        return $this->id. ':'. $this->name. '(' . $this->price .  $this->quantity . ')';
+    }
     
 
     
