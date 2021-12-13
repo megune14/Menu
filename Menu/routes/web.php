@@ -21,6 +21,11 @@ Route::get('/register',function () {
     return view('auth.register');
 });
 
+/* お試し用ルート */
+Route::get('/a',function () {
+    return view('html/shop.PassChangeUserCheck');
+});
+
 Route::get('/UserInput',function () {
     return view('html/user.UserInput');
 });
@@ -134,10 +139,7 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-/* お試し用ルート */
-Route::get('/a',function () {
-    return view('html/shop.StoreCouponList');
-});
+
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
@@ -195,7 +197,8 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-
+Route::get('/RequestForm/add','RequestForm@add');
+Route::post('/RequestForm/add','RequestForm@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');

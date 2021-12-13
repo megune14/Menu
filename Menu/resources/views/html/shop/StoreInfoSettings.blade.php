@@ -11,7 +11,7 @@
     <h2 class="">店舗情報</h2>
     <div class="col-sm-10">
 
-　@foreach ($data as $tdata)
+  @foreach ($data as $tdata)
     <div class="StoreInfoSetting">
       <p>店舗名</br>
       <input type="text" value ="{{ $tdata->StoreName}}"></p>
