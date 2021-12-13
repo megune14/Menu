@@ -51,19 +51,22 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Category');
     });
 
-    Route::get('/Category/Menu?categoryid={categoryid}&shopid={shopid}','MenuController@create',function () {
+    Route::get('/Category/Menu','MenuController@create',function () {
         return view('html/user.Menu');
     })->name('detail');
 
-    Route::get('/Category/{categoryid}/{shopid}/detail','MenuController@create',function () {
-        return view('html/user.Menu');
-    })->name('menudetail');
+
 
 });
+
+
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
 
+Route::get('/MenuCreate','MenuCreateController@create',function () {
+    return view('html/shop.MenuCreate');
+});
 Auth::routes(['verify' => true]);
 
 
@@ -89,9 +92,6 @@ Route::get('/StoreCouponList',function () {
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
-Route::get('CouponSetting/add','CouponController@add');
-Route::post('CouponSetting/add','CouponController@create');
-
 Route::get('/PassChangeUserCheck',function () {
     return view('html/shop.PassChangeUserCheck');
 });
@@ -104,9 +104,36 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
+return view('html/shop.MenuDetail');
+
+Route::get('/StoreInfoDelete',function () {
+    return view('html/shop.StoreInfoDelete');
+});
+
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
+    return view('html/shop.StoreInfoDetail');
+})->name('store');
+
+
+
+Route::get('/MailChange',function () {
+    return view('html/shop.MailChange');
+});
+
+Route::get('/PassChangeCheck',function () {
+    return view('html/user.PassChangeCheck');
+});
+
+Route::get('/MailChange',function () {
+    return view('html/user.MailChange');
+});
+
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.CouponSetting');
+    return view('html/shop.StoreCouponList');
 });
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
@@ -132,6 +159,10 @@ Route::get('/UserRegister',function () {
 
 Route::get('/UserLogin',function () {
     return view('html/user.UserLogin');
+});
+
+Route::get('/MailChange',function () {
+    return view('html/user.MailChange');
 });
 
 Route::get('/PassReSettingUserCheck',function () {

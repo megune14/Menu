@@ -1,7 +1,7 @@
 @extends('html/user.MOBILEbase')
 <?php
 use App\Models\Menu;
-$items = Menu::where('shopid',$shopid)->get();
+$items = Menu::where('StoreID',session()->get('StoreID'))->get();
 
 ?>
 
@@ -16,7 +16,7 @@ $items = Menu::where('shopid',$shopid)->get();
 
     @foreach ($items as $item)
     <div class="card">
-       <a href="{{ route('detail', ['categoryid' => $loop->index + 1 , 'shopid' => $shopid]) }}">
+       <a href="/Category/Menu?categoryid={{$item->Category}}&shopid={{$item->CommodityID}}">
          <img src="/images/test2.png">
          <p>{{ $item->name}}</p>
        </a>
