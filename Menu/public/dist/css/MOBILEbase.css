@@ -26,7 +26,7 @@ input[type="checkbox"] {
 	height: 75px;
 	width: 100%;
 	list-style-type: none;
-	background-color: rgba(30,144,255,0.65); /* ヘッダー背景 */
+	background-color: #1E90FF; /* ヘッダー背景 */
 }
 
 .header li {
@@ -538,7 +538,7 @@ nav li.has-child ul ul {
   position: fixed;
 	width: 100%;
 	height: 75px;
-	background-color: rgba(30,144,255,0.65);
+	background-color: #1E90FF;
 	color: black;
 	text-align: center;
 	position: absolute; /* 絶対位置 */

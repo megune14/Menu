@@ -639,6 +639,59 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------StoreCouponList終わり--------------------*/
 
 
+/*---------------------StoreInfoDelete--------------------*/
+.storeinfodelete {
+  padding-top: 1em;
+}
+
+.storeinfodelete h2 {
+  margin-left: 40px;
+  font-size: 36px;
+}
+
+.storeinfodelete p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.submit-delete { /* 送信ボタンのcss */
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.submit-delete button {
+  height: 45px;
+  width: 140px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 22px;
+  color: #fff;
+}
+
+.submit-delete input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 120px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 22px;
+  color: #fff;
+}
+
+
+
+/*---------------------StoreInfoDelete終わり--------------------*/
+
+
 /*---------------------RequestForm--------------------*/
 .request-form {
   margin-top: 50px;
