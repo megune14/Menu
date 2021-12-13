@@ -7,27 +7,35 @@
 
   <!--テキストサンプル-->
   @section('contents')
+
+  <?php $coupon = \DB::table('order_lists')->get();
+
+?>
     <div class = CouponSetting>
       <h1>クーポン設定</h1>
-
+      <form action="/CouponSetting/add" method = "post">
+      @csrf
       <p>商品</p>
       
       <div class="coupon-set">
-        <select name="coupon-set">
-          <option value="">-</option>
-          <option value="醤油ラーメン">醤油ラーメン</option>
-          <option value="塩ラーメン">塩ラーメン</option>
-        </select>
-      </div>
       
+        <select name="name">
+        
+        <?php foreach ($coupon as $coupon) {  ?>
+          <option  value="{{$coupon->name }}">{{$coupon->name }}</option>
+          <?php  } ?>
+        </select>
+        
+      </div>
+     
 
       <p>必要ポイント</p>
 
       <div class="number-set">
-        <input type="number"  value="100" min="0" max="" step="1">
+        <input type="number" name ="point" value="100" min="0" max="" step="1">
       </div>
 
-	    
+ 
 
       <div class="confirm">
         <button type="button" onclick=history.back()>戻る</button>
@@ -35,6 +43,6 @@
       </div>
 
     </div>
-  
+    </form>
     <!--/テキストサンプル-->
   @endsection
