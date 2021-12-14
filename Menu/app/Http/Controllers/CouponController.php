@@ -47,18 +47,41 @@ class CouponController extends Controller
 
     }
 
-    public function delete(Request $request)
-    {
-        $coupon = coupons::find($request->id);
-        return view('StoreCouponList.del',['form => $coupon']);
-
+   public function delete(Request $request)
+   {
+      // $coupon = Coupon::find($request->id);
+      // return view('StoreCouponList.del',['form => $coupon']);
+/////
+   }
+//強制
+    public function del(Request $request){
+        $param=['id'=> $request->id];
+        $item = DB::select('select * from Coupons where id = :id',$param );
+        return view('StoreCouponList.del',['form' => $item[0]]);
     }
+//
+
+
+
+
+
     public function remove(Request $request)
     {
-        coupon::find($request->id)->delete();
-        return redirect('/StoreCouponList');
-    }
+        //Coupon::find($request->id)->delete();
+        //return redirect('/StoreCouponList');
 
+       //もう一個のほう
+      $param = ['id'=> $request->id];
+      DB::delete('delete * from Coupons where id = :id',$param );
+      return redirect('/StoreCouponList');
+
+
+ }
+//
+   // public function softDeletes($column = 'deleted_at', $precision = 0)
+   // {
+   //     return $this->timestamp($column, $precision)->nullable();
+   // }
 
 
 

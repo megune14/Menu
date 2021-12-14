@@ -94,10 +94,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/UserDelete',function () {
     return view('html/user.UserDelete');
 });
-Route::get('/StoreCouponList',function () {
+Route::get('/StoreCouponList',function () {   
     return view('html/shop.StoreCouponList');
 });
-Route::get('/StoreCouponList/del','CouponController@delete');
+Route::get('/StoreCouponList/del','CouponController@del');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
