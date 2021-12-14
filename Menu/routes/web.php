@@ -23,7 +23,12 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.PassChangeUserCheck');
+    return view('html/user.PassChangeCheck');
+});
+
+/* お試し用ルートその2 */
+Route::get('/b',function () {
+    return view('html/shop.PassReSettingUserCheck');
 });
 
 Route::get('/UserInput',function () {
@@ -90,9 +95,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/UserDelete',function () {
     return view('html/user.UserDelete');
 });
-Route::get('/StoreCouponList',function () {
+Route::get('/StoreCouponList',function () {   
     return view('html/shop.StoreCouponList');
 });
+Route::get('/StoreCouponList/del','CouponController@del');
+Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');

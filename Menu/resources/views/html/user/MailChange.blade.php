@@ -1,31 +1,24 @@
-@extends('html/shop.PCbase')
+@extends('html/user.MOBILEbase')
 
 
 
 
   @section('title','メールアドレス変更画面')
 
-  <!--テキストサンプル-->
-  @section('contents')
-  <div class = "AccountDelete">
+    <!--テキストサンプル-->
+    @section('contents')
+      <div class = "MailChange">
         <h2>メールアドレスの変更</h2>
-        <ul>
-          <p>
-            新しいメールアドレス<br>
-          </p>
-          <p>
+        
+        <p>新しいメールアドレス
           <input type="email" name="email" size="30">
-          </p>
-          <p>
-            パスワード<br>
-          </p>
-          <p>
-          <input type="password" name="password" size="30">
-          </p>
-        </ul>
+        </p>
 
-        <button  type="button"><a href="#">戻る</a></button>
-        <label class="open" for="pop-up">変更</label>
+        <div class="submit">
+          <button  type="button"><a href="#">戻る</a></button>
+          <label class="open" for="pop-up">変更</label>
+        </div>
+        
         <input type="checkbox" id="pop-up">
         <div class="overlay">
           <div class="window">
