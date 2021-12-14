@@ -148,9 +148,6 @@ Route::get('/MailChange',function () {
 
 
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
 
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
@@ -207,8 +204,5 @@ Route::get('/MailChange',function () {
 Route::get('/RequestForm/add','RequestForm@add');
 Route::post('/RequestForm/add','RequestForm@create');
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
 
 
