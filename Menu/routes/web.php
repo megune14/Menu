@@ -97,6 +97,8 @@ Route::get('/UserDelete',function () {
 Route::get('/StoreCouponList',function () {
     return view('html/shop.StoreCouponList');
 });
+Route::get('/StoreCouponList/del','CouponController@delete');
+Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
