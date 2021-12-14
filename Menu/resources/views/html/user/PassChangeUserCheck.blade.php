@@ -1,7 +1,7 @@
 @extends('html/user.MOBILEbase')
 
 
-  @section('title','パスワード変更時本人確認画面')
+  @section('title','パスワード変更時本人確認')
 
     <!--テキストサンプル-->
     @section('contents')
@@ -15,7 +15,7 @@
 
           <div class="submit-check">
             <button type="button" onclick="history.back()">戻る</button>
-            <input type="button" value="次へ">
+            <input type="submit" value="次へ">
           </div>
 
         </form>
