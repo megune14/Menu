@@ -112,9 +112,7 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
+
 
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
@@ -140,23 +138,15 @@ Route::get('/MailChange',function () {
 });
 
 
-
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
-
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
 });
 
 
-Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
-    return view('html/shop.StoreInfoDetail');
-})->name('store');
 
 Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('html/shop.StoreInfoSettings');
-})->name('store');
+})->name('setting');
 
 Route::get('/UserRegister',function () {
     return view('html/user.UserRegister');
@@ -197,11 +187,9 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-Route::get('/RequestForm/add','RequestForm@add');
-Route::post('/RequestForm/add','RequestForm@create');
+Route::get('/Request/add','Request@add');
+Route::post('/Request/add','Request@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
 return view('html/shop.MenuDetail');
-
-
