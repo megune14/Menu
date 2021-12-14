@@ -15,6 +15,7 @@ class AddUserDeleteToCouponsTable extends Migration
     {
         Schema::table('coupons', function (Blueprint $table) {
             //
+            $table->softDeletes();
         });
     }
 
@@ -27,6 +28,7 @@ class AddUserDeleteToCouponsTable extends Migration
     {
         Schema::table('coupons', function (Blueprint $table) {
             //
+           
         });
     }
 }

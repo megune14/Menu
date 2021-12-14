@@ -1,5 +1,7 @@
 @extends('html/shop.PCbase')
+@php
 
+@endphp
 
 
 
@@ -8,8 +10,11 @@
     <!--テキストサンプル-->
     @section('contents')
     
-   <?php  $coupon = \DB::table('coupons')->get();
-  
+   <?php 
+    use App\Models\Coupon;
+    $coupon = Coupon::get();
+  //
+  //Coupon::find(1)->delete();
   ?>
       <div class = CouponList>
         <h1>クーポン一覧</h1>
@@ -47,7 +52,7 @@
         
         </form>
          
-
+        
 
         <a id="coupon-send" href="">
           <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
