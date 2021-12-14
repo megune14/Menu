@@ -10,10 +10,15 @@ class ShopsController extends Controller
     //
 
     public function store() {
-		$md = new Shop();
-		$data = $md->get();
-		return view('html/shop.StoreInfoDetail',['data' => $data]);
-	}
+      $md = new Shop();
+      $data = $md->get();
+      return view('html/shop.StoreInfoDetail',['data' => $data]);
+    }
+    public function setting() {
+      $md = new Shop();
+      $data = $md->get();
+      return view('html/shop.StoreInfoSettings',['data' => $data]);
+    }
 }
 
 /*public function store(Request $request){

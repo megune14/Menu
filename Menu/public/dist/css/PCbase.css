@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-
 }
 
 .pc-dsp { display: block; }
@@ -29,7 +28,6 @@ input[type="checkbox"] {
 }
 
 
-
 /* ---------------------全画面表示＋ヘッダー-------------------- */
 .header {
 	position: fixed;
@@ -43,7 +41,6 @@ input[type="checkbox"] {
 .header li {
 	float: left;
   position: relative;
-
 }
 
 .header li a {
@@ -310,6 +307,7 @@ nav li.has-child ul ul {
 	padding-left: 5px;
 }
 
+
 /*---------------------MenuDetail--------------------*/
 .menudetail {
 margin-top: 45px;
@@ -323,7 +321,6 @@ margin-left: 25px;
   border:1px solid rgba(128,128,128,0.6);;
   border-radius: 2px;
   color: rgba(128,128,128,0.9);
-
 }
 
 .menudetail .pricebutton input {
@@ -688,8 +685,150 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 
-
 /*---------------------StoreInfoDelete終わり--------------------*/
+
+
+/*---------------------PassChangeCheck--------------------*/
+.passchange-check {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+}
+
+.passchange-check h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.passchange-check p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.passchange-check input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  width: 65%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.submit button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.submit button a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit .open {
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.window {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window .text {
+	font-size: 23px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.window button {
+  margin-left: 20px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window input {
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}
+
+
+/*---------------------PassChangeCheck終わり--------------------*/
 
 
 /*---------------------PassChangeUserCheck--------------------*/
@@ -701,13 +840,13 @@ input[type="checkbox"]:checked ~ .abc ul{
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
   border-radius: 15px;
-  width: 50%;
+  width: 60%;
 }
 
 .passchange-usercheck h2 {
   margin-top: 40px;
   margin-left: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-size: 36px;
 }
 
@@ -773,13 +912,13 @@ input[type="checkbox"]:checked ~ .abc ul{
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
   border-radius: 15px;
-  width: 50%;
+  width: 60%;
 }
 
 .PassReSetting h2 {
   margin-top: 40px;
   margin-left: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-size: 36px;
 }
 
@@ -792,7 +931,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .PassReSetting input {
   margin-top: 5px;
   margin-left: 10px;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   padding-left: 5px;
   width: 65%;
   height: 35px;
@@ -832,11 +971,22 @@ input[type="checkbox"]:checked ~ .abc ul{
   color: #fff;
 }
 
+.PassReSetting .submit {
+  margin-top: 0;
+}
+
+.PassReSetting .window input {
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
 
 /*---------------------PassReSettingUserCheck終わり--------------------*/
-
-
-
 
 
 /*---------------------RequestForm--------------------*/

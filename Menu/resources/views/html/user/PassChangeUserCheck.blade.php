@@ -6,9 +6,10 @@
     <!--テキストサンプル-->
     @section('contents')
       <div class="passchange-usercheck">
+        <h2>パスワードの変更</h2>
 
         <form action="#" method="post">
-          <h2>パスワードの変更</h2>
+          
           <p>現在のパスワード</p>
           <input type="password" name="textbox" size="30" maxlength="8">
 

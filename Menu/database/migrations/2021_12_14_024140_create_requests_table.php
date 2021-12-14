@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestsFormsTable extends Migration
+class CreateRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRequestsFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests_forms', function (Blueprint $table) {
+        Schema::create('Request', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('address');
@@ -31,6 +31,6 @@ class CreateRequestsFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requests_forms');
+        Schema::dropIfExists('requests');
     }
 }
