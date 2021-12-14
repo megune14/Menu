@@ -23,7 +23,7 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/user.PassReSettingUserCheck');
+    return view('html/user.PassChangeCheck');
 });
 
 /* お試し用ルートその2 */
