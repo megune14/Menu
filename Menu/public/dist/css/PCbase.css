@@ -713,23 +713,24 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 .passchange-usercheck p {
   margin-left: 10px;
+  margin-bottom: 0;
   font-size: 18px;
 }
 
 .passchange-usercheck input {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 10px;
   margin-bottom: 120px;
   padding-left: 5px;
   width: 65%;
-  height: 30px;
+  height: 35px;
   border:1px solid #ccc;
   border-radius: 5px;
   font-size: 20px;
 }
 
 .submit-check { /* 送信ボタンのcss */
-  display: flex; /* ボタンを中央に */
+  display: flex; /* ボタンを右端に */
   justify-content: flex-end;
   margin-left: auto;
   margin-right: auto;
@@ -761,6 +762,81 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 
 /*---------------------PassChangeUserCheck終わり--------------------*/
+
+
+/*---------------------PassReSettingUserCheck--------------------*/
+.PassReSetting {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 50%;
+}
+
+.PassReSetting h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 80px;
+  font-size: 36px;
+}
+
+.PassReSetting p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.PassReSetting input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 120px;
+  padding-left: 5px;
+  width: 65%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit-reset { /* 送信ボタンのcss */
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-reset button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-reset input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------PassReSettingUserCheck終わり--------------------*/
+
+
+
 
 
 /*---------------------RequestForm--------------------*/

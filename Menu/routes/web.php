@@ -23,11 +23,12 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/user.MailChange');
+    return view('html/user.PassChangeCheck');
 });
 
+/* お試し用ルートその2 */
 Route::get('/b',function () {
-    return view('html/user.Inquiry');
+    return view('html/shop.PassReSettingUserCheck');
 });
 
 Route::get('/UserInput',function () {
