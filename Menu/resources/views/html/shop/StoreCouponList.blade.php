@@ -1,7 +1,4 @@
 @extends('html/shop.PCbase')
-@php
-
-@endphp
 
 
 
@@ -20,8 +17,7 @@
         <h1>クーポン一覧</h1>
         <?php foreach ($coupon as $coupon) { ?>
         <div class="couponcard">
-        <form action="/StoreCouponList/del"  method='post'  >
-                  @csrf
+        
           <img src="/images/men1.jpg"><br>
 
           <div class="couponcheckbox">
@@ -31,7 +27,8 @@
               <div class="abc">
               <ul>
                   <li><a href="#">変更</a></li>
-                  
+                  <form action="/StoreCouponList/del"  method='post'  >
+                  @csrf
                   <li><input type="submit"  value="削除"></li>
                   </form>
                 </ul>

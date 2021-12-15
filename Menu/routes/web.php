@@ -23,12 +23,22 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/user.PassReSetting');
+    return view('html/user.ConfirmRegisterDetail');
 });
 
 /* お試し用ルートその2 */
 Route::get('/b',function () {
-    return view('html/shop.PassReSettingUserCheck');
+    return view('html/user.MailChange');
+});
+
+/* お試し用ルートその2 */
+Route::get('/c',function () {
+    return view('html/user.PassReSetting');
+});
+
+/* お試し用ルートその2 */
+Route::get('/d',function () {
+    return view('html/user.PassReSettingUserCheck');
 });
 
 Route::get('/UserInput',function () {
@@ -43,8 +53,10 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/OrderList/add','OrderList@add');
-Route::post('/OrderList/add','OrderList@create');
+Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@create');
+Route::get('/OrderList/del','OrderListController@delete');
+Route::post('/OrderList/del','OrderListController@remove');
 
 
 
@@ -98,7 +110,7 @@ Route::get('/UserDelete',function () {
 Route::get('/StoreCouponList',function () {   
     return view('html/shop.StoreCouponList');
 });
-Route::get('/StoreCouponList/del','CouponController@del');
+Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
@@ -178,9 +190,6 @@ Route::get('/Category',function () {
     return view('html/user.Category');
 });
 
-Route::get('/',function () {
-    return view('html/user.');
-});
 
 Route::get('/MailChange',function () {
     return view('html/shop.MailChange');
