@@ -77,14 +77,14 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Menu');
     })->name('detail');
 
-
-
 });
 
 
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
+Route::get('/Request/add','RequestController@add');
+Route::post('/Request/add','RequestController@create');
 
 Route::get('/MenuCreate','MenuCreateController@create',function () {
     return view('html/shop.MenuCreate');
@@ -203,8 +203,7 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-Route::get('/Request/add','Request@add');
-Route::post('/Request/add','Request@create');
+
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
