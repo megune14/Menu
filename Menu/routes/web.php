@@ -43,8 +43,10 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/OrderList/add','OrderList@add');
-Route::post('/OrderList/add','OrderList@create');
+Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@create');
+Route::get('/OrderList/del','OrderListController@delete');
+Route::post('/OrderList/del','OrderListController@remove');
 
 
 
@@ -98,7 +100,7 @@ Route::get('/UserDelete',function () {
 Route::get('/StoreCouponList',function () {   
     return view('html/shop.StoreCouponList');
 });
-Route::get('/StoreCouponList/del','CouponController@del');
+Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
