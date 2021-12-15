@@ -16,7 +16,7 @@
 
           <div class="submit-check">
             <button type="button" onclick="history.back()">戻る</button>
-            <input type="submit" value="次へ">
+            <input type="submit"  value="次へ">
           </div>
 
         </form>

@@ -503,6 +503,36 @@ nav li.has-child ul ul {
 /*----------Orderlist終わり----------*/
 
 
+/*----------ConfirmRegisterDetail----------*/
+.ConfirmRegisterDetail { /* 枠線はこれ */
+  margin-top: 50px;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.ConfirmRegisterDetail h2 {
+  margin-top: 5px;
+  margin-bottom: 65px;
+  font-size: 27px;
+}
+
+.ConfirmRegisterDetail .submit-reset {
+  margin-top: 90px;
+}
+
+
+
+
+
+/*----------ConfirmRegisterDetail終わり----------*/
+
+
 /*----------RegisterComplete,ProvisionalRegister,OrderComplete----------*/
 .complete {
   text-align: center;
@@ -651,7 +681,7 @@ nav li.has-child ul ul {
 }
 
 .window button {
-  margin-left: 20px;
+  margin-left: 15px;
   margin-right: 0;
   border:1px solid rgba(128,128,128,0.6);
   border-radius: 0px;
@@ -724,6 +754,17 @@ nav li.has-child ul ul {
 
 .passchange-check .submit {
   margin-top: 50px;
+}
+
+.passchange-check .window input {
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
 }
 
 
@@ -874,6 +915,21 @@ nav li.has-child ul ul {
   border-radius: 5px;
   font-size: 20px;
   color: #fff;
+}
+
+.PassReSetting .submit {
+  margin-top: 50px;
+}
+
+.PassReSetting .submit .window input{
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
 }
 
 /*----------PassReSetting,PassReSettingUserCheck終わり----------*/
