@@ -9,7 +9,8 @@
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
 
-$apple = \DB::table('order_lists')->get();
+   
+$apple = OrderList::get();
 foreach ($apple as $apple) {
 ?>
 
@@ -26,12 +27,14 @@ foreach ($apple as $apple) {
         <img src="/images/men1.jpg"><!--写真-->
       </span>
   </th>
-        <span name = "name">  
+        <span >  
         <th> {{$apple->name}}  </th>
+        <input  name="name" type="hidden" value="{{$apple->name}}">
         </span>
        <br>
        <span name = "price">
        <td> {{$apple->price}}   円</td>
+       <input  name="price" type="hidden" value="{{$apple->price}}">
        </span>
       <br>
     </a>
@@ -62,13 +65,13 @@ foreach ($apple as $apple) {
           </select>
         </div></td>
     <td>
-    <form method='post' action="/delete" id='delete-form'>
+    <!--<form method='post' action="/delete" id='delete-form'>-->
       @csrf
     <input type="submit" name="delete_btn" value="削除">
     
     </td><!--削除ボタン-->
    <br>
-   </form>
+</form>
    <?php
 
 //DB::table('order')->insert([
