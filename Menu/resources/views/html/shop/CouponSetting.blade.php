@@ -7,32 +7,42 @@
 
   <!--テキストサンプル-->
   @section('contents')
-  <?php $coupon = \DB::table('couponmenu')->get();
+
+  <?php $coupon = \DB::table('order_lists')->get();
 
 ?>
-<form action="CouponSetting/add" method="post">
-  @csrf
-  <div class = CouponSetting>
-  <h1>クーポン設定</h1>
-  <p>商品<br>
-     <select name="name">
-     
-       <option value="">-</option>
-       <?php foreach ($coupon as $coupon){ ?>
-       <option value={{$coupon->name}}>{{$coupon->name}}</option>
-       <?php  } ?>
-      </select>
+    <div class = CouponSetting>
+      <h1>クーポン設定</h1>
+      <form action="/CouponSetting/add" method = "post">
+      @csrf
+      <p>商品</p>
       
-      <p>必要ポイント<br>
-	    <input type="number" name='point' value="100" min="0" max="" step="1"></p>
-      <div class="confirm">
-            <button type="button" onclick=history.back()>戻る</button>
-            <input type="submit" value="確定" id="button5">
+      <div class="coupon-set">
+      
+        <select name="name">
+        
+        <?php foreach ($coupon as $coupon) {  ?>
+          <option  value="{{$coupon->name }}">{{$coupon->name }}</option>
+          <?php  } ?>
+        </select>
+        
       </div>
-</form>
-      
+     
 
-  </div>
-  
+      <p>必要ポイント</p>
+
+      <div class="number-set">
+        <input type="number" name ="point" value="100" min="0" max="" step="1">
+      </div>
+
+ 
+
+      <div class="confirm">
+        <button type="button" onclick=history.back()>戻る</button>
+        <input type="submit" value="確定" id="button5">
+      </div>
+
+    </div>
+    </form>
     <!--/テキストサンプル-->
   @endsection

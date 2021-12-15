@@ -2,20 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\coupon;
+use App\Models\Coupon;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 
 class CouponController extends Controller
 {
     public function index(Request $request){
         $items = DB::select ('select * from coupon');
-        return view('');
+        return view('CouponSetting.index',['items => $items']);
 
     }
 
+    public function post(Request $request){
+        $items = DB::select ('select * from coupon');
+        return view('CouponSetting.index',['items => $items']);
+    }
 
 
      public function add(Request $request)
@@ -26,7 +31,14 @@ class CouponController extends Controller
 
     public function create(Request $request)
     {
-      //$this->validate($request,coupon::$rules);
+
+        //$param = [
+        //    'name' => $request->name,
+        //    'point' => $request->point,
+        //];
+        //DB::insert('insert into coupon(name, point) values (:name, :point)',$param);
+        //return redirect('/CouponSetting');
+      //$this->validate($request,Coupon::$rules);
       $coupon = new Coupon;
       $form = $request->all();
       unset($form['token']);
@@ -34,6 +46,56 @@ class CouponController extends Controller
       return redirect('/CouponSetting');
 
     }
+
+   public function delete(Request $request)
+   {
+       $coupon = Coupon::find($request->id);
+       return view('StoreCouponList.del',['form => $coupon']);
+/////
+   }
+//強制
+   // public function del(Request $request){
+   //     $param=['id'=> $request->id];
+   //     $item = DB::select('select * from Coupons where id = :id', $param);
+   //     return view('StoreCouponList.del',['form' => $item[0]]);
+   // }
+//
+
+
+
+
+
+    public function remove(Request $request)
+    {
+        Coupon::find($request->id)->delete();
+        return redirect('/StoreCouponList');
+
+       //もう一個のほう
+     //$param = ['id'=> $request->id];
+      //DB::delete('delete * from Coupons where id = :id', $param);
+     // return redirect('/StoreCouponList');
+
+
+ }
+//
+   public function softDeletes($column = 'deleted_at', $precision = 0)
+   {
+        return $this->timestamp($column, $precision)->nullable();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Display a listing of the resource.

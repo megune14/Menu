@@ -6,18 +6,29 @@
     <!--テキストサンプル-->
     @section('contents')
     <form action="#" method="post"> 
-      <div class="Inquiry">お問い合わせ</div> 
-      <p>症状</br>
-        <input type="text" maxlength="500" size="30">
-      </p>
-      <p>使用OS</br>
-        <input type="text" maxlength="500" size="30">
-      </p>
-      <p>使用OSのバージョン</br>
-        <input type="text" maxlength="500" size="30">
-      </p>
-      <button type="button" onclick=history.back()>閉じる</button>
-      <input type="submit">
+      <div class="Inquiry">お問い合わせ 
+        <div class="inquiryform">
+          <p>お名前
+            <input type="text" maxlength="500" size="30">
+          </p>
+          <p>電話番号
+            <input type="tel" maxlength="500" size="30">
+          </p>
+          <p>メールアドレス
+            <input type="email" maxlength="500" size="30">
+          </p>
+          <p>お問い合わせ内容
+            <div class="item-input">
+                <textarea rows="7" cols="15"></textarea>
+            </div>
+          </p>
+          <div class="formbutton">
+            <button type="button" onclick=history.back()>閉じる</button>
+            <input type="submit">
+          </div>
+        </div>
+
+      </div>
     </form>
     <!--/テキストサンプル-->
 

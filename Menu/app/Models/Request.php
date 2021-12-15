@@ -5,21 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class OrderList extends Model
+class Request extends Model
 {
     use HasFactory;
     protected $guarded = array('id');
 
     public static $rules = array(
-        'name' => 'required',
-        'price' => 'price',
-        'quantity' => 'quantity',
+        'name' => 'name',
+        'address' => 'address',
+        'email' => 'email',
+        'tel' => 'tel',
+        'leader' =>'leader',
     );
-
     public function getData(){
-        return $this->id. ':'. $this->name. '(' . $this->price .  $this->quantity . ')';
+        return $this->id. ':'. $this->name. '(' . $this->address . ')';
     }
-    
-
-    
 }

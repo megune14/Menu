@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrderListsTable extends Migration
+class CreateOrdercompTable extends Migration
 {
     /**
      * Run the migrations.
@@ -22,17 +22,12 @@ class CreateOrderListsTable extends Migration
 
         Schema::create('order_lists', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('name');
-            $table->integer('price');
-            $table->integer('quantity');
+           
             $table->integer('point');
             $table->integer('total');
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
-
-        
     }
 
     /**
@@ -42,6 +37,6 @@ class CreateOrderListsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_lists');
+        Schema::dropIfExists('ordercomp');
     }
 }

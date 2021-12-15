@@ -18,19 +18,40 @@ class MenuSeeder extends Seeder
               [
                 'name'=>'おかし',
                 'price' => 100 ,
-              ],
-              [
-                'name'=>'ラーメン',
-                'price' => 200 ,
+                'StoreID' => 1 ,
+                'CommodityID' => 1 ,
+                'CommodityDetailID' => 1 ,
+                'Category' => 1 ,
+                'StopFlag' => 0 ,
               ],
               [
                 'name'=>'デザート',
-                'price' => 300 ,
+                'price' => 100 ,
+                'StoreID' => 1 ,
+                'CommodityID' => 2 ,
+                'CommodityDetailID' => 2 ,
+                'Category' => 1 ,
+                'StopFlag' => 0 ,
+              ],
+              [
+                'name'=>'ラーメン',
+                'price' => 100 ,
+                'StoreID' => 2 ,
+                'CommodityID' => 3 ,
+                'CommodityDetailID' => 3 ,
+                'Category' => 2 ,
+                'StopFlag' => 0 ,
               ],
               [
                 'name'=>'中華',
-                'price' => 400 ,
+                'price' => 100 ,
+                'StoreID' => 2 ,
+                'CommodityID' => 4 ,
+                'CommodityDetailID' => 4 ,
+                'Category' => 2 ,
+                'StopFlag' => 0 ,
               ],
+
             ]
         );
     }

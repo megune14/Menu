@@ -1,25 +1,28 @@
-@extends('html/user.MOBILEbase')
+@extends('html/shop.PCbase')
 
 
-  @section('title','パスワード再設定')
 
 
-    <!--テキストサンプル ここがアタイの仕事-->
+  @section('title','パスワード変更確認')
+
+  <!--テキストサンプル-->
     @section('contents')
-
-      <div class="PassReSetting">
-        <h2>パスワード再設定</h2>
-
-        <form action="" method="post">
+      <div class = "passchange-check">
+        <h2>パスワード変更画面</h2>
+        
+        <form action="#" method="post">
+          <p>現在のメールアドレス</p>
+          <input type="email" name="email" size="30">
+          
+          <p>現在のパスワード</p>
+          <input type="password" name="password" size="30">
 
           <p>新規パスワード</p>
-          <input type="password" name="textbox" size="30" minlength="8">
+          <input type="password" name="password" size="30">
 
-          <p>新規パスワード(確認用)</p>
-          <input type="password" name="textbox" size="30" minlength="8">
-
+          <p>新規パスワード（確認用）</p>
+          <input type="password" name="password" size="30">
           
-
           <div class="submit">
             <button  type="button"><a href="#">戻る</a></button>
             <label class="open" for="pop-up">変更</label>
@@ -40,11 +43,5 @@
 
       </div>
 
-
-
-
-    @endsection
-
     <!--/テキストサンプル-->
-
-
+  @endsection

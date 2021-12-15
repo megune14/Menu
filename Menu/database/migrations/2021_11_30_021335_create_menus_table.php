@@ -17,6 +17,11 @@ class CreateMenusTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('price');
+            $table->integer('CommodityID');
+            $table->integer('StoreID');
+            $table->integer('CommodityDetailID');
+            $table->integer('Category');
+            $table->integer('StopFlag');
             $table->timestamps();
         });
     }
