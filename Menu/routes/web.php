@@ -146,9 +146,6 @@ Route::get('/Category',function () {
     return view('html/user.Category');
 });
 
-Route::get('/',function () {
-    return view('html/user.');
-});
 
 Route::get('/MailChange',function () {
     return view('html/shop.MailChange');

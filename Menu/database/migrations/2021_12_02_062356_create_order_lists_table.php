@@ -16,7 +16,7 @@ class CreateOrderListsTable extends Migration
 
         Schema::table('order_lists', function (Blueprint $table) {
             // noteカラムにNULLを許容
-            $table->text('image')->nullable()->change();
+            //$table->text('image')->nullable()->change();
         });
 
 
