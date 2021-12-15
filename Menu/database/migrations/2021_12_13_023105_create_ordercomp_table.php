@@ -13,7 +13,14 @@ class CreateOrdercompTable extends Migration
      */
     public function up()
     {
-        Schema::create('ordercomp', function (Blueprint $table) {
+
+        Schema::table('order_lists', function (Blueprint $table) {
+            // noteカラムにNULLを許容
+            //$table->text('image')->nullable()->change();
+        });
+
+
+        Schema::create('order_lists', function (Blueprint $table) {
             $table->id();
            
             $table->integer('point');

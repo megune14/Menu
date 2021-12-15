@@ -17,11 +17,12 @@ class CreateShopsTable extends Migration
             $table->id();
             $table->string('StoreName');
             $table->string('Adress');
-            $table->string('E-mail');
-            $table->string('Telephone number');
+            $table->string('Email');
+            $table->string('TelephoneNumber');
             $table->string('StoreID');
             $table->string('Password');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

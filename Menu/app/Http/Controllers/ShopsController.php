@@ -3,22 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Shop;
+use App\Models\shops;
 
 class ShopsController extends Controller
 {
     //
 
     public function store() {
-      $md = new Shop();
-      $data = $md->get();
-      return view('html/shop.StoreInfoDetail',['data' => $data]);
-    }
+		$md = new shops();
+		$data = $md->get();
+		return view('html/shop.StoreInfoDetail',['data' => $data]);
+	}
     public function setting() {
-      $md = new Shop();
-      $data = $md->get();
-      return view('html/shop.StoreInfoSettings',['data' => $data]);
-    }
+  		$md = new shops();
+  		$data = $md->get();
+  		return view('html/shop.StoreInfoSettings',['data' => $data]);
+	}
 }
 
 /*public function store(Request $request){
