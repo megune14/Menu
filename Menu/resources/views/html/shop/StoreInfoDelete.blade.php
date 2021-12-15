@@ -15,8 +15,11 @@
           
             <p>店舗情報を削除します。</br>
             本当によろしいでしょうか?</p>
-            <button type="button" onclick="history.back()">戻る</button>
-            <input type="submit" value="確定" id="button5">
+            
+            <div class="submit-delete">
+              <button type="button" onclick="history.back()">戻る</button>
+              <input type="submit" value="確定" id="button5">
+            </div>
 
           </div>
 
