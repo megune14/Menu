@@ -332,6 +332,41 @@ nav li.has-child ul ul {
 /*----------UserInput(register)終わり----------*/
 
 
+/*----------verify----------*/
+.justify {
+  padding: 1em 1em;
+  margin: 2em;
+  margin-top: 150px;
+  padding-bottom: 20px;  
+}
+
+.verify-header {
+  font-size: 28px;
+}
+
+.verify-body {
+  margin-top: 30px;
+}
+
+.d-inline {
+  display: flex; /* 中央揃え */
+  justify-content: center; /* 中央揃え */
+  margin-top: 40px;
+}
+
+.d-inline button {
+  height: 50px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: #578af9;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*----------verify終わり----------*/
+
+
 /*----------UserDelete----------*/
 .AccountDelete {
   padding-top: 60px;
@@ -1013,7 +1048,7 @@ nav li.has-child ul ul {
 .footer {
   position: fixed;
 	width: 100%;
-	height: 75px;
+	height: 50px;
 	background-color: #1E90FF;
 	color: black;
 	text-align: center;
