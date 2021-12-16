@@ -12,6 +12,10 @@ class RequestController extends Controller
     }
     public function create(Request $request)
     {
-        $name = $request->input('name');
+      $RequestForm = new RequestForm;
+      $form = $request->all();
+      unset($form['token']);
+      $RequestForm->fill($form)->save();
+      return redirect('/RequestComplete');
     }
 }
