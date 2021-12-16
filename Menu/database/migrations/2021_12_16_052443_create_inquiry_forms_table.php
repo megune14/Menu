@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInquiriesTable extends Migration
+class CreateInquiryFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateInquiriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('inquiries', function (Blueprint $table) {
+        Schema::create('inquiry_forms', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->string("condition");
             $table->string("operating");
             $table->string("version");
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreateInquiriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inquiries');
+        Schema::dropIfExists('inquiry_forms');
     }
 }
