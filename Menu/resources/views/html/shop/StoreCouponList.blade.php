@@ -50,10 +50,11 @@
         </form>
          
         
-
-        <a id="coupon-send" href="">
-          <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
-        </a>
+        <div class="coupon-send">
+          <a id="coupon-send" href="">
+            <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
+          </a>
+        </div>
 
       </div>
 

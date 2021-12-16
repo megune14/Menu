@@ -28,7 +28,7 @@ Route::get('/a',function () {
 
 /* お試し用ルートその2 */
 Route::get('/b',function () {
-    return view('html/shop.PassChangeCheck');
+    return view('html/');
 });
 
 /* お試し用ルートその2 */
