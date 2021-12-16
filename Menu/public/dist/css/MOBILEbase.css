@@ -211,7 +211,7 @@ nav li.has-child ul ul {
 .loginform_btm input {
   width: 90%;
   height: 44px;
-  padding: 5px 5%;
+  padding: 5px 2%;
   margin: 0;
   border:1px solid #ccc;
   border-radius: 10px;
@@ -240,7 +240,7 @@ nav li.has-child ul ul {
 .loginform_text button {
   width: 85%;
   height: 60px;
-  padding: 5px 5%;
+  padding: 5px 2%;
   margin: 0;
   margin-left: 16px;
   border:1px solid #ccc;
@@ -330,6 +330,41 @@ nav li.has-child ul ul {
 
 
 /*----------UserInput(register)終わり----------*/
+
+
+/*----------verify----------*/
+.justify {
+  padding: 1em 1em;
+  margin: 2em;
+  margin-top: 150px;
+  padding-bottom: 20px;  
+}
+
+.verify-header {
+  font-size: 28px;
+}
+
+.verify-body {
+  margin-top: 30px;
+}
+
+.d-inline {
+  display: flex; /* 中央揃え */
+  justify-content: center; /* 中央揃え */
+  margin-top: 40px;
+}
+
+.d-inline button {
+  height: 50px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*----------verify終わり----------*/
 
 
 /*----------UserDelete----------*/
@@ -597,7 +632,7 @@ nav li.has-child ul ul {
 .MailChange p input {
   width: 70%;
   height: 25px;
-  padding: 5px 5%;
+  padding: 5px 2%;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -955,7 +990,7 @@ nav li.has-child ul ul {
 .inquiryform p input {
   width: 90%;
   height: 30px;
-  padding: 5px 5%;
+  padding: 5px 2%;
   margin: 0;
   margin-bottom: 30px;
   border:1px solid #ccc;
@@ -969,7 +1004,7 @@ nav li.has-child ul ul {
 .item-input textarea {
   width: 90%;
   height: 180px;
-  padding: 5px 5%;
+  padding: 5px 2%;
   margin: 0;
   border:1px solid #ccc;
   border-radius: 10px;
@@ -1013,7 +1048,7 @@ nav li.has-child ul ul {
 .footer {
   position: fixed;
 	width: 100%;
-	height: 75px;
+	height: 50px;
 	background-color: #1E90FF;
 	color: black;
 	text-align: center;
