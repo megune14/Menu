@@ -13,13 +13,13 @@ class CreateCouponTable extends Migration
      */
     public function up()
     {
-        Schema::create('coupon', function (Blueprint $table) {
+        Schema::create('coupons', function (Blueprint $table) {
         $table->id();
         $table->string('name');
         $table->integer('point');
         $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP    on update CURRENT_TIMESTAMP'));
          $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->softDeletes();
+           // $table->softDeletes();
         });
     }
 

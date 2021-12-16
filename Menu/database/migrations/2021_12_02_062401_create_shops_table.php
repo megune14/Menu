@@ -17,8 +17,8 @@ class CreateShopsTable extends Migration
             $table->id();
             $table->string('StoreName');
             $table->string('Adress');
-            $table->string('Email');
-            $table->string('TelephoneNumber');
+            //$table->string('Email');
+            //$table->string('TelephoneNumber');
             $table->string('StoreID');
             $table->string('Password');
             $table->timestamps();

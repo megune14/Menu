@@ -9,7 +9,7 @@ class RequestForm extends Model
 {
     use HasFactory;
     protected $guarded = array('id');
-
+    protected $fillable = ['name','address','email','tel','leader'];
     public static $rules = array(
         'name' => 'name',
         'address' => 'address',

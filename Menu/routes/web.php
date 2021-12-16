@@ -60,9 +60,6 @@ Route::post('/OrderList/del','OrderListController@remove');
 
 
 
-Route::get('/RequestComplete',function () {
-    return view('html/shop/RequestComplete');
-});
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
@@ -80,11 +77,20 @@ Route::middleware(['verified'])->group(function(){
 });
 
 
+//Route::post('/RequestForm/RequestComplete',[App\Http\Controllers\RequestController::class, 'create'],function () {
+ //   return view('html/shop.RequestComplete');
+//});
+//Route::get('/Request/add','RequestController@add');
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
-Route::get('/Request/add','RequestController@add');
-Route::post('/Request/add','RequestController@create');
+Route::post('/RequestForm/add','RequestController@create');
+//Route::get('/RequestForm/add','RequestController@create',function () {
+    //});
+Route::get('/RequestComplete',function () {
+    return view('html/shop.RequestComplete');
+});
+
 
 Route::get('/MenuCreate','MenuCreateController@create',function () {
     return view('html/shop.MenuCreate');
@@ -183,9 +189,6 @@ Route::get('/PassReSettingUserCheck',function () {
     return view('html/user.PassReSettingUserCheck');
 });
 
-Route::get('/Inquiry',function () {
-    return view('html/user.Inquiry');
-});
 Route::get('/Category',function () {
     return view('html/user.Category');
 });
@@ -202,6 +205,12 @@ Route::get('/PassChangeCheck',function () {
 Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
+
+Route::get('/Inquiry',function () {
+    return view('html/shop.Inquiry');
+});
+
+Route::post('/Inquiry/add','InquiryController@create');
 
 
 
