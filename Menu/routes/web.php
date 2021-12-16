@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/user.ConfirmRegisterDetail');
+    return view('html/shop.CouponDetail');
 });
 
 /* お試し用ルートその2 */
@@ -164,9 +165,7 @@ Route::get('/MailChange',function () {
 });
 
 
-Route::get('/StoreInfoDelete',function () {
-    return view('html/shop.StoreInfoDelete');
-});
+
 
 
 
@@ -223,3 +222,8 @@ Route::post('/Inquiry/add','InquiryController@create');
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
 return view('html/shop.MenuDetail');
+
+Route::get('/StoreInfoDelete');
+Route::post('/StoreInfoDelete','ShopsController@delete');
+
+//Route::post('/StoreInfoDelete/add','ShopsController@delete');
