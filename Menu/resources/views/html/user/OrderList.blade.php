@@ -25,7 +25,7 @@ foreach ($apple as $apple) {
         <img src="/images/men1.jpg"><!--写真-->
       </span>
   </th>
-        <span >  
+        <span name = "name" >  
         <th> {{$apple->name}}  </th>
         <input  name="name" type="hidden" value="{{$apple->name}}">
         </span>
