@@ -23,12 +23,12 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/user.PassChangeCheck');
+    return view('html/user.ConfirmRegisterDetail');
 });
 
 /* お試し用ルートその2 */
 Route::get('/b',function () {
-    return view('html/');
+    return view('html/user.MailChange');
 });
 
 /* お試し用ルートその2 */
@@ -57,6 +57,7 @@ Route::get('/OrderList/add','OrderListController@add');
 Route::post('/OrderList/add','OrderListController@create');
 Route::get('/OrderList/del','OrderListController@delete');
 Route::post('/OrderList/del','OrderListController@remove');
+
 
 
 
@@ -189,6 +190,12 @@ Route::get('/PassReSettingUserCheck',function () {
     return view('html/user.PassReSettingUserCheck');
 });
 
+Route::get('/Inquiry',function () {
+    return view('html/shop.Inquiry');
+});
+
+
+
 Route::get('/Category',function () {
     return view('html/user.Category');
 });
@@ -211,7 +218,6 @@ Route::get('/Inquiry',function () {
 });
 
 Route::post('/Inquiry/add','InquiryController@create');
-
 
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
