@@ -19,6 +19,10 @@ class ShopsController extends Controller
   		$data = $md->get();
   		return view('html/shop.StoreInfoSettings',['data' => $data]);
 	}
+    public function delete(Request $request) {
+          shops::find(1)->delete();
+          return redirect('auth.login');
+    }
 }
 
 /*public function store(Request $request){
