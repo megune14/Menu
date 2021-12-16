@@ -14,9 +14,7 @@ $apple = OrderList::get();
 foreach ($apple as $apple) {
 ?>
 
-<form action="/OrderList/add"  method='post'  >
 
-@csrf
 
 <tr class="menu-list">
   <th>
@@ -27,7 +25,7 @@ foreach ($apple as $apple) {
         <img src="/images/men1.jpg"><!--写真-->
       </span>
   </th>
-        <span >  
+        <span name = "name" >  
         <th> {{$apple->name}}  </th>
         <input  name="name" type="hidden" value="{{$apple->name}}">
         </span>
@@ -65,13 +63,13 @@ foreach ($apple as $apple) {
           </select>
         </div></td>
     <td>
-    <!--<form method='post' action="/delete" id='delete-form'>-->
+    <form method='post' action="/OrderList/del" id='delete-form'>
       @csrf
     <input type="submit" name="delete_btn" value="削除">
-    
+    </form>
     </td><!--削除ボタン-->
    <br>
-</form>
+    
    <?php
 
 //DB::table('order')->insert([
@@ -105,7 +103,9 @@ foreach ($apple as $apple) {
           <input id="total_price" class="" name="total" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
 
 <br>
+<form action="/OrderList/add"  method='post'  >
 
+@csrf
 <a id="order-send" href="">
   <input type="submit"  value="注文を送信する"><!--送信ボタン-->
 </a>

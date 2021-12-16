@@ -54,14 +54,14 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/OrderList/add','OrderList@add');
-Route::post('/OrderList/add','OrderList@create');
+Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@create');
+Route::get('/OrderList/del','OrderListController@delete');
+Route::post('/OrderList/del','OrderListController@remove');
 
 
 
-Route::get('/RequestComplete',function () {
-    return view('html/shop/RequestComplete');
-});
+
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
@@ -76,14 +76,23 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Menu');
     })->name('detail');
 
-
-
 });
 
 
+//Route::post('/RequestForm/RequestComplete',[App\Http\Controllers\RequestController::class, 'create'],function () {
+ //   return view('html/shop.RequestComplete');
+//});
+//Route::get('/Request/add','RequestController@add');
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
+Route::post('/RequestForm/add','RequestController@create');
+//Route::get('/RequestForm/add','RequestController@create',function () {
+    //});
+Route::get('/RequestComplete',function () {
+    return view('html/shop.RequestComplete');
+});
+
 
 Route::get('/MenuCreate','MenuCreateController@create',function () {
     return view('html/shop.MenuCreate');
@@ -109,7 +118,7 @@ Route::get('/UserDelete',function () {
 Route::get('/StoreCouponList',function () {   
     return view('html/shop.StoreCouponList');
 });
-Route::get('/StoreCouponList/del','CouponController@del');
+Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
@@ -181,8 +190,11 @@ Route::get('/PassReSettingUserCheck',function () {
 });
 
 Route::get('/Inquiry',function () {
-    return view('html/user.Inquiry');
+    return view('html/shop.Inquiry');
 });
+
+
+
 Route::get('/Category',function () {
     return view('html/user.Category');
 });
@@ -200,8 +212,12 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-Route::get('/Request/add','Request@add');
-Route::post('/Request/add','Request@create');
+Route::get('/Inquiry',function () {
+    return view('html/shop.Inquiry');
+});
+
+Route::post('/Inquiry/add','InquiryController@create');
+
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');

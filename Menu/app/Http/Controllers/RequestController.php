@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RequestForm;
+
 
 class RequestController extends Controller
 {
@@ -12,6 +14,14 @@ class RequestController extends Controller
     }
     public function create(Request $request)
     {
-        $name = $request->input('name');
+      $RequestForm = new RequestForm;
+      $RequestForm->fill([
+        'name'=>$request->name,
+        'address'=>$request->address,
+        'email'=>$request->email,
+        'tel'=>$request->tel,
+        'leader'=>$request->leader,
+      ])->save();
+      return redirect('/RequestComplete');
     }
 }

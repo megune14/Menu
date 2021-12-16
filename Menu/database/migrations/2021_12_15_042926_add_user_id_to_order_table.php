@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserDeleteToCouponsTable extends Migration
+class AddUserIdToOrderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class AddUserDeleteToCouponsTable extends Migration
      */
     public function up()
     {
-        Schema::table('coupons', function (Blueprint $table) {
+        Schema::table('order', function (Blueprint $table) {
             //
             $table->softDeletes();
         });
@@ -26,9 +26,8 @@ class AddUserDeleteToCouponsTable extends Migration
      */
     public function down()
     {
-        Schema::table('coupons', function (Blueprint $table) {
+        Schema::table('order', function (Blueprint $table) {
             //
-           
         });
     }
 }
