@@ -53,10 +53,10 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/OrderList/add','OrderListController@add');
-Route::post('/OrderList/add','OrderListController@create');
-Route::get('/OrderList/del','OrderListController@delete');
-Route::post('/OrderList/del','OrderListController@remove');
+//Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@twoButtonsResult');
+//Route::get('/OrderList/del','OrderListController@delete');
+//Route::post('/OrderList/del','OrderListController@remove');
 
 
 
