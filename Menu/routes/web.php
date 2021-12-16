@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+/*use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +23,26 @@ Route::get('/register',function () {
     return view('auth.register');
 });
 
+/* お試し用ルート */
+Route::get('/a',function () {
+    return view('html/shop.CouponDetail');
+});
+
+/* お試し用ルートその2 */
+Route::get('/b',function () {
+    return view('html/user.MailChange');
+});
+
+/* お試し用ルートその2 */
+Route::get('/c',function () {
+    return view('html/user.PassReSetting');
+});
+
+/* お試し用ルートその2 */
+Route::get('/d',function () {
+    return view('html/user.PassReSettingUserCheck');
+});
+
 Route::get('/UserInput',function () {
     return view('html/user.UserInput');
 });
@@ -29,18 +51,18 @@ Route::get('/UserInfo',function () {
     return view('html/user.UserInfo');
 });
 
-Route::group(['OrderList'],function () {
+
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/delete', 'OrderListController@delete');
-Route::post('/delete', 'OrderListController@remove');
-});
+Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@create');
+Route::get('/OrderList/del','OrderListController@delete');
+Route::post('/OrderList/del','OrderListController@remove');
 
 
-Route::get('/RequestComplete',function () {
-    return view('html/shop/RequestComplete');
-});
+
+
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
@@ -55,11 +77,13 @@ Route::middleware(['verified'])->group(function(){
         return view('html/user.Menu');
     })->name('detail');
 
-
-
 });
 
 
+//Route::post('/RequestForm/RequestComplete',[App\Http\Controllers\RequestController::class, 'create'],function () {
+ //   return view('html/shop.RequestComplete');
+//});
+//Route::get('/Request/add','RequestController@add');
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
@@ -91,10 +115,15 @@ Route::get('/UserDelete',function () {
 Route::get('/StoreCouponList',function () {
     return view('html/shop.StoreCouponList');
 });
+Route::get('/StoreCouponList/del','CouponController@delete');
+Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/CouponSetting',function () {
     return view('html/shop.CouponSetting');
 });
+Route::get('/CouponSetting/add','CouponController@add');
+Route::post('/CouponSetting/add','CouponController@create');
+
 Route::get('/PassChangeUserCheck',function () {
     return view('html/shop.PassChangeUserCheck');
 });
@@ -107,9 +136,7 @@ Route::get('/MenuDetail',function () {
     return view('html/shop.MenuDetail');
 });
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
+
 
 Route::get('/StoreInfoDelete',function () {
     return view('html/shop.StoreInfoDelete');
@@ -134,27 +161,14 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
-/* お試し用ルート */
-Route::get('/a',function () {
-    return view('html/shop.StoreCouponList');
-});
-
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
-
-Route::get('/StoreInfoDelete',function () {
-    return view('html/shop.StoreInfoDelete');
-});
 
 
-Route::get('/StoreInfoDetail', 'ShopsController@store',function(){
-    return view('html/shop.StoreInfoDetail');
-})->name('store');
+
+
 
 Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('html/shop.StoreInfoSettings');
-})->name('store');
+})->name('setting');
 
 Route::get('/UserRegister',function () {
     return view('html/user.UserRegister');
@@ -173,15 +187,15 @@ Route::get('/PassReSettingUserCheck',function () {
 });
 
 Route::get('/Inquiry',function () {
-    return view('html/user.Inquiry');
+    return view('html/shop.Inquiry');
 });
+
+
+
 Route::get('/Category',function () {
     return view('html/user.Category');
 });
 
-Route::get('/',function () {
-    return view('html/user.');
-});
 
 Route::get('/MailChange',function () {
     return view('html/shop.MailChange');
@@ -195,8 +209,22 @@ Route::get('/MailChange',function () {
     return view('html/user.MailChange');
 });
 
+Route::get('/Inquiry',function () {
+    return view('html/shop.Inquiry');
+});
+
+Route::post('/Inquiry/add','InquiryController@create');
 
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
+<<<<<<< HEAD
 
+=======
+return view('html/shop.MenuDetail');
+
+Route::get('/StoreInfoDelete');
+Route::post('/StoreInfoDelete','ShopsController@delete');
+
+//Route::post('/StoreInfoDelete/add','ShopsController@delete');
+>>>>>>> f7a55355cd2abf74ef3c77cbd2d5c3357fd8bc66

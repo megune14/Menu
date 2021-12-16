@@ -3,17 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Shop;
+use App\Models\shops;
 
 class ShopsController extends Controller
 {
     //
 
     public function store() {
-		$md = new Shop();
+		$md = new shops();
 		$data = $md->get();
 		return view('html/shop.StoreInfoDetail',['data' => $data]);
 	}
+    public function setting() {
+  		$md = new shops();
+  		$data = $md->get();
+  		return view('html/shop.StoreInfoSettings',['data' => $data]);
+	}
+    public function delete(Request $request) {
+          shops::find(1)->delete();
+          return redirect('auth.login');
+    }
 }
 
 /*public function store(Request $request){

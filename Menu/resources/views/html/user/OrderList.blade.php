@@ -9,13 +9,12 @@
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
 
-$apple = \DB::table('order_lists')->get();
+   
+$apple = OrderList::get();
 foreach ($apple as $apple) {
 ?>
 
-<form method='POST' action="/store">
-<input type='hidden' name='id' value="5">
-@csrf
+
 
 <tr class="menu-list">
   <th>
@@ -26,13 +25,16 @@ foreach ($apple as $apple) {
         <img src="/images/men1.jpg"><!--写真-->
       </span>
   </th>
-      <?php
-       echo '<th>' . $apple->name   ."</th>\n";//商品名の値
-       ?>
+        <span name = "name" >  
+        <th> {{$apple->name}}  </th>
+        <input  name="name" type="hidden" value="{{$apple->name}}">
+        </span>
        <br>
-       <?php
-       echo '<td>' . $apple->price   ."円</td>\n";//値段
-      ?><br>
+       <span name = "price">
+       <td> {{$apple->price}}   円</td>
+       <input  name="price" type="hidden" value="{{$apple->price}}">
+       </span>
+      <br>
     </a>
 
     <td>
@@ -42,7 +44,7 @@ foreach ($apple as $apple) {
       ?>">
             <span class="kakaku"></span>
           </p>
-          <select name="塩ラーメン">
+          <select name="quantity">
             <option data-num={{$apple->quantity}} value={{$apple->quantity}} selected>{{$apple->quantity}}個</option>
             <option data-num="0" value="0個" >0個</option>
             <option data-num="1" value="1個">1個</option>
@@ -61,23 +63,23 @@ foreach ($apple as $apple) {
           </select>
         </div></td>
     <td>
-    <form method='post' action="/delete" id='delete-form'>
+    <form method='post' action="/OrderList/del" id='delete-form'>
       @csrf
     <input type="submit" name="delete_btn" value="削除">
     </form>
     </td><!--削除ボタン-->
    <br>
-
+    
    <?php
 
-DB::table('order')->insert([
- 'id' => '1',
+//DB::table('order')->insert([
+// 'id' => '1',
+//
+//'name' => $apple->name ,
+//'price' =>  $apple->price,
+ ///'quantity' => '5',
 
-'name' => $apple->name ,
-'price' =>  $apple->price,
- 'quantity' => '5',
-
-]);
+//]);
 
 
 
@@ -94,14 +96,16 @@ DB::table('order')->insert([
 
 
 <label class="form-label">付与されるポイント</label>
-          <input id="total_point" class="" name="合計金額" value="0pt" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly><br>
+          <input id="total_point" class="" name="point" value="0pt" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly><br>
 
 
 <label class="form-label">合計金額：</label>
-          <input id="total_price" class="" name="合計金額" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
+          <input id="total_price" class="" name="total" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
 
 <br>
+<form action="/OrderList/add"  method='post'  >
 
+@csrf
 <a id="order-send" href="">
   <input type="submit"  value="注文を送信する"><!--送信ボタン-->
 </a>

@@ -20,6 +20,7 @@ class CreateStoreTablesTable extends Migration
             $table->string('Tell');
             $table->string('Password');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
