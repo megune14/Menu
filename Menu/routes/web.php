@@ -63,8 +63,11 @@ Route::middleware(['verified'])->group(function(){
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
+//Route::get('/MenuCreate',function () {
+//    return view('html/shop.MenuCreate');
+//});
 
-Route::get('/MenuCreate','MenuCreateController@create',function () {
+Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
     return view('html/shop.MenuCreate');
 });
 Auth::routes(['verify' => true]);
@@ -196,4 +199,4 @@ Route::get('/MailChange',function () {
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
-return view('html/shop.MenuDetail');
+

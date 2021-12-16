@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestsFormsTable extends Migration
+class CreateInquiryTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateRequestsFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('requests_forms', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('email');
-            $table->string('tel');
-            $table->string('leader');
+        Schema::create('inquiry_tables', function (Blueprint $table) {
+            $table->unsignedBigInteger('InquiryID')->primary();
+            $table->string('Contents');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateRequestsFormsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requests_forms');
+        Schema::dropIfExists('inquiry_tables');
     }
 }
