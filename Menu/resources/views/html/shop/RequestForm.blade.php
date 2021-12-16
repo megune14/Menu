@@ -6,10 +6,10 @@
     @section('contents')
 
 
-    <form action="RequestController@add" method="post"> 
+    <form action="RequestForm/add" method="post"> 
 
       <div class="request-form">
-
+        @csrf
       
           <h2 class="Request">申請フォーム</h2>
           <p>代表者　　　　

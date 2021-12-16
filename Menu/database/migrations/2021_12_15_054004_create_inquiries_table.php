@@ -15,6 +15,9 @@ class CreateInquiriesTable extends Migration
     {
         Schema::create('inquiries', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("operating");
+            $table->string("version");
             $table->timestamps();
         });
     }
