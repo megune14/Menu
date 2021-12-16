@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
+
+/*use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,10 +55,10 @@ Route::get('/UserInfo',function () {
 Route::get('/OrderList',function () {
     return view('html/user.OrderList');
 });
-Route::get('/OrderList/add','OrderListController@add');
-Route::post('/OrderList/add','OrderListController@create');
-Route::get('/OrderList/del','OrderListController@delete');
-Route::post('/OrderList/del','OrderListController@remove');
+//Route::get('/OrderList/add','OrderListController@add');
+Route::post('/OrderList/add','OrderListController@twoButtonsResult');
+//Route::get('/OrderList/del','OrderListController@delete');
+//Route::post('/OrderList/del','OrderListController@remove');
 
 
 
@@ -86,15 +87,11 @@ Route::middleware(['verified'])->group(function(){
 Route::get('/RequestForm',function () {
     return view('html/shop.RequestForm');
 });
-Route::post('/RequestForm/add','RequestController@create');
-//Route::get('/RequestForm/add','RequestController@create',function () {
-    //});
-Route::get('/RequestComplete',function () {
-    return view('html/shop.RequestComplete');
-});
+//Route::get('/MenuCreate',function () {
+//    return view('html/shop.MenuCreate');
+//});
 
-
-Route::get('/MenuCreate','MenuCreateController@create',function () {
+Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
     return view('html/shop.MenuCreate');
 });
 Auth::routes(['verify' => true]);
@@ -115,7 +112,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/UserDelete',function () {
     return view('html/user.UserDelete');
 });
-Route::get('/StoreCouponList',function () {   
+Route::get('/StoreCouponList',function () {
     return view('html/shop.StoreCouponList');
 });
 Route::get('/StoreCouponList/del','CouponController@delete');
@@ -221,9 +218,13 @@ Route::post('/Inquiry/add','InquiryController@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
+<<<<<<< HEAD
+
+=======
 return view('html/shop.MenuDetail');
 
 Route::get('/StoreInfoDelete');
 Route::post('/StoreInfoDelete','ShopsController@delete');
 
 //Route::post('/StoreInfoDelete/add','ShopsController@delete');
+>>>>>>> f7a55355cd2abf74ef3c77cbd2d5c3357fd8bc66

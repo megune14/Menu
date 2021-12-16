@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInquiriesTable extends Migration
+class CreateInquiryTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateInquiriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('inquiries', function (Blueprint $table) {
-            $table->id();
-            $table->string("name");
-            $table->string("operating");
-            $table->string("version");
+        Schema::create('inquiry_tables', function (Blueprint $table) {
+            $table->unsignedBigInteger('InquiryID')->primary();
+            $table->string('Contents');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateInquiriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inquiries');
+        Schema::dropIfExists('inquiry_tables');
     }
 }

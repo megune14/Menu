@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCouponmenuTable extends Migration
+class CreateCategoryTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateCouponmenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('couponmenu', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::create('category_tables', function (Blueprint $table) {
+            $table->unsignedBigInteger('CategoryID')->primary();
+            $table->unsignedBigInteger('StoreID')->constrained('store_tables');
+            $table->string('Category');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateCouponmenuTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('couponmenu');
+        Schema::dropIfExists('category_tables');
     }
 }

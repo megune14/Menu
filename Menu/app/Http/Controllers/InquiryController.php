@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Inquiry;
+use App\Models\InquiryForm;
 
 class InquiryController extends Controller
 {
     public function create(Request $request)
     {
-        $inquiry = new Inquiry;
-        $inquiry->fill([
+        $inquiryform = new InquiryForm;
+        $inquiryform->fill([
             'condition'=>$request->condition,
             'operating'=>$request->operating,
             'version'=>$request->version,

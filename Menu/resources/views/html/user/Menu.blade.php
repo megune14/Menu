@@ -1,7 +1,7 @@
 @extends('html/user.MOBILEbase')
 <?php
-use App\Models\Menu;
-$items = Menu::where('category',$categoryid)->where('StoreID',$shopid)->get();
+use App\Models\CommodityTable;
+$items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopid)->where('StopFlag',0)->get();
 
 ?>
 
@@ -20,8 +20,8 @@ $items = Menu::where('category',$categoryid)->where('StoreID',$shopid)->get();
 <div class="card">
     <a href="">
      <img src="/images/test2.png">
-     <p>{{ $item->name}}</p>
-     <p>{{ $item->price}}円</p>
+     <p>{{ $item->CommodityName}}</p>
+     <p>{{ $item->Price}}円</p>
     </a>
 </div>
 @endforeach

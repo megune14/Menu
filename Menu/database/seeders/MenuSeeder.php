@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Menu;
+use App\Models\CommodityTable;
 use Illuminate\Database\Seeder;
 
 class MenuSeeder extends Seeder
@@ -13,44 +13,53 @@ class MenuSeeder extends Seeder
      */
     public function run()
     {
-        Menu::insert(
+        CommodityTable::insert(
             [
               [
-                'name'=>'おかし',
-                'price' => 100 ,
-                'StoreID' => 1 ,
                 'CommodityID' => 1 ,
-                'CommodityDetailID' => 1 ,
-                'Category' => 1 ,
-                'StopFlag' => 0 ,
-              ],
-              [
-                'name'=>'デザート',
+                'CommodityName'=>'ショコラ',
+                'CommodityDetail' => 'test' ,
                 'price' => 100 ,
                 'StoreID' => 1 ,
+                'CategoryID' => 2 ,
+                'Allergy' => 'いか' ,
+                'Calory' => 1 ,
+                'StopFlag' => 0 ,
+              ],
+              [
                 'CommodityID' => 2 ,
-                'CommodityDetailID' => 2 ,
-                'Category' => 1 ,
+                'CommodityName'=>'プリン',
+                'CommodityDetail' => 'test' ,
+                'price' => 100 ,
+                'StoreID' => 1 ,
+                'CategoryID' => 2 ,
+                'Allergy' => 'いか' ,
+                'Calory' => 1 ,
                 'StopFlag' => 0 ,
               ],
               [
-                'name'=>'ラーメン',
-                'price' => 100 ,
-                'StoreID' => 2 ,
                 'CommodityID' => 3 ,
-                'CommodityDetailID' => 3 ,
-                'Category' => 2 ,
+                'CommodityName'=>'らーめん',
+                'CommodityDetail' => 'test' ,
+                'price' => 100 ,
+                'StoreID' => 2 ,
+                'CategoryID' => 1 ,
+                'Allergy' => 'いか' ,
+                'Calory' => 1 ,
                 'StopFlag' => 0 ,
               ],
               [
-                'name'=>'中華',
+                'CommodityID' => 4 ,
+                'CommodityName'=>'餃子',
+                'CommodityDetail' => 'test' ,
                 'price' => 100 ,
                 'StoreID' => 2 ,
-                'CommodityID' => 4 ,
-                'CommodityDetailID' => 4 ,
-                'Category' => 2 ,
+                'CategoryID' => 10 ,
+                'Allergy' => 'いか' ,
+                'Calory' => 1 ,
                 'StopFlag' => 0 ,
               ],
+
 
             ]
         );
