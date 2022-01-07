@@ -25,22 +25,12 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.CouponDetail');
+    return view('html/user.VoucherDetail');
 });
 
 /* お試し用ルートその2 */
 Route::get('/b',function () {
     return view('html/user.MailChange');
-});
-
-/* お試し用ルートその2 */
-Route::get('/c',function () {
-    return view('html/user.PassReSetting');
-});
-
-/* お試し用ルートその2 */
-Route::get('/d',function () {
-    return view('html/user.PassReSettingUserCheck');
 });
 
 Route::get('/UserInput',function () {

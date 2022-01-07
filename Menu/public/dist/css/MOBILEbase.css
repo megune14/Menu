@@ -14,9 +14,9 @@ a {
   text-decoration: none;
 }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
   display: none;
-}
+}*/
 
 textarea {
   resize: none;
@@ -238,15 +238,17 @@ nav li.has-child ul ul {
 }
 
 .loginform_text button {
-  width: 85%;
+  width: 100%;
   height: 60px;
   padding: 5px 2%;
-  margin: 0;
-  margin-left: 16px;
+  margin-right: auto;
+  margin-left: auto;
   border:1px solid #ccc;
   border-radius: 10px;
   background-clip: padding-box;
   background-color: rgba(30,144,255,0.65);
+  font-size: 20px;
+  color: #000;
 }
 
 
@@ -562,10 +564,53 @@ nav li.has-child ul ul {
 }
 
 
-
-
-
 /*----------ConfirmRegisterDetail終わり----------*/
+
+
+/*---------------------VoucherDetail--------------------*/
+.VoucherDetail p { /*--データベース追加での変更ヶ所--*/
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #000;
+  font-size: 20px;
+}
+
+.Voucher-text {
+  margin-top: 60px;
+}
+
+.Voucher-text p {
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 24px;
+}
+
+.Voucher-text h2 {
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  padding-right: 20px;  
+}
+
+.submit-VoucherDetail input {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------VoucherDetail終わり--------------------*/
 
 
 /*----------RegisterComplete,ProvisionalRegister,OrderComplete----------*/
@@ -804,8 +849,6 @@ nav li.has-child ul ul {
 
 
 
-
-
 /*---------------------PassChangeCheck終わり--------------------*/
 
 
@@ -968,6 +1011,20 @@ nav li.has-child ul ul {
 }
 
 /*----------PassReSetting,PassReSettingUserCheck終わり----------*/
+
+
+/*---------------------CouponProduct--------------------*/
+
+
+
+
+
+
+
+
+
+
+/*---------------------CouponProduct終わり--------------------*/
 
 
 /*---------------------Inquiry--------------------*/

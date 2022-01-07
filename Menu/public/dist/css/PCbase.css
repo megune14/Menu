@@ -694,6 +694,47 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------CouponDetail終わり--------------------*/
 
 
+/*---------------------StoreInfoDetail--------------------*/
+.StoreInfoDetail {
+  margin-left: 60px;
+}
+
+.StoreInfoDetail h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.submit-InfoDetail {
+  margin-bottom: 60px;
+}
+
+.submit-InfoDetail button {
+  height: 45px;
+  width: 140px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-InfoDetail input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 140px;
+  padding: 6px 32px 6px 32px;
+  background-color: red;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------StoreInfoDetail終わり--------------------*/
+
+
 /*---------------------StoreInfoSettings--------------------*/
 .StoreInfoSetting {
   margin-top: 50px;
@@ -1301,7 +1342,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------フッター--------------------*/
 footer {
 	width: 100%;
-	height: 40px;
+	height: 70px;
 	background-color: #ffc45e; /*#a9ceec*/
 	color: black;
 	text-align: center;
