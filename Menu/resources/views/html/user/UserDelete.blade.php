@@ -7,8 +7,8 @@
     <!--テキストサンプル-->
     @section('contents')
     <div class = "AccountDelete">
-        <h2>アカウント情報を</br>削除しますか？
-</h2>
+        <h2>アカウント情報を</br>
+        削除しますか？</h2>
 
         <div class="confirm">
           <button  type="button"><a href="#">戻る</a></button>
