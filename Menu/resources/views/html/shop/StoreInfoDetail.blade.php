@@ -21,10 +21,10 @@
         @endforeach
 
                   
-                  
-        <button type="button" onclick="location.href='#'">変更</button>
-        <button type="button" onclick="location.href='/StoreInfoDelete'">削除</button>
-
+        <div class="submit-InfoDetail">
+          <button type="button" onclick="location.href='#'">変更</button>
+          <input type="button" onclick="location.href='/StoreInfoDelete' " value="削除">
+        </div>
             
       </form>
 

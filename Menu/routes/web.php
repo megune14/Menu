@@ -25,22 +25,12 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.CouponDetail');
+    return view('html/user.VoucherDetail');
 });
 
 /* お試し用ルートその2 */
 Route::get('/b',function () {
     return view('html/user.MailChange');
-});
-
-/* お試し用ルートその2 */
-Route::get('/c',function () {
-    return view('html/user.PassReSetting');
-});
-
-/* お試し用ルートその2 */
-Route::get('/d',function () {
-    return view('html/user.PassReSettingUserCheck');
 });
 
 Route::get('/UserInput',function () {
@@ -218,13 +208,3 @@ Route::post('/Inquiry/add','InquiryController@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
-<<<<<<< HEAD
-
-=======
-return view('html/shop.MenuDetail');
-
-Route::get('/StoreInfoDelete');
-Route::post('/StoreInfoDelete','ShopsController@delete');
-
-//Route::post('/StoreInfoDelete/add','ShopsController@delete');
->>>>>>> f7a55355cd2abf74ef3c77cbd2d5c3357fd8bc66
