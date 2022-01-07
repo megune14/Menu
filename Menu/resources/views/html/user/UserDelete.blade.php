@@ -7,7 +7,7 @@
     <!--テキストサンプル-->
     @section('contents')
     <div class = "AccountDelete">
-        <h2>アカウントを削除するとポイントやクーポン、利用者情報が削除されます。
+        <h2>アカウント情報を</br>削除しますか？
 </h2>
 
         <div class="confirm">
