@@ -218,13 +218,7 @@ Route::post('/Inquiry/add','InquiryController@create');
 
 Route::get('MenuDetail/edit','MenuDetailController@edit' );
 Route::post('MenuDetail/edit','MenuDetailController@update');
-<<<<<<< HEAD
 
-=======
-return view('html/shop.MenuDetail');
-
-Route::get('/StoreInfoDelete');
-Route::post('/StoreInfoDelete','ShopsController@delete');
-
-//Route::post('/StoreInfoDelete/add','ShopsController@delete');
->>>>>>> f7a55355cd2abf74ef3c77cbd2d5c3357fd8bc66
+Route::get('/CouponList',function () {
+    return view('html/user.CouponList');
+});

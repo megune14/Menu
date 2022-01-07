@@ -8,7 +8,7 @@
 <?php
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
-
+//
    
 $apple = OrderList::get();
 foreach ($apple as $apple) {
@@ -91,7 +91,7 @@ foreach ($apple as $apple) {
 //?>
 
    <?php }?>
-<a id="coupon-Choice" href="" >
+<a id="coupon-Choice" href="/CouponList" >
   <input type="button" name="coupon_btn" value="クーポンを選択"><!--クーポンボタン-->
 </a><br>
 
