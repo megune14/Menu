@@ -5,27 +5,33 @@
 
   @section('title','店舗情報詳細画面')
 
-  <!--テキストサンプル-->
-  @section('contents')
+    <!--テキストサンプル-->
+    @section('contents')
+    <div class="StoreInfoDetail">
 
-  <form action="" method="">
+      <form action="" method="">
         <h2 class="">店舗情報</h2>
-  <div class="col-sm-10">
+        <!--<div class="col-sm-10">-->
 
-  @foreach ($data as $tdata)	
-      <p class="form-control-plaintext">店舗名：{{ $tdata->StoreName}}<br>
-      住所：{{ $tdata->Adress}}<br>
-      電話番号：{{ $tdata->TelephoneNumber}}<br>
-      メールアドレス：{{ $tdata->Email}}</p>
-@endforeach
+        @foreach ($data as $tdata)	
+          <p class="form-control-plaintext">店舗名：{{ $tdata->StoreName}}<br>
+            住所：{{ $tdata->Adress}}<br>
+            電話番号：{{ $tdata->TelephoneNumber}}<br>
+            メールアドレス：{{ $tdata->Email}}</p>
+        @endforeach
 
-        
-        
-<button type="button" onclick="location.href='#'">変更</button>
-<button type="button" onclick="location.href='/StoreInfoDelete'">削除</button>
-
-        
+                  
+        <div class="submit-InfoDetail">
+          <button type="button" onclick="location.href='#'">変更</button>
+          <input type="button" onclick="location.href='/StoreInfoDelete' " value="削除">
+        </div>
+            
       </form>
-    <!--/テキストサンプル-->
+
+    </div>
+
+      
+
+    
     <!--/テキストサンプル-->
   @endsection

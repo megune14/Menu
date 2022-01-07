@@ -8,12 +8,14 @@
 <?php
 use App\Models\OrderList;
 use App\Http\Controllers\OrderListController;
-
+//
    
 $apple = OrderList::get();
 foreach ($apple as $apple) {
 ?>
+<form action="/OrderList/add"  method='post'  >
 
+@csrf
 
 
 <tr class="menu-list">
@@ -45,29 +47,29 @@ foreach ($apple as $apple) {
             <span class="kakaku"></span>
           </p>
           <select name="quantity">
-            <option data-num={{$apple->quantity}} value={{$apple->quantity}} selected>{{$apple->quantity}}個</option>
-            <option data-num="0" value="0個" >0個</option>
-            <option data-num="1" value="1個">1個</option>
-            <option data-num="2" value="2個">2個</option>
-            <option data-num="3" value="3個">3個</option>
-            <option data-num="4" value="4個">4個</option>
-            <option data-num="5" value="5個">5個</option>
-            <option data-num="6" value="6個">6個</option>
-            <option data-num="7" value="7個">7個</option>
-            <option data-num="8" value="8個">8個</option>
-            <option data-num="9" value="9個">9個</option>
-            <option data-num="10" value="10個">10個</option>
-            <option data-num="11" value="11個">11個</option>
-            <option data-num="12" value="12個">12個</option>
+            <option data-num="{{$apple->quantity}}" value="{{$apple->quantity}} "selected>{{$apple->quantity}}個</option>
+            <option data-num="0" value="0" >0個</option>
+            <option data-num="1" value="1">1個</option>
+            <option data-num="2" value="2">2個</option>
+            <option data-num="3" value="3">3個</option>
+            <option data-num="4" value="4">4個</option>
+            <option data-num="5" value="5">5個</option>
+            <option data-num="6" value="6">6個</option>
+            <option data-num="7" value="7">7個</option>
+            <option data-num="8" value="8">8個</option>
+            <option data-num="9" value="9">9個</option>
+            <option data-num="10" value="10">10個</option>
+            <option data-num="11" value="11">11個</option>
+            <option data-num="12" value="12">12個</option>
 
           </select>
         </div></td>
     <td>
-    <form method='post' action="/OrderList/del" id='delete-form'>
+    
       @csrf
     <input type="submit" name="delete_btn" value="削除">
-    </form>
-    </td><!--削除ボタン-->
+   
+    </td>
    <br>
     
    <?php
@@ -89,8 +91,8 @@ foreach ($apple as $apple) {
 //?>
 
    <?php }?>
-<a id="coupon-Choice" href="">
-  <input type="button"  value="クーポンを選択"><!--クーポンボタン-->
+<a id="coupon-Choice" href="/CouponList" >
+  <input type="button" name="coupon_btn" value="クーポンを選択"><!--クーポンボタン-->
 </a><br>
 
 
@@ -103,11 +105,9 @@ foreach ($apple as $apple) {
           <input id="total_price" class="" name="total" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
 
 <br>
-<form action="/OrderList/add"  method='post'  >
 
-@csrf
 <a id="order-send" href="">
-  <input type="submit"  value="注文を送信する"><!--送信ボタン-->
+  <input type="submit"  name="add_btn" value="注文を送信する"><!--送信ボタン-->
 </a>
 
 </form>
