@@ -30,8 +30,8 @@ foreach ($coupon as $coupon) {
 </div>
 <form>
   <div>
-    <p>checkbox
-    <input type="textbox" id="coding" name="interest" value="coding">
+    <p>
+    <input type="checkbox"  name="coupon" value="coding">利用する
 </p>
   </div>
   <?php } ?>
