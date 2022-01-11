@@ -212,3 +212,11 @@ Route::post('MenuDetail/edit','MenuDetailController@update');
 Route::get('/CouponList',function () {
     return view('html/user.CouponList');
 });
+
+Route::get('/FoodDetail',function () {
+    return view('html/user.FoodDetail');
+});
+
+Route::get('/NewProduct',function () {
+    return view('html/shop.NewProduct');
+});

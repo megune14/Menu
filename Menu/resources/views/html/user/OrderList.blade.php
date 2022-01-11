@@ -22,7 +22,7 @@ foreach ($apple as $apple) {
   <th>
 
 
-    <a id="menu1" href="">
+    <a id="menu1" href="FoodDetail{{$apple->id}}">
       <span class="menu-img">
         <img src="/images/men1.jpg"><!--写真-->
       </span>
