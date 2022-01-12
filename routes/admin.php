@@ -84,8 +84,4 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
-    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
-        return view('admin/html.Inquiry');
-    });
-             });
+
