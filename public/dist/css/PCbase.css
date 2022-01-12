@@ -1,0 +1,1499 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.pc-dsp { display: block; }
+.sp-dsp { display: none; }
+
+@media only screen and (max-width : 1000px) { /* 画面の大きさで表示切り替え */
+  .pc-dsp { display: none; }
+	.sp-dsp { display: block; }
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+::placeholder {
+  color:rgba(128,128,128,0.95);
+}
+
+
+/* ---------------------全画面表示＋ヘッダー-------------------- */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	list-style-type: none;
+	background-color: #ffc45e;
+}
+
+.header li {
+	float: left;
+  position: relative;
+}
+
+.header li a {
+	display: block;
+	padding: 22px 32px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+  transition:all .3s;
+}
+
+.header li.active {
+	text-align: center;
+	display: block;
+	padding: 24px 32px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+}
+
+.header li.right {
+	float: right;
+}
+
+.header li.pc-child {
+  float: right;
+}
+
+.header ul {
+  padding-left: 0;
+}
+
+.header ul li { /* 2階層目以降は横並びにしない */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header ul li a {
+  display: block;
+}
+
+.header li.pc-child a:hover,
+.header li.right a:hover { /* ホバー時に色が変わる */
+  color:#fff;
+}
+
+.header li.pc-child::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:15px;
+  top:30px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
+}
+
+.header li.pc-child ul { /* 下の階層を持っているulの指定 */
+  position: absolute; /* 絶対配置で位置を指定 */
+  right:0;
+  top:60px;
+  background:#ffac1e;
+  width: 250px;
+  visibility: hidden; /* はじめは非表示 */
+  opacity: 0;
+  transition: all .3s; /* アニメーション設定 */
+}
+
+.header li.pc-child:hover > ul,
+.header li.pc-child ul li:hover > ul,
+.header li.pc-child:active > ul,
+.header li.pc-child ul li:active > ul { /* hoverしたら表示 */
+  visibility: visible;
+  opacity: 1;
+}
+
+.header li.pc-child ul li a { /* ナビゲーションaタグの形状 */
+  color: #000;
+  border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+.header li.pc-child ul li:last-child a {
+  border-bottom:none;
+}
+
+.header li.pc-child ul li a:hover,
+.header li.pc-child ul li a:active {
+  background:#ff4500;
+}
+
+
+/* ---------------小画面表示＋ヘッダー--------------- */
+.type {
+  position: fixed;
+	top: 0;
+	left: 0;
+	height: 75px;
+	width: 100%;
+	list-style-type: none;
+	background-color: #ffc45e; /* ヘッダー背景 */
+  z-index: 8888;
+}
+
+.type li {
+  text-align: center;
+	font-size: 20px;
+	padding: 24px 20px;
+  z-index: 7777;
+}
+
+
+/* ----------ハンバーガーメニュー---------- */
+.menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+  cursor: pointer;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 3px;
+  background-color: #000; /* 3本線の色 */
+  position: absolute;
+}
+
+.menu-btn span:before {
+  bottom: 12px;
+}
+
+.menu-btn span:after {
+  top: 12px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgb(255, 255, 255,0); /* メニューオープン時は真ん中の線を透明にする */
+}
+
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg); /* ばつ印 */
+}
+
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg); /* ばつ印 */
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+#menu-btn-check:checked ~ nav {
+  top: 8%; /* メニューを画面内へ */
+}
+
+nav {
+  width:100%;
+  position: fixed;
+  left: 60%;
+  top: -100%;
+  z-index: auto;
+  background-color: #ffac1e; /* ハンバーガーメニュー背景色 */
+  transition: all 0.5s;
+}
+
+nav ul {
+  padding: 0 0 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  border-top: solid 1px #ff4500; /* ハンバーガーメニューの線色 */
+  border-bottom: solid 1px #ff4500;
+  border-left: solid 2px #ff4500;
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  width: 64%;
+  left: 0;
+  right:100%;
+  margin: 10px;
+  font-size: 20px;
+  color:#000; /* ハンバーガーメニューの文字色 */
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+nav ul li a:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+  color: #fff; /* ホバー時の文字色 */
+}
+
+nav li.has-child::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:10px;
+  top:243px;
+  width:6px;
+  height:6px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
+}
+
+nav li.has-child ul { /* 下の階層を持っているulの指定 */
+  position: absolute; /* 絶対配置で位置を指定 */
+  left:0;
+  top:62px;
+  z-index: 4;
+  background:#ffc45e; /* 設定開いた時の色 */
+  width:180px;
+  visibility: hidden; /* はじめは非表示 */
+  opacity: 0;
+  transition: all .3s; /* アニメーション設定 */
+}
+
+nav li.has-child:hover > ul,
+nav li.has-child ul li:hover > ul,
+nav li.has-child:active > ul,
+nav li.has-child ul li:active > ul { /* hoverしたら表示 */
+  visibility: visible;
+  opacity: 1;
+}
+
+nav li.has-child ul,
+nav li.has-child ul ul {
+  position: relative;
+  left:0;
+  top:0;
+  width:100%;
+  visibility:visible; /* JSで制御するため一旦表示 */
+  opacity:1; /* JSで制御するため一旦表示 */
+  display: none; /* JSのslidetoggleで表示させるため非表示に */
+  transition:none; /* JSで制御するためCSSのアニメーションを切る */
+}
+
+
+/*---------------------テキスト--------------------*/
+.contents {
+	padding-top: 60px;
+	padding-left: 5px;
+}
+
+
+/*---------------------MenuDetail--------------------*/
+.menudetail {
+margin-top: 45px;
+margin-left: 25px;
+}
+
+.menudetail .namechange input {
+  width: 60%;
+  height: 25px;
+  margin-left: 3px;
+  border:1px solid rgba(128,128,128,0.6);;
+  border-radius: 2px;
+  color: rgba(128,128,128,0.9);
+}
+
+.menudetail .pricebutton input {
+  width: 20%;
+  height: 30px;
+  margin-left: 20px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 5px;
+  color: rgba(128,128,128,0.9);
+  text-align: center;
+  font-size: 20px;
+}
+
+.menudetail-pop {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  width: 65%;
+}
+
+.menudetail-pop button {
+  margin-left: auto;
+  margin-right: auto;
+  height: 45px;
+  width: 100px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+}
+
+.menudetail-pop button a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.menudetail-pop .open {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.window {
+	width: 150vw;
+	max-width: 500px;
+	height: 360px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window .text {
+	font-size: 23px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 120px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.window button {
+  margin-left: 70px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window input {
+  margin-left: 20px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}
+
+
+/*---------------------MenuDetail終わり--------------------*/
+
+
+/*---------------------CouponSetting--------------------*/
+.CouponSetting { /* PCの枠線はこれで */
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 0;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 65%;
+}
+
+.CouponSetting h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.CouponSetting p {
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.coupon-set select {
+  margin-top: 10px;
+  margin-left: 35px;
+  width: 180px;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 7px;
+  color: rgba(128,128,128,0.95);
+  font-size: 20px;
+  background: linear-gradient(to right, #fff 0%, #fff 90%, rgba(30,144,255,0.4) 90%,  rgba(30,144,255,0.4) 100%);
+}
+
+.number-set input {
+  margin-top: 10px;
+  margin-left: 35px;
+  width: 180px;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 30px;
+  color: rgba(128,128,128,0.95);
+  text-align: center;
+  font-size: 20px;
+}
+
+.confirm {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.confirm button { 
+  margin-left: 110px;
+  height: 45px;
+  width: 75px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.confirm button a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.confirm input {
+  width: 140px;
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: #1E90FF;/* 鮮やかな青 */
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------CouponSetting終わり--------------------*/
+
+
+/*---------------------StoreCouponList--------------------*/
+.couponcard {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 35px;
+  margin-right: 60px;
+  width: 220px;
+  height: 290px;
+  border: solid 1px #ccc;
+}
+
+.couponcard img {
+  width: 220px;
+  height: 150px;
+}
+
+.couponcard p {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+.menuname {
+  font-size: 20px;
+}
+
+.couponcheckbox {
+  display: inline-block;
+  margin-left: 15px;
+  height: 6px;
+  width: 305px;
+}
+
+.coupon-btn {
+  display: inline-block;
+  margin-top: 0;
+  margin-left: 185px;
+  margin-bottom: 0;
+  height: 9px;
+}
+
+.coupon-btn span,
+.coupon-btn span:before,
+.coupon-btn span:after {
+  content: '';
+  display: flex;
+  height: 6px;
+  width: 6px;
+  border-radius: 10px;
+  background-color: #000000; /* 3本線の色 */
+  position: absolute;
+}
+
+.coupon-btn span:before {
+  left: 9px;
+}
+
+.coupon-btn span:after {
+  right: 9px;
+}
+
+.couponcard ul {
+  opacity: 0;
+  pointer-events: none;
+  float: right;
+  width: 80px;
+  height:104px;
+  margin: 0;
+  padding:6px 10px 0;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.couponcard ul li {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.couponcard ul li a {
+  width: 100%;
+  font-size: 22px;
+  color:#ffffff;
+  padding: 15px 15px 10px 0;
+}
+
+.couponcard ul li input {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  color:#ffffff;
+  padding: 10px 33px 10px 0;
+  background-color: rgba(0,0,0,0);
+  border:1px solid rgba(0,0,0,0);
+}
+
+input[type="checkbox"]:checked ~ .abc ul{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.coupon-send {
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coupon-send input {
+  margin-top: 30px;
+  padding: 6px 32px 6px 32px;
+  background-color: #1E90FF;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------StoreCouponList終わり--------------------*/
+
+/*---------------------CouponDetail--------------------*/
+.CouponDetail {
+  margin: 0;
+}
+
+.CouponDetail p {
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-top: 70px;
+  font-size: 32px;
+}
+
+.submit-Detail {
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.submit-Detail button {
+  height: 45px;
+  width: 140px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-Detail input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 160px;
+  padding: 6px 32px 6px 32px;
+  background-color: red;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------CouponDetail終わり--------------------*/
+
+
+/*---------------------CouponProduct--------------------*/
+.CouponProduct {
+  margin-top: 60px;
+}
+
+.text-CouponProduct {
+  margin-left: 40px;
+}
+
+.CouponProduct p select {
+  width: 400px;
+  height: 25px;
+  border-radius: 5px;
+  border:1px solid rgba(128,128,128,0.8);
+  margin-left: 50px;
+  font-size: 18px;
+  color: rgba(128,128,128,0.8);
+  
+}
+
+.CouponProduct p input {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  border:1px solid rgba(128,128,128,0.8);
+  padding-left: 50px;
+  font-size: 22px;
+  color: rgba(128,128,128,0.8);
+}
+
+.submit-CouponProduct input {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #1E90FF;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/*---------------------CouponProduct終わり--------------------*/
+
+
+/*---------------------StoreInfoDetail--------------------*/
+.StoreInfoDetail {
+  margin-left: 60px;
+}
+
+.StoreInfoDetail h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.submit-InfoDetail {
+  margin-bottom: 60px;
+}
+
+.submit-InfoDetail button {
+  height: 45px;
+  width: 140px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: #1E90FF;
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-InfoDetail input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 140px;
+  padding: 6px 32px 6px 32px;
+  background-color: red;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------StoreInfoDetail終わり--------------------*/
+
+
+/*---------------------StoreInfoSettings--------------------*/
+.StoreInfoSetting {
+  margin-top: 50px;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.StoreInfoSetting h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.StoreInfoSetting p {
+  font-size: 22px;
+}
+
+.StoreInfoSetting p input {
+  width: 50%;
+  height: 30px;
+  padding: 5px 2%;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  font-size: 20px;
+}
+
+.submit-InfoSetting {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+}
+
+.submit-InfoSetting button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-InfoSetting input {
+  margin-left: 20px;
+  background-color: #1E90FF;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------StoreInfoSettings終わり--------------------*/
+
+
+/*---------------------StoreInfoDelete--------------------*/
+.storeinfodelete {
+  padding-top: 1em;
+}
+
+.storeinfodelete h2 {
+  margin-left: 40px;
+  font-size: 36px;
+}
+
+.storeinfodelete p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.submit-delete { /* 送信ボタンのcss */
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.submit-delete button {
+  height: 45px;
+  width: 140px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 22px;
+  color: #fff;
+}
+
+.submit-delete input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 120px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 22px;
+  color: #fff;
+}
+
+
+/*---------------------StoreInfoDelete終わり--------------------*/
+
+/*---------------------MailChange--------------------*/
+.MailChange { /* 枠線はこれ */
+  margin-top: 50px;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.MailChange h2 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-size: 27px;
+  
+}
+
+.MailChange p {
+  font-size: 18px;
+  margin-top: 30px
+}
+
+.MailChange p input {
+  width: 50%;
+  height: 25px;
+  padding: 5px 2%;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  font-size: 20px;
+}
+
+
+/*---------------------MailChange終わり--------------------*/
+
+
+/*---------------------PassChangeCheck--------------------*/
+.passchange-check {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+}
+
+.passchange-check h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.passchange-check p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.passchange-check input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  width: 65%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.submit button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.submit button a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit .open {
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.window {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window .text {
+	font-size: 23px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.window button {
+  margin-left: 20px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window input {
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}
+
+
+/*---------------------PassChangeCheck終わり--------------------*/
+
+
+/*---------------------PassChangeUserCheck--------------------*/
+.passchange-usercheck {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+}
+
+.passchange-usercheck h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.passchange-usercheck p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.passchange-usercheck input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 120px;
+  padding-left: 5px;
+  width: 65%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit-check { /* 送信ボタンのcss */
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-check button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-check input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------PassChangeUserCheck終わり--------------------*/
+
+
+/*---------------------PassReSettingUserCheck--------------------*/
+.PassReSetting {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+}
+
+.PassReSetting h2 {
+  margin-top: 40px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+  font-size: 36px;
+}
+
+.PassReSetting p {
+  margin-left: 10px;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.PassReSetting input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 80px;
+  padding-left: 5px;
+  width: 65%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit-reset { /* 送信ボタンのcss */
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-reset button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-reset input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 20px;
+  margin-bottom: 0;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.PassReSetting .submit {
+  margin-top: 0;
+}
+
+.PassReSetting .window input {
+  margin-left: 10px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+/*---------------------PassReSettingUserCheck終わり--------------------*/
+
+
+/*---------------------RequestForm--------------------*/
+.request-form {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 0;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+}
+
+.request-form h2 {
+  font-size: 30px;
+}
+
+.request-form p {
+  font-size: 22px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.request-form input {
+  margin-top: 10px;
+  margin-left: 35px;
+  padding-left: 5px;
+  width: 200px;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit-request { /* 送信ボタンのcss */
+  display: flex; /* ボタンを中央に */
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-request button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  font-size: 20px;
+  color: #fff;
+}
+
+.submit-request input {
+  height: 100%;
+  width: 140px;
+  margin-top: 0;
+  margin-left: 30px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*---------------------RequestForm終わり--------------------*/
+
+
+/*---------------------RequestComplete--------------------*/
+.complete {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 400px;
+  margin-bottom: 300px;
+}
+
+
+/*---------------------RequestComplete終わり--------------------*/
+
+
+/*---------------------Inquiry--------------------*/
+.Inquiry {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 0;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 60%;
+  font-size: 24px;
+}
+
+.inquiryform p {
+  font-size: 18px;
+}
+
+.inquiryform p input {
+  width: 90%;
+  height: 40px;
+  padding: 5px 2%;
+  margin: 0;
+  border:1px solid #ccc;
+  border-radius: 10px;
+  background-clip: padding-box;
+  font-family:'HelveticaNeue','Arial', sans-serif;
+  letter-spacing: .8px;
+  margin-bottom: 30px;
+}
+
+.formbutton {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.formbutton button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+}
+
+.formbutton input {
+  margin-left: 20px;
+  background-color: #1E90FF;
+  height: 45px;
+  width: 125px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/*---------------------Inquiry終わり--------------------*/
+
+
+/*---------------------フッター--------------------*/
+footer {
+	width: 100%;
+	height: 70px;
+	background-color: #ffc45e; /*#a9ceec*/
+	color: black;
+	text-align: center;
+}
+
+.footer li {
+display: inline;
+}
+
+
+
+
+/*ポップアップ*/
+/*.menudetail/*変更 button {
+  margin-left: 110px;
+  height: 45px;
+  width: 75px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+}
+
+.menudetail/*変更 button a {
+  font-size: 20px;
+  color: #fff;
+}
+
+.menudetail/*変更 .open {
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: #1E90FF;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に
+}
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window .text {
+	font-size: 23px;
+  margin-left: 65px;
+  margin-right: 65px;
+  margin-top: 120px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.window button {
+  margin-left: 70px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window input {
+  margin-left: 20px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
+}*/
+
+/*ポップアップ終わり*/
