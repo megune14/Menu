@@ -28,3 +28,10 @@ Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
         return view('admin/html.Inquiry');
     });
              });
+Route::get('/UserDelete',function () {
+    return view('web/html.UserDelete');
+});
+
+Route::get('/VoucherDetail',function () {
+    return view('web/html.VoucherDetail');
+});
