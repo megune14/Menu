@@ -25,7 +25,7 @@ Route::get('/register',function () {
 
 /* お試し用ルート */
 Route::get('/a',function () {
-    return view('html/shop.CouponProduct');
+    return view('html/shop.StoreCouponList');
 });
 
 /* お試し用ルートその2 */
