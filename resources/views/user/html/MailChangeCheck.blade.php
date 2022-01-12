@@ -1,4 +1,4 @@
-@extends('html/shop.PCbase')
+@extends('user/html.MOBILEbase')
 
 
 

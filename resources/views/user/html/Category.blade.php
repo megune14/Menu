@@ -1,4 +1,4 @@
-@extends('html/user.MOBILEbase')
+@extends('user/html.MOBILEbase')
 <?php
 use App\Models\CategoryTable;
 $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();

@@ -23,19 +23,15 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/OrderList',function () {
-    return view('html/user.OrderList');
-});
-Route::post('/OrderList/add','OrderListController@twoButtonsResult');
-
-Route::get('/UserInfo',function () {
-    return view('html/user.UserInfo');
-});
-
-Route::get('/UserInput',function () {
-    return view('html/user.UserInput');
+Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
+    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
+        return view('admin/html.Inquiry');
+    });
+             });
+Route::get('/UserDelete',function () {
+    return view('html/user.UserDelete');
 });
 
-Route::get('/FoodDetail',function () {
-    return view('html/user.FoodDetail');
+Route::get('/VoucherDetail',function () {
+    return view('html/user.VoucherDetail');
 });
