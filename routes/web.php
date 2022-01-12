@@ -33,5 +33,5 @@ Route::get('/UserDelete',function () {
 });
 
 Route::get('/VoucherDetail',function () {
-    return view('html/uesr.VoucherDetail');
+    return view('html/user.VoucherDetail');
 });

@@ -89,7 +89,11 @@ Route::get('/PassChangeUserCheck',function () {
 });
 
 Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
-    return view('admin.html.StoreInfoSettings');
+    return view('admin/html.StoreInfoSettings');
 })->name('setting');
+
+Route::get('/RequestForm',function () {
+    return view('admin/html.RequestForm');
+});
 
 
