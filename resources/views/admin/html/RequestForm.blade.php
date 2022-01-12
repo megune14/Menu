@@ -1,4 +1,4 @@
-@extends('admin/html.MOBILEbase')
+@extends('user/html.MOBILEbase')
 
 
   @section('title','申請フォーム画面')

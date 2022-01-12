@@ -1,4 +1,4 @@
-@extends('admin/html.MOBILEbase')
+@extends('user/html.MOBILEbase')
 
 
   @section('title','メール送信完了')

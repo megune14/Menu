@@ -1,4 +1,4 @@
-@extends('admin/html.MOBILEbase')
+@extends('user/html.MOBILEbase')
 
 
   @section('title','パスワード再設定時本人確認')
