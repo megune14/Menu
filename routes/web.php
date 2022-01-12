@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('user.welcome');
+    return view('user.login');
 });
 
 Route::get('/dashboard', function () {
@@ -23,8 +23,3 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
-    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
-        return view('admin/html.Inquiry');
-    });
-             });

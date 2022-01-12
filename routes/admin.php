@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\InquiryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +23,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.welcome');
+    return view('admin/auth.login');
 });
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin'])->name('dashboard');
+
+//完成したページのルートはグループに含める
+Route::group(['middleware' => 'auth:admin'], function () {
+    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
+        return view('admin/html.Inquiry');
+    });
+             });
 
 
 
