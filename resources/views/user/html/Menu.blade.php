@@ -1,4 +1,4 @@
-@extends('html/user.MOBILEbase')
+@extends('user/html.MOBILEbase')
 <?php
 use App\Models\CommodityTable;
 $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopid)->where('StopFlag',0)->get();
