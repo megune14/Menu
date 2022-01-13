@@ -23,21 +23,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
-    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
-        return view('admin/html.Inquiry');
-    });
-             });
-Route::get('/UserDelete',function () {
-    return view('user/html.UserDelete');
-});
-
-Route::get('/VoucherDetail',function () {
-    return view('html/user.VoucherDetail');
-});
-
-Route::get('/OrderList',function () {
-    return view('html/user.OrderList');
-});
-Route::post('/OrderList/add','OrderListController@twoButtonsResult');
 
