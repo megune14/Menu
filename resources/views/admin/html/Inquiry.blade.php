@@ -1,13 +1,12 @@
 @extends('admin/html.PCbase')
 
 
-  
   @section('title','お問い合わせ画面')
     <!--テキストサンプル-->
     @section('contents')
-    <form action="Inquiry/add" method="post"> 
+    <form action="Inquiry/add" method="post">
     @csrf
-      <div class="Inquiry">お問い合わせ 
+      <div class="Inquiry">お問い合わせ
         <div class="inquiryform">
           <p>症状<br>
             <input type="text" name="condition" maxlength="500" size="30">
