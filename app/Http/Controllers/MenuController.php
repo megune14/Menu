@@ -11,6 +11,6 @@ class MenuController extends Controller
     public function create(Request $request) {
         $categoryid = $request->categoryid;
         $shopid = $request->shopid;
-        return view('html/user.Menu', ['categoryid' => $categoryid], ['shopid' => $shopid]);
+        return view('user/html.Menu', ['categoryid' => $categoryid], ['shopid' => $shopid]);
     }
 }

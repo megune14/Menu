@@ -18,6 +18,21 @@
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
+            <div>
+                <x-label for="firstname" :value="__('firstname')" />
+
+                <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus />
+            </div>
+            <div>
+                <x-label for="lastname" :value="__('lastname')" />
+
+                <x-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus />
+            </div>
+            <div>
+                <x-label for="birthday " :value="__('birthday ')" />
+
+                <x-input id="birthday " class="block mt-1 w-full" type="date" name="birthday " :value="old('birthday ')" required autofocus />
+            </div>
 
             <!-- Email Address -->
             <div class="mt-4">
