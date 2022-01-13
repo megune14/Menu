@@ -1,7 +1,6 @@
 @extends('admin/html.PCbase')
 
 
-
   @section('title','お問い合わせ画面')
     <!--テキストサンプル-->
     @section('contents')

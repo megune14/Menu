@@ -92,12 +92,12 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::get('/PassChangeUserCheck',function () {
-    return view('admin/html.PassChangeUserCheck');
-});
-
-Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
-    return view('admin.html.StoreInfoSettings');
-})->name('setting');
+Route::get('/PointSetting', function () {
+        return view('admin/html.PointSetting');
+        });//->middleware('auth:admin');
+        
+Route::get('/StoreInfoDelete', function () {
+        return view('admin/html.StoreInfoDelete');
+        });//->middleware('auth:admin');
 
 
