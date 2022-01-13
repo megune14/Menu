@@ -37,7 +37,7 @@ Route::get('/VoucherDetail',function () {
 });
 
 Route::get('/OrderList',function () {
-    return view('html/user.OrderList');
+    return view('user/html.OrderList');
 });
 Route::post('/OrderList/add','OrderListController@twoButtonsResult');
 

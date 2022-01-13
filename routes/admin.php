@@ -93,12 +93,14 @@ Route::post('/StoreCouponList/del','CouponController@remove');
 Route::get('/MenuDetail',function () {
     return view('admin/html.MenuDetail');
 });
+Route::get('MenuDetail/edit','MenuDetailController@edit' );
+Route::post('MenuDetail/edit','MenuDetailController@update');
 
 Route::get('/CouponSetting',function () {
     return view('admin/html.CouponSetting');
 });
-Route::get('/CouponSetting/add','CouponController@add');
-Route::post('/CouponSetting/add','CouponController@create');
+Route::get('CouponSetting/edit','CouponController@edit' );
+Route::post('CouponSetting/edit','CouponController@update');
 
 Route::get('/NewProduct',function () {
     return view('admin/html.NewProduct');
@@ -111,5 +113,8 @@ Route::get('/StoreCouponList',function () {
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
-
+Route::get('/CouponProduct',function () {
+    return view('admin/html.CouponProduct');
+});
+Route::post('/CouponProduct/add','CouponController@create');
 
