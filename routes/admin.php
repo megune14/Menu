@@ -111,5 +111,7 @@ Route::get('/StoreCouponList',function () {
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
-
+Route::get('/RequestForm',function () {
+    return view('admin/html.RequestForm');
+});
 
