@@ -35,3 +35,9 @@ Route::get('/UserDelete',function () {
 Route::get('/VoucherDetail',function () {
     return view('user/html.VoucherDetail');
 });
+
+Route::get('/OrderList',function () {
+    return view('html/user.OrderList');
+});
+Route::post('/OrderList/add','OrderListController@twoButtonsResult');
+
