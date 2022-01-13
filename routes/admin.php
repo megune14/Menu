@@ -92,12 +92,34 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::get('/PointSetting', function () {
-        return view('admin/html.PointSetting');
-        });//->middleware('auth:admin');
-        
-Route::get('/StoreInfoDelete', function () {
-        return view('admin/html.StoreInfoDelete');
-        });//->middleware('auth:admin');
+Route::get('/StoreCouponList',function () {
+    return view('admin/html.StoreCouponList');
+});
+Route::get('/StoreCouponList/del','CouponController@delete');
+Route::post('/StoreCouponList/del','CouponController@remove');
+    
+Route::get('/MenuDetail',function () {
+    return view('admin/html.MenuDetail');
+});
 
+Route::get('/CouponSetting',function () {
+    return view('admin/html.CouponSetting');
+});
+Route::get('/CouponSetting/add','CouponController@add');
+Route::post('/CouponSetting/add','CouponController@create');
+
+Route::get('/NewProduct',function () {
+    return view('admin/html.NewProduct');
+});
+Route::post('/NewProduct/add','MenuFoodController@create');
+
+Route::get('/StoreCouponList',function () {
+    return view('admin/html.StoreCouponList');
+});
+Route::get('/StoreCouponList/del','CouponController@delete');
+Route::post('/StoreCouponList/del','CouponController@remove');
+
+Route::get('/RequestForm',function () {
+    return view('admin/html.RequestForm');
+});
 
