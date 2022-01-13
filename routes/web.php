@@ -29,9 +29,9 @@ Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
     });
              });
 Route::get('/UserDelete',function () {
-    return view('html/user.UserDelete');
+    return view('user/html.UserDelete');
 });
 
 Route::get('/VoucherDetail',function () {
-    return view('html/user.VoucherDetail');
+    return view('user/html.VoucherDetail');
 });
