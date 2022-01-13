@@ -84,4 +84,12 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
+Route::get('/PointSetting', function () {
+        return view('admin/html.PointSetting');
+        });//->middleware('auth:admin');
+        
+Route::get('/StoreInfoDelete', function () {
+        return view('admin/html.StoreInfoDelete');
+        });//->middleware('auth:admin');
+
 

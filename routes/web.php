@@ -23,8 +23,5 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::group(['prefix' => 'admin','middleware' => 'auth:admin'], function () {
-    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
-        return view('admin/html.Inquiry');
-    });
-             });
+
+
