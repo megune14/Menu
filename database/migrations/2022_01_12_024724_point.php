@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoryTablesTable extends Migration
+class Point extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateCategoryTablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_tables', function (Blueprint $table) {
-            $table->unsignedBigInteger('CategoryID')->primary();
-            $table->unsignedBigInteger('StoreID')->constrained('admins');
-            $table->string('Category');
+        Schema::create('point', function (Blueprint $table) {
+            $table->id();
+            $table->integer('point');
             $table->timestamps();
+            
         });
     }
 
@@ -28,6 +28,6 @@ class CreateCategoryTablesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_tables');
+        Schema::dropIfExists('point');
     }
 }

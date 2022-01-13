@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\Auth\NewPasswordController;
 use App\Http\Controllers\Admin\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Admin\Auth\RegisteredUserController;
 use App\Http\Controllers\Admin\Auth\VerifyEmailController;
+use App\Http\Controllers\InquiryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +23,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.welcome');
+    return view('admin/auth.login');
 });
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth:admin'])->name('dashboard');
+
+//完成したページのルートはグループに含める
+Route::group(['middleware' => 'auth:admin'], function () {
+    Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
+        return view('admin/html.Inquiry');
+    });
+             });
 
 
 
@@ -84,37 +92,12 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::get('/StoreCouponList',function () {
-    return view('admin/html.StoreCouponList');
-});
-Route::get('/StoreCouponList/del','CouponController@delete');
-Route::post('/StoreCouponList/del','CouponController@remove');
-    
-Route::get('/MenuDetail',function () {
-    return view('admin/html.MenuDetail');
-});
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
+Route::get('/PointSetting', function () {
+        return view('admin/html.PointSetting');
+        });//->middleware('auth:admin');
+        
+Route::get('/StoreInfoDelete', function () {
+        return view('admin/html.StoreInfoDelete');
+        });//->middleware('auth:admin');
 
-Route::get('/CouponSetting',function () {
-    return view('admin/html.CouponSetting');
-});
-Route::get('CouponSetting/edit','CouponController@edit' );
-Route::post('CouponSetting/edit','CouponController@update');
-
-Route::get('/NewProduct',function () {
-    return view('admin/html.NewProduct');
-});
-Route::post('/NewProduct/add','MenuFoodController@create');
-
-Route::get('/StoreCouponList',function () {
-    return view('admin/html.StoreCouponList');
-});
-Route::get('/StoreCouponList/del','CouponController@delete');
-Route::post('/StoreCouponList/del','CouponController@remove');
-
-Route::get('/CouponProduct',function () {
-    return view('admin/html.CouponProduct');
-});
-Route::post('/CouponProduct/add','CouponController@create');
 
