@@ -304,7 +304,7 @@ nav li.has-child ul ul {
 /*---------------------テキスト--------------------*/
 .contents {
 	padding-top: 60px;
-	padding-left: 5px;
+	
 }
 
 
@@ -376,6 +376,81 @@ nav li.has-child ul ul {
 
 
 /*----------ShopLogin終わり----------*/
+
+
+/*----------ShopInput(register)----------*/
+.container {
+  margin-top: 50px;
+  margin-left: auto; /* 中央揃え */
+  margin-right: auto; /* 中央揃え */
+  margin-bottom: 0;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 65%;
+}
+
+.container h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+}
+
+
+
+.container .mr-4 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.container .mr-4 label {
+  font-size: 20px;
+}
+
+.container .mr-4 input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 30px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(204,204,204,0.15);
+}
+
+.container .mr-4 a {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.container .ml-4 {
+  
+}
+
+.container .mr-4 button {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: #1E90FF;
+  height: 50px;
+  width: 270px;
+  border:1px solid #696969;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+/*----------UserInput(register)終わり----------*/
 
 
 /*---------------------MenuDetail--------------------*/
