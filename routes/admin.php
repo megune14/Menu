@@ -127,9 +127,10 @@ Route::get('/RequestForm',function () {
     return view('admin/html.RequestForm');
 });
 
-Route::get('/Inquiry',function () {
-    return view('admin/html.Inquiry');
+Route::get('/CouponProduct',function () {
+    return view('admin/html.CouponProduct');
 });
+Route::post('/CouponProduct/add','CouponController@create');
 
 Route::post('/Inquiry/add','InquiryController@create');
 

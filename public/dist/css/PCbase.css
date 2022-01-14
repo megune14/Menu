@@ -310,13 +310,24 @@ nav li.has-child ul ul {
 
 /*----------ShopLogin----------*/
 .loginform {
-  width: 40%;
+  width: 55%;
   height: 40%;
   padding-top: 60px;
   padding: 1em 1em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+}
+
+.mb-4 {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.font-medium.text-red-600 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .mt-4 {
@@ -431,9 +442,6 @@ nav li.has-child ul ul {
   font-size: 20px;
 }
 
-.container .ml-4 {
-  
-}
 
 .container .mr-4 button {
   display: block;

@@ -16,6 +16,7 @@ class AddUserIdToCouponsTable extends Migration
         Schema::table('coupons', function (Blueprint $table) {
             //
             $table->string('img');
+            $table->softDeletes();
         });
     }
 

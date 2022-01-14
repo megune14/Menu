@@ -13,4 +13,8 @@ class MenuController extends Controller
         $shopid = session()->get('StoreID');
         return view('user/html.Menu', ['categoryid' => $categoryid], ['shopid' => $shopid]);
     }
+
+    public function detail(Request $request){
+        return view('user/html.MenuDetail',['commodityid'=>$request->detail]);
+    }
 }

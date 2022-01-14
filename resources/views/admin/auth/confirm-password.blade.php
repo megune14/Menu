@@ -28,7 +28,7 @@
 
             <div class="flex justify-end mt-4">
                 <x-button>
-                    {{ __('Confirm') }}
+                    {{ __('確認') }}
                 </x-button>
             </div>
         </form>

@@ -8,7 +8,7 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
 
 
 
-  @section('title','メール送信完了')
+  @section('title','商品')
 
 
 
@@ -18,12 +18,13 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
     </div>
 @foreach ($items as $item)
 <div class="card">
-    <a href="">
-     <img src="/images/test2.png">
+    <a href="/Category/Menu/{{$item->CommodityID}}">
+     <img src="/images/men1.jpg">
      <p>{{ $item->CommodityName}}</p>
      <p>{{ $item->Price}}円</p>
     </a>
 </div>
+<form action=""></form>
 @endforeach
 
   @endsection
