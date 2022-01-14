@@ -12,8 +12,8 @@
   <div class = CouponProduct>
     
 
-  <h1>画像を追加したいんだけどどうすればいい？</h1>
-
+  
+  
   <p>商品名：
 	<input type="text" name="name"></p>
 
