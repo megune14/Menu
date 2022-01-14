@@ -13,6 +13,6 @@ class MenuCreateController extends Controller
         }else{
             $items = CommodityTable::where('CategoryID',$request->FORM_NAME)->get();
         }
-        return view('html/shop.MenuCreate',['Menu'=>$items]);
+        return view('admin/html.MenuCreate',['Menu'=>$items]);
     }
 }

@@ -6,7 +6,6 @@
 
 <x-guest-layout>
     <x-auth-card>
-        
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -19,9 +18,21 @@
 
                 <!-- Name -->
                 <div class="form-group">
-                    <x-label for="name" :value="__('名前')" />
+                    <x-label for="firstname" :value="__('苗字')" />
 
-                    <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                    <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus />
+                </div>    
+
+                <div class="form-group">
+                    <x-label for="lastname" :value="__('名前')" />
+
+                    <x-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus />
+                </div>
+
+                <div class="mr-4">
+                    <x-label for="birthday " :value="__('誕生日')" />
+
+                    <x-input id="birthday " class="block mt-1 w-full" type="date" name="birthday " :value="old('birthday ')" required autofocus />
                 </div>
 
                 <!-- Email Address -->
@@ -60,21 +71,9 @@
                     </x-button>
                 </div>
             </div>
-            <div>
-                <x-label for="firstname" :value="__('firstname')" />
-
-                <x-input id="firstname" class="block mt-1 w-full" type="text" name="firstname" :value="old('firstname')" required autofocus />
-            </div>
-            <div>
-                <x-label for="lastname" :value="__('lastname')" />
-
-                <x-input id="lastname" class="block mt-1 w-full" type="text" name="lastname" :value="old('lastname')" required autofocus />
-            </div>
-            <div>
-                <x-label for="birthday " :value="__('birthday ')" />
-
-                <x-input id="birthday " class="block mt-1 w-full" type="date" name="birthday " :value="old('birthday ')" required autofocus />
-            </div>
+            
+            
+            
 
         </form>
     </x-auth-card>
