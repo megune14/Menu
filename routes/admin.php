@@ -123,3 +123,19 @@ Route::get('/RequestForm',function () {
     return view('admin/html.RequestForm');
 });
 
+Route::get('/Inquiry',function () {
+    return view('admin/html.Inquiry');
+});
+
+Route::post('/Inquiry/add','InquiryController@create');
+
+
+Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
+    return view('admin/html.MenuCreate');
+});
+
+Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
+    return view('admin/html.StoreInfoSettings');
+})->name('setting');
+
+Route::post('/StoreInfoSettings/add','ShopsController@');
