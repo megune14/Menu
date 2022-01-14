@@ -34,7 +34,16 @@
              </ul>
             </li>
             @if( Auth::check() )
-            <li><a href="/logout">ログアウト</a></li>
+            <li>
+                <form method="POST" action="{{ route('user.logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('user.logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('ログアウト') }}
+                    </x-dropdown-link>
+                </form>
+            </li>
             @else
             <li><a href="/">ログイン</a></li>
             @endif

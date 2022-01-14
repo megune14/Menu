@@ -7,7 +7,7 @@ $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
 
 
 
-  @section('title','メール送信完了')
+  @section('title','カテゴリー')
 
   @section('contents')
     <div class="category">
@@ -16,7 +16,7 @@ $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
 
     @foreach ($items as $item)
     <div class="card">
-       <a href="/Category/Menu?categoryid={{$item->CategoryID}}&shopid={{$item->StoreID}}">
+       <a href="/Category/Menu?categoryid={{$item->CategoryID}}">
          <img src="/images/test2.png">
          <p>{{ $item->Category}}</p>
        </a>
