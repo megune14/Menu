@@ -132,3 +132,17 @@ Route::get('/CouponProduct',function () {
 });
 Route::post('/CouponProduct/add','CouponController@create');
 
+Route::post('/Inquiry/add','InquiryController@create');
+
+
+Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
+    return view('admin/html.MenuCreate');
+});
+
+Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
+    return view('admin/html.StoreInfoSettings');
+})->name('setting');
+
+Route::get('/StoreInfoSettings/edit','ShopsController@edit');
+Route::post('/StoreInfoSettings/edit','ShopsController@update');
+

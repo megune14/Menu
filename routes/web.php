@@ -46,3 +46,7 @@ Route::post('/OrderList/add','OrderListController@twoButtonsResult');
 Route::get('/FoodDetail',function () {
     return view('user/html.FoodDetail');
 });
+
+Route::get('/UserDelete',function () {
+    return view('user/html.UserDelete');
+});

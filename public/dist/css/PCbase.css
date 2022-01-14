@@ -319,6 +319,17 @@ nav li.has-child ul ul {
   margin-top: 50px;
 }
 
+.mb-4 {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.font-medium.text-red-600 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 .mt-4 {
   text-align: center;
   color:#fff;
