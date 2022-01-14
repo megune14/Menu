@@ -13,23 +13,21 @@ use App\Http\Controllers\OrderListController;
 //
    
 $ap = Order::get();
-foreach ($ap as $ap) {}
+foreach ($ap as $ap) {
 ?>
-    <div class="VoucherDetail">
-      
-     
-        <!-- ここはデータベースのやつで作って下さい。 -->       
-          <input type="text" value ="{{ $ap->name}}">
-          <input type="text" value ="{{ $ap->price}}">
-          <input type="text" value ="{{ $ap->quantity}}">
+    <tr class="VoucherDetail">
+      <td>{{ $ap->name}}</td>
+      <td>{{ $ap->price}}円</td>
+      <td>×</td>
+      <td>{{ $ap->quantity}}個</td><br>
         <!-- ここまで -->
-
+        <?php } ?>
         <div class="submit-VoucherDetail">
         
         <input type="button" onclick="location.href='#'" value="お会計">    
         </div>
               
-        <script
+<script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>

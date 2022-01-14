@@ -8,12 +8,17 @@
   <!--テキストサンプル-->
   @section('contents')
 
-  <?php $coupon = \DB::table('order_lists')->get();
+  <?php
+use App\Models\Coupon;
+use App\Http\Controllers\CouponController;
+//
+   
+$Coupon = Coupon::get();
 
 ?>
     <div class = CouponSetting>
       <h1>クーポン設定</h1>
-      <form action="/CouponSetting/add" method = "post">
+      <form action="/admin/CouponSetting/edit" method="post">
       @csrf
       <p>商品</p>
       
@@ -21,18 +26,18 @@
       
         <select name="name">
         
-        <?php foreach ($coupon as $coupon) {  ?>
-          <option  value="{{$coupon->name }}">{{$coupon->name }}</option>
+        <?php foreach ($Coupon as $Coupon) {  ?>
+          <option  value="{{$Coupon->name }}">{{$Coupon->name }}</option>
           <?php  } ?>
         </select>
         
       </div>
-     
+      <input type = "hidden" name = "id" value = "{{$Coupon->id}}">
 
       <p>必要ポイント</p>
 
       <div class="number-set">
-        <input type="number" name ="point" value="100" min="0" max="" step="1">
+        <input type="number" name ="point" value="{{$Coupon->point }}" min="0" max="" step="10">
       </div>
 
  

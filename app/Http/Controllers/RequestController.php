@@ -22,6 +22,6 @@ class RequestController extends Controller
         'tel'=>$request->tel,
         'leader'=>$request->leader,
       ])->save();
-      return redirect('/RequestComplete');
+      return redirect('/admin/RequestComplete');
     }
 }

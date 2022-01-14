@@ -17,7 +17,7 @@
         }
   ?>
     <div class="menudetail">
-      <form action="/MenuDetail/edit" method="post">
+      <form action="/admin/MenuDetail/edit" method="post">
       @csrf
         <input type = "hidden" name = "id" value = "{{$menudeta->id}}">
         <span class="menudeta-img">

@@ -30,6 +30,12 @@ Route::group(['middleware' => 'auth:users'], function () {
     Route::get('/Category/Menu','MenuController@create',function () {
         return view('user/html.Menu');
     })->name('detail');
+});
+Route::get('/OrderList',function () {
+    return view('user/html.OrderList');
+});
+Route::post('/OrderList/add','OrderListController@twoButtonsResult');
 
-    });
-
+Route::get('/FoodDetail',function () {
+    return view('user/html.FoodDetail');
+});
