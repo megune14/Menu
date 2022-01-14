@@ -7,10 +7,11 @@
 
   <!--テキストサンプル-->
   @section('contents')
-  <form action="/admin/NewProduct/add"  method='post'  >
+  <form action="/admin/NewProduct/add"  method='post' enctype="multipart/form-data">
 
 @csrf
-  <h1>画像を追加したいんだけどどうすればいい？</h1>
+  <p>画像の追加</p>
+  <input id="img" type="file" name="img">
   <p>商品名
 	<input type="text" name="name"></p>
 
@@ -49,5 +50,9 @@
         </div>
 
 </form>
-    <!--/テキストサンプル-->
+
+
+    <!--/テキストサンプル 
+    
+  -->
   @endsection

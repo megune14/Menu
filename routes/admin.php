@@ -127,3 +127,8 @@ Route::get('/RequestForm',function () {
     return view('admin/html.RequestForm');
 });
 
+Route::get('/CouponProduct',function () {
+    return view('admin/html.CouponProduct');
+});
+Route::post('/CouponProduct/add','CouponController@create');
+
