@@ -15,9 +15,10 @@ class Point extends Migration
     {
         Schema::create('point', function (Blueprint $table) {
             $table->id();
-            $table->integer('point');
+            $table->string('PointID');
+            $table->string('StoreID');
+            $table->integer('Point');
             $table->timestamps();
-            
         });
     }
 
