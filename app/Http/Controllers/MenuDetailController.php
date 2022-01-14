@@ -24,7 +24,7 @@ public function update(Request $request)
 
     ];
     DB::update('update _menu_detail set name = :name, price = :price where id = :id', $param);
-    return redirect('/MenuDetail');
+    return redirect('/admin/MenuDetail');
 }
 
 
