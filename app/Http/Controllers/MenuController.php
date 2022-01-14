@@ -10,7 +10,7 @@ class MenuController extends Controller
 
     public function create(Request $request) {
         $categoryid = $request->categoryid;
-        $shopid = $request->shopid;
+        $shopid = session()->get('StoreID');
         return view('user/html.Menu', ['categoryid' => $categoryid], ['shopid' => $shopid]);
     }
 }
