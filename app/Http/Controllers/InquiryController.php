@@ -15,6 +15,6 @@ class InquiryController extends Controller
             'operating'=>$request->operating,
             'version'=>$request->version,
         ])->save();
-        return redirect('/MenuCreate');
+        return redirect('/admin/MenuCreate');
     }
 }

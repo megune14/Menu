@@ -34,6 +34,9 @@ Route::group(['middleware' => 'auth:users'], function () {
 Route::get('/OrderList',function () {
     return view('user/html.OrderList');
 });
+Route::get('/VoucherDetail',function () {
+    return view('user/html.VoucherDetail');
+});
 Route::post('/OrderList/add','OrderListController@twoButtonsResult');
 
 Route::get('/FoodDetail',function () {
