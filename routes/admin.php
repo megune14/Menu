@@ -126,12 +126,16 @@ Route::post('/StoreCouponList/del','CouponController@remove');
 Route::get('/RequestForm',function () {
     return view('admin/html.RequestForm');
 });
+Route::post('/RequestForm/add','RequestController@create');
 
 Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
 });
 Route::post('/CouponProduct/add','CouponController@create');
 
+Route::get('/Inquiry',function () {
+    return view('admin/html.inquiry');
+});
 Route::post('/Inquiry/add','InquiryController@create');
 
 
@@ -146,3 +150,6 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
 Route::get('/StoreInfoSettings/edit','ShopsController@edit');
 Route::post('/StoreInfoSettings/edit','ShopsController@update');
 
+Route::get('/RequestComplete',function () {
+    return view('admin/html.RequestComplete');
+});
