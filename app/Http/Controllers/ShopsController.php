@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\shops;
+use App\Models\admin;
 use Illuminate\Support\Facades\DB;
 
 class ShopsController extends Controller
