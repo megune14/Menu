@@ -1054,6 +1054,139 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 /*---------------------StoreInfoDelete終わり--------------------*/
 
+
+/*----------NewProduct----------*/
+.NewProduct {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.NewProduct p {
+  display: inline-block;
+  width: 180px;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.NewProduct input {
+  font-size: 20px;
+}
+
+.Product-img {
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+.Product-img p {
+  display: block;
+}
+
+.Product-img input {
+  font-size: 18px;
+}
+
+.Product-form input {
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  width: 46%;
+  height: 35px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Product-number input {
+  border-radius: 20px;
+  width: 230px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.menudetail-Product {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.menudetail-Product button {
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 160px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+}
+
+.menudetail-Product button a {
+  font-size: 22px;
+  color: #fff;
+}
+
+.menudetail-Product .open {
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 41px;
+  padding-top: 9px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+}
+
+.window-Product {
+	width: 150vw;
+	max-width: 480px;
+	height: 300px;
+  margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window-Product .text {
+	font-size: 27px;
+  margin-top: 90px;
+  margin-bottom: 35px;
+  padding-left: 155px;
+}
+
+.window-Product button {
+  margin-left: 65px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window-Product input {
+  margin-left: 20px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+
+/*----------NewProduct終わり----------*/
+
+
 /*---------------------MailChange--------------------*/
 .MailChange { /* 枠線はこれ */
   margin-top: 50px;
