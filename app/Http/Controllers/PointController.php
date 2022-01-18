@@ -25,4 +25,5 @@ class PointController extends Controller
     {
       $param =[]
     }
+      
 }
