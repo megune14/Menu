@@ -8,6 +8,6 @@ class CategoryController extends Controller
     public function create(Request $request) {
         $shopid = $request->shopid;
         session(['StoreID'=>$shopid]);
-        return view('html/user.Category');
+        return view('user/html.Category');
     }
 }

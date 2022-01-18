@@ -17,8 +17,20 @@ class ShopsController extends Controller
     public function setting() {
   		$md = new shops();
   		$data = $md->get();
-  		return view('html/shop.StoreInfoSettings',['data' => $data]);
+  		return view('admin/html.StoreInfoSettings',['data' => $data]);
 	}
+    public function update(Request $request)
+    {
+        $param = [
+            'id' => $request->id,
+            'StoreName' => $request->StoreName,
+            'Adress' => $request->Adress,
+            'TelephoneNumber' => $request->TelephoneNumber,
+            
+        ];
+        DB::update('update shops set StoreName = :StoreName, Adress = :Adress, TelephoneNumber = :TelephoneNumber where id = :id', $param);
+        return redirect('/admin/StoreInfoSettings');
+    }
     public function delete(Request $request) {
           shops::find(1)->delete();
           return redirect('auth.login');

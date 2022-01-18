@@ -8,8 +8,8 @@
     <!--テキストサンプル-->
     @section('contents')
       <div class="StoreInfoSetting">
-        <form action="" method="">
-          <h2 class="">店舗情報</h2>
+        <h2>店舗情報</h2>
+        <form action="/StoreInfoSettings/add" method=""> 
           <!--<div class="col-sm-10">-->
             
           @foreach ($data as $tdata)

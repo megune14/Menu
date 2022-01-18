@@ -11,24 +11,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CouponController extends Controller
 {
-    public function index(Request $request){
-        $items = DB::select ('select * from coupon');
-        return view('CouponSetting.index',['items => $items']);
+   //public function index(Request $request){
+   //    $items = DB::select ('select * from coupon');
+   //    return view('CouponSetting.index',['items => $items']);
 
-    }
+   //}
 
-    public function post(Request $request){
-        $items = DB::select ('select * from coupon');
-        return view('CouponSetting.index',['items => $items']);
-    }
+   //public function post(Request $request){
+   //    $items = DB::select ('select * from coupon');
+   //    return view('CouponSetting.index',['items => $items']);
+   //}
 
 
-     public function add(Request $request)
-    {
-
-        return view('CouponSetting.add');
-    }
-
+    // public function add(Request $request)
+    //{
+//
+    //    return view('CouponSetting.add');
+    //}
+//
     public function create(Request $request)
     {
 
@@ -43,7 +43,7 @@ class CouponController extends Controller
       $form = $request->all();
       unset($form['token']);
       $coupon->fill($form)->save();
-      return redirect('/CouponSetting');
+      return redirect('/admin/CouponProduct');
 
     }
 
@@ -68,7 +68,7 @@ class CouponController extends Controller
     public function remove(Request $request)
     {
         Coupon::find($request->id)->delete();
-        return redirect('/StoreCouponList');
+        return redirect('/admin/StoreCouponList');
 
        //もう一個のほう
      //$param = ['id'=> $request->id];
@@ -82,6 +82,31 @@ class CouponController extends Controller
    {
         return $this->timestamp($column, $precision)->nullable();
     }
+
+
+
+
+    public function edit(Request $request)
+    {
+        $param = ['id' => $request->id];
+        $item = DB::select('select *  from coupons where id = :id',$param);
+        return view('CouponSetting.edit',['form' => $item[0]]);
+    }
+    
+    public function update(Request $request)
+    {
+        $param = [
+            'id' => $request->id,
+            'name' => $request->name,
+            'point' => $request->point,
+            
+    
+        ];
+        DB::update('update coupons set name = :name, point = :point where id = :id', $param);
+        return redirect('/admin/CouponSetting');
+    }
+    
+    
 
 
 
@@ -123,10 +148,10 @@ class CouponController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    //public function store(Request $request)
+   // {
+   //     //
+   // }
 
     /**
      * Display the specified resource.
@@ -134,33 +159,33 @@ class CouponController extends Controller
      * @param  \App\Models\coupon  $coupon
      * @return \Illuminate\Http\Response
      */
-    public function show(coupon $coupon)
-    {
-        //
-    }
-
+  //  public function show(coupon $coupon)
+  //  {
+  //      //
+  //  }
+//
     /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\coupon  $coupon
      * @return \Illuminate\Http\Response
      */
-    public function edit(coupon $coupon)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\coupon  $coupon
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, coupon $coupon)
-    {
-        //
-    }
+   // public function edit(coupon $coupon)
+   // {
+   //     //
+   // }
+//
+   // /**
+ //  * Update the specified resource in storage.
+ //  *
+ //  * @param  \Illuminate\Http\Request  $request
+ //  * @param  \App\Models\coupon  $coupon
+ //  * @return \Illuminate\Http\Response
+ //  */
+ // public function update(Request $request, coupon $coupon)
+ // {
+ //     //
+ // }
 
     /**
      * Remove the specified resource from storage.
@@ -168,8 +193,8 @@ class CouponController extends Controller
      * @param  \App\Models\coupon  $coupon
      * @return \Illuminate\Http\Response
      */
-    public function destroy(coupon $coupon)
-    {
-        //
-    }
+   // public function destroy(coupon $coupon)
+   // {
+   //     //
+   // }
 }
