@@ -14,7 +14,7 @@ class CreateCommodityTablesTable extends Migration
     public function up()
     {
         Schema::create('commodity_tables', function (Blueprint $table) {
-            $table->unsignedBigInteger('CommodityID')->primary();
+            $table->bigIncrements('CommodityID');
             $table->string('CommodityName');
             $table->string('CommodityDetail');
             $table->string('Allergy');

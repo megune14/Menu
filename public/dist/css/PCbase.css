@@ -680,6 +680,10 @@ margin-left: 25px;
 
 
 /*---------------------StoreCouponList--------------------*/
+.couponcard input[type="checkbox"] {
+  display: none;
+}
+
 .couponcard {
   display: inline-block;
   margin-top: 30px;
@@ -1068,6 +1072,10 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 22px;
 }
 
+.NewProduct input {
+  font-size: 20px;
+}
+
 .Product-img {
   padding-top: 20px;
   margin-left: 20px;
@@ -1076,6 +1084,10 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 .Product-img p {
   display: block;
+}
+
+.Product-img input {
+  font-size: 18px;
 }
 
 .Product-form input {
@@ -1100,7 +1112,6 @@ input[type="checkbox"]:checked ~ .abc ul{
   display: flex; 
   justify-content: center; 
   margin-top: 20px;
-  
 }
 
 .menudetail-Product button {
@@ -1114,7 +1125,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .menudetail-Product button a {
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
 }
 
@@ -1127,9 +1138,53 @@ input[type="checkbox"]:checked ~ .abc ul{
   background-color: #578af9;
   border:1px solid #696969;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   color: #fff;
+}
+
+.window-Product {
+	width: 150vw;
+	max-width: 480px;
+	height: 300px;
+  margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window-Product .text {
+	font-size: 27px;
+  margin-top: 90px;
+  margin-bottom: 35px;
+  padding-left: 155px;
+}
+
+.window-Product button {
+  margin-left: 65px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window-Product input {
+  margin-left: 20px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
 }
 
 
@@ -1553,7 +1608,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .complete {
   text-align: center;
   font-size: 30px;
-  margin-top: 400px;
+  margin-top: 280px;
   margin-bottom: 300px;
 }
 
@@ -1603,6 +1658,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   border:1px solid #696969;
   border-radius: 5px;
   background-color: rgba(128,128,128,0.6);
+  font-size: 18px;
   color: #fff;
 }
 
@@ -1613,7 +1669,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 125px;
   border:1px solid #696969;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
 }
 

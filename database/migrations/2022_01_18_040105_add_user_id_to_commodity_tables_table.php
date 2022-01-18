@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Coupon extends Migration
+class AddUserIdToCommodityTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class Coupon extends Migration
      */
     public function up()
     {
-        Schema::create('coupon', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('commodity_tables', function (Blueprint $table) {
+            //
+            $table->string('img');
         });
     }
 
@@ -26,6 +26,8 @@ class Coupon extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coupon');
+        Schema::table('commodity_tables', function (Blueprint $table) {
+            //
+        });
     }
 }
