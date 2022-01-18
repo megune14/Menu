@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
-
+use Illuminate\Validation\Rule;
 class RegisteredUserController extends Controller
 {
     /**
@@ -36,7 +36,7 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users', 'email')->whereNull('deleted_at'),],
             'firstname' => ['required', 'string', 'max:11'],
             'lastname' => ['required', 'string', 'max:11'],
             'birthday' => ['required', 'date', 'max:30'],
