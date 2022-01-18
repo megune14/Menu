@@ -22,7 +22,16 @@
         <li class="active">デジタルメニュー表</li>
 
 
-        <li class="right"><a href="#">ログアウト</a></li>
+        <li class="right">
+            <form method="POST" action="{{ route('admin.logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('admin.logout')"
+                        onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                    {{ __('ログアウト') }}
+                </x-dropdown-link>
+            </form>
+        </li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="#">メールアドレス変更</a></li>
@@ -33,7 +42,7 @@
         </li>
         <li class="right"><a href="#">受注商品</a></li>
         <li class="right"><a href="#">クーポン</a></li>
-        <li class="right"><a href="#">メニュー一覧</a></li>
+        <li class="right"><a href="/admin/MenuCreate">メニュー一覧</a></li>
       </div>
     </div>
 
