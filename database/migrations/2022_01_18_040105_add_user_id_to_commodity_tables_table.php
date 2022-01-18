@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserIdToCouponsTable extends Migration
+class AddUserIdToCommodityTablesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AddUserIdToCouponsTable extends Migration
      */
     public function up()
     {
-        Schema::table('coupons', function (Blueprint $table) {
+        Schema::table('commodity_tables', function (Blueprint $table) {
             //
             $table->string('img');
-            $table->softDeletes();
         });
     }
 
@@ -27,7 +26,7 @@ class AddUserIdToCouponsTable extends Migration
      */
     public function down()
     {
-        Schema::table('coupons', function (Blueprint $table) {
+        Schema::table('commodity_tables', function (Blueprint $table) {
             //
         });
     }

@@ -15,7 +15,7 @@ class MenuFood extends Model
         'name' => 'required',
         'price' => 'price',
         'quantity' => 'quantity',
-       
+        'img' => 'img',
         'explanation' => 'explanation',
         'calorie' => 'calorie',
         'allergy' => 'allergy',
@@ -23,7 +23,7 @@ class MenuFood extends Model
     );
 
     public function getData(){
-        return $this->id. ':'. $this->name. '(' . $this->price .  $this->quantity .  $this->explanation .  $this->allergy .  $this->calorie . $this->category .')';
+        return $this->id. ':'. $this->name. '(' . $this->price .  $this->quantity .  $this->explanation .  $this->allergy .  $this->calorie . $this->category . $this->img .')';
     }
     
 

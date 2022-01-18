@@ -3,32 +3,39 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\shops;
-
+use App\Models\Admin;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 class ShopsController extends Controller
 {
     //
 
     public function store() {
-		$md = new shops();
+		$md = new Admin();
 		$data = $md->get();
 		return view('html/shop.StoreInfoDetail',['data' => $data]);
 	}
     public function setting() {
-  		$md = new shops();
-  		$data = $md->get();
+  		$md = new Admin();
+  		$data = $md->where('id',Auth::id())->first();
   		return view('admin/html.StoreInfoSettings',['data' => $data]);
 	}
+    public function edit(Request $request)
+    {
+        $param = ['id' => $request->id];
+        $item = DB::select('select *  from admins where id = :id',$param);
+        return view('StoreInfoSettings.edit',['form' => $item[0]]);
+    }
     public function update(Request $request)
     {
         $param = [
             'id' => $request->id,
-            'StoreName' => $request->StoreName,
-            'Adress' => $request->Adress,
-            'TelephoneNumber' => $request->TelephoneNumber,
+            'shopname' => $request->shopname,
+            'address' => $request->address,
+            'tell' => $request->tell,
             
         ];
-        DB::update('update shops set StoreName = :StoreName, Adress = :Adress, TelephoneNumber = :TelephoneNumber where id = :id', $param);
+        DB::update('update admins set shopname = :shopname, address = :address, tell = :tell where id = :id', $param);
         return redirect('/admin/StoreInfoSettings');
     }
     public function delete(Request $request) {

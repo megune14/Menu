@@ -6,7 +6,7 @@
     @section('contents')
 
 
-    <form action="RequestForm/add" method="post"> 
+    <form action="/admin/RequestForm/add" method="post"> 
 
       <div class="request-form">
         @csrf

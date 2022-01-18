@@ -14,6 +14,7 @@ class Coupon extends Model
    public static $rules = array(
      'name' => 'required',
      'point' => 'point',
+     
    );
 
    public function getData(){
