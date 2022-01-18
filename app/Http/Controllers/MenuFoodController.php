@@ -13,7 +13,7 @@ class MenuFoodController extends Controller
 {
   public function create(Request $request)
   {
-      
+
         if ($request->file('img')) {
             $this->validate($request, [
                 'img' => [
@@ -34,33 +34,33 @@ class MenuFoodController extends Controller
       unset($form['token']);
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
-        $form['img']=$request->file('img')->storeAs('public/images', $filename);
+        $form['img']=$request->file('img')->store('public/images');
       }
       $MenuFood->fill($form)->save();
 
 
       return redirect('/admin/NewProduct');
-  
+
     }
 
     public function store(Request $request)
     {
         // 新規postを作成
-        $post=new Post();
- 
+
+
         // バリデーションルール
         $inputs=request()->validate([
-            
+
             'img'=>'img'
         ]);
- 
+
         // 画像ファイルの保存場所指定
-        
+
             $filename=request()->file('img')->getClientOriginalName();
-            $inputs['img']=request('img')->storeAs('public/images', $filename);
-       
- 
+            $inputs['img']=request('img')->store('public/images');
+
+
         // postを保存
-        $post->create($inputs);
+
 }
 }
