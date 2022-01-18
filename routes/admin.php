@@ -153,9 +153,10 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('admin/html.StoreInfoSettings');
 })->name('setting');
 
-Route::get('/StoreInfoSettings/edit','ShopsController@edit');
-Route::post('/StoreInfoSettings/edit','ShopsController@update');
+Route::post('/StoreInfoSettings/add','ShopsController@');
 
-Route::get('/RequestComplete',function () {
-    return view('admin/html.RequestComplete');
+Route::get('/PointSetting',function () {
+    return view('admin/html.PointSetting');
 });
+
+Route::post('PointSetting/add','PointController@create');

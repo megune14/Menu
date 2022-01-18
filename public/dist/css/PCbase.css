@@ -680,6 +680,10 @@ margin-left: 25px;
 
 
 /*---------------------StoreCouponList--------------------*/
+.couponcard input[type="checkbox"] {
+  display: none;
+}
+
 .couponcard {
   display: inline-block;
   margin-top: 30px;
@@ -1604,7 +1608,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .complete {
   text-align: center;
   font-size: 30px;
-  margin-top: 400px;
+  margin-top: 280px;
   margin-bottom: 300px;
 }
 
@@ -1654,6 +1658,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   border:1px solid #696969;
   border-radius: 5px;
   background-color: rgba(128,128,128,0.6);
+  font-size: 18px;
   color: #fff;
 }
 
@@ -1664,7 +1669,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 125px;
   border:1px solid #696969;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
 }
 

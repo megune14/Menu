@@ -8,5 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Point extends Model
 {
     use HasFactory;
-    protected $fillable = ['Point'];
+    protected $guarded = array('id');
+
+   public static $rules = array(
+     'Price' => 'Price',
+     'Point' => 'Point',
+   );
+
+   public function getData(){
+       return $this->id. ':'. $this->price. '(' . $this->point . ')';
 }
+
+}
+
+/**public  function updateAll() {
+    Point::where('point', '!=', 'null')->update([
+        'point' => '100', ]);*/
+
