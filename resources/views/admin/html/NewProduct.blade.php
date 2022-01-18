@@ -58,9 +58,9 @@
             <input type="checkbox" id="pop-up">
 
             <div class="overlay">
-              <div class="window">
+              <div class="window-Product">
                 <label class="close" for="pop-up">×</label>
-                <p class="text">この商品を追加しますか?<br></p>            
+                <p class="text">この商品を<br>追加しますか?</p>            
                 <button type="button" onclick="history.back()">戻る</button>
                 <input type="submit" value="確定">
               </div>
