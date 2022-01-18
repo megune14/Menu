@@ -11,6 +11,15 @@
 
         @csrf
 
+        <?php
+    use App\Models\CategoryTable;
+    
+//
+   
+    $CategoryTable = CategoryTable::get();
+
+?>
+
 
         <div class="NewProduct">
 
@@ -40,8 +49,15 @@
             </div>
 
             <div>
-              <p>カテゴリー</p>
-              <input type="text" name="CategoryID">
+              
+              <p>カテゴリー
+            <select name="CategoryID">
+        
+            <?php foreach ($CategoryTable as $CategoryTable) {  ?>
+            <option  value="{{$CategoryTable->Category }}">{{$CategoryTable->Category }}</option>
+            <?php  } ?>
+          </select>
+          </p>
             </div>
           
             <div>
