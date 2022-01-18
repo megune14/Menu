@@ -97,7 +97,7 @@ Route::get('/StoreCouponList',function () {
 });
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
-    
+
 Route::get('/MenuDetail',function () {
     return view('admin/html.MenuDetail');
 });
@@ -128,9 +128,15 @@ Route::get('/RequestForm',function () {
 });
 Route::post('/RequestForm/add','RequestController@create');
 
+Route::get('/MenuCreate','MenuCreateController@create',function () {
+    return view('admin/html.MenuCreate');
+});
+Route::post('/MenuCreate','MenuCreateController@create');
+
 Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
 });
+
 Route::post('/CouponProduct/add','CouponController@create');
 
 Route::get('/Inquiry',function () {
