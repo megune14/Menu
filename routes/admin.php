@@ -115,7 +115,7 @@ Route::post('CouponSetting/edit','CouponController@update');
 Route::get('/NewProduct',function () {
     return view('admin/html.NewProduct');
 });
-Route::post('/NewProduct/add','MenuFoodController@create');
+Route::post('/NewProduct/add','CommodityTableController@create');
 
 Route::get('/StoreCouponList',function () {
     return view('admin/html.StoreCouponList');
