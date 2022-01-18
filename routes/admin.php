@@ -143,3 +143,9 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
 })->name('setting');
 
 Route::post('/StoreInfoSettings/add','ShopsController@');
+
+Route::get('/PointSetting',function () {
+    return view('admin/html.PointSetting');
+});
+
+Route::post('PointSetting/add','PointController@create');

@@ -8,30 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Point extends Model
 {
     use HasFactory;
-    protected $fillable = ['PointID','StoreID','Point'];
+    protected $guarded = array('id');
 
-    public function insert() {
-        $point = new Point();
-    
-        $point->PointID = 'grape';
-        $point->StoreID = 'blue';
-        $point->Point = 320;
-    
-        $fruit->save();
-    }
-            
-    public  function updateAll() {
-        Fruit::where('name', '!=', 'null')->update([
-            'PointID' => 'banana',
-            'StoreID' => 'yellow',
-            'Point' => '200',
-        ]);
-    }
-       
-    }
+   public static $rules = array(
+     'Price' => 'Price',
+     'Point' => 'Point',
+   );
 
-    
+   public function getData(){
+       return $this->id. ':'. $this->price. '(' . $this->point . ')';
+}
+
+}
 
 /**public  function updateAll() {
     Point::where('point', '!=', 'null')->update([
         'point' => '100', ]);*/
+

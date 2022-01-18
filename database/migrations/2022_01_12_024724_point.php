@@ -13,10 +13,10 @@ class Point extends Migration
      */
     public function up()
     {
-        Schema::create('point', function (Blueprint $table) {
+        Schema::create('points', function (Blueprint $table) {
             $table->id();
-            $table->string('PointID');
             $table->string('StoreID');
+            $table->integer('Price');
             $table->integer('Point');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class Point extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('point');
+        Schema::dropIfExists('points');
     }
 }
