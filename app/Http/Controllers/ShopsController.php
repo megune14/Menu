@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\shops;
+use App\Models\admin;
+use Illuminate\Support\Facades\DB;
 
 class ShopsController extends Controller
 {
@@ -19,6 +20,12 @@ class ShopsController extends Controller
   		$data = $md->get();
   		return view('admin/html.StoreInfoSettings',['data' => $data]);
 	}
+    public function edit(Request $request)
+    {
+        $param = ['id' => $request->id];
+        $item = DB::select('select *  from shops where id = :id',$param);
+        return view('StoreInfoSettings.edit',['form' => $item[0]]);
+    }
     public function update(Request $request)
     {
         $param = [
