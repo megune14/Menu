@@ -201,6 +201,17 @@ nav li.has-child ul ul {
   border-radius: 15px;
 }
 
+.mb-4 {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.font-medium.text-red-600 {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}
+
 .mt-4 {
   text-align: center;
   color:#fff;
@@ -259,11 +270,6 @@ nav li.has-child ul ul {
 
 
 /*----------UserInput(register)----------*/
-.mb-4 {
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
 .container {
   padding: 1em 1em;
   margin: 2em;
