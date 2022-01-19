@@ -684,6 +684,7 @@ nav li.has-child ul ul {
 }
 
 .MailChange p input {
+  display: flex;
   width: 70%;
   height: 25px;
   padding: 5px 2%;
@@ -1144,7 +1145,7 @@ nav li.has-child ul ul {
   font-size: 18px;
 }
 
-.inquiryform p input {
+.inquiryform input {
   width: 90%;
   height: 30px;
   padding: 5px 2%;
@@ -1183,6 +1184,7 @@ nav li.has-child ul ul {
   border:1px solid #696969;
   border-radius: 5px;
   background-color: rgba(128,128,128,0.6);
+  font-size: 18px;
   color: #fff;
 }
 
@@ -1193,7 +1195,7 @@ nav li.has-child ul ul {
   width: 125px;
   border:1px solid #696969;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
 }
 

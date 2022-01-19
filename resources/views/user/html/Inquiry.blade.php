@@ -8,7 +8,7 @@
     <form action="#" method="post"> 
       <div class="Inquiry">お問い合わせ 
         <div class="inquiryform">
-          <p>お名前
+          <p>お名前<br>
             <input type="text" maxlength="500" size="30">
           </p>
           <p>電話番号
