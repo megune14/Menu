@@ -1788,3 +1788,26 @@ display: inline;
 }*/
 
 /*ポップアップ終わり*/
+
+.change-image-wrap {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.change-image-wrap .input-image,
+.change-image-wrap .drop-image,
+.change-image-wrap .show-db-image {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.change-image-wrap .input-image {
+  z-index: 3;
+}
+.change-image-wrap .drop-image {
+  z-index: 1;
+}
+.change-image-wrap .show-db-image {
+  z-index: 0;
+}
