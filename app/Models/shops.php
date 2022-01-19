@@ -12,11 +12,11 @@ class shops extends Model
     use SoftDeletes;
     protected $fillable = [
         'id',
-        'StoreName',
-        'Adress',
-        'Email',
-        'TelephoneNumber',
-        'StoreID',
+        'name',
+        'email',
+        'shopname',
+        'address',
+        'tell',
         'Password',
     ];
 }
