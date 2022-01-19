@@ -3,16 +3,28 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\MenuFood;
+use App\Models\CommodityTable;
 
 use Illuminate\Support\Facades\DB;
 use Validator;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
-class MenuFoodController extends Controller
+// 現在認証しているユーザーを取得
+$admin = Auth::user();
+// 現在認証しているユーザーのIDを取得
+$id = Auth::id();
+
+
+class CommodityTableController extends Controller
 {
-  public function create(Request $request)
+    //
+    public function create(Request $request)
   {
+
+    // 現在認証しているユーザーを取得
+    $admin = Auth::user();
+    // 現在認証しているユーザーのIDを取得
+    $id = Auth::id();
 
         if ($request->file('img')) {
             $this->validate($request, [
@@ -29,39 +41,20 @@ class MenuFoodController extends Controller
             ]);
           }
 
-      $MenuFood = new MenuFood;
+      $CommodityTable = new CommodityTable;
       $form = $request->all();
+      $form['StoreID'] = $id;
       unset($form['token']);
       
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');
       }
-      $MenuFood->fill($form)->save();
-
+      $CommodityTable->fill($form)->save();
+      
 
       return redirect('/admin/NewProduct');
 
     }
 
-//   public function store(Request $request)
-//   {
-//       // 新規postを作成
-//
-//
-//       // バリデーションルール
-//       $inputs=request()->validate([
-//
-//           'img'=>'img'
-//       ]);
-//
-//       // 画像ファイルの保存場所指定
-//
-//           $filename=request()->file('img')->getClientOriginalName();
-//           $inputs['img']=request('img')->store('public/images');
-//
-
-        // postを保存
-
-//}
 }

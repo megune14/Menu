@@ -10,8 +10,25 @@
       <form action="/admin/NewProduct/add"  method='post' enctype="multipart/form-data">
 
         @csrf
+
+        <?php
+    use App\Models\CategoryTable;
+    
+//
+   
+    $CategoryTable = CategoryTable::get();
+
+?>
+
+
         <div class="NewProduct">
+
+
+
+        
           
+
+
           <div class="Product-img">
             <p>画像の追加</p>
             <input id="img" type="file" name="img">
@@ -19,31 +36,40 @@
           
           <div class="Product-form">
             <p>商品名</p>
-            <input type="text" name="name">
+            <input type="text" name="CommodityName">
 
             <div class="Product-number">
               <p>値段</p>
-              <input type="number" name="price" value="100" min="10" max="10000" step="10">
+              <input type="number" name="Price" value="100" min="10" max="10000" step="10">
             </div>
             
             <div>
               <p>商品説明</p>
-              <input type="text" name="explanation">
+              <input type="text" name="CommodityDetail">
             </div>
 
             <div>
-              <p>カテゴリー</p>
-              <input type="text" name="category">
+              
+              <p>カテゴリー
+            
+        
+                <input type="text" name="CategoryID" list="kenpo" placeholder="" autocomplete="off">
+                <datalist id="kenpo">
+            <?php foreach ($CategoryTable as $CategoryTable) {  ?>
+              <option  value="{{$CategoryTable->Category }}">{{$CategoryTable->Category }}</option>
+            <?php  } ?>
+              </datalist>
+          </p>
             </div>
           
             <div>
               <p>アレルギー</p>
-              <input type="text" name="allergy">
+              <input type="text" name="Allergy">
             </div>
 
             <div class="Product-number">
               <p>カロリー</p>
-              <input type="number" name="calorie" value="100" min="1" max="10000" step="1">
+              <input type="number" name="Calory" value="100" min="1" max="10000" step="1">
             </div>
 
           </div>
