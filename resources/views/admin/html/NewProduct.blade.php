@@ -51,12 +51,14 @@
             <div>
               
               <p>カテゴリー
-            <select name="CategoryID">
+            
         
+                <input type="text" name="CategoryID" list="kenpo" placeholder="" autocomplete="off">
+                <datalist id="kenpo">
             <?php foreach ($CategoryTable as $CategoryTable) {  ?>
-            <option  value="{{$CategoryTable->Category }}">{{$CategoryTable->Category }}</option>
+              <option  value="{{$CategoryTable->Category }}">{{$CategoryTable->Category }}</option>
             <?php  } ?>
-          </select>
+              </datalist>
           </p>
             </div>
           

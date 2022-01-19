@@ -45,6 +45,7 @@ class CommodityTableController extends Controller
       $form = $request->all();
       $form['StoreID'] = $id;
       unset($form['token']);
+      
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');
