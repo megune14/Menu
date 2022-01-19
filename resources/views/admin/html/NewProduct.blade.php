@@ -11,6 +11,15 @@
 
         @csrf
 
+        <?php
+    use App\Models\CategoryTable;
+    
+//
+   
+    $CategoryTable = CategoryTable::get();
+
+?>
+
 
         <div class="NewProduct">
 
@@ -40,8 +49,17 @@
             </div>
 
             <div>
-              <p>カテゴリー</p>
-              <input type="text" name="CategoryID">
+              
+              <p>カテゴリー
+            
+        
+                <input type="text" name="CategoryID" list="kenpo" placeholder="" autocomplete="off">
+                <datalist id="kenpo">
+            <?php foreach ($CategoryTable as $CategoryTable) {  ?>
+              <option  value="{{$CategoryTable->Category }}">{{$CategoryTable->Category }}</option>
+            <?php  } ?>
+              </datalist>
+          </p>
             </div>
           
             <div>
