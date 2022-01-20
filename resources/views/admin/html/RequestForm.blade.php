@@ -11,30 +11,38 @@
       <div class="request-form">
         @csrf
       
-          <h2 class="Request">申請フォーム</h2>
-          <p>代表者　　　　
-           <input type="text" name="leader" size="30" placeholder="代表者">
-          </p>
-          <p>店舗名　　　　
-           <input type="text" name="name" size="30" placeholder="店舗名">
-          </p>
-          <p>住所　　　　　
-          <input type="text" name="address" size="30" placeholder="住所">
-          </p>
-          <p>メールアドレス
-          <input type="email" name="email" size="30" placeholder="メールアドレス">
-          </p>
-          <p>電話番号　　　
-          <input type="tel" name="tel" maxlength="12" size="30" placeholder="電話番号">
-          </p>
+        <h2 class="Request">申請フォーム</h2>
+        <div>
+          <p>代表者</p>
+          <input type="text" name="leader" size="30" placeholder="代表者">
+        </div>
 
-          <div class="submit-request">
-            <button type="button" onclick=history.back()>戻る</button>
-            <input type="submit">
-          </div>
-          
+        <div>
+          <p>店舗名</p>
+          <input type="text" name="name" size="30" placeholder="店舗名">
+        </div>
+
+        <div>
+          <p>住所</p>
+          <input type="text" name="address" size="30" placeholder="住所">
+        </div>
+
+        <div>
+          <p>メールアドレス</p>
+          <input type="email" name="email" size="30" placeholder="メールアドレス">
+        </div>
+
+        <div>
+          <p>電話番号</p>
+          <input type="tel" name="tel" maxlength="12" size="30" placeholder="電話番号">
+        </div>
 
       </div>
+
+      <div class="submit-request">
+        <input type="submit">
+      </div>
+      
       
     </form>
     <!--/テキストサンプル-->

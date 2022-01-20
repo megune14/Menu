@@ -164,5 +164,15 @@ Route::post('PointSetting/add','PointController@create');
 Route::get('PointSetting/add','PointController@edit');
 Route::post('PointSetting/add','PointController@update');
 
+Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
+    return view('admin/html.StoreInfoDetail');
+})->name('setting');
 
+Route::post('/StoreInfoDetail/add','ShopsController@');
+
+Route::get('/StoreInfoDelete',function () {
+    return view('admin/html.StoreInfoDelete');
+})->name('setting');
+
+Route::post('/StoreInfoDelete/delete','ShopsController@delete');
 

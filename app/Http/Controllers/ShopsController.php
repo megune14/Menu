@@ -12,8 +12,8 @@ class ShopsController extends Controller
 
     public function store() {
 		$md = new Admin();
-		$data = $md->get();
-		return view('html/shop.StoreInfoDetail',['data' => $data]);
+		$data = $md->where('id',Auth::id())->first();
+		return view('admin/html.StoreInfoDetail',['data' => $data]);
 	}
     public function setting() {
   		$md = new Admin();
@@ -39,8 +39,8 @@ class ShopsController extends Controller
         return redirect('/admin/StoreInfoSettings');
     }
     public function delete(Request $request) {
-          shops::find(1)->delete();
-          return redirect('auth.login');
+          admin::find(Auth::id())->delete();
+          return redirect('admin/login');
     }
 }
 

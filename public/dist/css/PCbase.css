@@ -625,7 +625,7 @@ margin-left: 25px;
   height: 35px;
   border:1px solid #ccc;
   border-radius: 7px;
-  color: rgba(128,128,128,0.95);
+  color: rgba(0,0,0,0.8);
   font-size: 20px;
   background: linear-gradient(to right, #fff 0%, #fff 90%, rgba(30,144,255,0.4) 90%,  rgba(30,144,255,0.4) 100%);
 }
@@ -682,6 +682,16 @@ margin-left: 25px;
 /*---------------------StoreCouponList--------------------*/
 .couponcard input[type="checkbox"] {
   display: none;
+}
+
+.CouponList {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CouponList h1 {
+  margin-top: 40px;
 }
 
 .couponcard {
@@ -855,27 +865,27 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-top: 60px;
 }
 
-.text-CouponProduct {
-  margin-left: 40px;
+.CouponProduct p {
+  margin-left: 20px;
+  font-size: 22px;
 }
 
 .CouponProduct p select {
-  width: 400px;
-  height: 25px;
+  width: 300px;
+  height: 30px;
   border-radius: 5px;
   border:1px solid rgba(128,128,128,0.8);
   margin-left: 50px;
   font-size: 18px;
   color: rgba(128,128,128,0.8);
-  
 }
 
-.CouponProduct p input {
-  width: 90px;
+.coupon-product p input {
+  margin-top: 30px;
   height: 40px;
   border-radius: 10px;
   border:1px solid rgba(128,128,128,0.8);
-  padding-left: 50px;
+  text-align: center;
   font-size: 22px;
   color: rgba(128,128,128,0.8);
 }
@@ -1228,7 +1238,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   background-clip: padding-box;
   font-family:'HelveticaNeue','Arial', sans-serif;
   letter-spacing: .8px;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 
@@ -1543,6 +1553,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-right: auto; /* 中央揃え */
   margin-bottom: 0;
   padding: 1em 1em;
+  padding-bottom: 80px;
   border: solid 1px rgba(128,128,128,0.8);
   border-radius: 15px;
   width: 60%;
@@ -1553,6 +1564,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .request-form p {
+  display: inline-block;
+  width: 230px;
   font-size: 22px;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -1562,7 +1575,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-top: 10px;
   margin-left: 35px;
   padding-left: 5px;
-  width: 200px;
+  width: 40%;
   height: 35px;
   border:1px solid #ccc;
   border-radius: 5px;
@@ -1572,30 +1585,21 @@ input[type="checkbox"]:checked ~ .abc ul{
 .submit-request { /* 送信ボタンのcss */
   display: flex; /* ボタンを中央に */
   justify-content: center;
-  margin-top: 80px;
+  width: 50%;
+  margin-top: 40px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.submit-request button {
-  height: 45px;
-  width: 80px;
-  border:1px solid #696969;
-  border-radius: 5px;
-  background-color: rgba(128,128,128,0.6);
-  font-size: 20px;
-  color: #fff;
-}
-
 .submit-request input {
-  height: 100%;
-  width: 140px;
+  height: 50px;
+  width: 400px;
   margin-top: 0;
-  margin-left: 30px;
-  padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  padding: 0px 32px 0px 32px;
+  background-color: #1E90FF;
   border:1px solid #696969;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 20px;
   color: #fff;
 }
@@ -1788,3 +1792,5 @@ display: inline;
 }*/
 
 /*ポップアップ終わり*/
+
+

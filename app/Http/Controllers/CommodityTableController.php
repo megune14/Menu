@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CommodityTable;
+use App\Models\CategoryTable;
 
 use Illuminate\Support\Facades\DB;
 use Validator;
@@ -42,9 +43,21 @@ class CommodityTableController extends Controller
           }
 
       $CommodityTable = new CommodityTable;
+      $CategoryTable = new CategoryTable;
       $form = $request->all();
+      $category = $CategoryTable->where('Category',$form['Category'])->first();
+      if($category == null){
+        $CategoryTable->insert([
+          'Category' => $form['Category'],
+          'StoreID' => Auth::id()
+        ]);
+        $category = $CategoryTable->where('Category',$form['Category'])->first();
+      };
+      $form['CategoryID'] = $category->CategoryID;
       $form['StoreID'] = $id;
+      unset($form['Category']);
       unset($form['token']);
+      
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');

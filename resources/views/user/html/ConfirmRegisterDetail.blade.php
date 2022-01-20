@@ -9,11 +9,12 @@
     @section('contents')
       <div class="ConfirmRegisterDetail">
         <h2>登録内容確認</h2>
-        <form action="#" method="post">
+        <form action="ConfirmRegisterDetail" method="post">
 
-          <p>名前：</p>
+        @csrf
+          <p>名前：<input type="text" name="name" value ="{{ $data->name }}"></p>
 
-          <p>生年月日：</p>
+          <p>生年月日：<input type="text" name="birthday" value ="{{ $data->birthday }}"></p>
 
           <div class="submit-reset">
             <button type="button" onclick="history.back()">戻る</button>
