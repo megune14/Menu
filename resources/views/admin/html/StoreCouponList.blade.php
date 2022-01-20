@@ -8,21 +8,30 @@
     @section('contents')
     
    <?php 
-    use App\Models\Coupon;
-    $coupon = Coupon::get();
+    use App\Models\CouponTable;
+    use App\Models\CommodityTable;
+    $coupon = CouponTable::where('StoreID',Auth::id())->get();
+    $menu = CommodityTable::get();
+    foreach ($coupon as $key) {
+      $coupon['CommodityName'] = $menu->where('StoreID',$key->StoreID)->get();
+      # code...
+    }
+    dd($coupon['CommodityName']);
   //
   //Coupon::find(1)->delete();
+   foreach ($menu as $menu)  {} 
   ?>
       <div class = CouponList>
         <h1>クーポン一覧</h1>
-        <?php foreach ($coupon as $coupon) { ?>
+        <?php foreach ($coupon as $coupon)  { ?>
+          
         <div class="couponcard">
         
           <img src="/images/men1.jpg"><br>
 
           <div class="couponcheckbox">
-            <input type="checkbox" id="coupon-btn-check{{$coupon->id}}">
-            <label for="coupon-btn-check{{$coupon->id}}" class="coupon-btn"><span></span></label>
+            <input type="checkbox" id="coupon-btn-check{{$coupon->CouponID}}">
+            <label for="coupon-btn-check{{$coupon->CouponID}}" class="coupon-btn"><span></span></label>
 
               <div class="abc">
               <ul>
@@ -37,12 +46,12 @@
 
           </div>
           
-          <input type="hidden"  name="id" value="{{$coupon->id}}">
+          <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
           <div class="menuname" name="name">
-            <p>{{$coupon->name}}</p>
+            <p>{{$menu->CommodityName}}</p>
           </div>
           <div class="menupoint" name="point">
-          <p>必要ポイント数： {{$coupon->point}}pt</p>
+          <p>必要ポイント数： {{$coupon->Point}}pt</p>
           </div>
         </div>
 
