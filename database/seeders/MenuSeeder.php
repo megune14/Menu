@@ -25,6 +25,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
               ],
               [
                 'CommodityID' => 2 ,
@@ -36,6 +37,8 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
+
               ],
               [
                 'CommodityID' => 3 ,
@@ -47,6 +50,8 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
+
               ],
 
               [
@@ -59,6 +64,8 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
+
               ],
               [
                 'CommodityID' => 6 ,
@@ -70,6 +77,8 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
+
               ],
               [
                 'CommodityID' => 7 ,
@@ -81,6 +90,8 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
+                'img' => null ,
+
               ],
 
 

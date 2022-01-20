@@ -170,9 +170,9 @@ Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
 
 Route::post('/StoreInfoDetail/add','ShopsController@');
 
-Route::get('/StoreInfoDelete', 'ShopsController@setting',function () {
-    return view('admin/html.StoreDelete');
+Route::get('/StoreInfoDelete',function () {
+    return view('admin/html.StoreInfoDelete');
 })->name('setting');
 
-Route::post('/StoreDelete/add','ShopsController@');
+Route::post('/StoreInfoDelete/delete','ShopsController@delete');
 

@@ -22,7 +22,7 @@
         
         
 <button type="button" onclick="location.href='/admin/StoreInfoSettings'">変更</button>
-<button type="button" onclick="location.href='/StoreInfoDelete'">削除</button>
+<button type="button" onclick="location.href='/admin/StoreInfoDelete'">削除</button>
 
         
       </form>

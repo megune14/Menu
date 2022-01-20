@@ -19,11 +19,25 @@ $Coupon = CommodityTable::get();
   @csrf
   <div class = CouponProduct>
     
+  $Coupon = MenuFood::get();
 
-  <div class="coupon-product">
-  <p>商品名：
-        <select name="name">
+  ?>
+    <form action="/admin/CouponProduct/add"  method='post'  >
+    @csrf
+      <div class = CouponProduct>
+      
+        <div class="coupon-product">
+
+          <p>商品名：
+            <select name="name">
+            
+            <?php foreach ($Coupon as $Coupon) {  ?>
+              <option  value="{{$Coupon->name }}">{{$Coupon->name }}</option>
+              <?php  } ?>
+            </select>
+          </p>
         
+<<<<<<< HEAD
         <?php foreach ($Coupon as $Coupon) {  ?>
           <option  value="{{$Coupon->CommodityName }}">{{$Coupon->CommodityName }}</option>
           <?php  } ?>
@@ -32,15 +46,19 @@ $Coupon = CommodityTable::get();
       </div>
   
   
+=======
+          <p>必要ポイント：<input type="number" name="point" value="100" min="10" max="10000" step="10"></p>
+>>>>>>> f41df1c9b59259885e297873fc7de29416749ad5
 
-  <p>必要ポイント：<input type="number" name="point" value="100" min="10" max="10000" step="10"></p>
+        </div>
 
 
+        <div class="submit-CouponProduct">
+          <input type="submit"   value="確定"><!--送信ボタン-->
+        </div>
+        
+      </div>  
 
-  </div>
-
-  <input type="submit"   value="確定"><!--送信ボタン-->
-
-</form>
+    </form>
     <!--/テキストサンプル-->
   @endsection
