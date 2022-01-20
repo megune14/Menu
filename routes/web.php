@@ -50,3 +50,7 @@ Route::get('/FoodDetail',function () {
 Route::get('/UserDelete',function () {
     return view('user/html.UserDelete');
 });
+
+Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
+    return view('user/html.ConfirmRegisterDetail');
+});

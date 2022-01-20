@@ -23,23 +23,31 @@
           <input type = "hidden" name = "id" value = "{{$data->id}}">
           <div class="submit-InfoSetting">
             <button type="button" onclick=history.back()>戻る</button>
-            
-            <label class="open" for="pop-up" ><input type="submit" value="確定"></label>
+            <label class="open" for="pop-up">確定</label>
+
             <input type="checkbox" id="pop-up">
-          <div class="overlay">
-            <div class="window">
-              <label class="close" for="pop-up">×</label>
-              <p class="text">この商品を追加しますか<br>
-               </p>            
-              <button type="button" onclick="history.back()">戻る</button>
-              <input type="submit" value="確定">
+
+            <div class="overlay">
+              <div class="window-Product">
+                <label class="close" for="pop-up">×</label>
+                <p class="text">店舗名</br>
+                <input type="text" name="shopname" value ="shopname"></p>
+                <p>住所</br>
+                <input type="text" name="address" value ="{{ $data->address}}"></p>
+                <p>電話番号</br>
+                <input type="tel" name="tell" value ="{{ $data->tell}}"></p>
+                
+                <button type="button" onclick="history.back()">戻る</button>
+                <input type="submit" value="確定">
+              </div>
             </div>
-   
+            
           </div>
-          </div>
+          
 
 
         </form>
+        
 
       </div>
 
