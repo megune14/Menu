@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use \Askedio\SoftCascade\Traits\SoftCascadeTrait;
 class Admin extends Authenticatable
 {
     use HasFactory;
     use SoftDeletes; //追記
-
    //中略
    protected $dates = ['deleted_at'];
         /**
@@ -18,6 +18,7 @@ class Admin extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $softCascade = ['CommodityTable'];
     protected $fillable = [
         'name',
         'email',
@@ -45,4 +46,12 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($article) {
+            $article->Commodity_Tables()->delete();
+        });
+    }
 }
