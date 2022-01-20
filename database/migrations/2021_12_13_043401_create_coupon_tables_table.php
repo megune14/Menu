@@ -18,7 +18,8 @@ class CreateCouponTablesTable extends Migration
             $table->unsignedBigInteger('StoreID')->constrained('admins');
             $table->unsignedBigInteger('CommodityID')->constrained('commodity_tables');
             $table->integer('Point');
-            $table->date('Day');
+            $table->date('FirstDay');
+            $table->date('LastDay');
             $table->timestamps();
         });
     }

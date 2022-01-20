@@ -26,7 +26,7 @@
 
               <div class="abc">
               <ul>
-                  <li><a href="#">変更</a></li>
+                  <li><a href="/admin/CouponSetting">変更</a></li>
                   <form action="/StoreCouponList/del"  method='post'  >
                   @csrf
                   <li><input type="submit"  value="削除"></li>
@@ -52,7 +52,7 @@
          
         
         <div class="coupon-send">
-          <a id="coupon-send" href="">
+          <a id="coupon-send" href="/admin/CouponProduct">
             <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
           </a>
         </div>

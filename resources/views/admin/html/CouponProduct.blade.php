@@ -8,11 +8,11 @@
   <!--テキストサンプル-->
   @section('contents')
   <?php
-use App\Models\MenuFood;
-use App\Http\Controllers\MenuFoodController;
+use App\Models\CommodityTable;
+use App\Http\Controllers\CommodityTableController;
 //
    
-$Coupon = MenuFood::get();
+$Coupon = CommodityTable::get();
 
 ?>
   <form action="/admin/CouponProduct/add"  method='post'  >
@@ -25,7 +25,7 @@ $Coupon = MenuFood::get();
         <select name="name">
         
         <?php foreach ($Coupon as $Coupon) {  ?>
-          <option  value="{{$Coupon->name }}">{{$Coupon->name }}</option>
+          <option  value="{{$Coupon->CommodityName }}">{{$Coupon->CommodityName }}</option>
           <?php  } ?>
         </select>
         </p>
