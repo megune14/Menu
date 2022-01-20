@@ -115,7 +115,7 @@ Route::post('CouponSetting/edit','CouponController@update');
 Route::get('/NewProduct',function () {
     return view('admin/html.NewProduct');
 });
-Route::post('/NewProduct/add','MenuFoodController@create');
+Route::post('/NewProduct/add','CommodityTableController@create');
 
 Route::get('/StoreCouponList',function () {
     return view('admin/html.StoreCouponList');
@@ -153,9 +153,26 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('admin/html.StoreInfoSettings');
 })->name('setting');
 
-Route::get('/StoreInfoSettings/edit','ShopsController@edit');
-Route::post('/StoreInfoSettings/edit','ShopsController@update');
+Route::post('/StoreInfoSettings/add','ShopsController@');
 
-Route::get('/RequestComplete',function () {
-    return view('admin/html.RequestComplete');
+Route::get('/PointSetting','PointController@setting',function () {
+    return view('admin/html.PointSetting');
 });
+
+Route::post('PointSetting/add','PointController@create');
+
+Route::get('PointSetting/add','PointController@edit');
+Route::post('PointSetting/add','PointController@update');
+
+Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
+    return view('admin/html.StoreInfoDetail');
+})->name('setting');
+
+Route::post('/StoreInfoDetail/add','ShopsController@');
+
+Route::get('/StoreInfoDelete', 'ShopsController@setting',function () {
+    return view('admin/html.StoreDelete');
+})->name('setting');
+
+Route::post('/StoreDelete/add','ShopsController@');
+
