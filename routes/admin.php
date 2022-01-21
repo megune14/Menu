@@ -137,7 +137,7 @@ Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
 });
 
-Route::post('/CouponProduct/add','CouponController@create');
+Route::post('/CouponProduct/add','CouponTableController@create');
 
 Route::get('/Inquiry',function () {
     return view('admin/html.inquiry');
