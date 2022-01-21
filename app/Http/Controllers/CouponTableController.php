@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CouponTable;
+
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\CouponTable;
+use App\Models\CommodityTable;
 
 // 現在認証しているユーザーを取得
 $admin = Auth::user();
@@ -32,5 +34,19 @@ class CouponTableController extends Controller
       $coupon->fill($form)->save();
       return redirect('/admin/CouponProduct');
 
+    }
+
+    public function open()
+    {
+      $coupon = CouponTable::where('StoreID',Auth::id())->get();
+    $menu = CommodityTable::where('StoreID',Auth::id())->get();
+    $i = 0; 
+    foreach ($coupon as $key) {
+      $key['CommodityName'] = $menu[$i]->CommodityName;
+      $coupon[$i] = $key; 
+      $i++;
+
+
+    }
     }
 }

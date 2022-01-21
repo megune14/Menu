@@ -11,15 +11,17 @@
     use App\Models\CouponTable;
     use App\Models\CommodityTable;
     $coupon = CouponTable::where('StoreID',Auth::id())->get();
-    $menu = CommodityTable::get();
+    $menu = CommodityTable::where('StoreID',Auth::id())->get();
+    $i = 0; 
     foreach ($coupon as $key) {
-      $coupon['CommodityName'] = $menu->where('StoreID',$key->StoreID)->get();
-      # code...
+      $key['CommodityName'] = $menu[$i]->CommodityName;
+      $coupon[$i] = $key; 
+      $i++;
     }
-    dd($coupon['CommodityName']);
-  //
+
+    //
   //Coupon::find(1)->delete();
-   foreach ($menu as $menu)  {} 
+   
   ?>
       <div class = CouponList>
         <h1>クーポン一覧</h1>
@@ -48,7 +50,7 @@
           
           <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
           <div class="menuname" name="name">
-            <p>{{$menu->CommodityName}}</p>
+            <p>{{$coupon->CommodityName}}</p>
           </div>
           <div class="menupoint" name="point">
           <p>必要ポイント数： {{$coupon->Point}}pt</p>

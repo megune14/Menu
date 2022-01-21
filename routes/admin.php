@@ -97,6 +97,7 @@ Route::get('/StoreCouponList',function () {
 });
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
+Route::get('/StoreCouponList','CouponController@delete');
 
 Route::get('/MenuDetail',function () {
     return view('admin/html.MenuDetail');
