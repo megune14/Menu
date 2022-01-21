@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Coupon;
+use App\Models\CouponTable;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -46,13 +46,12 @@ class CouponController extends Controller
       return redirect('/admin/CouponProduct');
 
     }
-
-   public function delete(Request $request)
-   {
-       $coupon = Coupon::find($request->id);
-       return view('StoreCouponList.del',['form => $coupon']);
-/////
-   }
+   
+   public function delete(Request $request) {
+    coupontable::find(Auth::id())->delete();
+    return redirect('admin/StoreCouponList');
+    /**return view('StoreCouponList.del',['form => $coupon']); */
+}
 //強制
    // public function del(Request $request){
    //     $param=['id'=> $request->id];

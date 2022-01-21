@@ -3,24 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 class CouponTable extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'CouponID';
-    protected $fillable = ['CouponID','StoreID','CommodityID','Point','FirstDay','LastDay'];
+    use SoftDeletes;
 
-   public static $rules = array(
-     'StoreID' => 'StoreID',
-     'CommodityID' => 'CommodityID',
-     'Point' => 'Point',
-     'FirstDay' => 'FirstDay',
-     'LastDay' => 'LastDay',
-     
-   );
+    protected $dates = ['deleted_at'];
 
-   public function getData(){
-       return $this->CouponID. ':'. $this->StoreID. '(' . $this->CommodityID . $this->Point . $this->FirstDay . $this->LastDay .')';
- }
+   
 }
