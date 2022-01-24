@@ -15,7 +15,7 @@ class Point extends Migration
     {
         Schema::create('points', function (Blueprint $table) {
             $table->id();
-            $table->string('StoreID');
+            $table->string('StoreID')->constrained('admins')->cascadeOnDelete();
             $table->integer('Price');
             $table->integer('Point');
             $table->timestamps();

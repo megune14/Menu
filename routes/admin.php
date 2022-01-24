@@ -97,6 +97,7 @@ Route::get('/StoreCouponList',function () {
 });
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
+Route::get('/StoreCouponList','CouponController@delete');
 
 Route::get('/MenuDetail',function () {
     return view('admin/html.MenuDetail');
@@ -137,7 +138,7 @@ Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
 });
 
-Route::post('/CouponProduct/add','CouponController@create');
+Route::post('/CouponProduct/add','CouponTableController@create');
 
 Route::get('/Inquiry',function () {
     return view('admin/html.inquiry');
@@ -170,9 +171,15 @@ Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
 
 Route::post('/StoreInfoDetail/add','ShopsController@');
 
-Route::get('/StoreInfoDelete', 'ShopsController@setting',function () {
-    return view('admin/html.StoreDelete');
+Route::get('/StoreInfoDelete',function () {
+    return view('admin/html.StoreInfoDelete');
 })->name('setting');
 
-Route::post('/StoreDelete/add','ShopsController@');
+Route::post('/StoreInfoDelete/delete','ShopsController@delete');
+
+Route::get('/CouponDetail',function () {
+    return view('admin/html.CouponDetail');
+})->name('setting');
+
+Route::post('/CouponDetail/delete','CouponDetail@delete');
 

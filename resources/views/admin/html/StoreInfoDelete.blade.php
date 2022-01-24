@@ -10,7 +10,7 @@
       <div class="storeinfodelete">
         <h2 class="">店舗情報の削除</h2>
         
-          <form action='/admin/StoreInfoDelete' method="POST" >
+          <form action='/admin/StoreInfoDelete/delete' method="POST" >
           {{ csrf_field() }}
 
           <!--<form action="StoreInfoDelete/kakak" method="post">-->

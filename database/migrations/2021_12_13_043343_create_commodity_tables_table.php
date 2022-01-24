@@ -22,7 +22,7 @@ class CreateCommodityTablesTable extends Migration
             $table->integer('Price');
             $table->integer('StopFlag');
             $table->unsignedBigInteger('CategoryID');
-            $table->unsignedBigInteger('StoreID')->constrained('admins');
+            $table->unsignedBigInteger('StoreID')->references('id')->on('admins')->onDelete('cascade');;
             $table->timestamps();
         });
     }
