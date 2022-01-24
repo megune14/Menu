@@ -9,7 +9,9 @@
     @section('contents')
     <div class="CouponDetail">
       <p>このクーポンを削除します。<br>　よろしいでしょうか？</p>
-
+       
+      <form action='/admin/CouponDetail/delete' method="POST" >
+          {{ csrf_field() }}
       
 
 
@@ -22,7 +24,7 @@
 
       <div class="submit-Detail">     
         <button type="button" onclick="history.back()">戻る</button>
-        <input type="button" value="確定">
+        <input type="submit" value="確定" name='delete'>
       </div>
 
 
@@ -32,3 +34,5 @@
 
     <!--/テキストサンプル-->
   @endsection
+
+  
