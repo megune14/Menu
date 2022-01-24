@@ -18,6 +18,7 @@ class ShopsController extends Controller
     public function setting() {
   		$md = new Admin();
   		$data = $md->where('id',Auth::id())->first();
+        
   		return view('admin/html.StoreInfoSettings',['data' => $data]);
 	}
     public function edit(Request $request)
