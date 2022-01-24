@@ -1,18 +1,18 @@
 @extends('user/html.MOBILEbase')
 
 
-  @section('title','データ削除')
+  @section('title','顧客情報削除')
 
 
     <!--テキストサンプル-->
     @section('contents')
-  <form action='/UserDelete' method="POST" >
+  <form action='/UserDelete/delete' method="POST" >
     {{ csrf_field() }}
     <div class = "AccountDelete">
       <h2>アカウント情報を</br>
       削除しますか？</h2>
       <div class="confirm-Delete">
-        <button  type="button"><a href="#">戻る</a></button>
+        <button  type="button" onclick="history.back()">戻る</a></button>
         <label class="open" for="pop-up">削除</label>
         <input type="checkbox" id="pop-up">
         <div class="overlay">
