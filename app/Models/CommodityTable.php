@@ -18,10 +18,10 @@ class CommodityTable extends Model
         'CommodityDetail' => 'CommodityDetail',
         'Allergy' => 'Allergy',
         'Calory' => 'Calory',
-        'StopFlag ' => 'StopFlag ',
-        'CategoryID ' => 'CategoryID ',
-        'StoreID ' => 'StoreID ',
-        'img  ' => 'img  ',
+        'StopFlag' => 'StopFlag',
+        'CategoryID' => 'CategoryID',
+        'StoreID' => 'StoreID',
+        'img' => 'img',
         
     );
 

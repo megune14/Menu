@@ -10,7 +10,7 @@ class CouponTable extends Model
 {
     use HasFactory;
     protected $primaryKey = 'CouponID ';
-    protected $fillable = ['CouponID ','StoreID ','CommodityID ','Point ','FirstDay ','LastDay ']; //保存したいカラム名が複数の場合
+    protected $fillable = ['CouponID','StoreID','CommodityID','Point','FirstDay','LastDay']; //保存したいカラム名が複数の場合
 
     public static $rules = array(
         'StoreID' => 'StoreID',
@@ -18,13 +18,14 @@ class CouponTable extends Model
         'Point' => 'Point',
         
         'FirstDay' => 'FirstDay',
-        'LastDay ' => 'LastDay ',
+        'LastDay' => 'LastDay',
        
         
     );
 
     public function getData(){
-        return $this->CouponID. ':'. $this->StoreID. '(' . $this->CommodityID .   $this->Point  .  $this->FirstDay  .  $this->LastDay  .')';
+        return $this->CouponID. ':'. $this->StoreID. '(' . $this->CommodityID .   $this->Point  .  $this->FirstDay  .  $this->LastDay  .  $this->img . $this->StopFlag  . $this->CategoryID  . $this->StoreID  .')';
+        
     }
     
     //use SoftDeletes;

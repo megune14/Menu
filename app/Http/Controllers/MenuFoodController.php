@@ -33,9 +33,11 @@ class MenuFoodController extends Controller
       $form = $request->all();
       unset($form['token']);
       
+      dd($form['img']);
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');
+        $form['img'] = str_replace('public/images/', ' ', $form['img']);
       }
       $MenuFood->fill($form)->save();
 
