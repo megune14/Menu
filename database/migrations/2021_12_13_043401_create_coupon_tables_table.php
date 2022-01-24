@@ -14,7 +14,7 @@ class CreateCouponTablesTable extends Migration
     public function up()
     {
         Schema::create('coupon_tables', function (Blueprint $table) {
-            $table->unsignedBigInteger('CouponID')->primary();
+            $table->bigIncrements('CouponID');
             $table->unsignedBigInteger('StoreID')->constrained('admins')->cascadeOnDelete()->cascadeOnDelete();
             $table->unsignedBigInteger('CommodityID')->constrained('commodity_tables')->cascadeOnDelete();
             $table->integer('Point');

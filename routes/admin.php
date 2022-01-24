@@ -92,11 +92,12 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::get('/StoreCouponList',function () {
+Route::get('/StoreCouponList','CouponTableController@open',function () {
     return view('admin/html.StoreCouponList');
 });
-Route::get('/StoreCouponList/del','CouponController@delete');
-Route::post('/StoreCouponList/del','CouponController@remove');
+//Route::get('/StoreCouponList/del','CouponController@delete');
+//Route::post('/StoreCouponList/del','CouponController@remove');
+//Route::get('/StoreCouponList','CouponTableController@open');
 
 Route::get('/MenuDetail',function () {
     return view('admin/html.MenuDetail');
@@ -117,9 +118,7 @@ Route::get('/NewProduct',function () {
 });
 Route::post('/NewProduct/add','CommodityTableController@create');
 
-Route::get('/StoreCouponList',function () {
-    return view('admin/html.StoreCouponList');
-});
+
 Route::get('/StoreCouponList/del','CouponController@delete');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
@@ -137,7 +136,7 @@ Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
 });
 
-Route::post('/CouponProduct/add','CouponController@create');
+Route::post('/CouponProduct/add','CouponTableController@create');
 
 Route::get('/Inquiry',function () {
     return view('admin/html.inquiry');
@@ -176,4 +175,10 @@ Route::get('/StoreInfoDelete',function () {
 })->name('setting');
 
 Route::post('/StoreInfoDelete/delete','ShopsController@delete');
+
+Route::get('/CouponDetail',function () {
+    return view('admin/html.CouponDetail');
+})->name('setting');
+
+Route::post('/CouponDetail/delete','CouponDetail@delete');
 

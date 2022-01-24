@@ -15,13 +15,7 @@ use App\Http\Controllers\CommodityTableController;
 $Coupon = CommodityTable::get();
 
 ?>
-  <form action="/admin/CouponProduct/add"  method='post'  >
-  @csrf
-  <div class = CouponProduct>
-    
-  $Coupon = MenuFood::get();
-
-  ?>
+  
     <form action="/admin/CouponProduct/add"  method='post'  >
     @csrf
       <div class = CouponProduct>
@@ -29,26 +23,29 @@ $Coupon = CommodityTable::get();
         <div class="coupon-product">
 
           <p>商品名：
-            <select name="name">
+            <select name="CommodityID">
             
-            <?php foreach ($Coupon as $Coupon) {  ?>
-              <option  value="{{$Coupon->name }}">{{$Coupon->name }}</option>
-              <?php  } ?>
-            </select>
-          </p>
+            
         
-<<<<<<< HEAD
         <?php foreach ($Coupon as $Coupon) {  ?>
-          <option  value="{{$Coupon->CommodityName }}">{{$Coupon->CommodityName }}</option>
+          <option  value="{{$Coupon->CommodityID }}">{{$Coupon->CommodityName }}</option>
           <?php  } ?>
         </select>
         </p>
+
       </div>
+
+      <p>必要ポイント：<input type="number" name="Point" value="100" min="10" max="10000" step="10"></p>
+
+      <p>クーポン使用開始日：
+      <input type="date" name="FirstDay" value="">
+      </p>
+
+      <p>クーポン使用終了日：
+      <input type="date" name="LastDay" value="">
+      </p>
   
   
-=======
-          <p>必要ポイント：<input type="number" name="point" value="100" min="10" max="10000" step="10"></p>
->>>>>>> f41df1c9b59259885e297873fc7de29416749ad5
 
         </div>
 
