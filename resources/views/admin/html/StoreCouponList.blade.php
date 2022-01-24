@@ -8,16 +8,16 @@
     @section('contents')
     
    <?php 
-    use App\Models\CouponTable;
-    use App\Models\CommodityTable;
-    $coupon = CouponTable::where('StoreID',Auth::id())->get();
-    $menu = CommodityTable::where('StoreID',Auth::id())->get();
-    $i = 0; 
-    foreach ($coupon as $key) {
-      $key['CommodityName'] = $menu[$i]->CommodityName;
-      $coupon[$i] = $key; 
-      $i++;
-    }
+   //use App\Models\CouponTable;
+   //use App\Models\CommodityTable;
+   //$coupon = CouponTable::where('StoreID',Auth::id())->get();
+   //$menu = CommodityTable::where('StoreID',Auth::id())->get();
+   //$i = 0; 
+   //foreach ($coupon as $key) {
+   //  $key['CommodityName'] = $menu[$i]->CommodityName;
+   //  $coupon[$i] = $key; 
+   //  $i++;
+   //}
 
     //
   //Coupon::find(1)->delete();
