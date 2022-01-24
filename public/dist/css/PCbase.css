@@ -922,7 +922,19 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 36px;
 }
 
+.col-sm-10 {
+  border: solid 1px #000;
+  border-radius: 15px;
+  width: 430px;
+}
+
+.col-sm-10 p {
+  margin: 5px,5px,5px,5px;
+  font-size: 22px;
+}
+
 .submit-InfoDetail {
+  margin-top: 30px;
   margin-bottom: 60px;
 }
 
@@ -940,7 +952,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   height: 100%;
   width: 140px;
   margin-top: 0;
-  margin-left: 140px;
+  margin-left: 150px;
   padding: 6px 32px 6px 32px;
   background-color: red;
   border:1px solid #696969;
