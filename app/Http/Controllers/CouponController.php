@@ -46,12 +46,12 @@ class CouponController extends Controller
       return redirect('/admin/CouponProduct');
 
     }
-   
-   public function delete(Request $request) {
-    coupontable::find(Auth::id())->delete();
-    return redirect('admin/StoreCouponList');
-    /**return view('StoreCouponList.del',['form => $coupon']); */
-}
+
+   public function delete(Request $request)
+   {
+       $coupon = Coupon::find($request->id);
+       return view('StoreCouponList.del',['form => $coupon']);
+   }
 //強制
    // public function del(Request $request){
    //     $param=['id'=> $request->id];
@@ -91,21 +91,21 @@ class CouponController extends Controller
         $item = DB::select('select *  from coupons where id = :id',$param);
         return view('CouponSetting.edit',['form' => $item[0]]);
     }
-    
+
     public function update(Request $request)
     {
         $param = [
             'id' => $request->id,
             'name' => $request->name,
             'point' => $request->point,
-            
-    
+
+
         ];
         DB::update('update coupons set name = :name, point = :point where id = :id', $param);
         return redirect('/admin/CouponSetting');
     }
-    
-    
+
+
 
 
 

@@ -61,6 +61,7 @@ class CommodityTableController extends Controller
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');
+        $form['img'] = str_replace('public/images/', '', $form['img']);
       }
       $CommodityTable->fill($form)->save();
       
