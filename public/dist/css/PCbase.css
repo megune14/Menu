@@ -1143,15 +1143,69 @@ input[type="checkbox"]:checked ~ .abc ul{
   color: #fff;
 }
 
-.submit-InfoSetting input {
+.submit-InfoSetting .open {
   margin-left: 20px;
+  padding-top: 7px;
   background-color: #1E90FF;
-  height: 45px;
+  height: 38px;
   width: 125px;
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
+  text-align: center;
   color: #fff;
+}
+
+.window-Setting {
+	width: 150vw;
+	max-width: 480px;
+	height: 300px;
+  margin-top: 10px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window-Setting #msg {
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.window-Setting .text {
+  width: 480px;
+  height: 60px;
+	font-size: 21px;
+  padding-left: 110px;
+  margin-bottom: 0;
+}
+
+.window-Setting button {
+  margin-left: 65px;
+  margin-right: 0;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
+}
+
+.window-Setting input {
+  margin-left: 160px;
+  border:1px solid rgba(128,128,128,0.6);
+  border-radius: 0px;
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  color: rgba(128,128,128,1);
 }
 
 
