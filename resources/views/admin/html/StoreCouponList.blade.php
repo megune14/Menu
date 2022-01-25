@@ -44,8 +44,8 @@
           $date = $coupon->FirstDay;
           $date2 = $coupon->LastDay;
 
-          echo '<p> 使用開始日' . date('Y年n月j日',strtotime($date)) ."</p>\n"; 
-          echo '<p> 使用終了日' . date('Y年n月j日',strtotime($date2)) ."</p>\n"; ?>
+          echo '<p> 使用開始日　' . date('Y/n/j',strtotime($date)) ."</p>\n"; 
+          echo '<p> 使用終了日　' . date('Y/n/j',strtotime($date2)) ."</p>\n"; ?>
         </div>
 
         

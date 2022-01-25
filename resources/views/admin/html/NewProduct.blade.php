@@ -13,12 +13,12 @@
 
       $(function(){
         // ドラッグしたままエリアに乗った＆外れたとき
-        $(document).on('dragover', '#file_drag_drop_area, #file_drag_drop_area_stl', function (event) {
+        $(document).on('dragover', '#file_drag_drop_area, #file_drag_drop_area_stl,#img1', function (event) {
             event.preventDefault();
             $(this).css("background-image", "url(../../images/ドロップ2.png)");
         });
 
-        $(document).on('dragleave', '#file_drag_drop_area, #file_drag_drop_area_stl', function (event) {
+        $(document).on('dragleave', '#file_drag_drop_area, #file_drag_drop_area_stl,#img1', function (event) {
             event.preventDefault();
             $(this).css("background-image", "url(../../images/ドロップ1.png)");
         });
@@ -95,11 +95,9 @@
 
         
             
-          <div id="file_drag_drop_area" class="" >
+          <div id="file_drag_drop_area" class="">
             
-            <img id="img1" style="width:250px;height:250px;" />
-
-            </img>
+            <img id="img1"></img>
 
           </div>
           <input type="file" id="file_input" name="img">
