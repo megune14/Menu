@@ -824,26 +824,28 @@ margin-left: 25px;
 .couponcard {
   display: inline-block;
   margin-top: 30px;
-  margin-left: 35px;
+  margin-left: 45px;
   margin-right: 60px;
   width: 220px;
-  height: 290px;
+  height: 330px;
   border: solid 1px #ccc;
 }
 
 .couponcard img {
   width: 220px;
-  height: 150px;
+  height: 160px;
 }
 
 .couponcard p {
   display: inline-block;
   margin-top: 0;
   margin-left: 15px;
+  margin-bottom: 5px;
 }
 
 .menuname {
-  font-size: 20px;
+  font-size: 22px;
+  height: 45px;
 }
 
 .couponcheckbox {
