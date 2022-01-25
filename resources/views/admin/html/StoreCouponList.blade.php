@@ -7,26 +7,22 @@
     <!--テキストサンプル-->
     @section('contents')
     
-   <?php 
-    use App\Models\Coupon;
-    $coupon = Coupon::get();
-  //
-  //Coupon::find(1)->delete();
-  ?>
+  
       <div class = CouponList>
         <h1>クーポン一覧</h1>
-        <?php foreach ($coupon as $coupon) { ?>
+        <?php foreach ($coupon as $coupon)  { ?>
+          
         <div class="couponcard">
         
-          <img src="/images/men1.jpg"><br>
+          <img src="{{ asset('storage/images/'. $coupon->img) }}"><br>
 
           <div class="couponcheckbox">
-            <input type="checkbox" id="coupon-btn-check{{$coupon->id}}">
-            <label for="coupon-btn-check{{$coupon->id}}" class="coupon-btn"><span></span></label>
+            <input type="checkbox" id="coupon-btn-check{{$coupon->CouponID}}">
+            <label for="coupon-btn-check{{$coupon->CouponID}}" class="coupon-btn"><span></span></label>
 
               <div class="abc">
               <ul>
-                  <li><a href="#">変更</a></li>
+                  <li><a href="/admin/CouponSetting">変更</a></li>
                   <form action="/StoreCouponList/del"  method='post'  >
                   @csrf
                   <li><input type="submit"  value="削除"></li>
@@ -37,14 +33,16 @@
 
           </div>
           
-          <input type="hidden"  name="id" value="{{$coupon->id}}">
+          <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
           <div class="menuname" name="name">
-            <p>{{$coupon->name}}</p>
+            <p>{{$coupon->CommodityName}}</p>
           </div>
           <div class="menupoint" name="point">
-          <p>必要ポイント数： {{$coupon->point}}pt</p>
+          <p>必要ポイント数： {{$coupon->Point}}pt</p>
           </div>
         </div>
+
+        <p>開始日</p>
 
         <?php } ?>
         
@@ -52,7 +50,7 @@
          
         
         <div class="coupon-send">
-          <a id="coupon-send" href="">
+          <a id="coupon-send" href="/admin/CouponProduct">
             <input type="submit"  value="クーポンの追加"><!--送信ボタン-->
           </a>
         </div>

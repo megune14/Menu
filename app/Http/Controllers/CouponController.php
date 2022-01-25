@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Coupon;
+use App\Models\CouponTable;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -91,21 +91,21 @@ class CouponController extends Controller
         $item = DB::select('select *  from coupons where id = :id',$param);
         return view('CouponSetting.edit',['form' => $item[0]]);
     }
-    
+
     public function update(Request $request)
     {
         $param = [
             'id' => $request->id,
             'name' => $request->name,
             'point' => $request->point,
-            
-    
+
+
         ];
         DB::update('update coupons set name = :name, point = :point where id = :id', $param);
         return redirect('/admin/CouponSetting');
     }
-    
-    
+
+
 
 
 
