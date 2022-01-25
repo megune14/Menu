@@ -51,9 +51,10 @@ class CouponTableController extends Controller
       $key['img'] = $menu[$i]->img;
       $coupon[$i] = $key; 
       $i++;
-
+      
 
     }
+    
    //dd($coupon[0]['img']);
     return view('admin/html.StoreCouponList',['coupon'=>$coupon]);
     }
