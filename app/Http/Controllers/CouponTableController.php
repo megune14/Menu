@@ -44,13 +44,16 @@ class CouponTableController extends Controller
       $coupon = CouponTable::where('StoreID',Auth::id())->get();
     $menu = CommodityTable::where('StoreID',Auth::id())->get();
     
-    $i = 0; 
+    $i = 0;
+
+    
     
     foreach ($coupon as $key) {
       $key['CommodityName'] = $menu[$i]->CommodityName;
       $key['img'] = $menu[$i]->img;
       $coupon[$i] = $key; 
       $i++;
+      
       
 
     }
