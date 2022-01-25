@@ -28,17 +28,17 @@ class CategorySeeder extends Seeder
               ],
               [
                 'CategoryID'=>3,
-                'StoreID' => 2 ,
+                'StoreID' => 1 ,
                 'Category' => '寿司' ,
               ],
               [
                 'CategoryID'=>4,
-                'StoreID' => 2 ,
+                'StoreID' => 1 ,
                 'Category' => '麺' ,
               ],
               [
                 'CategoryID'=>5,
-                'StoreID' => 3 ,
+                'StoreID' => 1 ,
                 'Category' => 'そば' ,
               ],
             ],
