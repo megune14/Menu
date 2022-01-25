@@ -568,7 +568,6 @@ nav li.has-child ul ul {
 
 .Menucheckbox ul li {
   list-style: none;
-  
 }
 
 .Menucheckbox ul li {
@@ -1296,6 +1295,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .NewProduct input {
+  margin-top: 1px;
   font-size: 20px;
 }
 
@@ -1305,9 +1305,6 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 252px;
   height: 252px;
   border:solid 1px #000;
-  
-  
-  
 }
 
 #file_drag_drop_area input {
@@ -1315,11 +1312,10 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 #img1 {
+  width:250px;
+  height:250px;
   background-image: url(../../images/ドロップ1.png);
 }
-
-
-
 
 .Product-form input {
   margin-top: 5px;
