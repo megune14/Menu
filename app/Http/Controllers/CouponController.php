@@ -51,7 +51,6 @@ class CouponController extends Controller
    {
        $coupon = Coupon::find($request->id);
        return view('StoreCouponList.del',['form => $coupon']);
-/////
    }
 //強制
    // public function del(Request $request){

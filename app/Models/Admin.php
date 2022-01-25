@@ -46,12 +46,16 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
     public static function boot()
     {
         parent::boot();
 
         static::deleting(function ($article) {
-            $article->Commodity_Tables()->delete();
+            $article->users()->delete();
         });
     }
 }
