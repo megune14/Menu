@@ -33,6 +33,7 @@ class CouponTableController extends Controller
       $form = $request->all();
       unset($form['token']);
       $form['StoreID'] = $id;
+      //dd($form);
       $coupon->fill($form)->save();
       return redirect('/admin/CouponProduct');
 
@@ -49,11 +50,11 @@ class CouponTableController extends Controller
 
 
     foreach ($coupon as $key) {
-      $key['CommodityName'] = $menu[$i]->CommodityName;
-      $key['img'] = $menu[$i]->img;
+      $key['CommodityName'] = $menu->where('CommodityID',$key['CommodityID'])->first()->CommodityName;
+      $key['img'] = $menu->where('CommodityID',$key['CommodityID'])->first()->img;
       $coupon[$i] = $key;
       $i++;
-
+      //dd($coupon);
 
 
     }
