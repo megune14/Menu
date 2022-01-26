@@ -50,7 +50,14 @@ Route::get('/FoodDetail',function () {
 Route::get('/UserDelete',function () {
     return view('user/html.UserDelete');
 });
+Route::post('/UserDelete/delete','UserController@delete');
+
 
 Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
     return view('user/html.ConfirmRegisterDetail');
 });
+
+Route::prefix('cart')->middleware('auth:users')->group(function(){
+    Route::post('/add','CartController@add')->name('cart.add');
+});
+

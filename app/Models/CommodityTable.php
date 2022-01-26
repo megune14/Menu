@@ -18,17 +18,21 @@ class CommodityTable extends Model
         'CommodityDetail' => 'CommodityDetail',
         'Allergy' => 'Allergy',
         'Calory' => 'Calory',
-        'StopFlag ' => 'StopFlag ',
-        'CategoryID ' => 'CategoryID ',
-        'StoreID ' => 'StoreID ',
-        'img  ' => 'img  ',
-        
+        'StopFlag' => 'StopFlag',
+        'CategoryID' => 'CategoryID',
+        'StoreID' => 'StoreID',
+        'img' => 'img',
+
     );
 
     public function getData(){
         return $this->CommodityID. ':'. $this->CommodityName. '(' . $this->Price .   $this->CommodityDetail  .  $this->Allergy  .  $this->Calory  .  $this->img . $this->StopFlag  . $this->CategoryID  . $this->StoreID  .')';
     }
-    
 
-    
+    public function users(){
+        return $this->belongsToMany(User::class,'carts')->withPivot(['id','quantity']);
+    }
+
+
+
 }

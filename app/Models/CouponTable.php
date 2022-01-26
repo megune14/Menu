@@ -23,7 +23,8 @@ class CouponTable extends Model
     );
 
     public function getData(){
-        return $this->CouponID. ':'. $this->StoreID. '(' . $this->CommodityID .   $this->Point  .  $this->FirstDay  .  $this->LastDay  .')';
+        return $this->CouponID. ':'. $this->StoreID. '(' . $this->CommodityID .   $this->Point  .  $this->FirstDay  .  $this->LastDay  .  $this->img . $this->StopFlag  . $this->CategoryID  . $this->StoreID  .')';
+        
     }
     
     //use SoftDeletes;

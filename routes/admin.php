@@ -152,7 +152,8 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('admin/html.StoreInfoSettings');
 })->name('setting');
 
-Route::post('/StoreInfoSettings/add','ShopsController@');
+Route::post('/StoreInfoSettings/edit','ShopsController@edit');
+Route::post('/StoreInfoSettings/edit','ShopsController@update');
 
 Route::get('/PointSetting','PointController@setting',function () {
     return view('admin/html.PointSetting');
