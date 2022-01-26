@@ -40,25 +40,25 @@ class CouponTableController extends Controller
 
     public function open()
     {
-      
+
       $coupon = CouponTable::where('StoreID',Auth::id())->get();
     $menu = CommodityTable::where('StoreID',Auth::id())->get();
-    
+
     $i = 0;
 
-    
-    
+
+
     foreach ($coupon as $key) {
       $key['CommodityName'] = $menu[$i]->CommodityName;
       $key['img'] = $menu[$i]->img;
-      $coupon[$i] = $key; 
+      $coupon[$i] = $key;
       $i++;
-      
-      
+
+
 
     }
-    
-   //dd($coupon[0]['img']);
+
+   dd($coupon);
     return view('admin/html.StoreCouponList',['coupon'=>$coupon]);
     }
 }
