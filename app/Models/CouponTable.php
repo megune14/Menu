@@ -9,14 +9,13 @@ use Illuminate\Database\Eloquent\Model;
 class CouponTable extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'CouponID ';
+    protected $primaryKey = 'CouponID';
     protected $fillable = ['CouponID','StoreID','CommodityID','Point','FirstDay','LastDay']; //保存したいカラム名が複数の場合
 
     public static $rules = array(
         'StoreID' => 'StoreID',
         'CommodityID' => 'CommodityID',
         'Point' => 'Point',
-        
         'FirstDay' => 'FirstDay',
         'LastDay' => 'LastDay',
        

@@ -33,6 +33,7 @@ class CouponTableController extends Controller
       $form = $request->all();
       unset($form['token']);
       $form['StoreID'] = $id;
+      //dd($form);
       $coupon->fill($form)->save();
       return redirect('/admin/CouponProduct');
 
