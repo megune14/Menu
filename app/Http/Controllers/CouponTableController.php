@@ -33,6 +33,7 @@ class CouponTableController extends Controller
       $form = $request->all();
       unset($form['token']);
       $form['StoreID'] = $id;
+      //dd($form);
       $coupon->fill($form)->save();
       return redirect('/admin/CouponProduct');
 
@@ -44,7 +45,8 @@ class CouponTableController extends Controller
       $coupon = CouponTable::where('StoreID',Auth::id())->get();
     $menu = CommodityTable::where('StoreID',Auth::id())->get();
     $i = 0; 
-    foreach ($coupon as $key) {
+
+    foreach ($coupon as $key) {                                                
       $key['CommodityName'] = $menu[$i]->CommodityName;
       $coupon[$i] = $key; 
       $i++;

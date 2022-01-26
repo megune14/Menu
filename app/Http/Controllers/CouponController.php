@@ -46,10 +46,19 @@ class CouponController extends Controller
       return redirect('/admin/CouponProduct');
 
     }
+
+    public function detail() {
+        $md = new CouponTable();
+        $data = $md->where('id'())->first();
+        return view('admin/html.CouponDetail',['data' => $data]);
+  }
    
    public function delete(Request $request) {
-    coupontable::find(Auth::id())->delete();
-    return redirect('admin/StoreCouponList');
+    $companies = new Companies;
+    $companies->fill( $request->all() ); 
+    $companies->save(); 
+    coupontable::find($request->id)->delete();
+    return redirect('admin/html.CouponDetail');
     /**return view('StoreCouponList.del',['form => $coupon']); */
 }
 //強制
