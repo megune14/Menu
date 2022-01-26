@@ -35,7 +35,6 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users', 'email')->whereNull('deleted_at'),],
             'firstname' => ['required', 'string', 'max:11'],
             'lastname' => ['required', 'string', 'max:11'],
@@ -44,7 +43,6 @@ class RegisteredUserController extends Controller
         ]);
 
         $user = User::create([
-            'name' => $request->name,
             'email' => $request->email,
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,

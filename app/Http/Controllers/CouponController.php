@@ -39,7 +39,7 @@ class CouponController extends Controller
         //DB::insert('insert into coupon(name, point) values (:name, :point)',$param);
         //return redirect('/CouponSetting');
       //$this->validate($request,Coupon::$rules);
-      $coupon = new Coupon;
+      $coupon = new CouponTable;
       $form = $request->all();
       unset($form['token']);
       $coupon->fill($form)->save();
@@ -49,7 +49,7 @@ class CouponController extends Controller
 
    public function delete(Request $request)
    {
-       $coupon = Coupon::find($request->id);
+       $coupon = CouponTable::find($request->id);
        return view('StoreCouponList.del',['form => $coupon']);
    }
 //強制
@@ -66,7 +66,7 @@ class CouponController extends Controller
 
     public function remove(Request $request)
     {
-        Coupon::find($request->id)->delete();
+        CouponTable::find($request->id)->delete();
         return redirect('/admin/StoreCouponList');
 
        //もう一個のほう
