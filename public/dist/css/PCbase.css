@@ -471,6 +471,16 @@ nav li.has-child ul ul {
   display: none;
 }
 
+.MenuCreate {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.MenuCreate h1 {
+  margin-top: 40px;
+}
+
 .search input {
   width: 70px;
   margin-left: 14px;
@@ -482,14 +492,17 @@ nav li.has-child ul ul {
 
 .search .form-control {
   width: 150px;
-  margin-left: 14px;
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
   color: #000;
 }
 
-.MenuCreate {
+.field-Create {
+  margin-top: 5px;
+}
+
+.MenuCreate-card {
   display: inline-block;
   margin-top: 20px;
   margin-left: 20px;
@@ -499,9 +512,11 @@ nav li.has-child ul ul {
   border-radius: 15px;
   height: 145px;
   width: 400px;
+  box-shadow: 2px 2px 2px 1px #696969;
+
 }
 
-.MenuCreate img {
+.MenuCreate-card img {
   display: inline;
   width: 145px;
   height: 145px;
@@ -531,35 +546,27 @@ nav li.has-child ul ul {
   display: inline-block;
   margin-left: 15px;
   height: 6px;
-  width: 280px;
+  width: 275px;
 }
 
 .Menu-btn {
   display: inline-block;
-  margin-top: 0;
-  margin-left: 210px;
+  margin-top: 3px;
+  margin-left: 185px;
   margin-bottom: 0;
-  height: 9px;
+  height: 12px;
+  width: 35px;
+  z-index: 3;
+  background-color: #fff;
+  background-image:
+    radial-gradient(#000 30%, transparent 42%);
+  background-size: 12px 12px;
 }
 
-.Menu-btn span,
-.Menu-btn span:before,
-.Menu-btn span:after {
-  content: '';
-  display: flex;
-  height: 6px;
-  width: 6px;
-  border-radius: 10px;
-  background-color: #000000; /* 3本線の色 */
-  position: absolute;
-}
-
-.Menu-btn span:before {
-  left: 9px;
-}
-
-.Menu-btn span:after {
-  right: 9px;
+.Menucheckbox label:hover {
+  background-color: #fff;
+  background-image:
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
 }
 
 .Menucheckbox ul {
@@ -850,14 +857,10 @@ margin-left: 25px;
   font-size: 44px;
 }
 
-
-
 .coupon-send input {
-  
   margin-top: 35px;
   margin-right: 10px;
   height: 60px;
-  
   padding: 5px 20px 5px 20px;
   background-color: #1E90FF;
   border:1px solid #696969;
@@ -866,12 +869,10 @@ margin-left: 25px;
   color: #fff;
 }
 
-
 .field-couponcard {
   margin-left: 80px;
   margin-bottom: 40px;
 }
-
 
 .couponcard {
   display: inline-block;
@@ -888,7 +889,7 @@ margin-left: 25px;
 .couponcard img {
   width: 220px;
   height: 160px;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .couponcard h3 {
@@ -924,9 +925,6 @@ margin-left: 25px;
   height: 12px;
   width: 35px;
   z-index: 3;
-}
-
-.coupon-btn  {
   background-color: #fff;
   background-image:
     radial-gradient(#000 30%, transparent 42%);
@@ -1042,7 +1040,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 .CouponProduct select {
   width: 200px;
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   border:1px solid rgba(128,128,128,0.8);
   font-size: 18px;
@@ -1066,11 +1064,11 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-right: auto;
   margin-left: auto;
   background-color: #1E90FF;
-  height: 45px;
-  width: 125px;
+  height: 55px;
+  width: 145px;
   border:1px solid #696969;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 22px;
   color: #fff;
 }
 
