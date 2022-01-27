@@ -56,3 +56,7 @@ Route::post('/UserDelete/delete','UserController@delete');
 Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
     return view('user/html.ConfirmRegisterDetail');
 });
+
+Route::get('/OrderComplete.blade.php',function () {
+    return view('user/html.OrderComplete.blade.php');
+});
