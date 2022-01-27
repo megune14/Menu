@@ -119,7 +119,7 @@ Route::get('/NewProduct',function () {
 Route::post('/NewProduct/add','CommodityTableController@create');
 
 
-Route::get('/StoreCouponList/del','CouponController@delete');
+Route::get('/StoreCouponList/del','CouponController@detail');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/RequestForm',function () {
