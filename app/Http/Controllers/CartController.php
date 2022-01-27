@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\User;
+use App\Models\OrderTable;
+use App\Models\OrderDetailTable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class CartController extends Controller
@@ -37,4 +39,26 @@ class CartController extends Controller
         Cart::where('commodity_table_CommodityID',$id)->where('user_id',Auth::id())->delete();
         return redirect()->route('user.cart.index');
     }
+
+    public function push(){
+        $user = User::findOrFail(Auth::id());
+        $carts = $user->commoditys;
+        $order = OrderTable::create([
+            'DayTime' => date('Y/m/d/'),
+            'UserID' => Auth::id(),
+            'StoreID' => session()->get('StoreID'),
+            'TableNumber' => 101,
+        ]);
+        foreach($carts as $cart){
+            OrderDetailTable::create([
+                'order_table_OrderID' => $order->id,
+                'CommodityID' => $cart->CommodityID,
+                'Quantity' =>$cart->pivot->quantity,
+            ]);
+        }
+        Cart::where('user_id',Auth::id())->delete();
+        return redirect()->route('user.category');
+    }
+
+
 }

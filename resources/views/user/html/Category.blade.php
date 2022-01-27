@@ -2,7 +2,6 @@
 <?php
 use App\Models\CategoryTable;
 $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
-
 ?>
 
 
