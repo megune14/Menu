@@ -22,31 +22,7 @@
         <div class="field-couponcard">
         <?php foreach ($coupon as $coupon)  { ?>
           
-<<<<<<< HEAD
           <div class="couponcard">
-=======
-        <div class="couponcard">
-        
-          <img src="{{ asset('storage/images/'. $coupon->img) }}"><br>
-
-          <div class="couponcheckbox">
-            <input type="checkbox" id="coupon-btn-check{{$coupon->CouponID}}">
-            <label for="coupon-btn-check{{$coupon->CouponID}}" class="coupon-btn"><span></span></label>
-
-              <div class="abc">
-              <ul>
-                  <li><a href="/admin/CouponSetting">変更</a></li>
-                  <form action="/admin/CouponDetail"  method='post'  >
-                  @csrf
-                  <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
-                  <li><input type="submit" value="削除"></li>
-                  </form>
-                </ul>
-
-              </div>
-
-          </div>
->>>>>>> f454fbc8be344a5d4640fc92a0204817c32d1988
           
             <img src="{{ asset('storage/images/'. $coupon->img) }}"><br>
 
