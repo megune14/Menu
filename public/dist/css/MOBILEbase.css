@@ -505,28 +505,43 @@ nav li.has-child ul ul {
   margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 5px;
+  font-size: 36px;
+}
+
+.field-card {
+ margin-left: 8px;
+ margin-bottom: 20px;
 }
 
 .card {
-  float: left;
+  display: inline-block;
   margin-top: 30px;
-  width: 165px;
-  height: 180px;
-  margin-left: 25px;
+  width: 160px;
+  height: 230px;
+  margin-left: 20px;
   border: solid 1px #ccc;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px#696969;
+}
+
+.card a {
+  color: #000;
+}
+
+.card a:hover {
+  color: #696969;
 }
 
 .card img {
-  display: flex;
-  width: 165px;
+  width: 160px;
+  height: 140px;
   border-radius: 10px 10px 0 0;
   margin-bottom: 8px;
 }
 
 .card p {
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
 }
 

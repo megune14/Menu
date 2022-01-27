@@ -63,6 +63,7 @@ class CommodityTableController extends Controller
         $form['img']=$request->file('img')->store('public/images');
         $form['img'] = str_replace('public/images/', '', $form['img']);
       }
+      $form['StopFlag'] = 0;
       $CommodityTable->fill($form)->save();
       
 
