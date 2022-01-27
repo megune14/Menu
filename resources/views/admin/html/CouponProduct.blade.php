@@ -146,12 +146,86 @@ var show_table=function(){
         columns: columns
     });
 }
+
+
 </script>
+
+
+
 <input type="date" name="FirstDay" value="">
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptで2つの日付を比較する方法をサンプルコード付き解説！</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+  <div id="result1"></div><!-- #result1 -->
+  <script src="index.js"></script>
+</body>
+
+
+
+<script>
+'use strict';
+
+let str1 = "2021-03-30 11:00:00";
+let str2 = "2021-03-31 12:00:00";
+
+let date1 = new Date(str1);
+let date2 = new Date(str2);
+
+let year1 = date1.getFullYear();
+let month1 = date1.getMonth() + 1;
+let day1 = date1.getDate();
+
+let year2 = date2.getFullYear();
+let month2 = date2.getMonth() + 1;
+let day2 = date2.getDate();
+
+let flag = true;
+if(year1 == year2){
+  if(month1 == month2){
+    if(date1 < date2){
+      flag = false;
+    }
+  }else{
+    if(month1 < month2){
+      flag = false;
+    }
+  }
+}else{
+  if(year1 < year2){
+    flag = false;
+  }
+}
+
+if(flag){
+  document.getElementById('result1').innerText = str1 + "の方が新しい日付です。";
+}else{
+  document.getElementById('result1').innerText = str2 + "の方が新しい日付です。";
+}
+
+
+
+
+</script>
 
 
 
