@@ -55,6 +55,16 @@ Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
     return view('user/html.ConfirmRegisterDetail');
 });
 
-Route::get('/OrderComplete.blade.php',function () {
-    return view('user/html.OrderComplete.blade.php');
+Route::prefix('cart')->middleware('auth:users')->group(function(){
+    Route::get('/','CartController@index')->name('cart.index');
+    Route::post('/add','CartController@add')->name('cart.add');
+    Route::post('/delete/{item}','CartController@delete')->name('cart.delete');
+
 });
+
+Route::get('/MailChange',function () {
+    return view('user/html.MailChange');
+});
+
+Route::post('/MailChang/edit','UserController@edit');
+Route::post('/MailChang/edit','UserController@update');
