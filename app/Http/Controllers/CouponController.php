@@ -47,11 +47,20 @@ class CouponController extends Controller
 
     }
 
-   public function delete(Request $request)
-   {
-       $coupon = CouponTable::find($request->id);
-       return view('StoreCouponList.del',['form => $coupon']);
-   }
+    public function detail() {
+        $md = new CouponTable();
+        $data = $md->where('id'())->first();
+        return view('admin/html.CouponDetail',['data' => $data]);
+  }
+   
+   public function delete(Request $request) {
+    $companies = new Companies;
+    $companies->fill( $request->all() ); 
+    $companies->save(); 
+    coupontable::find($request->id)->delete();
+    return redirect('admin/html.CouponDetail');
+    /**return view('StoreCouponList.del',['form => $coupon']); */
+}
 //強制
    // public function del(Request $request){
    //     $param=['id'=> $request->id];

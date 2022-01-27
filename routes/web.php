@@ -35,13 +35,11 @@ Route::group(['middleware' => 'auth:users'], function () {
         return view('user/html.MenuDetail');
     })->name('menudetail');
 });
-Route::get('/OrderList',function () {
-    return view('user/html.OrderList');
-});
+
 Route::get('/VoucherDetail',function () {
     return view('user/html.VoucherDetail');
 });
-Route::post('/OrderList/add','OrderListController@twoButtonsResult');
+
 
 Route::get('/FoodDetail',function () {
     return view('user/html.FoodDetail');
@@ -57,7 +55,6 @@ Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
     return view('user/html.ConfirmRegisterDetail');
 });
 
-Route::prefix('cart')->middleware('auth:users')->group(function(){
-    Route::post('/add','CartController@add')->name('cart.add');
+Route::get('/OrderComplete.blade.php',function () {
+    return view('user/html.OrderComplete.blade.php');
 });
-
