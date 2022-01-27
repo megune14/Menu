@@ -180,7 +180,8 @@ Route::get('/CouponDetail',function () {
     return view('admin/html.CouponDetail');
 })->name('setting');
 
-Route::post('/CouponDetail/delete','CouponDetail@delete');
+Route::post('/CouponDetail','CouponController@detail');
+Route::post('/CouponDetail/delete','CouponController@delete');
 
 Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');

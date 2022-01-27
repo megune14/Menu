@@ -7,18 +7,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><!--ここ-->
 
     <script>
 
       $(function(){
         // ドラッグしたままエリアに乗った＆外れたとき
-        $(document).on('dragover', '#file_drag_drop_area, #file_drag_drop_area_stl', function (event) {
+        $(document).on('dragover', '#file_drag_drop_area, #file_drag_drop_area_stl,#img1', function (event) {
             event.preventDefault();
             $(this).css("background-image", "url(../../images/ドロップ2.png)");
         });
 
-        $(document).on('dragleave', '#file_drag_drop_area, #file_drag_drop_area_stl', function (event) {
+        $(document).on('dragleave', '#file_drag_drop_area, #file_drag_drop_area_stl,#img1', function (event) {
             event.preventDefault();
             $(this).css("background-image", "url(../../images/ドロップ1.png)");
         });
@@ -54,26 +54,26 @@
   
         });
         $('#file_input').change(function(e){
-    //ファイルオブジェクトを取得する
-    var file = e.target.files[0];
-    var reader = new FileReader();
+      //ファイルオブジェクトを取得する
+      var file = e.target.files[0];
+      var reader = new FileReader();
  
-    //画像でない場合は処理終了
-    if(file.type.indexOf("image") < 0){
+      //画像でない場合は処理終了
+      if(file.type.indexOf("image") < 0){
       alert("画像ファイルを指定してください。");
       return false;
-    }
+     }
  
-    //アップロードした画像を設定する
-    reader.onload = (function(file){
+     //アップロードした画像を設定する
+     reader.onload = (function(file){
       return function(e){
         $("#img1").attr("src", e.target.result);
         $("#img1").attr("title", file.name);
       };
-    })(file);
-    reader.readAsDataURL(file);
+     })(file);
+     reader.readAsDataURL(file);
  
-  });
+      });
       });
       
     </script>
@@ -95,11 +95,9 @@
 
         
             
-          <div id="file_drag_drop_area" class="" >
+          <div id="file_drag_drop_area" class="">
             
-            <img id="img1" style="width:250px;height:250px;" />
-
-            </img>
+            <img id="img1"></img>
 
           </div>
           <input type="file" id="file_input" name="img">
@@ -165,3 +163,4 @@
 
       <!--/テキストサンプル-->
 @endsection
+

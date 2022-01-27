@@ -7,29 +7,14 @@
     <!--テキストサンプル-->
     @section('contents')
     
-   <?php 
-   //use App\Models\CouponTable;
-   //use App\Models\CommodityTable;
-   //$coupon = CouponTable::where('StoreID',Auth::id())->get();
-   //$menu = CommodityTable::where('StoreID',Auth::id())->get();
-   //$i = 0; 
-   //foreach ($coupon as $key) {
-   //  $key['CommodityName'] = $menu[$i]->CommodityName;
-   //  $coupon[$i] = $key; 
-   //  $i++;
-   //}
-
-    //
-  //Coupon::find(1)->delete();
-   
-  ?>
+  
       <div class = CouponList>
         <h1>クーポン一覧</h1>
         <?php foreach ($coupon as $coupon)  { ?>
           
         <div class="couponcard">
         
-          <img src="/images/men1.jpg"><br>
+          <img src="{{ asset('storage/images/'. $coupon->img) }}"><br>
 
           <div class="couponcheckbox">
             <input type="checkbox" id="coupon-btn-check{{$coupon->CouponID}}">
@@ -38,9 +23,10 @@
               <div class="abc">
               <ul>
                   <li><a href="/admin/CouponSetting">変更</a></li>
-                  <form action="/StoreCouponList/del"  method='post'  >
+                  <form action="/admin/CouponDetail"  method='post'  >
                   @csrf
-                  <li><input type="submit"  value="削除"></li>
+                  <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
+                  <li><input type="submit" value="削除"></li>
                   </form>
                 </ul>
 
@@ -55,7 +41,15 @@
           <div class="menupoint" name="point">
           <p>必要ポイント数： {{$coupon->Point}}pt</p>
           </div>
+          <?php 
+          $date = $coupon->FirstDay;
+          $date2 = $coupon->LastDay;
+
+          echo '<p> 使用開始日　' . date('Y/n/j',strtotime($date)) ."</p>\n"; 
+          echo '<p> 使用終了日　' . date('Y/n/j',strtotime($date2)) ."</p>\n"; ?>
         </div>
+
+        
 
         <?php } ?>
         
@@ -69,6 +63,11 @@
         </div>
 
       </div>
+
+
+
+
+
 
     <!--/テキストサンプル-->
     @endsection

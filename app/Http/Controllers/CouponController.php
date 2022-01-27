@@ -39,17 +39,26 @@ class CouponController extends Controller
         //DB::insert('insert into coupon(name, point) values (:name, :point)',$param);
         //return redirect('/CouponSetting');
       //$this->validate($request,Coupon::$rules);
-      $coupon = new Coupon;
+      $coupon = new CouponTable;
       $form = $request->all();
       unset($form['token']);
       $coupon->fill($form)->save();
       return redirect('/admin/CouponProduct');
 
     }
+
+    public function detail() {
+        $md = new CouponTable();
+        $data = $md->where('id'())->first();
+        return view('admin/html.CouponDetail',['data' => $data]);
+  }
    
    public function delete(Request $request) {
-    coupontable::find(Auth::id())->delete();
-    return redirect('admin/StoreCouponList');
+    $companies = new Companies;
+    $companies->fill( $request->all() ); 
+    $companies->save(); 
+    coupontable::find($request->id)->delete();
+    return redirect('admin/html.CouponDetail');
     /**return view('StoreCouponList.del',['form => $coupon']); */
 }
 //強制
@@ -66,7 +75,7 @@ class CouponController extends Controller
 
     public function remove(Request $request)
     {
-        Coupon::find($request->id)->delete();
+        CouponTable::find($request->id)->delete();
         return redirect('/admin/StoreCouponList');
 
        //もう一個のほう
@@ -91,21 +100,21 @@ class CouponController extends Controller
         $item = DB::select('select *  from coupons where id = :id',$param);
         return view('CouponSetting.edit',['form' => $item[0]]);
     }
-    
+
     public function update(Request $request)
     {
         $param = [
             'id' => $request->id,
             'name' => $request->name,
             'point' => $request->point,
-            
-    
+
+
         ];
         DB::update('update coupons set name = :name, point = :point where id = :id', $param);
         return redirect('/admin/CouponSetting');
     }
-    
-    
+
+
 
 
 
