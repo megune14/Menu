@@ -25,7 +25,7 @@ require __DIR__.'/auth.php';
 Route::group(['middleware' => 'auth:users'], function () {
     Route::get('/Category','CategoryController@create',function () {
         return view('user/html.Category');
-    });
+    })->name('category');
 
     Route::get('/Category/Menu','MenuController@create',function () {
         return view('user/html.Menu');
@@ -59,6 +59,7 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
     Route::get('/','CartController@index')->name('cart.index');
     Route::post('/add','CartController@add')->name('cart.add');
     Route::post('/delete/{item}','CartController@delete')->name('cart.delete');
+    Route::post('/push','CartController@push')->name('cart.push');
 
 });
 

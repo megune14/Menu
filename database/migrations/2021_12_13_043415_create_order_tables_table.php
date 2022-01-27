@@ -14,11 +14,11 @@ class CreateOrderTablesTable extends Migration
     public function up()
     {
         Schema::create('order_tables', function (Blueprint $table) {
-            $table->unsignedBigInteger('OrderID')->primary();
+            $table->bigIncrements('OrderID');
             $table->date('DayTime');
-            $table->unsignedBigInteger('CommodityID')->constrained('commodity_tables');
-            $table->unsignedBigInteger('UserID')->constrained('users');
-            $table->integer('Quantity');
+            $table->integer('StoreID');
+            $table->integer('UserID');
+            $table->integer('TableNumber');
             $table->timestamps();
         });
     }
