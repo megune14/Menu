@@ -14,8 +14,12 @@
     @csrf
 <button>削除</button>
 </form>
- @endforeach
- <p>合計金額:{{$totalPrice}}円</p>
+@endforeach
+<p>合計金額:{{$totalPrice}}円</p>
+<form method='post' action="{{route('user.cart.push')}}">
+@csrf
+<button>注文</button>
+</form>
  @else
 <p> カートに商品が入っていません</p>
 @endif

@@ -15,9 +15,10 @@ class CreateOrderDetailTablesTable extends Migration
     {
         Schema::create('order_detail_tables', function (Blueprint $table) {
             $table->unsignedBigInteger('OrderDetailID')->primary();
-            $table->unsignedBigInteger('OrderID')->constrained('order_tables');
+            $table->unsignedBigInteger('order_table_OrderID')->constrained('order_tables');
             $table->unsignedBigInteger('CommodityID')->constrained('commodity_tables');
             $table->integer('Quantity');
+            $table->foreign('order_table_OrderID')->references('OrderID')->on('order_tables')->cascadeOnDelete();
             $table->timestamps();
         });
     }

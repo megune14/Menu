@@ -26,7 +26,7 @@
             <li><a href="/Category">メニュー表</a></li>
             <li><a href="/UserInfo">マイページ</a></li>
             <li><a href="/Inquiry">お問い合わせ</a></li>
-            <li class="has-child"><a href="#">設定</a>
+            <li class="has-child"><a href="#">　設定</a>
              <ul>
               <li><a href="/MailChange">メールアドレス変更</a></li>
               <li><a href="/PassChangeUserCheck">パスワード変更</a></li>

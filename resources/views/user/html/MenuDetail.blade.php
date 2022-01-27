@@ -14,7 +14,7 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
             @csrf
             <p>{{$items->CommodityName}}</p>
             <p>{{$items->Price}}</p>
-            <input type="number" name="quantity">
+            <input type="number" name="quantity" value='1' min="1">
             <input type="hidden" name="commodity_id" value="{{$items->CommodityID}}">
             <input type="hidden" name="price" value="{{$items->Price}}">
             <input type="hidden" name="commodityname" value="{{$items->CommodityName}}">
