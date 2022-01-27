@@ -47,17 +47,16 @@ class CouponTableController extends Controller
     
     $i = 0;
    
-    
-    
+    if (is_array($coupon) && empty($coupon)) {
+    }else{
     foreach ($coupon as $key) {
       $key['CommodityName'] = $menu->where('CommodityID',$key['CommodityID'])->first()->CommodityName;
       $key['img'] = $menu->where('CommodityID',$key['CommodityID'])->first()->img;
       $coupon[$i] = $key; 
       $i++;
-      //dd($coupon);
-      
-
     }
+  }
+    
     
    //dd($coupon[0]['img']);
     return view('admin/html.StoreCouponList',['coupon'=>$coupon]);

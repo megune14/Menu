@@ -176,9 +176,10 @@ Route::get('/StoreInfoDelete',function () {
 
 Route::post('/StoreInfoDelete/delete','ShopsController@delete');
 
-Route::get('/CouponDetail',function () {
+Route::get('/CouponDetail','CouponTableController@open',function () {
     return view('admin/html.CouponDetail');
 })->name('setting');
+
 
 Route::post('/CouponDetail','CouponController@detail');
 Route::post('/CouponDetail/delete','CouponController@delete');

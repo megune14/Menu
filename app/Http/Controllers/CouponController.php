@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CouponTable;
+use App\Models\CommodityTable;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Support\Facades\DB;
@@ -47,20 +48,24 @@ class CouponController extends Controller
 
     }
 
-    public function detail() {
-        $md = new CouponTable();
-        $data = $md->where('id'())->first();
-        return view('admin/html.CouponDetail',['data' => $data]);
-  }
-   
+    public function detail(Request $request) {
+        $md = new CouponTable;
+        $menu = new CommodityTable;
+        $data = $md->where('CouponID',$request->id)->first();
+        $commodity = $menu->where('CommodityID',$data->CommodityID)->first();
+        return view('admin/html.CouponDetail',['data' => $data,'commodity'=>$commodity]);
+
+    }
+  
+
    public function delete(Request $request) {
-    $companies = new Companies;
-    $companies->fill( $request->all() ); 
-    $companies->save(); 
     coupontable::find($request->id)->delete();
-    return redirect('admin/html.CouponDetail');
+    return redirect('/admin/StoreCouponList');
     /**return view('StoreCouponList.del',['form => $coupon']); */
 }
+
+   
+
 //強制
    // public function del(Request $request){
    //     $param=['id'=> $request->id];
