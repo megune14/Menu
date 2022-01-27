@@ -471,9 +471,17 @@ nav li.has-child ul ul {
   display: none;
 }
 
-.search input,
-.search .form-control {
+.search input {
   width: 70px;
+  margin-left: 14px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #000;
+}
+
+.search .form-control {
+  width: 150px;
   margin-left: 14px;
   border:1px solid #696969;
   border-radius: 5px;
@@ -832,23 +840,60 @@ margin-left: 25px;
   margin-right: auto;
 }
 
-.CouponList h1 {
+.coupon-send {
+  display: flex;
+  justify-content: space-between;
   margin-top: 40px;
 }
+
+.coupon-send h1 {
+  font-size: 44px;
+}
+
+
+
+.coupon-send input {
+  
+  margin-top: 35px;
+  margin-right: 10px;
+  height: 60px;
+  
+  padding: 5px 20px 5px 20px;
+  background-color: #1E90FF;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #fff;
+}
+
+
+.field-couponcard {
+  margin-left: 80px;
+  margin-bottom: 40px;
+}
+
 
 .couponcard {
   display: inline-block;
   margin-top: 30px;
-  margin-left: 45px;
-  margin-right: 60px;
+  margin-left: 40px;
+  margin-right: 30px;
   width: 220px;
-  height: 330px;
-  border: solid 1px #ccc;
+  height: 350px;
+  border: solid 1px #696969;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px #696969;
 }
 
 .couponcard img {
   width: 220px;
   height: 160px;
+  border-radius: 10px;
+}
+
+.couponcard h3 {
+  margin: 0;
+  margin-left: 15px;
 }
 
 .couponcard p {
@@ -861,53 +906,47 @@ margin-left: 25px;
 .menuname {
   font-size: 22px;
   height: 45px;
+  margin-bottom: 10px;
 }
 
 .couponcheckbox {
   display: inline-block;
   margin-left: 15px;
   height: 6px;
-  width: 305px;
-  
+  width: 275px;
 }
 
 .coupon-btn {
   display: inline-block;
-  margin-top: 0;
-  margin-left: 185px;
+  margin-top: 3px;
+  margin-left: 160px;
   margin-bottom: 0;
-  height: 9px;
+  height: 12px;
+  width: 35px;
   z-index: 3;
 }
 
-.coupon-btn span,
-.coupon-btn span:before,
-.coupon-btn span:after {
-  content: '';
-  display: flex;
-  height: 6px;
-  width: 6px;
-  border-radius: 10px;
-  background-color: #000000; /* 3本線の色 */
-  position: absolute;
+.coupon-btn  {
+  background-color: #fff;
+  background-image:
+    radial-gradient(#000 30%, transparent 42%);
+  background-size: 12px 12px;
 }
 
-.coupon-btn span:before {
-  left: 9px;
-}
-
-.coupon-btn span:after {
-  right: 9px;
+.couponcheckbox label:hover {
+  background-color: #fff;
+  background-image:
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
 }
 
 .couponcard ul {
   opacity: 0;
   pointer-events: none;
   float: right;
-  width: 80px;
+  width: 60px;
   height:104px;
   margin: 0;
-  padding:6px 10px 0;
+  padding:4px 8px 0;
   background-color: rgba(0,0,0,0.8);
 }
 
@@ -936,23 +975,6 @@ margin-left: 25px;
 input[type="checkbox"]:checked ~ .abc ul{
   opacity: 1;
   pointer-events: auto;
-}
-
-.coupon-send {
-  display: flex; /* ボタンを中央に */
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.coupon-send input {
-  margin-top: 30px;
-  padding: 6px 32px 6px 32px;
-  background-color: #1E90FF;
-  border:1px solid #696969;
-  border-radius: 5px;
-  font-size: 20px;
-  color: #fff;
 }
 
 
@@ -1012,28 +1034,30 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .CouponProduct p {
+  display: inline-block;
   margin-left: 20px;
   font-size: 22px;
+  width: 250px;
 }
 
-.CouponProduct p select {
-  width: 300px;
+.CouponProduct select {
+  width: 200px;
   height: 30px;
   border-radius: 5px;
   border:1px solid rgba(128,128,128,0.8);
-  margin-left: 50px;
   font-size: 18px;
-  color: rgba(128,128,128,0.8);
+
 }
 
-.coupon-product p input {
+
+.CouponProduct input {
   margin-top: 30px;
   height: 40px;
   border-radius: 10px;
   border:1px solid rgba(128,128,128,0.8);
   text-align: center;
   font-size: 22px;
-  color: rgba(128,128,128,0.8);
+  
 }
 
 .submit-CouponProduct input {

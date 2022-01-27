@@ -15,16 +15,27 @@ use App\Http\Controllers\OrderListController;
 $ap = Order::get();
 foreach ($ap as $ap) {
 ?>
+<form action="/voucherDetail/add" method='post'>
+@csrf
     <tr class="VoucherDetail">
+      <span name = "name" >
       <td>{{ $ap->name}}</td>
-      <td>{{ $ap->price}}円</td>
-      <td>×</td>
-      <td>{{ $ap->quantity}}個</td><br>
+      <input  name="name" type="hidden" value="{{$ap->name}}">
+        </span>
+      <span name = "price">
+       <td>{{ $ap->price}}円 ×</td>
+       <input  name="price" type="hidden" value="{{$ap->price}}">
+       </span>
+       <span class="kakaku"></span>
+      <option data-num="{{$ap->quantity}}" value="{{$ap->quantity}}"> {{ $ap->quantity}}個</option></td><br>
         <!-- ここまで -->
         <?php } ?>
         <div class="submit-VoucherDetail">
         
-        <input type="button" onclick="location.href='#'" value="お会計">    
+        <!--<input type="button" onclick="location.href='#'" value="お会計">-->
+        <label class="form-label">合計金額：</label>
+          <input id="total_price" class="" name="total" value="0円" style="font-size: 150%; font-weight: bold; display: inline-block;" readonly>
+
         </div>
               
 <script
@@ -36,18 +47,18 @@ foreach ($ap as $ap) {
 <script>
 $(function() {
 
-$("select,#kaiinnkakaku").change(function() {
+$("option,#kaiinnkakaku").change(function() {
 
   var hairetu = [];
   for(var i = 0; i < $(".buy_itemu_menu").length; i++){
 
     var item_price = $(".buy_itemu_menu").eq(i).data("price");
-    var item_select = $(".buy_itemu_menu").eq(i).next("select").find("option:selected").data("num");
+    var item_quantity = $(".buy_itemu_menu").eq(i).data("quantity");
 
 
 
-    if( item_select > 0 ) {
-      hairetu.push(item_price * item_select);
+    if( item_quantity > 0 ) {
+      hairetu.push(item_price * item_);
     } else {
       0;
     }
