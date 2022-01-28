@@ -371,19 +371,19 @@ nav li.has-child ul ul {
 
 
 /*----------forgot-password----------*/
-.font-sans {
+.forgot-password .font-sans {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.font-sans .mb-4 {
+.forgot-password .font-sans .mb-4 {
   font-size: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.font-sans .mb-4 h1 {
+.forgot-password .font-sans .mb-4 h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -410,7 +410,7 @@ nav li.has-child ul ul {
   padding: 1em;
 }
 
-.mt-4 button {
+.mt-4 .forgot-button {
   width: 280px;
   padding: 10px;
   border-radius: 15px;
