@@ -62,3 +62,10 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
     Route::post('/push','CartController@push')->name('cart.push');
 
 });
+
+Route::get('/MailChange',function () {
+    return view('user/html.MailChange');
+});
+
+Route::post('/MailChang/edit','UserController@edit');
+Route::post('/MailChang/edit','UserController@update');

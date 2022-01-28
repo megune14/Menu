@@ -10,13 +10,13 @@
       <div class = "MailChange">
         <h2>メールアドレスの変更</h2>
 
-        <form action="#" method="post">
+        <form action="MailChange/edit" method="post">
           <p>新しいメールアドレス
             <input type="email" name="email" size="30">
           </p>
 
           <div class="submit">
-            <button  type="button"><a href="#">戻る</a></button>
+            <button  type="button" onclick="history.back()">戻る</button>
             <label class="open" for="pop-up">変更</label>
           </div>
           
