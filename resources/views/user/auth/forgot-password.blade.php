@@ -1,12 +1,20 @@
+@extends('user/html.MOBILEbase')
+
+@section('title','パスワード忘れた')
+
+@section('contents')
+
+
+
+
+
+
+
+
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
         <div class="mb-4 text-sm text-gray-600">
+            <h1>パスワード再設定</h1>
             {{ __('パスワードを忘れた場合は、こちらにメールアドレスを入力してください。') }}
         </div>
 
@@ -20,10 +28,10 @@
             @csrf
 
             <!-- Email Address -->
-            <div>
+            <div class="forgot">
                 <x-label for="email" :value="__('メールアドレス')" />
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" placeholder="メールアドレス" required autofocus />
             </div>
 
             <div class="flex items-center justify-end mt-4">
@@ -34,3 +42,5 @@
         </form>
     </x-auth-card>
 </x-guest-layout>
+
+@endsection
