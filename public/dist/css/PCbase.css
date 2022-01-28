@@ -990,13 +990,54 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 32px;
 }
 
+.Detail-couponcard {  
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 220px;
+  height: 350px;
+  border: solid 1px #696969;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px #696969;
+}
+
+.Detail-couponcard img {
+  width: 220px;
+  height: 160px;
+  border-radius: 10px 10px 0 0;
+}
+
+.Detail-menuname {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Detail-menuname p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 32px;
+}
+
+.menupoint {
+  margin-top: 18px;
+}
+
+.menupoint p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 21px;
+}
+
 .submit-Detail {
   display: flex; /* ボタンを中央に */
   justify-content: center;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .submit-Detail button {
@@ -1013,7 +1054,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   height: 100%;
   width: 140px;
   margin-top: 0;
-  margin-left: 160px;
+  margin-left: 240px;
   padding: 6px 32px 6px 32px;
   background-color: red;
   border:1px solid #696969;
@@ -1041,9 +1082,9 @@ input[type="checkbox"]:checked ~ .abc ul{
 .CouponProduct select {
   width: 200px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   border:1px solid rgba(128,128,128,0.8);
-  font-size: 18px;
+  font-size: 20px;
 
 }
 
