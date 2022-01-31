@@ -8,25 +8,32 @@
 @endphp
   <!--テキストサンプル-->
   @section('contents')
-<h2>商品一覧</h2>
-<div class="search">
-{{csrf_field()}}
-{{ Form::open(['action' => 'MenuCreateController@create', 'method' => 'post']) }}
-{{ Form::select('FORM_NAME', CategoryTable::where('StoreID',Auth::id())->select('CategoryID', 'Category')->get()->pluck('Category','CategoryID')->prepend( "全て", "0"), null, ['class' => 'form-control']) }}
-{!! Form::submit('検索') !!}
-{{ Form::close() }}
-</div>
-@foreach ($Menu as $item)
 <div class="MenuCreate">
-    <!--ここのURLにクエリパラメータで商品IDを送る-->
+
+  <h1>商品一覧</h1>
+
+  <div class="search">
+    {{csrf_field()}}
+    {{ Form::open(['action' => 'MenuCreateController@create', 'method' => 'post']) }}
+    {{ Form::select('FORM_NAME', CategoryTable::where('StoreID',Auth::id())->select('CategoryID', 'Category')->get()->pluck('Category','CategoryID')->prepend( "全て", "0"), null, ['class' => 'form-control']) }}
+    {!! Form::submit('検索') !!}
+    {{ Form::close() }}
+  </div>
+
+  <div class="field-Create">
     
+    @foreach ($Menu as $item)
+    <div class="MenuCreate-card">
+        <!--ここのURLにクエリパラメータで商品IDを送る-->
+        
         <img src="{{ asset('images/men1.jpg') }}">
 
         <div class="Create-Name">
 
           <div class="Menucheckbox">
               <input type="checkbox" id="Menubox{{$item->CommodityID}}"><!--データベースの数値-->
-              <label for="Menubox{{$item->CommodityID}}" class="Menu-btn"><span></span></label>
+              <label for="Menubox{{$item->CommodityID}}" class="Menu-btn">
+              </label>
 
                 <div class="Menu-abc">
                   <ul>
@@ -47,8 +54,13 @@
           </div>
 
         </div>   
-    
+        
+    </div>
+    @endforeach
+
+  </div>
+
 </div>
-@endforeach
+
     <!--/テキストサンプル-->
   @endsection

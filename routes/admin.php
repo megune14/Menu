@@ -119,7 +119,7 @@ Route::get('/NewProduct',function () {
 Route::post('/NewProduct/add','CommodityTableController@create');
 
 
-Route::get('/StoreCouponList/del','CouponController@delete');
+Route::get('/StoreCouponList/del','CouponController@detail');
 Route::post('/StoreCouponList/del','CouponController@remove');
 
 Route::get('/RequestForm',function () {
@@ -176,9 +176,10 @@ Route::get('/StoreInfoDelete',function () {
 
 Route::post('/StoreInfoDelete/delete','ShopsController@delete');
 
-Route::get('/CouponDetail',function () {
+Route::get('/CouponDetail','CouponTableController@open',function () {
     return view('admin/html.CouponDetail');
 })->name('setting');
+
 
 Route::post('/CouponDetail','CouponController@detail');
 Route::post('/CouponDetail/delete','CouponController@delete');
@@ -188,4 +189,10 @@ Route::get('/RequestComplete',function () {
 });
 Route::get('/OrderCheck','OrderCheckController@view');
 
+Route::get('/MailChange','MailChangeController@MailCheck',function () {
+    return view('admin/html.MailChange');
+});
+
+Route::get('/MailChange/edit','MailChangeController@edit');
+Route::post('/MailChange/edit','MailChangeController@update');
 

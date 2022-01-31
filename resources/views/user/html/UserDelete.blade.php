@@ -21,7 +21,7 @@
             <p class="text">削除されたアカウントは復元できません。<br>
             <font color="red">本当に削除しますか？</font></p>            
             <button type="button" onclick="history.back()">戻る</button>
-            <input type="submit" value="確定">
+            <input type="submit" value="確定" name='delete'>
           </div>
         </div> 
       </div>

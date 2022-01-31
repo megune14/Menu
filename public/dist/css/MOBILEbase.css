@@ -249,7 +249,6 @@ nav li.has-child ul ul {
   margin-bottom: 0;
 }
 
-
 .ml-4 {
   width: 100%;
   height: 60px;
@@ -306,7 +305,6 @@ nav li.has-child ul ul {
   width: 260px;
   margin-top: 15px;
 }
-
 
 .container .mr-4 input {
   margin-left: 5px;
@@ -370,6 +368,90 @@ nav li.has-child ul ul {
 
 
 /*----------verify終わり----------*/
+
+
+/*----------forgot-password----------*/
+.forgot-password .font-sans {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.forgot-password .font-sans .mb-4 {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.forgot-password .font-sans .mb-4 h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.forgot {
+  margin-bottom: 20px;
+}
+
+.forgot label {
+  display: flex;
+  font-size: 16px;
+  color: #fff;
+}
+
+.forgot input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  height: 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  padding: 1em;
+}
+
+.mt-4 .forgot-button {
+  width: 280px;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #fff;
+  background-color: darkblue;
+  border-color: transparent;
+}
+
+
+/*----------forgot-password終わり----------*/
+
+
+/*----------verify-email----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------verify-email終わり----------*/
+
+
+/*----------reset-password----------*/
+
+
+
+
+
+
+
+
+
+/*----------reset-password終わり----------*/
 
 
 /*----------UserDelete----------*/
@@ -505,28 +587,43 @@ nav li.has-child ul ul {
   margin-bottom: 0;
   padding-bottom: 0;
   padding-left: 5px;
+  font-size: 36px;
+}
+
+.field-card {
+ margin-left: 8px;
+ margin-bottom: 20px;
 }
 
 .card {
-  float: left;
+  display: inline-block;
   margin-top: 30px;
-  width: 165px;
-  height: 180px;
-  margin-left: 25px;
+  width: 160px;
+  height: 230px;
+  margin-left: 20px;
   border: solid 1px #ccc;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px#696969;
+}
+
+.card a {
+  color: #000;
+}
+
+.card a:hover {
+  color: #696969;
 }
 
 .card img {
-  display: flex;
-  width: 165px;
+  width: 160px;
+  height: 140px;
   border-radius: 10px 10px 0 0;
   margin-bottom: 8px;
 }
 
 .card p {
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
 }
 
@@ -1037,6 +1134,7 @@ nav li.has-child ul ul {
   height: 70%;
   border: solid 1px #000000;
   border-radius: 15px 15px 0 0;
+  box-shadow: 2px 0px 2px 1px#696969;
 }
 
 .Coupon-box h1 {
@@ -1044,29 +1142,28 @@ nav li.has-child ul ul {
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-weight: 200;
-  font-size: 1.2em;
+  font-size: 19px;
 }
 
 .Coupon-img {
   display: flex;
   justify-content: center;
-  
 }
 
 .Coupon-img img {
   width: 140px;
-  height: 90px;
+  height: 115px;
   border-radius: 10px;
 }
 
 .Coupon-check {
   display: inline-block;
   width: 180px;
-  height: 35%;
+  height: 40%;
   margin-top: 0;
   border: solid 1px #000000;
   border-radius: 0 0 15px 15px;
+  box-shadow: 2px 2px 2px 1px#696969;
 }
 
 .Coupon-check h3 {
@@ -1074,19 +1171,31 @@ nav li.has-child ul ul {
   justify-content: center;
   margin-top: 15px;
   margin-bottom: 5px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .Coupon-check p {
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 16px; 
+  font-size: 18px; 
+}
+
+.Coupon-check h2,
+.Coupon-check h3 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 18px; 
+}
+
+.Coupon-check h2 {
+  margin-top: 5px;
 }
 
 .Coupon-check p input {
-  height: 20px;
-  width: 20px;
+  height: 19px;
+  width: 19px;
   margin-right: 10px;
 }
 

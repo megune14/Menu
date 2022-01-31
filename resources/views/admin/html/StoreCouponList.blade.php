@@ -36,8 +36,9 @@
                 <div class="abc">
                 <ul>
                     <li><a href="/admin/CouponSetting">変更</a></li>
-                    <form action="/StoreCouponList/del"  method='post'  >
+                    <form action="/admin/CouponDetail"  method='post'  >
                     @csrf
+                    <input type="hidden"  name="id" value="{{$coupon->CouponID}}">
                     <li><input type="submit"  value="削除"></li>
                     </form>
                   </ul>

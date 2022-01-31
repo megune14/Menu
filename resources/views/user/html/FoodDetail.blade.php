@@ -8,23 +8,23 @@
   <!--テキストサンプル-->
   @section('contents')
   <?php
-use App\Models\OrderList;
-use App\Http\Controllers\OrderListController;
- $Food = OrderList::get();
+use App\Models\CommodityTable;
+use App\Http\Controllers\CommodityTableController;
+ $Food = CommodityTable::get();
 foreach ($Food as $Food) {}
 ?>
  
   <div class="Food-box">
       <span class="food-img">
-        <img src="/images/men1.jpg"><!--写真-->
+      <img src="{{ asset('storage/images/'. $Food->img) }}"><br><!--写真-->
       </span>
 
-      <h2>{{$Food->name}}</h2>
+      <h2>{{$Food->CommodityName}}</h2>
       <h4>商品説明</h4>
-      <p>{{$Food->explanation}}</p>
-      <h4>{{$Food->price}}円</h4>
+      <p>{{$Food->CommodityDetail}}</p>
+      <h4>{{$Food->Price}}円</h4>
       <select name="Food">
-      <option data-num="{{$Food->quantity}}" value="{{$Food->quantity}} "selected>{{$Food->quantity}}個</option>
+      
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -51,9 +51,9 @@ foreach ($Food as $Food) {}
 <input type="submit" value="注文" id="button13">
 
 <h4>アレルギー</h4>
-<p>{{$Food->allergy}}</p>
+<p>{{$Food->Allergy}}</p>
 <h4>カロリー</h4>
-<p>{{$Food->calorie}}</p>
+<p>{{$Food->Calory}}</p>
 
 
   
