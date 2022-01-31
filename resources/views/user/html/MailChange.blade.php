@@ -13,7 +13,7 @@
         <form action="/MailChange/edit" method="post">
         @csrf
           <p>新しいメールアドレス
-            <input type="email" id="email" name="email" size="30">
+            <input type="email" id="email" name="email" value = "{{$data->email}}">
           </p>
 
           <input type = "hidden" name = "id" value = "{{$data->id}}">
