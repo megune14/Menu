@@ -67,8 +67,8 @@ Route::get('/MailChange','UserController@MailCheck',function () {
     return view('user/html.MailChange');
 });
 
-Route::post('/MailChang/edit','UserController@edit');
-Route::post('/MailChang/edit','UserController@update');
+Route::get('/MailChange/edit','UserController@edit');
+Route::post('/MailChange/edit','UserController@update');
 
 Route::get('/CouponList',function () {
     return view('user/html.CouponList');
