@@ -19,8 +19,8 @@
 
           {{ csrf_field() }}
 
-          <!--<img src="{{ asset('storage/images/'.$commodity->img) }}" alt="">-->
-          <img src="/images/men1.jpg" alt="">
+          <img src="{{ asset('storage/images/'.$commodity->img) }}" alt="">
+          
 
         
 
