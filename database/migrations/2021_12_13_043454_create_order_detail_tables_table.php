@@ -14,10 +14,11 @@ class CreateOrderDetailTablesTable extends Migration
     public function up()
     {
         Schema::create('order_detail_tables', function (Blueprint $table) {
-            $table->unsignedBigInteger('OrderDetailID')->primary();
+            $table->bigIncrements('OrderDetailID');
             $table->unsignedBigInteger('order_table_OrderID')->constrained('order_tables');
             $table->unsignedBigInteger('CommodityID')->constrained('commodity_tables');
             $table->integer('Quantity');
+            $table->integer('Flag')->default(0);
             $table->foreign('order_table_OrderID')->references('OrderID')->on('order_tables')->cascadeOnDelete();
             $table->timestamps();
         });

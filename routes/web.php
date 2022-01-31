@@ -62,3 +62,8 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
     Route::post('/push','CartController@push')->name('cart.push');
 
 });
+Route::get('/VoucherDetail','VoucherController@view');
+Route::get('/VoucherDetail/end','VoucherController@flagchenge')->name('flagchenge');
+Route::post('/VoucherDetail/end','VoucherController@end');
+
+

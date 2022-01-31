@@ -19,6 +19,7 @@ class CreateOrderTablesTable extends Migration
             $table->integer('StoreID');
             $table->integer('UserID');
             $table->integer('TableNumber');
+            $table->integer('Flag')->default(0);
             $table->timestamps();
         });
     }

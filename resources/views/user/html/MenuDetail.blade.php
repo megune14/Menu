@@ -12,6 +12,7 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
     <div class="category">
         <form method="post" action="{{route('user.cart.add')}}">
             @csrf
+            <img src="{{asset('storage/images/'.$items->img)}}" alt="">
             <p>{{$items->CommodityName}}</p>
             <p>{{$items->Price}}</p>
             <input type="number" name="quantity" value='1' min="1">

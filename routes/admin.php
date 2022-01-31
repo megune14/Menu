@@ -186,6 +186,6 @@ Route::post('/CouponDetail/delete','CouponController@delete');
 Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');
 });
-
+Route::get('/OrderCheck','OrderCheckController@view');
 
 

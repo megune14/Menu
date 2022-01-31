@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->integer('point');
+            $table->integer('point')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('firstname'); //苗字を追加
