@@ -62,6 +62,11 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
     Route::post('/push','CartController@push')->name('cart.push');
 
 });
+Route::get('/VoucherDetail','VoucherController@view');
+Route::get('/VoucherDetail/end','VoucherController@flagchenge')->name('flagchenge');
+Route::post('/VoucherDetail/end','VoucherController@end');
+
+
 
 Route::get('/MailChange','UserController@MailCheck',function () {
     return view('user/html.MailChange');
@@ -70,6 +75,6 @@ Route::get('/MailChange','UserController@MailCheck',function () {
 Route::get('/MailChange/edit','UserController@edit');
 Route::post('/MailChange/edit','UserController@update');
 
-Route::get('/CouponList',function () {
+Route::get('/CouponList','CouponTableController@CouponOpen',function () {
     return view('user/html.CouponList');
 });

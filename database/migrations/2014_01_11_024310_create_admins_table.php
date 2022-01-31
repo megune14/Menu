@@ -20,6 +20,7 @@ class CreateAdminsTable extends Migration
             $table->string('shopname');
             $table->string('address');
             $table->string('tell');
+            $table->integer('point')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unique(['email', 'deleted_at']);
