@@ -63,7 +63,7 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
 
 });
 
-Route::get('/MailChange',function () {
+Route::get('/MailChange','UserController@MailCheck',function () {
     return view('user/html.MailChange');
 });
 
