@@ -62,3 +62,5 @@ Route::prefix('cart')->middleware('auth:users')->group(function(){
     Route::post('/push','CartController@push')->name('cart.push');
 
 });
+
+
