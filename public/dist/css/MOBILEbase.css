@@ -1134,7 +1134,7 @@ nav li.has-child ul ul {
   height: 70%;
   border: solid 1px #000000;
   border-radius: 15px 15px 0 0;
-  box-shadow: 2px 2px 2px 1px#696969;
+  box-shadow: 2px 0px 2px 1px#696969;
 }
 
 .Coupon-box h1 {
@@ -1142,14 +1142,12 @@ nav li.has-child ul ul {
   justify-content: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-weight: 200;
   font-size: 19px;
 }
 
 .Coupon-img {
   display: flex;
   justify-content: center;
-  
 }
 
 .Coupon-img img {
@@ -1161,10 +1159,11 @@ nav li.has-child ul ul {
 .Coupon-check {
   display: inline-block;
   width: 180px;
-  height: 35%;
+  height: 40%;
   margin-top: 0;
   border: solid 1px #000000;
   border-radius: 0 0 15px 15px;
+  box-shadow: 2px 2px 2px 1px#696969;
 }
 
 .Coupon-check h3 {
@@ -1180,6 +1179,18 @@ nav li.has-child ul ul {
   justify-content: center;
   margin: 0;
   font-size: 18px; 
+}
+
+.Coupon-check h2,
+.Coupon-check h3 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 18px; 
+}
+
+.Coupon-check h2 {
+  margin-top: 5px;
 }
 
 .Coupon-check p input {
