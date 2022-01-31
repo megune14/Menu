@@ -495,15 +495,15 @@ nav li.has-child ul ul {
   width: 480px;
   height: 20px;
   border-radius: 15px;
-  font-size: 18px;
+  font-size: 19px;
   padding: 1em;
 }
 
 .mt-4 .forgot-button {
   width: 520px;
-  padding: 10px;
+  padding: 13px;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 21px;
   color: #fff;
   background-color: darkblue;
   border-color: transparent;
@@ -511,6 +511,36 @@ nav li.has-child ul ul {
 
 
 /*----------forgot-password終わり----------*/
+
+
+/*----------verify-email----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------verify-email終わり----------*/
+
+
+/*----------reset-password----------*/
+
+
+
+
+
+
+
+
+
+/*----------reset-password終わり----------*/
 
 
 /*----------MenuCreate----------*/
@@ -1067,15 +1097,15 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 32px;
 }
 
-.menupoint {
-  margin-top: 18px;
+.Detail-couponcard .menupoint {
+  margin-top: 0;
 }
 
-.menupoint p {
+.Detail-couponcard .menupoint p {
   display: flex;
   justify-content: center;
   margin: 0;
-  font-size: 21px;
+  font-size: 16px;
 }
 
 .submit-Detail {

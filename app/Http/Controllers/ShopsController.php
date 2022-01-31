@@ -40,7 +40,7 @@ class ShopsController extends Controller
         return redirect('/admin/StoreInfoSettings');
     }
     public function delete(Request $request) {
-          admin::find(Auth::id())->delete();
+          Admin::where('id',Auth::id())->delete();
           return redirect('admin/login');
     }
 }
