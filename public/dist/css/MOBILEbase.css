@@ -631,6 +631,75 @@ nav li.has-child ul ul {
 /*----------Category,Menu終わり----------*/
 
 
+/*----------MenuDetail----------*/
+.MenuDetail {
+
+}
+
+.MenuDetail img {
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 50%;
+  height: 180px;
+}
+
+.MenuDetail h2 {
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #000;
+  font-size: 32px;
+}
+
+.Detail-number {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.Detail-number h3 {
+  margin: 0;
+  font-size: 32px;
+  padding-left: 15px;
+}
+
+.Detail-number input {
+  width: 110px;
+  height: 35px;
+  margin-right: 20px;
+  border-radius: 20px; 
+  font-size: 22px;
+  text-align: center;
+}
+
+.cart-button,
+.Detail-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.MenuDetail button {
+  height: 45px;
+  width: 260px;
+  border: 1px solid #696969;
+  border-radius: 10px;
+  background-color: rgba(30,144,255,0.8);
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+/*----------MenuDetail終わり----------*/
+
+
 /*----------Orderlist----------*/
 .menu-list li a { 
   font-size: 30px;
@@ -758,14 +827,14 @@ nav li.has-child ul ul {
 
 /*---------------------MailChange--------------------*/
 .MailChange { /* 枠線はこれ */
-  margin-top: 50px;
+  margin-top: 90px;
   margin-left: auto; 
   margin-right: auto; 
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
   border-radius: 15px;
-  width: 70%;
+  width: 80%;
   font-size: 24px;
 }
 
@@ -809,11 +878,7 @@ nav li.has-child ul ul {
   border-radius: 5px;
   background-color: rgba(128,128,128,0.6);
   color: #fff;
-}
-
-.submit button a {
   font-size: 20px;
-  color: #fff;
 }
 
 .submit .open {
@@ -845,7 +910,7 @@ nav li.has-child ul ul {
 	left: 0;
 }
 
-.window {
+.window-Change {
 	width: 90vw;
 	max-width: 380px;
 	height: 240px;
@@ -858,35 +923,29 @@ nav li.has-child ul ul {
 	transform: translate(-50%, -50%);
 }
 
-.window .text {
+.window-Change #msg {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.window-Change .text {
 	font-size: 23px;
-  margin-left: 65px;
-  margin-right: 65px;
-  margin-top: 80px;
-  margin-bottom: 30px;
+  margin-top: 0;
   text-align: center;
 }
 
-.window button {
-  margin-left: 15px;
-  margin-right: 0;
+.window-Change input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
   background-color: #fff;
   width: 160px;
   height: 35px;
   font-size: 20px;
-  color: rgba(128,128,128,1);
-}
-
-.window input {
-  margin-left: 10px;
-  border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
-  background-color: #fff;
-  width: 160px;
-  height: 35px;
-  font-size: 20px;
+  padding-left: 60px;
   color: rgba(128,128,128,1);
 }
 
