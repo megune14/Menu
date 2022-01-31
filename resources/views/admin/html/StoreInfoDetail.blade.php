@@ -22,8 +22,7 @@
 
                   <div class="submit-InfoDetail">
                         <button type="button" onclick="location.href='/admin/StoreInfoSettings'">変更</button>
-                        <a href="{{ route('StoreInfoDelete', ['StoreInfoDelete'=>'$data']) }}">
-                        <input type="submit" onclick="location.href='/admin/StoreInfoDelete'" value="削除"></input></a>
+                        <button type="button" onclick="location.href='/admin/StoreInfoDelete'">削除</button>
                   </div>
                         
             </form>
