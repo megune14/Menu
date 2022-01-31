@@ -309,7 +309,6 @@ nav li.has-child ul ul {
 /*---------------------テキスト--------------------*/
 .contents {
 	padding-top: 60px;
-	
 }
 
 
@@ -412,8 +411,6 @@ nav li.has-child ul ul {
   font-size: 42px;
 }
 
-
-
 .container .mr-4 {
   display: block;
   margin-left: auto;
@@ -447,7 +444,6 @@ nav li.has-child ul ul {
   font-size: 20px;
 }
 
-
 .container .mr-4 button {
   display: block;
   margin-top: 20px;
@@ -463,7 +459,88 @@ nav li.has-child ul ul {
   color: #fff;
 }
 
+
 /*----------UserInput(register)終わり----------*/
+
+
+/*----------forgot-password----------*/
+.forgot-password .font-sans {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.forgot-password .font-sans .mb-4 {
+  font-size: 24px;
+}
+
+.forgot-password .font-sans .mb-4 h1 {
+  margin-bottom: 30px;
+}
+
+.forgot {
+  margin-bottom: 20px;
+}
+
+.forgot label {
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+}
+
+.forgot input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  height: 20px;
+  border-radius: 15px;
+  font-size: 19px;
+  padding: 1em;
+}
+
+.mt-4 .forgot-button {
+  width: 520px;
+  padding: 13px;
+  border-radius: 15px;
+  font-size: 21px;
+  color: #fff;
+  background-color: darkblue;
+  border-color: transparent;
+}
+
+
+/*----------forgot-password終わり----------*/
+
+
+/*----------verify-email----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------verify-email終わり----------*/
+
+
+/*----------reset-password----------*/
+
+
+
+
+
+
+
+
+
+/*----------reset-password終わり----------*/
 
 
 /*----------MenuCreate----------*/
@@ -990,13 +1067,54 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 32px;
 }
 
+.Detail-couponcard {  
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  width: 220px;
+  height: 350px;
+  border: solid 1px #696969;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px #696969;
+}
+
+.Detail-couponcard img {
+  width: 220px;
+  height: 160px;
+  border-radius: 10px 10px 0 0;
+}
+
+.Detail-menuname {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.Detail-menuname p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 32px;
+}
+
+.Detail-couponcard .menupoint {
+  margin-top: 0;
+}
+
+.Detail-couponcard .menupoint p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-size: 16px;
+}
+
 .submit-Detail {
   display: flex; /* ボタンを中央に */
   justify-content: center;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .submit-Detail button {
@@ -1013,7 +1131,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   height: 100%;
   width: 140px;
   margin-top: 0;
-  margin-left: 160px;
+  margin-left: 240px;
   padding: 6px 32px 6px 32px;
   background-color: red;
   border:1px solid #696969;
@@ -1041,9 +1159,9 @@ input[type="checkbox"]:checked ~ .abc ul{
 .CouponProduct select {
   width: 200px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 10px;
   border:1px solid rgba(128,128,128,0.8);
-  font-size: 18px;
+  font-size: 20px;
 
 }
 
@@ -1941,104 +2059,4 @@ footer {
 .footer li {
 display: inline;
 }
-
-
-
-
-/*ポップアップ*/
-/*.menudetail/*変更 button {
-  margin-left: 110px;
-  height: 45px;
-  width: 75px;
-  border:1px solid #696969;
-  border-radius: 5px;
-  background-color: rgba(128,128,128,0.6);
-}
-
-.menudetail/*変更 button a {
-  font-size: 20px;
-  color: #fff;
-}
-
-.menudetail/*変更 .open {
-  margin-left: 14px;
-  padding: 6px 32px 6px 32px;
-  background-color: #1E90FF;
-  border:1px solid #696969;
-  border-radius: 5px;
-  font-size: 20px;
-  color: #fff;
-}
-
-#pop-up {
-	display: none; /* label でコントロールするので input は非表示に
-}
-.overlay {
-	display: none; /* input にチェックが入るまでは非表示に
-}
-#pop-up:checked + .overlay {
-	display: block;
-	z-index: 9999;
-	background-color: #00000070;
-	position: fixed;
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-}
-.window {
-	width: 90vw;
-	max-width: 380px;
-	height: 240px;
-	background-color: #ffffff;
-	border-radius: 6px;
-	justify-content: center;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.window .text {
-	font-size: 23px;
-  margin-left: 65px;
-  margin-right: 65px;
-  margin-top: 120px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.window button {
-  margin-left: 70px;
-  margin-right: 0;
-  border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
-  background-color: #fff;
-  width: 160px;
-  height: 35px;
-  font-size: 20px;
-  color: rgba(128,128,128,1);
-}
-
-.window input {
-  margin-left: 20px;
-  border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
-  background-color: #fff;
-  width: 160px;
-  height: 35px;
-  font-size: 20px;
-  color: rgba(128,128,128,1);
-}
-
-.close {
-	cursor:pointer;
-	position: absolute;
-	top: 4px;
-	right: 4px;
-	font-size: 20px;
-}*/
-
-/*ポップアップ終わり*/
-
 

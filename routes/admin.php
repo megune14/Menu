@@ -188,5 +188,10 @@ Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');
 });
 
+Route::get('/MailChange','MailChangeController@MailCheck',function () {
+    return view('admin/html.MailChange');
+});
 
+Route::get('/MailChange/edit','MailChangeController@edit');
+Route::post('/MailChange/edit','MailChangeController@update');
 
