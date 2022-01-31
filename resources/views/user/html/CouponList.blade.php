@@ -30,7 +30,7 @@
           </div>
 
           <div class="Coupon-check">
-            <h3>必要ポイント：{{$coupon->point}}pt</h3>
+            <h2>必要ポイント</h2><h3>{{$coupon->point}}pt</h3>
             <p>
               <input type="checkbox"  name="coupon" value="coding">利用する
             </p>
