@@ -19,12 +19,12 @@
           <input type = "hidden" name = "id" value = "{{$data->id}}">
           <div class="submit">
             <button  type="button" onclick="history.back()">戻る</button>
-            <label class="open" for="pop-up" id="checkButton">確定</label>
+            <label class="open" for="pop-up" id="checkButton">変更</label>
 
 <input type="checkbox" id="pop-up">
 
 <div class="overlay">
-  <div class="window-Setting">
+  <div class="window-Change">
     <label class="close" for="pop-up">×</label>
       <script>
       function butotnClick(){

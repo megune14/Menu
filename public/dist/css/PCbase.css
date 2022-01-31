@@ -30,7 +30,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* ---------------------全画面表示＋ヘッダー-------------------- */
 .pc-dsp {
-  
+
 }
 
 .header {
@@ -358,7 +358,7 @@ nav li.has-child ul ul {
   font-size: 20px;
   padding-left: 10px;
   line-height: 26px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .mt-2 span {
@@ -610,7 +610,7 @@ nav li.has-child ul ul {
 }
 
 .Create-Name p {
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 .Create-Price p {
@@ -643,7 +643,7 @@ nav li.has-child ul ul {
 .Menucheckbox label:hover {
   background-color: #fff;
   background-image:
-    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%);
 }
 
 .Menucheckbox ul {
@@ -882,7 +882,7 @@ margin-left: 25px;
   margin-top: 25px;
 }
 
-.confirm button { 
+.confirm button {
   margin-left: 110px;
   height: 45px;
   width: 75px;
@@ -1011,7 +1011,7 @@ margin-left: 25px;
 .couponcheckbox label:hover {
   background-color: #fff;
   background-image:
-    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%);
 }
 
 .couponcard ul {
@@ -1067,7 +1067,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 32px;
 }
 
-.Detail-couponcard {  
+.Detail-couponcard {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1173,7 +1173,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   border:1px solid rgba(128,128,128,0.8);
   text-align: center;
   font-size: 22px;
-  
+
 }
 
 .submit-CouponProduct input {
@@ -1250,8 +1250,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------StoreInfoSettings--------------------*/
 .StoreInfoSetting {
   margin-top: 50px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
@@ -1424,7 +1424,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*----------NewProduct----------*/
 .qwe .header li.pc-child form {
   padding-top: 10px;
-} 
+}
 
 
 
@@ -1482,8 +1482,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .menudetail-Product {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -1570,8 +1570,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------MailChange--------------------*/
 .MailChange { /* 枠線はこれ */
   margin-top: 50px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
@@ -1584,7 +1584,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-top: 20px;
   margin-bottom: 60px;
   font-size: 27px;
-  
+
 }
 
 .MailChange p {
@@ -1605,6 +1605,98 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-family:'HelveticaNeue','Arial', sans-serif;
   letter-spacing: .8px;
   font-size: 23px;
+}
+
+.submit {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.submit button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+  font-size: 20px;
+}
+
+.submit .open {
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: #578af9;
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.window-Change {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window-Change #msg {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.window-Change .text {
+	font-size: 23px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.window-Change input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid rgba(128,128,128,0.6);
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 60px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
 }
 
 
@@ -2060,3 +2152,46 @@ footer {
 display: inline;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  p{
+    margin: 0;
+  }
+  .wrap-tab{
+    overflow: hidden;
+  }
+
+  .list-tab{
+    display: flex;
+    margin: 0 -2px;
+    border-bottom: 3px solid #5bbee5;
+  }
+  .list-tab > li{
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0 2px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .list-tab .active{
+    background: #5bbee5;
+  }
+
+  .tab-content{
+    display: none;
+    padding: 1em;
+    border-bottom: 1px solid #5bbee5;
+    border-left: 1px solid #5bbee5;
+    border-right: 1px solid #5bbee5;
+  }
+  .tab-content.active{
+    display: block;
+  }
