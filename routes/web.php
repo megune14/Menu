@@ -70,6 +70,6 @@ Route::get('/MailChange','UserController@MailCheck',function () {
 Route::post('/MailChang/edit','UserController@edit');
 Route::post('/MailChang/edit','UserController@update');
 
-Route::get('/CouponList',function () {
+Route::get('/CouponList','CouponTableController@CouponOpen',function () {
     return view('user/html.CouponList');
 });
