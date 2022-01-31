@@ -24,5 +24,12 @@ class OrderCheckController extends Controller
         }
         $commodity = CommodityTable::get();
         return view('admin.html/OrderCheck',compact('allorderdetail'));
-}
+    }
+    public function updata(Request $request){
+        $order = OrderDetailTable::where('OrderDetailID',$request->id)->update([
+            'Flag' => $request->flag
+        ]);
+
+        return redirect()->route('admin.view');
+    }
 }

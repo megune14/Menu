@@ -187,7 +187,8 @@ Route::post('/CouponDetail/delete','CouponController@delete');
 Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');
 });
-Route::get('/OrderCheck','OrderCheckController@view');
+Route::get('/OrderCheck','OrderCheckController@view')->name('view');
+Route::post('/OrderCheck/chenge','OrderCheckController@updata')->name('update');
 
 Route::get('/MailChange','MailChangeController@MailCheck',function () {
     return view('admin/html.MailChange');

@@ -11,6 +11,7 @@ class OrderDetailTable extends Model
     protected $fillable = [
         'order_table_OrderID',
         'Quantity',
+        'Flag',
         'CommodityID',
     ];
     public function ordertable()
