@@ -36,7 +36,7 @@
       </script>
 
       <p id="msg"></p>
-      <p class="text">以上の内容に変更しますか？</p>
+      <p class="text">以上の内容に変更します。</p>
       <input type="submit" value="確定">
       
   </div>
