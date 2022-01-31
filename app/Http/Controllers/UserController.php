@@ -38,7 +38,7 @@ class UserController extends Controller
             'email' => $request->email,
         ];
         DB::update('update users set email = :email where id = :id', $param);
-        return redirect('MenuCreat');
+        return redirect('UserInfo');
     }
   
 }
