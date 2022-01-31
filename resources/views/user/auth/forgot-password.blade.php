@@ -1,6 +1,6 @@
 @extends('user/html.MOBILEbase')
 
-@section('title','パスワード忘れた')
+@section('title','パスワード再設定')
 
 @section('contents')
 
@@ -10,7 +10,7 @@
 
 
 
-
+<div class="forgot-password">
 <x-guest-layout>
     <x-auth-card>
         <div class="mb-4 text-sm text-gray-600">
@@ -35,12 +35,13 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <x-button>
+                <x-button class="forgot-button">
                     {{ __('パスワードを変更する') }}
                 </x-button>
             </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
+</div>
 
 @endsection
