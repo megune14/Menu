@@ -20,7 +20,7 @@ $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
         <div class="card">
           <a href="/Category/Menu?categoryid={{$item->CategoryID}}">
             <img src="../../images/men1.jpg">
-            <p>{{ $item->Category}}</p>
+            <h2>{{ $item->Category}}</h2>
           </a>
         </div>
         
