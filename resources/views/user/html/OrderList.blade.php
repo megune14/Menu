@@ -8,34 +8,36 @@
 
     @if(count($products) > 0)
 
-    <div class="field-card">
+    
 
         @foreach ($products as $product)
-        <div class="card">
+        <div class="cart-card">
             <div class="cart-img">
-                <!--<a href="{{asset('storage/images/'.$product->img)}}"></a>-->
-                <img src="/images/men1.jpg" alt="">
+                <img src="{{asset('storage/images/'.$product->img)}}" alt="">
             </div>
             
-            <div class="cart-name">
-                <h2>{{$product->CommodityName}}</h2>
-            </div>
-                
-            <div class="cart-price">
-                <h2>{{$product->pivot->quantity}}個</h2>
-                <h2>{{number_format($product->pivot->quantity * $product->Price)}}円</h2>
-            </div>
+            <div class="cart-text">
 
-            <div class="cart-delete">
-                <form method='post' action="{{route('user.cart.delete',['item'=>$product->CommodityID])}}">
-                    @csrf
-                <button>削除</button>
-                </form>
+                <h2>{{$product->CommodityName}}</h2>
+            
+                <h3>{{number_format($product->pivot->quantity * $product->Price)}}円</h3>
+
+                <div class="cart-delete">
+
+                    <h2>{{$product->pivot->quantity}}個</h2>
+
+                    <form method='post' action="{{route('user.cart.delete',['item'=>$product->CommodityID])}}">
+                        @csrf
+                    <button>削除</button>
+                    </form>
+
+                </div>
+
             </div>
         </div>
         @endforeach
 
-    </div>    
+        
 
     <div class="Voucher-all">
       <h2>合計金額:{{$totalPrice}}円</h2>
@@ -50,7 +52,9 @@
     </div>
 
     @else
-    <p> カートに商品が入っていません</p>
+    <div class="cart-null">
+      <p> カートに商品が入っていません</p>
+    </div>
 
     @endif
 
