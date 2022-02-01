@@ -29,10 +29,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 /* ---------------------全画面表示＋ヘッダー-------------------- */
-.pc-dsp {
-
-}
-
 .header {
 	position: fixed;
 	top: 0;
@@ -1423,12 +1419,124 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 
 /*----------NewProduct----------*/
-.qwe .header li.pc-child form {
-  padding-top: 10px;
+/*--NewProductの全画面表示--*/
+.header li.right-Product {
+	float: right;
 }
 
+.header li.right-Product form {
+	margin-top: 13px;
+}
 
+.header li.pc-child-Product {
+  float: right;
+}
 
+.header .pc-child-Product ul {
+  margin-top: 18px;
+  padding-left: 0;
+}
+
+.header li.pc-child-Product a:hover,
+.header li.right-Product a:hover { /* ホバー時に色が変わる */
+  color:#fff;
+}
+
+.header li.pc-child-Product::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:15px;
+  top:32px;
+  
+  width:8px;
+  height:8px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
+}
+
+.header li.pc-child-Product ul { /* 下の階層を持っているulの指定 */
+  position: absolute; /* 絶対配置で位置を指定 */
+  right:0;
+  top:60px;
+  background:#ffac1e;
+  width: 250px;
+  visibility: hidden; /* はじめは非表示 */
+  opacity: 0;
+  transition: all .3s; /* アニメーション設定 */
+}
+
+.header li.pc-child-Product:hover > ul,
+.header li.pc-child-Product ul li:hover > ul,
+.header li.pc-child-Product:active > ul,
+.header li.pc-child-Product ul li:active > ul { /* hoverしたら表示 */
+  visibility: visible;
+  opacity: 1;
+}
+
+.header li.pc-child-Product ul li a { /* ナビゲーションaタグの形状 */
+  color: #000;
+  border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+.header li.pc-child-Product ul li:last-child a {
+  border-bottom:none;
+}
+
+.header li.pc-child-Product ul li a:hover,
+.header li.pc-child-Product ul li a:active {
+  background:#ff4500;
+}
+
+/* ----------NewProductのハンバーガーメニュー---------- */
+.menu-btn-Product {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+  cursor: pointer;
+}
+
+.menu-btn-Product span,
+.menu-btn-Product span:before,
+.menu-btn-Product span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 3px;
+  background-color: #000; /* 3本線の色 */
+  position: absolute;
+}
+
+.menu-btn-Product span:before {
+  bottom: 12px;
+}
+
+.menu-btn-Product span:after {
+  top: 12px;
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span {
+  background-color: rgb(255, 255, 255,0); /* メニューオープン時は真ん中の線を透明にする */
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span::before {
+  bottom: 0;
+  transform: rotate(45deg); /* ばつ印 */
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span::after {
+  top: 0;
+  transform: rotate(-45deg); /* ばつ印 */
+}
+
+/*--contents部分--*/
 .NewProduct {
   margin-top: 20px;
   margin-left: 20px;
@@ -1491,7 +1599,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .menudetail-Product button {
   margin-left: auto;
   margin-right: auto;
-  height: 50px;
+  height: 55px;
   width: 160px;
   border:1px solid #696969;
   border-radius: 5px;
@@ -1507,8 +1615,9 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-left: auto;
   margin-right: auto;
   width: 160px;
-  height: 50px;
+  height: 55px;
   padding-top: 9px;
+  
   margin-bottom: 9px;
   background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
