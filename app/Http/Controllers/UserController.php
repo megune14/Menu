@@ -21,9 +21,9 @@ class UserController extends Controller
     return redirect('/login');
   }
   public function MailCheck() {
-    $md = new Admin();
+    $md = new User();
     $data = $md->where('id',Auth::id())->first();
-    return view('html.MailChange',['data' => $data]);
+    return view('user/html.MailChange',['data' => $data]);
 }
   public function edit(Request $request)
     {

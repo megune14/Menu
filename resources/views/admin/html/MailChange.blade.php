@@ -24,7 +24,7 @@
 <input type="checkbox" id="pop-up">
 
 <div class="overlay">
-  <div class="window-Setting">
+  <div class="window-Change">
     <label class="close" for="pop-up">×</label>
       <script>
       function butotnClick(){
@@ -36,7 +36,7 @@
       </script>
 
       <p id="msg"></p>
-      <p class="text">以上の内容に変更しますか？</p>
+      <p class="text">以上の内容に変更します。</p>
       <input type="submit" value="確定">
       
   </div>
