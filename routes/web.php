@@ -78,3 +78,5 @@ Route::post('/MailChange/edit','UserController@update');
 Route::get('/CouponList','CouponTableController@CouponOpen',function () {
     return view('user/html.CouponList');
 });
+Route::post('/CouponList/edit','CouponTableController@edit');
+//Route::post('/CouponList/edit','CouponTableController@update');

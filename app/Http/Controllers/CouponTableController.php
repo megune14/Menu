@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Models\CouponTable;
 use App\Models\CommodityTable;
+use App\Models\User;
 //use App\Models\CouponTable;
 //use App\Models\CommodityTable;
 
@@ -41,10 +42,10 @@ class CouponTableController extends Controller
 
     public function open()
     {
-
+      
       $coupon = CouponTable::where('StoreID',Auth::id())->get();
     $menu = CommodityTable::where('StoreID',Auth::id())->get();
-
+    
     $i = 0;
    
     if (is_array($coupon) && empty($coupon)) {
@@ -70,6 +71,9 @@ class CouponTableController extends Controller
       session()->has('StoreID');
       $coupon = CouponTable::where('StoreID',Auth::id())->get();
       $menu = CommodityTable::where('StoreID',Auth::id())->get();
+      
+      $user = User::where('id',Auth::id())->get();
+     
 
     $i = 0;
    
@@ -81,10 +85,40 @@ class CouponTableController extends Controller
       $coupon[$i] = $key;
       $i++;
     }
+    
+  }
+  foreach ($user as $user) {   
   }
     
     
    //dd($coupon[0]['img']);
-    return view('user/html.CouponList',['coupon'=>$coupon]);
+    return view('user/html.CouponList',['coupon'=>$coupon,'user'=>$user]);
+    }
+
+
+
+
+    
+    public function edit(Request $request)
+    {
+        $param = ['id' => $request->id];
+        $item = User::where('id',Auth::id())->update([
+          'point' => $request-> point
+        ]);
+        return redirect('/cart');
+    }
+
+    public function update(Request $request)
+    {
+        $param = [
+            'id' => $request->id,
+            
+            'point' => $request->point,
+           
+
+
+        ];
+        DB::update('update users set point = :point where id = :id', $param);
+        return redirect('/CouponList');
     }
 }
