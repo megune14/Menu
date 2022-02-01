@@ -12,8 +12,7 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
     <div class="MenuDetail">
         <form method="post" action="{{route('user.cart.add')}}">
             @csrf
-            <!--<img src="{{asset('storage/images/'.$items->img)}}" alt="">-->
-            <img src="/images/men1.jpg" alt="">
+            <img src="{{asset('storage/images/'.$items->img)}}" alt="">
             <h2>{{$items->CommodityName}}</h2>
             
 
