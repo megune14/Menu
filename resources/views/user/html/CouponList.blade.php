@@ -42,27 +42,47 @@
          
           <div class="Coupon-check">必要ポイント：
           <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
-            <p>
-            <input class="check" data-price="{{$coupon->CommodityName}}" id="{{$coupon->CommodityName}}" name="" type="checkbox" >利用する
-            </p>
+           
 
+          <input type = "hidden" name = "commodity_id" value = "{{$coupon->commodity_id}}">
+
+
+
+          <div class=" coupon-pop">
+          
+    
+          <label class="open" for="pop-up" >使用する</label>
+          <input type="checkbox" id="pop-up" class="check"  name="commodity_id" value="{{$coupon->commodity_id}}">
+          <div class="overlay">
+            <div class="window">
+              <label class="close" for="pop-up">×</label>
+              <p class="text">クーポンを使用しますが<br>
+               よろしいでしょうか？</p>            
+              <button type="button" onclick="history.back()">戻る</button>
+              <input type="submit" value="確定">
+            </div>
+   
+          </div>
+        </div>
             
           </div> 
 
         </div>
 
-        <input type = "hidden" name = "commodity_id" value = "{{$coupon->CommodityID}}">
+        
 
         <?php } ?>
+        
+
+        
+
+<br>
+        <button type="button" onclick=history.back()><a href="#">戻る</a></button>
+
+
         <label for="priceTotal"></label>
         <div class="Current-point">現在のポイント：
-        <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none"></td>
-        </div>
-
-        <div class="Coupon-confirm">
-        
-          <button type="button" onclick=history.back()>戻る</button>
-          <input type="submit" value="確定" id="button5">
+        <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none" ></td>
         </div>
 
       </form>
@@ -116,5 +136,14 @@ function calcPrice(){
 
 
 </script>
+
+
+
+
+
+
+
+
+
     <!--/テキストサンプル-->
   @endsection
