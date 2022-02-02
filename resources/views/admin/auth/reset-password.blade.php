@@ -7,7 +7,7 @@
 @section('contents')
 
 
-
+<div class="reset-password">
 <x-guest-layout>
     <x-auth-card>
 
@@ -46,12 +46,13 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-button>
-                    {{ __('Reset Password') }}
+                    {{ __('パスワードリセット') }}
                 </x-button>
             </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
+</div>
 
 
 @endsection

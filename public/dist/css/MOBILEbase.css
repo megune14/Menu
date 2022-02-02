@@ -415,29 +415,12 @@ nav li.has-child ul ul {
   border-radius: 15px;
   font-size: 20px;
   color: #fff;
-  background-color: darkblue;
+  background-color: rgba(30,144,255,0.8);
   border-color: transparent;
 }
 
 
 /*----------forgot-password終わり----------*/
-
-
-/*----------verify-email----------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------verify-email終わり----------*/
 
 
 /*----------reset-password----------*/
@@ -450,7 +433,39 @@ nav li.has-child ul ul {
 
 
 
+
+
 /*----------reset-password終わり----------*/
+
+
+/*----------verify-email----------*/
+.verify-email  {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.verify-email .mb-4 {
+  font-size: 20px;
+  padding-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 90px;
+}
+
+.verify-email button {
+  width: 280px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(30,144,255,0.8);
+  border-color: transparent;
+}
+
+
+/*----------verify-email終わり----------*/
 
 
 /*----------UserDelete----------*/

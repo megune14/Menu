@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\OrderTable;
 class OrderDetailTable extends Model
 {
     use HasFactory;
@@ -16,6 +16,6 @@ class OrderDetailTable extends Model
     ];
     public function ordertable()
     {
-        return $this->belongsTo('App\Modele\OrderTable');
+        return $this->belongsTo(OrderTable::class,'order_table_OrderID','OrderID');
     }
 }

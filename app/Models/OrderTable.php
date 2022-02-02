@@ -9,8 +9,8 @@ class OrderTable extends Model
 {
     use HasFactory;
     protected $fillable = ['OrderID','DayTime','UserID','StoreID','TableNumber','Flag'];
-    public function ordertables()
+    public function orderdetailtables()
     {
-        return $this->hasMany('App\Models\OrderTable');
+        return $this->hasMany('App\Models\OrderDetailTable');
     }
 }

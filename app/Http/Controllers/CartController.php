@@ -43,19 +43,23 @@ class CartController extends Controller
     public function push(){
         $user = User::findOrFail(Auth::id());
         $carts = $user->commoditys;
-        $order = OrderTable::create([
-            'DayTime' => date('Y/m/d/'),
-            'UserID' => Auth::id(),
-            'StoreID' => session()->get('StoreID'),
-            'TableNumber' => 101,
-        ]);
+        $order = OrderTable::where('UserID',Auth::id())->where('Flag',0)->first();
+        if($order === null){
+            OrderTable::create([
+                'DayTime' => date('Y/m/d/'),
+                'UserID' => Auth::id(),
+                'StoreID' => session()->get('StoreID'),
+                'TableNumber' => 101,
+            ]);
+            $order = OrderTable::where('UserID',Auth::id())->where('Flag',0)->first();
+        }
         foreach($carts as $cart){
             OrderDetailTable::create([
-                'order_table_OrderID' => $order->id,
+                'order_table_OrderID' => $order->OrderID,
                 'CommodityID' => $cart->CommodityID,
                 'Quantity' =>$cart->pivot->quantity,
             ]);
-        }
+    }
         Cart::where('user_id',Auth::id())->delete();
         return redirect()->route('user.category');
     }

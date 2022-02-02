@@ -14,7 +14,7 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
             @csrf
             <img src="{{asset('storage/images/'.$items->img)}}" alt="">
             <h2>{{$items->CommodityName}}</h2>
-            
+
 
             <div class="Detail-number">
               <h3>{{$items->Price}}円</h3>
@@ -25,8 +25,8 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
             <input type="hidden" name="price" value="{{$items->Price}}">
             <input type="hidden" name="commodityname" value="{{$items->CommodityName}}">
 
-            
-            
+
+
             <div class="cart-button">
               <button>カートに追加</button>
             </div>
