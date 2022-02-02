@@ -14,7 +14,7 @@
 
 
 
-
+<div class="verify-email">
 <x-guest-layout>
     <x-auth-card>
 
@@ -35,7 +35,7 @@
 
                 <div>
                     <x-button>
-                        {{ __('Resend Verification Email') }}
+                        {{ __('認証メールの再送信') }}
                     </x-button>
                 </div>
             </form>
@@ -44,12 +44,13 @@
                 @csrf
 
                 <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                    {{ __('Log Out') }}
+                    {{ __('ログアウト') }}
                 </button>
             </form>
         </div>
     </x-auth-card>
 </x-guest-layout>
+</div>
 
 
 @endsection

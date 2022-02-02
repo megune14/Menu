@@ -73,6 +73,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .header ul {
+  margin-top: 18px;
   padding-left: 0;
 }
 
@@ -499,32 +500,16 @@ nav li.has-child ul ul {
 .mt-4 .forgot-button {
   width: 520px;
   padding: 13px;
+  margin-bottom: 60px;
   border-radius: 15px;
   font-size: 21px;
   color: #fff;
-  background-color: darkblue;
+  background-color: rgba(30,144,255,0.8);
   border-color: transparent;
 }
 
 
 /*----------forgot-password終わり----------*/
-
-
-/*----------verify-email----------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------verify-email終わり----------*/
 
 
 /*----------reset-password----------*/
@@ -538,6 +523,34 @@ nav li.has-child ul ul {
 
 
 /*----------reset-password終わり----------*/
+
+
+/*----------verify-email----------*/
+.verify-email  {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.verify-email .mb-4 {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 120px;
+  font-size: 24px;
+}
+
+.verify-email button {
+  width: 430px;
+  padding: 13px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 21px;
+  color: #fff;
+  background-color: rgba(30,144,255,0.8);
+  border-color: transparent;
+}
+
+
+/*----------verify-email終わり----------*/
 
 
 /*----------MenuCreate----------*/
@@ -1447,7 +1460,6 @@ input[type="checkbox"]:checked ~ .abc ul{
   position: absolute;
   left:15px;
   top:32px;
-  
   width:8px;
   height:8px;
   border-top: 2px solid #000;
