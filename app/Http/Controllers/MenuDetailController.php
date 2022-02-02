@@ -4,27 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use App\Models\CommodityTable;
+use App\Models\CategoryTable;
 class MenuDetailController extends Controller
 {
-    public function edit(Request $request)
+    public function view(Request $request)
 {
-    $param = ['id' => $request->id];
-    $item = DB::select('select *  from _menu_detail where id = :id',$param);
-    return view('MenuDetail.edit',['form' => $item[0]]);
+    $item = CommodityTable::where('CommodityID',$request->id)->first();
+    $category = CategoryTable::where('CategoryID',$item->CategoryID)->first();
+    return view('admin/html.MenuDetail',['commodity' => $item,'category'=>$category]);
 }
 
 public function update(Request $request)
 {
-    $param = [
-        'id' => $request->id,
-        'name' => $request->name,
-        'price' => $request->price,
-        
-
-    ];
-    DB::update('update _menu_detail set name = :name, price = :price where id = :id', $param);
-    return redirect('/admin/MenuDetail');
+    CommodityTable::where('CommodityID',$request->id)->first()->update([
+        'CommodityName' => $request->name,
+        'Price' => $request->price,
+        'Allergy' => $request->allergy,
+        'Calory' => $request->calory,
+    ]);
+    return redirect()->route('admin.menudetail',['id'=>$request->id]);
 }
 
 

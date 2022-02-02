@@ -36,12 +36,13 @@
 <br>
 <div class="wrap-tab">
     <ul id="js-tab" class="list-tab">
-      <li class="active">タブ1</li>
-      <li>タブ2</li>
+      <li class="active">未提供</li>
+      <li>提供済み</li>
     </ul>
 
     <div class="wrap-tab-content">
       <div class="tab-content active">
+          @if(isset($detail0))
         <table>
             <tr>
                 <th>状況</th>
@@ -49,21 +50,15 @@
                 <th>個数</th>
                 <th>卓番</th>
             </tr>
-            @foreach ($allorderdetail as $order)
-            @if ($order->Flag === 0)
+            @foreach ($detail0 as $order)
 
 
             <tr>
               <td><form method='post' action='/admin/OrderCheck/chenge' id='submit_form'>
                   @csrf
                   <select name="flag" onchange="submit(this.form)">
-                      @if ($order->Flag === 0)
                       <option value="0" selected>未提供</option>
                       <option value="1">提供済み</option>
-                      @else
-                      <option value="0">未提供</option>
-                      <option value="1" selected  >提供済み</option>
-                      @endif
                   </select>
                   <input type="hidden" value="{{$order->OrderDetailID}}" name="id">
               </form>
@@ -74,12 +69,15 @@
               <td>{{$order->TableNumber}}番</td>
 
           </tr>
+          @endforeach
+        </table>
+          @else
+          <p>空</p>
           @endif
-              @endforeach
-      </table>
       </div>
 
       <div class="tab-content">
+          @if(isset($detail1))
         <table>
             <tr>
                 <th>状況</th>
@@ -87,21 +85,14 @@
                 <th>個数</th>
                 <th>卓番</th>
             </tr>
-            @foreach ($allorderdetail as $order)
-            @if ($order->Flag === 1)
-
+            @foreach ($detail1 as $order)
 
             <tr>
               <td><form method='post' action='/admin/OrderCheck/chenge' id='submit_form'>
                   @csrf
                   <select name="flag" onchange="submit(this.form)">
-                      @if ($order->Flag === 0)
-                      <option value="0" selected>未提供</option>
-                      <option value="1">提供済み</option>
-                      @else
                       <option value="0">未提供</option>
                       <option value="1" selected  >提供済み</option>
-                      @endif
                   </select>
                   <input type="hidden" value="{{$order->OrderDetailID}}" name="id">
               </form>
@@ -112,9 +103,11 @@
               <td>{{$order->TableNumber}}番</td>
 
           </tr>
-          @endif
-              @endforeach
-      </table>
+          @endforeach
+        </table>
+            @else
+            <p>空</p>
+            @endif
       </div>
 
     </div>

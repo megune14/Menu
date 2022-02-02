@@ -2195,3 +2195,26 @@ ul{
   .tab-content.active{
     display: block;
   }
+
+
+
+
+
+
+
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.target-click-menuitem {
+    color: blue;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
