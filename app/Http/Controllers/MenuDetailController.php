@@ -17,6 +17,7 @@ class MenuDetailController extends Controller
 
 public function update(Request $request)
 {
+
     CommodityTable::where('CommodityID',$request->id)->first()->update([
         'CommodityName' => $request->name,
         'Price' => $request->price,
