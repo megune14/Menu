@@ -532,10 +532,11 @@ nav li.has-child ul ul {
 }
 
 .verify-email .mb-4 {
-  margin-left: 50px;
-  margin-right: 50px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 120px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .verify-email button {
@@ -600,7 +601,6 @@ nav li.has-child ul ul {
   height: 145px;
   width: 400px;
   box-shadow: 2px 2px 2px 1px #696969;
-
 }
 
 .MenuCreate-card img {
