@@ -11,6 +11,7 @@
   <?php
       use App\Models\CouponTable;
       use App\Http\Controllers\CouponTableController;
+      use App\Models\Cart;
 
 
     
@@ -23,7 +24,8 @@
 
 
 
-      <form>
+<form action="/CouponList/edit"  method='post'  >
+    @csrf
         <div class="CouponList">
 
           <div class="Coupon-box">
@@ -35,20 +37,26 @@
             </div>
       
           </div>
+          <input type = "hidden" name = "id" value = "{{$user->id}}">
+          
          
           <div class="Coupon-check">必要ポイント：
-          <input  class="price" id="{{$coupon->CommodityName}}" name="assesPrice" readonly type="text" style="border:none" value="{{$coupon->Point}}">
+          <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
             <p>
-            <input class="check" data-price="{{$coupon->CommodityName}}" id="" name="" type="checkbox" >利用する
+            <input class="check" data-price="{{$coupon->CommodityName}}" id="{{$coupon->CommodityName}}" name="" type="checkbox" >利用する
             </p>
+
+            
           </div> 
 
         </div>
 
+        <input type = "hidden" name = "commodity_id" value = "{{$coupon->CommodityID}}">
+
         <?php } ?>
-        <label for="priceTotal">合計</label>
+        <label for="priceTotal"></label>
         <div class="Current-point">現在のポイント：
-        <input placeholder="" id="priceTotal" name="priceTotal" readonly type="text" style="border:none"></td>
+        <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none"></td>
         </div>
 
         <div class="Coupon-confirm">
@@ -65,42 +73,6 @@
 
 
 
-
-
-
-      <table>
-<tr>
-<th style="background-color:gray;">商品</th>
-<th style="background-color:gray;">金額</th>
-<th style="background-color:gray;"></th>
-</tr>
-<tr>
-<td><label for="glasses">めがね</label></td>
-<td><input placeholder="金額" class="price" id="glassesPrice" name="glassesPrice" type="text" value="{{$coupon->Point}}"></td>
-<td><input class="check" data-price="glassesPrice" id="" name="checkGlasses" type="checkbox">
-</td>
-</tr>
-<tr>
-<td><label for="mustache">ひげ</label></td>
-<td><input placeholder="金額" class="price" id="mustachePrice" name="mustachePrice" type="text" value="300"></td>
-<td><input class="check" data-price="mustachePrice" id="" name="checkMustache" type="checkbox"></td>
-</tr>
-<tr>
-<td><label for="kGlasses">めがね（かにゃめモデル）</label</td>
-<td><input placeholder="金額" class="price" id="kGlassesPrice" name="kGlassesPrice" type="text" value="900"></td>
-<td><input class="check" data-price="kGlassesPrice" id="" name="checkKGlassesPrice" type="checkbox" ></td>
-</tr>
-<tr>
-<td><label for="kGlasses">{{$coupon->CommodityName}}</label</td>
-<td><input placeholder="金額" class="price" id="GlassesPrice" name="GlassesPrice" type="text" value="{{$coupon->Point}}"></td>
-<td><input class="check" data-price="GlassesPrice" id="" name="checkKGlassesPrice" type="checkbox" ></td>
-</tr>
-<tr>
-<td><label for="priceTotal">合計</label></td>
-<td><input placeholder="合計金額" id="priceTotal" name="priceTotal" type="text"></td>
-<td></td>
-</tr>
-</table>
 
 
 
@@ -133,12 +105,12 @@ function calcPrice(){
   price.push(number);
 
   });
-  var price_total = {{$coupon->Point}};
+  var price_total = {{$user->point}};
 //for文で配列を回して合計を出す
   for(var i = 0, len = price.length;i < len; i++){
   price_total -= price[i];
   }
-  $("#priceTotal").val(price_total +"pt");
+  $("#priceTotal").val(price_total);
  }
 });
 

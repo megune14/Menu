@@ -63,7 +63,7 @@
 
                 <div class="flex items-center justify-end mr-4">
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.login') }}">
-                        {{ __('登録済ですか?') }}
+                        {{ __('登録済みの方はこちら') }}
                     </a>
 
                     <x-button class="ml-4">

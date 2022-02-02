@@ -48,7 +48,7 @@
                 <div class="flex items-center justify-end mt-2">
                     @if (Route::has('user.password.request'))
                         <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('user.password.request') }}">
-                            {{ __('パスワードを忘れましたか?') }}
+                            {{ __('パスワードを忘れた方はこちら') }}
                         </a>
                     @endif
 
