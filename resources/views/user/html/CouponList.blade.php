@@ -11,6 +11,7 @@
   <?php
       use App\Models\CouponTable;
       use App\Http\Controllers\CouponTableController;
+      use App\Models\Cart;
 
 
     
@@ -37,15 +38,20 @@
       
           </div>
           <input type = "hidden" name = "id" value = "{{$user->id}}">
+          
          
           <div class="Coupon-check">必要ポイント：
           <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
             <p>
             <input class="check" data-price="{{$coupon->CommodityName}}" id="{{$coupon->CommodityName}}" name="" type="checkbox" >利用する
             </p>
+
+            
           </div> 
 
         </div>
+
+        <input type = "hidden" name = "commodity_id" value = "{{$coupon->CommodityID}}">
 
         <?php } ?>
         <label for="priceTotal"></label>
