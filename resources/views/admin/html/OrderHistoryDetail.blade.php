@@ -7,22 +7,21 @@
 
   <!--テキストサンプル-->
   @section('contents')
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <table>
-      <tr>
-          <th>商品名</th>
-          <th>個数</th>
-        </tr>
-        @foreach ($order1 as $order)
+
+
+  <div class="OrderHistoryDetail">
+    <table>
         <tr>
-            <td>{{$order->Commodity->CommodityName}}</td>
-            <td>{{$order->Quantity}}</td>
-        </tr>
-        @endforeach
-</table>
+            <th>商品名</th>
+            <th>個数</th>
+          </tr>
+          @foreach ($order1 as $order)
+          <tr>
+              <td>{{$order->Commodity->CommodityName}}</td>
+              <td>{{$order->Quantity}}</td>
+          </tr>
+          @endforeach
+    </table>
+</div>
     <!--/テキストサンプル-->
   @endsection
