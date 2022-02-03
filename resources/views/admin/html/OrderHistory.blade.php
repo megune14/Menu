@@ -10,30 +10,48 @@ use App\Models\OrderDetailTable;
   <!--テキストサンプル-->
   @section('contents')
 
-<br>
 
+<div class="OrderHistory">
+    @if(isset($orders))
 
-    @if (isset($orders))
-<table>
-    <tr>
-        <th>日時</th>
-        <th>卓番</th>
-        <th>詳細</th>
-      </tr>
-      @foreach ($orders as $allorder)
-      <tr>
+    <div class="History-table">
+        <table>
+            <thead>
+            <tr>
+                <th>注文日時</th>
+                <th>卓番</th>
+                <th>詳細</th>
+                
+            </tr>
+            </thead>
 
-          <td>{{$allorder->DayTime}}</td>
-          <td>{{$allorder->TableNumber}}</td>
-          <td>
-              <form action="{{route('admin.historydetail',['detail' => $allorder->OrderID])}}" method="post">
-                  @csrf
-                  <button>詳細</button>
-              </form>
-          </td>
-      </tr>
-@endforeach
-</table>
-@endif
+            @foreach ($orders as $allorder)
+            <form action="{{route('admin.historydetail',['detail' => $allorder->OrderID])}}" method="post">
+                @csrf
+            <tbody>
+
+                
+                    <tr>
+                        
+                        <td>                          
+                            <button>{{$allorder->DayTime}}</button>
+                        </td>
+                        <td>                            
+                            <button>{{$allorder->TableNumber}}</button>
+                        </td>
+                    
+                    </tr>
+                    
+
+            </tbody>
+            
+        </form>
+            @endforeach
+    
+        </table>
+    </div>
+
+    @endif
+</div>
     <!--/テキストサンプル-->
   @endsection

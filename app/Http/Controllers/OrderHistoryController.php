@@ -12,8 +12,7 @@ use App\Models\User;
 class OrderHistoryController extends Controller
 {
     public function view(){
-        dd(Auth::guard('admin')->id());
-        $orders = OrderTable::where('StoreID',Auth::id())->where('Flag',1)->get();
+        $orders = OrderTable::where('StoreID',Auth::guard('admin')->id())->where('Flag',1)->get();
         return view('admin/html.OrderHistory',compact('orders'));
     }
     public function detail($detail){
