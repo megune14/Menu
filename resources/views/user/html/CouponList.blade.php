@@ -11,7 +11,7 @@
   <?php
       use App\Models\CouponTable;
       use App\Http\Controllers\CouponTableController;
-      use App\Models\Cart;
+      //use App\Models\Cart;
 
 
     
@@ -41,29 +41,27 @@
           
          
           <div class="Coupon-check">必要ポイント：
+         
+           <!--↓この辺があやしいよね↓-->
+           <label class="switch__label">
           <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
-           
 
-          <input type = "hidden" name = "commodity_id" value = "{{$coupon->commodity_id}}">
+          <label class="switch__label">
+         
+        <input class="check" data-price="{{$coupon->CommodityName}}" id="" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}">使用する<br>
+        <span class="switch__content"></span>
+        <span class="switch__circle"></span>
 
-
-
-          <div class=" coupon-pop">
           
-    
-          <label class="open" for="pop-up" >使用する</label>
-          <input type="checkbox" id="pop-up" class="check"  name="commodity_id" value="{{$coupon->commodity_id}}">
-          <div class="overlay">
-            <div class="window">
-              <label class="close" for="pop-up">×</label>
-              <p class="text">クーポンを使用しますが<br>
-               よろしいでしょうか？</p>            
-              <button type="button" onclick="history.back()">戻る</button>
-              <input type="submit" value="確定">
-            </div>
-   
-          </div>
-        </div>
+
+  
+        </label>
+
+
+
+         
+
+        
             
           </div> 
 
@@ -85,7 +83,13 @@
         <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none" ></td>
         </div>
 
-      </form>
+
+
+        <div class=" coupon-pop">
+          
+         
+
+        <input type="submit" value="確定">
 
 
 
@@ -137,6 +141,108 @@ function calcPrice(){
 
 </script>
 
+
+
+
+
+
+
+
+<script>
+$("[name='commodity_id']").on("click", function(){
+                if ($(this).prop('checked')){
+                    $("[name='commodity_id']").prop('checked', false);
+                    $(this).prop('checked', true);
+                }
+            });
+
+
+
+            </script>
+
+
+
+<style>
+.switch__label {
+    width: 50px;
+    position: relative;
+    display: inline-block;
+}
+.switch__content {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    border-radius: 30px;
+    height: 31px;
+    overflow: hidden;
+}
+.switch__content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    top: 0;
+    left: 0;
+    border: 1.5px solid #E5E5EA;
+    border-radius: 30px;
+    background-color: #fff;
+}
+.switch__content:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    border-radius: 30px;
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+        -ms-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+}
+.switch__input {
+    display: none;
+}
+.switch__circle {
+    display: block;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    -webkit-box-shadow: 0 2px 6px #999;
+            box-shadow: 0 2px 6px #999;
+    width: 27px;
+    height: 27px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
+    background-color: #fff;
+    -webkit-transition: all .5s;
+       -moz-transition: all .5s;
+        -ms-transition: all .5s;
+         -o-transition: all .5s;
+            transition: all .5s;
+}
+.switch__input:checked ~ .switch__circle {
+    left: 21px;
+}
+.switch__input:checked ~ .switch__content:after {
+    background-color: #00c4cc;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+  </style>
 
 
 

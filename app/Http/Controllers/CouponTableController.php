@@ -117,13 +117,15 @@ class CouponTableController extends Controller
      $coupon = CouponTable::where('StoreID',Auth::id())->first();
   
   
+    //$food = $_POST['commodity_id'];
+    //dd($food);
   
     $cou = new Cart;
     $form = $request->all();
     unset($form['token']);
     $form['user_id'] = $id;
     $form['commodity_table_CommodityID'] = $request->commodity_id;
-    dd($form['commodity_table_CommodityID']);
+    //dd($request->commodity_id);
     //dd($form['commodity_table_CommodityID']);
     $form['quantity'] = 1;
 
