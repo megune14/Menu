@@ -107,7 +107,33 @@ class CouponTableController extends Controller
         $item = User::where('id',Auth::id())->update([
           'point' => $request-> point
         ]);
-        return redirect('/cart');
+       
+
+
+      // 現在認証しているユーザーを取得
+      $admin = Auth::user();
+     // // 現在認証しているユーザーのIDを取得
+     $id = Auth::id();
+     $coupon = CouponTable::where('StoreID',Auth::id())->first();
+  
+  
+  
+    $cou = new Cart;
+    $form = $request->all();
+    unset($form['token']);
+    $form['user_id'] = $id;
+    $form['commodity_table_CommodityID'] = $request->commodity_id;
+    dd($form['commodity_table_CommodityID']);
+    //dd($form['commodity_table_CommodityID']);
+    $form['quantity'] = 1;
+
+
+    //dd($form);
+    $cou->fill($form)->save();
+    return redirect('/cart');
+
+
+
     }
 
    // public function update(Request $request)
@@ -128,7 +154,7 @@ class CouponTableController extends Controller
     public function add(Request $request)
     {
 
-     $a = Cart::where('user_id',Auth::id())->where('commodity_table_CommodityID',$request->commodity_id)->first();
+    //$a = Cart::where('user_id',Auth::id())->where//('commodity_table_CommodityID',$request->commodity_id)->first();
 
  //    $coupon = CouponTable::where('CouponID',Auth::id())->get();
  //    dd($coupon);
@@ -142,27 +168,6 @@ class CouponTableController extends Controller
  //  ]);
 
 
-
-      // 現在認証しているユーザーを取得
-      $admin = Auth::user();
-     // // 現在認証しているユーザーのIDを取得
-     $id = Auth::id();
-     $coupon = CouponTable::where('StoreID',Auth::id())->first();
-  
-  
-  
-    $cou = new Cart;
-    $form = $request->all();
-    unset($form['token']);
-    $form['user_id'] = $id;
-    $form['commodity_table_CommodityID'] = $request->commodity_id;
-    dd($form['commodity_table_CommodityID']);
-    $form['quantity'] = 1;
-
-
-    //dd($form);
-    $cou->fill($form)->save();
-    return redirect('/CouponList');
 
     }
 
