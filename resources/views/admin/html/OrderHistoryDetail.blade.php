@@ -14,18 +14,18 @@
   <script type="text/javascript">
 
 $(function() {
-  $('#tehuda1 td button').mouseover( function(){
-    $('td').css('background-color','orange');
-  $('.sample1 button').css('background-color','orange');
+  $('#tehuda2 td ').mouseover( function(){
+    $(this).parent().find('td').css('background-color','rgba(128,128,128,0.6)');
+
+    $('#tehuda2 td ').mouseout(function(){
+    $('td').css('background-color','transparent');
+  
+  });
   });
 });
 </script>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <table id='tehuda1'>
+<div class="HistoryDetail-table">
+  <table id='tehuda2'>
       <tr>
           <th>商品名</th>
           <th>個数</th>
@@ -33,11 +33,12 @@ $(function() {
         @foreach ($order1 as $order)
         <tbody>
         <tr>
-            <td class="sample1">{{$order->Commodity->CommodityName}}</td>
-            <td class="sample1"><button>{{$order->Quantity}}</button></td>
+            <td>{{$order->Commodity->CommodityName}}</td>
+            <td>{{$order->Quantity}}</td>
         </tr>
     </tbody>
         @endforeach
-</table>
+  </table>
+</div>
     <!--/テキストサンプル-->
   @endsection
