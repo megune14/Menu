@@ -33,7 +33,7 @@ $(function() {
         @foreach ($order1 as $order)
         <tbody>
         <tr>
-            <td class="sample1"><button>{{$order->Commodity->CommodityName}}</td></button>
+            <td class="sample1">{{$order->Commodity->CommodityName}}</td>
             <td class="sample1"><button>{{$order->Quantity}}</button></td>
         </tr>
     </tbody>
