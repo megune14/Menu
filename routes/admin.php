@@ -195,3 +195,9 @@ Route::get('/MailChange','MailChangeController@MailCheck',function () {
 Route::get('/MailChange/edit','MailChangeController@edit');
 Route::post('/MailChange/edit','MailChangeController@update');
 
+Route::get('/PassChangeCheck',function () {
+    return view('admin/html.PassChangeCheck');
+});
+
+
+
