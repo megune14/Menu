@@ -14,8 +14,6 @@ a {
   text-decoration: none;
 }
 
-
-
 textarea {
   resize: none;
   width:300px;
@@ -32,6 +30,7 @@ textarea {
 	width: 100%;
 	list-style-type: none;
 	background-color: #1E90FF; /* ヘッダー背景 */
+  
 }
 
 .header li {
@@ -113,9 +112,9 @@ nav  ul {
 }
 
 nav  ul li {
-  border-top: solid 1px #578af9; /* ハンバーガーメニューの線色 */
-  border-bottom: solid 1px #578af9;
-  border-right: solid 2px #578af9;
+  border-top: solid 1px #8eb0fa; /* ハンバーガーメニューの線色 */
+  border-bottom: solid 1px #1E90FF;
+  border-right: solid 2px #8eb0fa;
   list-style: none;
 }
 
@@ -416,29 +415,12 @@ nav li.has-child ul ul {
   border-radius: 15px;
   font-size: 20px;
   color: #fff;
-  background-color: darkblue;
+  background-color: rgba(30,144,255,0.8);
   border-color: transparent;
 }
 
 
 /*----------forgot-password終わり----------*/
-
-
-/*----------verify-email----------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------verify-email終わり----------*/
 
 
 /*----------reset-password----------*/
@@ -451,7 +433,39 @@ nav li.has-child ul ul {
 
 
 
+
+
 /*----------reset-password終わり----------*/
+
+
+/*----------verify-email----------*/
+.verify-email  {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.verify-email .mb-4 {
+  font-size: 20px;
+  padding-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 90px;
+}
+
+.verify-email button {
+  width: 280px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(30,144,255,0.8);
+  border-color: transparent;
+}
+
+
+/*----------verify-email終わり----------*/
 
 
 /*----------UserDelete----------*/
@@ -595,6 +609,11 @@ nav li.has-child ul ul {
  margin-bottom: 20px;
 }
 
+.field-card form {
+  width: 0;
+  display: inline-block;
+}
+
 .card {
   display: inline-block;
   margin-top: 30px;
@@ -621,7 +640,7 @@ nav li.has-child ul ul {
   margin-bottom: 8px;
 }
 
-.card p {
+.card h2 {
   text-align: center;
   font-size: 22px;
   margin: 0;
@@ -631,18 +650,72 @@ nav li.has-child ul ul {
 /*----------Category,Menu終わり----------*/
 
 
-/*----------Orderlist----------*/
-.menu-list li a { 
-  font-size: 30px;
+/*----------MenuDetail----------*/
+.MenuDetail img {
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 50%;
+  height: 180px;
 }
 
-.menu-list li a input { 
-  width: 100px;
-  height: 250px;
+.MenuDetail h2 {
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #000;
+  font-size: 32px;
+}
+
+.Detail-number {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.Detail-number h3 {
+  margin: 0;
+  font-size: 32px;
+  padding-left: 15px;
+}
+
+.Detail-number input {
+  width: 110px;
+  height: 35px;
+  margin-right: 20px;
+  border-radius: 20px; 
+  font-size: 22px;
+  text-align: center;
+}
+
+.cart-button,
+.Detail-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 
-/*----------Orderlist終わり----------*/
+.MenuDetail button {
+  height: 45px;
+  width: 260px;
+  border: 1px solid #696969;
+  border-radius: 10px;
+  background-color: rgba(30,144,255,0.8);
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+/*----------MenuDetail終わり----------*/
+
+
+
 
 
 /*----------ConfirmRegisterDetail----------*/
@@ -672,43 +745,142 @@ nav li.has-child ul ul {
 /*----------ConfirmRegisterDetail終わり----------*/
 
 
-/*---------------------VoucherDetail--------------------*/
-.VoucherDetail p { /*--データベース追加での変更ヶ所--*/
-  padding-left: 20px;
-  padding-bottom: 10px;
-  border-bottom: solid 1px #000;
-  font-size: 20px;
+/*----------OrderList(cart)----------*/
+.OrderList {
+  margin-top: 20px;
 }
 
-.Voucher-text {
-  margin-top: 60px;
+.cart-card {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 25px;
+  z-index: 100;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  height: 160px;
+  width: 360px;
+  box-shadow: 2px 2px 2px 1px #696969;
+
 }
 
-.Voucher-text p {
-  display: flex; /* ボタンを右端に */
-  justify-content: flex-end;
-  padding-right: 20px;
+.cart-img {
+  display: inline-block;
+}
+
+.cart-img img {
+  display: inline;
+  width: 145px;
+  height: 160px;
+  z-index: 99;
+  border-radius: 15px 0 0 15px;
+}
+
+.cart-text {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  height: 145px;
+  width: 200px;
+}
+
+.cart-text h2 {
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+.cart-text h3 {
+  margin: 0;
+  margin-left: 10px;
   font-size: 24px;
 }
 
-.Voucher-text h2 {
-  display: flex; /* ボタンを右端に */
-  justify-content: flex-end;
-  padding-right: 20px;  
+.cart-delete {
+  display: flex;
+  justify-content: space-between;
 }
 
-.submit-VoucherDetail input {
+.cart-delete h2 {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+
+.cart-delete form {
+  margin-top: 3px;
+}
+
+.cart-delete button {
+  height: 40px;
+  width: 85px;
+  background-color: #ff2828;
+  border:1px solid #696969;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.cart-null {
   display: flex;
   justify-content: center;
-  height: 60px;
-  width: 300px;
+  margin-top: 230px;
+}
+
+.cart-null p {
+  text-align: center;
+  font-size: 24px;
+}
+
+
+/*----------OrderList(cart)終わり----------*/
+
+
+/*---------------------VoucherDetail--------------------*/
+.Voucher-text {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #000;
+}
+
+.Voucher-text h2 {
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.Voucher-text P {
+  margin-right: 50px;
+  padding-top: 10px;
+  font-size: 24px;
+}
+
+.Voucher-all {
+  margin-top: 60px;
+}
+
+.Voucher-all h2 {
+  display: flex; /* ボタンを右端に */
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 34px;
+}
+
+.submit-VoucherDetail button {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 250px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: #578af9;
+  padding-top: 10px;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 15px;
+  text-align: center;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
@@ -758,14 +930,14 @@ nav li.has-child ul ul {
 
 /*---------------------MailChange--------------------*/
 .MailChange { /* 枠線はこれ */
-  margin-top: 50px;
+  margin-top: 90px;
   margin-left: auto; 
   margin-right: auto; 
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
   border-radius: 15px;
-  width: 70%;
+  width: 80%;
   font-size: 24px;
 }
 
@@ -809,17 +981,13 @@ nav li.has-child ul ul {
   border-radius: 5px;
   background-color: rgba(128,128,128,0.6);
   color: #fff;
-}
-
-.submit button a {
   font-size: 20px;
-  color: #fff;
 }
 
 .submit .open {
   margin-left: 14px;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -845,7 +1013,7 @@ nav li.has-child ul ul {
 	left: 0;
 }
 
-.window {
+.window-Change {
 	width: 90vw;
 	max-width: 380px;
 	height: 240px;
@@ -858,35 +1026,29 @@ nav li.has-child ul ul {
 	transform: translate(-50%, -50%);
 }
 
-.window .text {
+.window-Change #msg {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.window-Change .text {
 	font-size: 23px;
-  margin-left: 65px;
-  margin-right: 65px;
-  margin-top: 80px;
-  margin-bottom: 30px;
+  margin-top: 0;
   text-align: center;
 }
 
-.window button {
-  margin-left: 15px;
-  margin-right: 0;
+.window-Change input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
   background-color: #fff;
   width: 160px;
   height: 35px;
   font-size: 20px;
-  color: rgba(128,128,128,1);
-}
-
-.window input {
-  margin-left: 10px;
-  border:1px solid rgba(128,128,128,0.6);
-  border-radius: 0px;
-  background-color: #fff;
-  width: 160px;
-  height: 35px;
-  font-size: 20px;
+  padding-left: 60px;
   color: rgba(128,128,128,1);
 }
 
@@ -1020,7 +1182,7 @@ nav li.has-child ul ul {
   margin-left: 20px;
   margin-bottom: 0;
   padding: 6px 32px 6px 30px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -1094,7 +1256,7 @@ nav li.has-child ul ul {
   margin-left: 20px;
   margin-bottom: 0;
   padding: 6px 32px 6px 28px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;

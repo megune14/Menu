@@ -24,7 +24,7 @@
 <input type="checkbox" id="pop-up">
 
 <div class="overlay">
-  <div class="window-Setting">
+  <div class="window-Change">
     <label class="close" for="pop-up">×</label>
       <script>
       function butotnClick(){

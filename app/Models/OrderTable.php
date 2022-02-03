@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class OrderTable extends Model
 {
     use HasFactory;
-    protected $fillable = ['OrderID','DayTime','UserID','StoreID','TableNumber'];
-    public function ordertables()
+    protected $fillable = ['OrderID','DayTime','UserID','StoreID','TableNumber','Flag'];
+    public function orderdetailtables()
     {
-        return $this->hasMany('App\Models\OrderTable');
+        return $this->hasMany('App\Models\OrderDetailTable');
     }
 }

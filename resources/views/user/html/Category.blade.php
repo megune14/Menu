@@ -12,22 +12,22 @@ $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
       <div class="category">
         <h1>カテゴリー</h1>
       </div>
-      
+
       <div class="field-card">
 
         @foreach ($items as $item)
 
         <div class="card">
           <a href="/Category/Menu?categoryid={{$item->CategoryID}}">
-            <img src="../../images/men1.jpg">
-            <p>{{ $item->Category}}</p>
+            <img src="{{asset('storage/images/'.$item->img)}}">
+            <h2>{{ $item->Category}}</h2>
           </a>
         </div>
-        
+
         @endforeach
 
-      </div>  
-        
-        
+      </div>
+
+
 
   @endsection

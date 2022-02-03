@@ -29,10 +29,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 /* ---------------------全画面表示＋ヘッダー-------------------- */
-.pc-dsp {
-  
-}
-
 .header {
 	position: fixed;
 	top: 0;
@@ -77,6 +73,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .header ul {
+  margin-top: 18px;
   padding-left: 0;
 }
 
@@ -358,7 +355,7 @@ nav li.has-child ul ul {
   font-size: 20px;
   padding-left: 10px;
   line-height: 26px;
-  margin-top: 10px; 
+  margin-top: 10px;
 }
 
 .mt-2 span {
@@ -387,6 +384,7 @@ nav li.has-child ul ul {
   background-color: rgba(30,144,255,0.65);
   font-size: 20px;
   color: #000;
+  font-weight: bold;
 }
 
 
@@ -450,7 +448,7 @@ nav li.has-child ul ul {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   height: 50px;
   width: 270px;
   border:1px solid #696969;
@@ -502,32 +500,16 @@ nav li.has-child ul ul {
 .mt-4 .forgot-button {
   width: 520px;
   padding: 13px;
+  margin-bottom: 60px;
   border-radius: 15px;
   font-size: 21px;
   color: #fff;
-  background-color: darkblue;
+  background-color: rgba(30,144,255,0.8);
   border-color: transparent;
 }
 
 
 /*----------forgot-password終わり----------*/
-
-
-/*----------verify-email----------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------verify-email終わり----------*/
 
 
 /*----------reset-password----------*/
@@ -541,6 +523,35 @@ nav li.has-child ul ul {
 
 
 /*----------reset-password終わり----------*/
+
+
+/*----------verify-email----------*/
+.verify-email  {
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
+.verify-email .mb-4 {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+  font-size: 26px;
+}
+
+.verify-email button {
+  width: 430px;
+  padding: 13px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  font-size: 21px;
+  color: #fff;
+  background-color: rgba(30,144,255,0.8);
+  border-color: transparent;
+}
+
+
+/*----------verify-email終わり----------*/
 
 
 /*----------MenuCreate----------*/
@@ -590,7 +601,6 @@ nav li.has-child ul ul {
   height: 145px;
   width: 400px;
   box-shadow: 2px 2px 2px 1px #696969;
-
 }
 
 .MenuCreate-card img {
@@ -610,7 +620,7 @@ nav li.has-child ul ul {
 }
 
 .Create-Name p {
-  margin-top: 0; 
+  margin-top: 0;
 }
 
 .Create-Price p {
@@ -643,7 +653,7 @@ nav li.has-child ul ul {
 .Menucheckbox label:hover {
   background-color: #fff;
   background-image:
-    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%);
 }
 
 .Menucheckbox ul {
@@ -746,7 +756,7 @@ margin-left: 25px;
   margin-left: auto;
   margin-right: auto;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -882,7 +892,7 @@ margin-left: 25px;
   margin-top: 25px;
 }
 
-.confirm button { 
+.confirm button {
   margin-left: 110px;
   height: 45px;
   width: 75px;
@@ -902,7 +912,7 @@ margin-left: 25px;
   width: 140px;
   margin-left: 14px;
   padding: 6px 32px 6px 32px;
-  background-color: #1E90FF;/* 鮮やかな青 */
+  background-color: rgba(30,144,255,0.8);/* 鮮やかな青 */
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -939,7 +949,7 @@ margin-left: 25px;
   margin-right: 10px;
   height: 60px;
   padding: 5px 20px 5px 20px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 24px;
@@ -1011,7 +1021,7 @@ margin-left: 25px;
 .couponcheckbox label:hover {
   background-color: #fff;
   background-image:
-    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%); 
+    radial-gradient( rgba(0,0,0,0.6) 30%, transparent 42%);
 }
 
 .couponcard ul {
@@ -1067,7 +1077,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 32px;
 }
 
-.Detail-couponcard {  
+.Detail-couponcard {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -1122,7 +1132,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 140px;
   border:1px solid #696969;
   border-radius: 5px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   font-size: 20px;
   color: #fff;
 }
@@ -1173,7 +1183,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   border:1px solid rgba(128,128,128,0.8);
   text-align: center;
   font-size: 22px;
-  
+
 }
 
 .submit-CouponProduct input {
@@ -1181,7 +1191,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   height: 55px;
   width: 145px;
   border:1px solid #696969;
@@ -1225,7 +1235,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 140px;
   border:1px solid #696969;
   border-radius: 5px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   font-size: 20px;
   color: #fff;
 }
@@ -1250,8 +1260,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------StoreInfoSettings--------------------*/
 .StoreInfoSetting {
   margin-top: 50px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
@@ -1303,7 +1313,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .submit-InfoSetting .open {
   margin-left: 20px;
   padding-top: 7px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   height: 38px;
   width: 125px;
   border:1px solid #696969;
@@ -1410,7 +1420,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-top: 0;
   margin-left: 120px;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 22px;
@@ -1422,12 +1432,123 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 
 /*----------NewProduct----------*/
-.qwe .header li.pc-child form {
-  padding-top: 10px;
-} 
+/*--NewProductの全画面表示--*/
+.header li.right-Product {
+	float: right;
+}
 
+.header li.right-Product form {
+	margin-top: 13px;
+}
 
+.header li.pc-child-Product {
+  float: right;
+}
 
+.header .pc-child-Product ul {
+  margin-top: 18px;
+  padding-left: 0;
+}
+
+.header li.pc-child-Product a:hover,
+.header li.right-Product a:hover { /* ホバー時に色が変わる */
+  color:#fff;
+}
+
+.header li.pc-child-Product::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:15px;
+  top:32px;
+  width:8px;
+  height:8px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
+}
+
+.header li.pc-child-Product ul { /* 下の階層を持っているulの指定 */
+  position: absolute; /* 絶対配置で位置を指定 */
+  right:0;
+  top:60px;
+  background:#ffac1e;
+  width: 250px;
+  visibility: hidden; /* はじめは非表示 */
+  opacity: 0;
+  transition: all .3s; /* アニメーション設定 */
+}
+
+.header li.pc-child-Product:hover > ul,
+.header li.pc-child-Product ul li:hover > ul,
+.header li.pc-child-Product:active > ul,
+.header li.pc-child-Product ul li:active > ul { /* hoverしたら表示 */
+  visibility: visible;
+  opacity: 1;
+}
+
+.header li.pc-child-Product ul li a { /* ナビゲーションaタグの形状 */
+  color: #000;
+  border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+.header li.pc-child-Product ul li:last-child a {
+  border-bottom:none;
+}
+
+.header li.pc-child-Product ul li a:hover,
+.header li.pc-child-Product ul li a:active {
+  background:#ff4500;
+}
+
+/* ----------NewProductのハンバーガーメニュー---------- */
+.menu-btn-Product {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 9000;
+  cursor: pointer;
+}
+
+.menu-btn-Product span,
+.menu-btn-Product span:before,
+.menu-btn-Product span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 40px;
+  border-radius: 3px;
+  background-color: #000; /* 3本線の色 */
+  position: absolute;
+}
+
+.menu-btn-Product span:before {
+  bottom: 12px;
+}
+
+.menu-btn-Product span:after {
+  top: 12px;
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span {
+  background-color: rgb(255, 255, 255,0); /* メニューオープン時は真ん中の線を透明にする */
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span::before {
+  bottom: 0;
+  transform: rotate(45deg); /* ばつ印 */
+}
+
+#menu-btn-check:checked ~ .menu-btn-Product span::after {
+  top: 0;
+  transform: rotate(-45deg); /* ばつ印 */
+}
+
+/*--contents部分--*/
 .NewProduct {
   margin-top: 20px;
   margin-left: 20px;
@@ -1482,15 +1603,15 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .menudetail-Product {
-  display: flex; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .menudetail-Product button {
   margin-left: auto;
   margin-right: auto;
-  height: 50px;
+  height: 55px;
   width: 160px;
   border:1px solid #696969;
   border-radius: 5px;
@@ -1506,10 +1627,11 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-left: auto;
   margin-right: auto;
   width: 160px;
-  height: 50px;
+  height: 55px;
   padding-top: 9px;
+  
   margin-bottom: 9px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 22px;
@@ -1570,8 +1692,8 @@ input[type="checkbox"]:checked ~ .abc ul{
 /*---------------------MailChange--------------------*/
 .MailChange { /* 枠線はこれ */
   margin-top: 50px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   padding: 1em 1em;
   border: solid 1px rgba(128,128,128,0.8);
@@ -1584,7 +1706,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-top: 20px;
   margin-bottom: 60px;
   font-size: 27px;
-  
+
 }
 
 .MailChange p {
@@ -1605,6 +1727,98 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-family:'HelveticaNeue','Arial', sans-serif;
   letter-spacing: .8px;
   font-size: 23px;
+}
+
+.submit {
+  display: flex; /* 右揃え */
+  justify-content: flex-end; /* 右揃え */
+  margin-top:100px;
+}
+
+.submit button {
+  height: 45px;
+  width: 80px;
+  border:1px solid #696969;
+  border-radius: 5px;
+  background-color: rgba(128,128,128,0.6);
+  color: #fff;
+  font-size: 20px;
+}
+
+.submit .open {
+  margin-left: 14px;
+  padding: 6px 32px 6px 32px;
+  background-color: rgba(30,144,255,0.8);
+  border:1px solid #696969;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+
+.window-Change {
+	width: 90vw;
+	max-width: 380px;
+	height: 240px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	justify-content: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.window-Change #msg {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.window-Change .text {
+	font-size: 23px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.window-Change input {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid rgba(128,128,128,0.6);
+  background-color: #fff;
+  width: 160px;
+  height: 35px;
+  font-size: 20px;
+  padding-left: 60px;
+  color: rgba(128,128,128,1);
+}
+
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	font-size: 20px;
 }
 
 
@@ -1671,7 +1885,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .submit .open {
   margin-left: 14px;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -1815,7 +2029,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-left: 20px;
   margin-bottom: 0;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -1887,7 +2101,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   margin-left: 20px;
   margin-bottom: 0;
   padding: 6px 32px 6px 32px;
-  background-color: #578af9;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 5px;
   font-size: 20px;
@@ -1963,7 +2177,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   width: 400px;
   margin-top: 0;
   padding: 0px 32px 0px 32px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   border:1px solid #696969;
   border-radius: 10px;
   font-size: 20px;
@@ -1984,6 +2198,166 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 
 /*---------------------RequestComplete終わり--------------------*/
+
+
+/*---------------------OrderHistory--------------------*/
+.OrderHistory {
+  margin-top: 60px;
+}
+
+.History-table {
+  height: 510px;
+  width:70%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  overflow: auto;
+}
+
+.History-table thead th {
+  /* 縦スクロール時に固定する *
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* tbody内のセルより手前に表示する */
+  z-index: 1;
+}
+
+
+
+.History-table tbody tr :hover{
+  color: #5bbee5;
+}
+
+
+
+
+.History-table button {
+  font-size: 20px;
+  height: 30px;
+  color: #000;
+  border: solid 1px transparent;
+  background-color: transparent;
+}
+
+
+
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #3c6690;
+}
+
+table th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  border-left: 1px solid #3c6690;
+  border-top: 1px solid #3c6690;
+  border-bottom: 1px solid #3c6690;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+table td:last-child{
+  border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
+
+/*---------------------OrderHistory終わり--------------------*/
+
+
+/*---------------------OrderHistoryDetail--------------------*/
+.OrderHistoryDetail {
+  margin-top: 60px;
+}
+
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+}
+
+table th:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table th:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #3c6690;
+}
+
+table th{
+  text-align: center;
+  color:white;
+  background: linear-gradient(#829ebc,#225588);
+  border-left: 1px solid #3c6690;
+  border-top: 1px solid #3c6690;
+  border-bottom: 1px solid #3c6690;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 20px;
+}
+
+table td:last-child{
+  border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
+
+
+
+
+/*---------------------OrderHistoryDetail終わり--------------------*/
 
 
 /*---------------------Inquiry--------------------*/
@@ -2034,7 +2408,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 .formbutton input {
   margin-left: 20px;
-  background-color: #1E90FF;
+  background-color: rgba(30,144,255,0.8);
   height: 45px;
   width: 125px;
   border:1px solid #696969;
@@ -2060,3 +2434,69 @@ footer {
 display: inline;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  p{
+    margin: 0;
+  }
+  .wrap-tab{
+    overflow: hidden;
+  }
+
+  .list-tab{
+    display: flex;
+    margin: 0 -2px;
+    border-bottom: 3px solid #5bbee5;
+  }
+  .list-tab > li{
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0 2px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    background: #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .list-tab .active{
+    background: #5bbee5;
+  }
+
+  .tab-content{
+    display: none;
+    padding: 1em;
+    border-bottom: 1px solid #5bbee5;
+    border-left: 1px solid #5bbee5;
+    border-right: 1px solid #5bbee5;
+  }
+  .tab-content.active{
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.target-click-menuitem {
+    color: blue;
+    cursor: pointer;
+    font-size: 1.2rem;
+}

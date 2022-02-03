@@ -21,12 +21,12 @@
   </div>
 
   <div class="field-Create">
-    
+
     @foreach ($Menu as $item)
     <div class="MenuCreate-card">
         <!--ここのURLにクエリパラメータで商品IDを送る-->
-        
-        <img src="{{ asset('images/men1.jpg') }}">
+
+        <img src="{{asset('storage/images/'.$item->img)}}">
 
         <div class="Create-Name">
 
@@ -37,7 +37,12 @@
 
                 <div class="Menu-abc">
                   <ul>
-                    <li><a href="/admin/login">変更</a></li>
+                    <li>
+                    <form action="{{route('admin.menudetail',['id'=>$item->CommodityID])}}" method="post">
+                        @csrf
+                    <button>変更</button>
+                    </form>
+                    </li>
                     <li><input type="submit"  value="削除"></li>
                     <li><a href="/admin/login">販売中止</a></li>
                   </ul>
@@ -45,16 +50,16 @@
                 </div>
 
           </div>
-          
-        
+
+
           <p>{{$item->CommodityName}}</p>
-          
+
           <div class="Create-Price">
             <p>{{$item->Price}}円</p>
           </div>
 
-        </div>   
-        
+        </div>
+
     </div>
     @endforeach
 

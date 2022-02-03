@@ -23,13 +23,13 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
 
       <div class="card">
           <a href="/Category/Menu/{{$item->CommodityID}}">
-          <img src="/images/men1.jpg">
-          <p>{{ $item->CommodityName}}</p>
-          <p>{{ $item->Price}}円</p>
+          <img src="{{asset('storage/images/'.$item->img)}}">
+          <h2>{{ $item->CommodityName}}</h2>
+          <h2>{{ $item->Price}}円</h2>
           </a>
       </div>
       <form action=""></form>
-      
+
       @endforeach
 
     </div>

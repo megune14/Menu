@@ -99,12 +99,12 @@ Route::get('/StoreCouponList','CouponTableController@open',function () {
 //Route::post('/StoreCouponList/del','CouponController@remove');
 //Route::get('/StoreCouponList','CouponTableController@open');
 
-Route::get('/MenuDetail',function () {
+Route::post('/MenuDetail/{id}/update','MenuDetailController@update')->name('menudetailupdate');
+Route::match(['post','get'],'/MenuDetail/{id}','MenuDetailController@view',function () {
     return view('admin/html.MenuDetail');
-});
+})->name('menudetail');
 
-Route::get('MenuDetail/edit','MenuDetailController@edit' );
-Route::post('MenuDetail/edit','MenuDetailController@update');
+
 
 Route::get('/CouponSetting',function () {
     return view('admin/html.CouponSetting');
@@ -187,6 +187,8 @@ Route::post('/CouponDetail/delete','CouponController@delete');
 Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');
 });
+Route::get('/OrderCheck','OrderCheckController@view')->name('view');
+Route::post('/OrderCheck/chenge','OrderCheckController@updata')->name('update');
 
 Route::get('/MailChange','MailChangeController@MailCheck',function () {
     return view('admin/html.MailChange');
@@ -194,6 +196,10 @@ Route::get('/MailChange','MailChangeController@MailCheck',function () {
 
 Route::get('/MailChange/edit','MailChangeController@edit');
 Route::post('/MailChange/edit','MailChangeController@update');
+Route::get('/OrderHistory','OrderHistoryController@view');
+Route::post('/OrderHistory','OrderHistoryController@view');
+Route::get('/OrderHistoryDetail/{detail}','OrderHistoryController@detail')->name('historydetail');
+Route::post('/OrderHistoryDetail/{detail}','OrderHistoryController@detail');
 
 Route::get('/PassChangeCheck',function () {
     return view('admin/html.PassChangeCheck');
