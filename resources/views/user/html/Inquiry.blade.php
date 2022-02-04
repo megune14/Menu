@@ -2,7 +2,7 @@
 
 
   
-  @section('title','お問い合わせ画面')
+  @section('title','お問い合わせ')
     <!--テキストサンプル-->
     @section('contents')
     <form action="#" method="post"> 

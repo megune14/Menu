@@ -6,7 +6,7 @@ $items = CategoryTable::where('StoreID',session()->get('StoreID'))->get();
 
 
 
-  @section('title','カテゴリー')
+  @section('title','カテゴリー一覧')
 
     @section('contents')
       <div class="category">

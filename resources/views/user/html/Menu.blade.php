@@ -8,7 +8,7 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
 
 
 
-  @section('title','商品')
+  @section('title','メニュー')
 
 
 

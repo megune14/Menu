@@ -22,6 +22,8 @@
 
   <div class="field-Create">
 
+  <button><a href="/admin/NewProduct">新規追加</a></button>
+
     @foreach ($Menu as $item)
     <div class="MenuCreate-card">
         <!--ここのURLにクエリパラメータで商品IDを送る-->
@@ -34,6 +36,7 @@
               <input type="checkbox" id="Menubox{{$item->CommodityID}}"><!--データベースの数値-->
               <label for="Menubox{{$item->CommodityID}}" class="Menu-btn">
               </label>
+
 
                 <div class="Menu-abc">
                   <ul>
@@ -61,7 +64,9 @@
         </div>
 
     </div>
+    
     @endforeach
+                  
 
   </div>
 

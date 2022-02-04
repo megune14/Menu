@@ -3,7 +3,7 @@
 
 
 
-  @section('title','店舗情報削除画面')
+  @section('title','店舗情報削除')
 
   <!--テキストサンプル-->
     @section('contents')

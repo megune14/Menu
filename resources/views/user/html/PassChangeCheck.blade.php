@@ -3,7 +3,7 @@
 
 
 
-  @section('title','パスワード変更確認画面')
+  @section('title','パスワード変更確認')
 
   <!--テキストサンプル-->
     @section('contents')

@@ -3,7 +3,7 @@
 
 
 
-  @section('title','メール送信完了')
+  @section('title','パスポート再設定')
 
   <!--テキストサンプル-->
     @section('contents')

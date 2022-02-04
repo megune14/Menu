@@ -3,7 +3,7 @@
 
 
 
-  @section('title','会計詳細画面')
+  @section('title','会計詳細')
 @php
 
 $allprice = 0;
