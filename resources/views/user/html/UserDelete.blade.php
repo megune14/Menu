@@ -19,9 +19,11 @@
           <div class="window-Delete">
             <label class="close" for="pop-up">×</label>
             <p class="text">削除されたアカウントは復元できません。<br>
-            <font color="red">本当に削除しますか？</font></p>            
-            <button type="button" onclick="history.back()">戻る</button>
-            <input type="submit" value="確定" name='delete'>
+            <font color="red">本当に削除しますか？</font></p>
+            <label class="xxz" for="pop-up"></lavel>          
+            <button type="button">戻る</button>
+            <input type="submit" value="確定" name='delete'></input>
+
           </div>
         </div> 
       </div>
