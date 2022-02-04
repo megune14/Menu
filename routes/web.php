@@ -34,6 +34,23 @@ Route::group(['middleware' => 'auth:users'], function () {
     Route::get('/Category/Menu/{detail}','MenuController@detail',function () {
         return view('user/html.MenuDetail');
     })->name('menudetail');
+
+    Route::get('/UserInfo',function () {
+        return view('user/html.UserInfo');
+    });
+
+    Route::get('/MailChange',function () {
+        return view('user/html.MailChange');
+    });
+
+    Route::get('/PassChangeUserCheck',function () {
+        return view('user/html.PassChangeUserCheck');
+    });
+
+    Route::get('/UserDelete',function () {
+        return view('user/html.UserDelete');
+    });
+    Route::post('/UserDelete/delete','UserController@delete');
 });
 
 Route::get('/VoucherDetail',function () {
@@ -45,10 +62,7 @@ Route::get('/FoodDetail',function () {
     return view('user/html.FoodDetail');
 });
 
-Route::get('/UserDelete',function () {
-    return view('user/html.UserDelete');
-});
-Route::post('/UserDelete/delete','UserController@delete');
+
 
 
 Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
@@ -82,9 +96,7 @@ Route::post('/CouponList/edit','CouponTableController@edit');
 //Route::post('/CouponList/edit','CouponTableController@add');
 //Route::post('/CouponList/edit','CouponTableController@update');
 
-Route::get('/UserInfo',function () {
-    return view('user/html.UserInfo');
-});
+
 
 Route::get('/Inquiry',function () {
     return view('user/html.Inquiry');
