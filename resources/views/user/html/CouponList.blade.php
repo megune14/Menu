@@ -48,7 +48,7 @@
 
           <label class="switch__label">
          
-        <input class="check" data-price="{{$coupon->CommodityName}}" id="" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}" >使用する<br>
+        <input class="check" data-price="{{$coupon->CommodityName}}" id="input" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}" >使用する<br>
         <span class="switch__content"></span>
         <span class="switch__circle"></span>
 
@@ -141,7 +141,11 @@ function calcPrice(){
             });
     price_total -= price[i];
     }else{
-      preventDefault();
+      var obj = document.getElementById("input");
+      obj.disabled = true;
+      //preventDefault();
+     
+
     }
       }
   
@@ -256,6 +260,7 @@ function calcPrice(){
 
 
 -->
+
 
 
     <!--/テキストサンプル-->
