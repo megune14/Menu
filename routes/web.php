@@ -82,3 +82,10 @@ Route::post('/CouponList/edit','CouponTableController@edit');
 //Route::post('/CouponList/edit','CouponTableController@add');
 //Route::post('/CouponList/edit','CouponTableController@update');
 
+Route::get('/UserInfo',function () {
+    return view('user/html.UserInfo');
+});
+
+Route::get('/Inquiry',function () {
+    return view('user/html.Inquiry');
+});
