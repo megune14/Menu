@@ -9,9 +9,11 @@
   <!--テキストサンプル-->
   @section('contents')
 <div class="MenuCreate">
+  <div class="AK">
+    <h1>商品一覧</h1>
 
-  <h1>商品一覧</h1>
-
+    <button><a href="/admin/NewProduct">新規追加</a></button>
+  </div>
   <div class="search">
     {{csrf_field()}}
     {{ Form::open(['action' => 'MenuCreateController@create', 'method' => 'post']) }}
@@ -22,7 +24,7 @@
 
   <div class="field-Create">
 
-  <button><a href="/admin/NewProduct">新規追加</a></button>
+  
 
     @foreach ($Menu as $item)
     <div class="MenuCreate-card">
