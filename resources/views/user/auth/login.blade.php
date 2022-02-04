@@ -52,6 +52,8 @@
                         </a>
                     @endif
 
+                    <a class="RTA" href="/register">新規登録</a>
+
                     <x-button class="ml-4">
                         {{ __('ログイン') }}
                     </x-button>

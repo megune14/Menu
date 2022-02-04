@@ -3,7 +3,7 @@
 
 
 
-  @section('title','クーポンリスト')
+  @section('title','クーポン一覧')
 
   <!--テキストサンプル-->
   @section('contents')
@@ -48,7 +48,7 @@
 
           <label class="switch__label">
          
-        <input class="check" data-price="{{$coupon->CommodityName}}" id="" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}">使用する<br>
+        <input class="check" data-price="{{$coupon->CommodityName}}" id="" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}" >使用する<br>
         <span class="switch__content"></span>
         <span class="switch__circle"></span>
 
@@ -132,11 +132,23 @@ function calcPrice(){
   var price_total = {{$user->point}};
 //for文で配列を回して合計を出す
   for(var i = 0, len = price.length;i < len; i++){
-  price_total -= price[i];
-  }
+    if(price_total >= price[i]){
+      $("[name='commodity_id']").on("click", function(){
+                if ($(this).prop('checked')){
+                    $("[name='commodity_id']").prop('checked', false);
+                    $(this).prop('checked', true);
+                }
+            });
+    price_total -= price[i];
+    }else{
+      preventDefault();
+    }
+      }
+  
   $("#priceTotal").val(price_total);
  }
 });
+
 
 
 </script>
@@ -149,12 +161,7 @@ function calcPrice(){
 
 
 <script>
-$("[name='commodity_id']").on("click", function(){
-                if ($(this).prop('checked')){
-                    $("[name='commodity_id']").prop('checked', false);
-                    $(this).prop('checked', true);
-                }
-            });
+
 
 
 
@@ -162,7 +169,7 @@ $("[name='commodity_id']").on("click", function(){
 
 
 
-<style>
+<!--<style>
 .switch__label {
     width: 50px;
     position: relative;
@@ -248,7 +255,7 @@ $("[name='commodity_id']").on("click", function(){
 
 
 
-
+-->
 
 
     <!--/テキストサンプル-->

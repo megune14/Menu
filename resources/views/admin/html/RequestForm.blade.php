@@ -1,7 +1,7 @@
 @extends('admin/html.PCbase')
 
 
-  @section('title','申請フォーム画面')
+  @section('title','申請フォーム')
     <!--テキストサンプル-->
     @section('contents')
 

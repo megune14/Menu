@@ -3,7 +3,7 @@
 
 
 
-  @section('title','メール削除画面')
+  @section('title','クーポン削除')
 
     <!--テキストサンプル-->
     @section('contents')
