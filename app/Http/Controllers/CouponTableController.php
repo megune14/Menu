@@ -103,6 +103,9 @@ class CouponTableController extends Controller
     
     public function edit(Request $request)
     {
+
+        $request-> point = ['point' => 'integer | between:0,150'];
+
         $param = ['id' => $request->id];
         $item = User::where('id',Auth::id())->update([
           'point' => $request-> point
@@ -128,6 +131,8 @@ class CouponTableController extends Controller
     //dd($request->commodity_id);
     //dd($form['commodity_table_CommodityID']);
     $form['quantity'] = 1;
+
+
 
 
     //dd($form);
