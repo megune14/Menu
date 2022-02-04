@@ -39,9 +39,12 @@ Route::group(['middleware' => 'auth:users'], function () {
         return view('user/html.UserInfo');
     });
 
-    Route::get('/MailChange',function () {
+    Route::get('/MailChange','UserController@MailCheck',function () {
         return view('user/html.MailChange');
     });
+    
+    Route::get('/MailChange/edit','UserController@edit');
+    Route::post('/MailChange/edit','UserController@update');
 
     Route::get('/PassChangeUserCheck',function () {
         return view('user/html.PassChangeUserCheck');
@@ -82,12 +85,7 @@ Route::post('/VoucherDetail/end','VoucherController@end');
 
 
 
-Route::get('/MailChange','UserController@MailCheck',function () {
-    return view('user/html.MailChange');
-});
 
-Route::get('/MailChange/edit','UserController@edit');
-Route::post('/MailChange/edit','UserController@update');
 
 Route::get('/CouponList','CouponTableController@CouponOpen',function () {
     return view('user/html.CouponList');
