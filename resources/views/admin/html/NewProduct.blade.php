@@ -84,8 +84,8 @@
       });
       
     </script>
-
-
+<body>
+<div class="footerFixed">
 <header>
     <div class="header">
 
@@ -113,7 +113,7 @@
           </ul>
         </li>
         <li class="right"><a href="/admin/OrderCheck">受注商品</a></li>
-        <li class="right"><a href="/admin/StoreCouponLis">クーポン</a></li>
+        <li class="right"><a href="/admin/StoreCouponList">クーポン</a></li>
         <li class="right"><a href="/admin/MenuCreate">メニュー一覧</a></li>
       </div>
     </div>
@@ -258,6 +258,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ asset('dist/js/PCbase.js') }}"></script>
 
+                </div>
 </body>
 
 </html>

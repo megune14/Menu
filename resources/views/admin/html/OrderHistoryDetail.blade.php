@@ -25,7 +25,7 @@ $(function() {
 });
 </script>
 <div class="HistoryDetail-table">
-  <table id='tehuda2'>
+  <table class="History-tehuda1" id='tehuda2'>
       <tr>
           <th>商品名</th>
           <th>個数</th>

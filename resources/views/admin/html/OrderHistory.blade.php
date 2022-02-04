@@ -39,7 +39,7 @@ $(function() {
     @if(isset($orders))
 
     <div class="History-table">
-        <table>
+        <table class="History-tehuda1">
             <thead>
             <tr>
                 <th>注文日時</th>
