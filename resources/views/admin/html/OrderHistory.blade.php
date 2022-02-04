@@ -5,7 +5,7 @@ use App\Models\OrderTable;
 use App\Models\OrderDetailTable;
 @endphp
 
-  @section('title','メール送信完了')
+  @section('title','受注商品履歴')
 
   <!--テキストサンプル-->
   @section('contents')

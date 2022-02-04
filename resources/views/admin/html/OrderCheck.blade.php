@@ -22,7 +22,7 @@
     </script>
 
 
-  @section('title','メール送信完了')
+  @section('title','受注商品一覧')
 
   <!--テキストサンプル-->
   @section('contents')

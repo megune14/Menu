@@ -3,7 +3,7 @@
 
 
 
-  @section('title','クーポンリスト')
+  @section('title','クーポン一覧')
 
   <!--テキストサンプル-->
   @section('contents')

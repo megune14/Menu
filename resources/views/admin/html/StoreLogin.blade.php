@@ -3,7 +3,7 @@
 
 
 
-  @section('title','メール送信完了')
+  @section('title','ログイン')
 
   <!--テキストサンプル-->
   @section('contents')
