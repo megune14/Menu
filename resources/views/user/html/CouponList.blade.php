@@ -141,8 +141,9 @@ function calcPrice(){
             });
     price_total -= price[i];
     }else{
-      var obj = document.getElementById("input");
-      obj.disabled = true;
+      $("[name='commodity_id']").prop('checked', false);
+     // var obj = document.getElementById("input");
+     // obj.disabled = true;
       //preventDefault();
      
 
