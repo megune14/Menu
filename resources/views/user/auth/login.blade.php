@@ -1,6 +1,6 @@
 @extends('user/html.MOBILEbase')
 
-@section('title','ログイン画面')
+@section('title','ログイン')
 
 @section('contents')
 
