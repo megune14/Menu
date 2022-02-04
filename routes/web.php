@@ -89,3 +89,7 @@ Route::get('/UserInfo',function () {
 Route::get('/Inquiry',function () {
     return view('user/html.Inquiry');
 });
+
+Route::get('/PassChangeCheck',function () {
+    return view('user/html.PassChangeCheck');
+});
