@@ -22,7 +22,11 @@ class CartController extends Controller
                 'quantity'=> $request->quantity
             ]);
         }
-       return redirect()->route('user.cart.index');
+        if ($request->has('button1')) {
+            return view('user/html.Category');
+        }else{
+          return redirect()->route('user.cart.index');
+        }
 
     }
     public function index(){

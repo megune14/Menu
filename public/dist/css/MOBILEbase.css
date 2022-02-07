@@ -30,6 +30,7 @@ textarea {
 	width: 100%;
 	list-style-type: none;
 	background-color: #1E90FF; /* ヘッダー背景 */
+  z-index: 999;
   
 }
 
@@ -631,8 +632,37 @@ nav li.has-child ul ul {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0;
-  padding-left: 5px;
   font-size: 36px;
+}
+
+.category-menu {
+  margin-top: 20px;
+}
+
+.category-menu h1 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 36px;
+}
+
+.category-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.category-button button {
+height: 45px;
+width: 210px;
+border: 1px solid #696969;
+border-radius: 10px;
+background-color: rgba(30,144,255,0.8);
+}
+
+.category-button button a {
+  color: #fff;
+  font-size: 20px;
 }
 
 .field-card {
@@ -728,7 +758,8 @@ nav li.has-child ul ul {
 }
 
 
-.MenuDetail button {
+.cart-button input,
+ .Detail-button input {
   height: 45px;
   width: 260px;
   border: 1px solid #696969;
@@ -1334,12 +1365,13 @@ nav li.has-child ul ul {
   box-shadow: 2px 0px 2px 1px#696969;
 }
 
-.Coupon-box h1 {
+.Coupon-box .Coupon-Name {
   display: flex;
   justify-content: center;
+  font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 19px;
+  font-size: 21px;
 }
 
 .Coupon-img {
@@ -1356,7 +1388,7 @@ nav li.has-child ul ul {
 .Coupon-check {
   display: inline-block;
   width: 180px;
-  height: 40%;
+  height: 44%;
   margin-top: 0;
   border: solid 1px #000000;
   border-radius: 0 0 15px 15px;
@@ -1372,8 +1404,6 @@ nav li.has-child ul ul {
 }
 
 .Coupon-check p {
-  display: flex;
-  justify-content: center;
   margin: 0;
   font-size: 18px; 
 }
@@ -1403,7 +1433,8 @@ nav li.has-child ul ul {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .Coupon-confirm {
@@ -1417,7 +1448,6 @@ nav li.has-child ul ul {
   background-color: #1E90FF;
   border:1px solid #696969;
   border-radius: 15px;
-  
   font-size: 22px;
   font-weight: bold;
 }
@@ -1441,7 +1471,9 @@ nav li.has-child ul ul {
 
 .switch__label {
   width: 50px;
-  margin-left: 120px;
+  margin-top: 5px;
+  margin-left:70px;
+  margin-bottom: 0;
   position: relative;
   display: inline-block;
 }
@@ -1516,20 +1548,30 @@ nav li.has-child ul ul {
 }
 
 .switch__price {
-  
+  margin-left: 15px;
+}
+
+.switch__price p {
+  display: inline;
+  width: 70px;
+  font-size: 17px;
+  margin-right: 0;
+
 }
 
 .switch__price input {
-  font-size: 25px;
-  width: 160px;
-  padding-left: 10px;
-  text-align: center;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 26px;
+  width: 60px;
 }
 
 
 .Current-point input {
   width: 120px;
-  font-size: 27px;
+  margin-left: 10px;
+  font-size: 35px;
+  font-weight: 600;
 }
 
 

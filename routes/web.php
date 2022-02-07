@@ -99,7 +99,3 @@ Route::post('/CouponList/edit','CouponTableController@edit');
 Route::get('/Inquiry',function () {
     return view('user/html.Inquiry');
 });
-
-Route::get('/PassChangeCheck',function () {
-    return view('user/html.PassChangeCheck');
-});

@@ -28,11 +28,11 @@ $items = CommodityTable::where('CommodityID',$commodityid)->first();
 
 
             <div class="cart-button">
-              <button>カートに追加</button>
+              <input type="submit" name="button1" value="カートに追加">
             </div>
 
             <div class="Detail-button">
-              <button>注文</button>
+            <input type="submit" name="button2" value="注文">
             </div>
 
     </div>

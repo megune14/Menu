@@ -48,7 +48,35 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/MailChange',function () {
         return view('user/html.MailChange');
     });
-             });
+
+    Route::get('/MenuCreate','MenuCreateController@create',function () {
+        return view('admin/html.MenuCreate');
+    });
+    Route::post('/MenuCreate','MenuCreateController@create');
+
+    Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
+        return view('admin/html.MenuCreate');
+    });
+
+    Route::get('/StoreCouponList','CouponTableController@open',function () {
+        return view('admin/html.StoreCouponList');
+    });
+
+    Route::get('/StoreCouponList/del','CouponController@detail');
+    Route::post('/StoreCouponList/del','CouponController@remove');
+
+    Route::get('/OrderCheck','OrderCheckController@view')->name('view');
+    Route::post('/OrderCheck/chenge','OrderCheckController@updata')->name('update');
+
+    Route::get('/MailChange','MailChangeController@MailCheck',function () {
+        return view('admin/html.MailChange');
+    });
+
+    Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
+        return view('admin/html.StoreInfoDetail');
+    })->name('setting');
+
+    });
 
 
 
@@ -105,9 +133,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth:admin')
                 ->name('logout');
 
-Route::get('/StoreCouponList','CouponTableController@open',function () {
-    return view('admin/html.StoreCouponList');
-});
+
 //Route::get('/StoreCouponList/del','CouponController@delete');
 //Route::post('/StoreCouponList/del','CouponController@remove');
 //Route::get('/StoreCouponList','CouponTableController@open');
@@ -132,18 +158,14 @@ Route::get('/NewProduct',function () {
 Route::post('/NewProduct/add','CommodityTableController@create');
 
 
-Route::get('/StoreCouponList/del','CouponController@detail');
-Route::post('/StoreCouponList/del','CouponController@remove');
+
 
 Route::get('/RequestForm',function () {
     return view('admin/html.RequestForm');
 });
 Route::post('/RequestForm/add','RequestController@create');
 
-Route::get('/MenuCreate','MenuCreateController@create',function () {
-    return view('admin/html.MenuCreate');
-});
-Route::post('/MenuCreate','MenuCreateController@create');
+
 
 Route::get('/CouponProduct',function () {
     return view('admin/html.CouponProduct');
@@ -157,9 +179,7 @@ Route::get('/Inquiry',function () {
 Route::post('/Inquiry/add','InquiryController@create');
 
 
-Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
-    return view('admin/html.MenuCreate');
-});
+
 
 Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
     return view('admin/html.StoreInfoSettings');
@@ -168,18 +188,14 @@ Route::get('/StoreInfoSettings', 'ShopsController@setting',function () {
 Route::post('/StoreInfoSettings/edit','ShopsController@edit');
 Route::post('/StoreInfoSettings/edit','ShopsController@update');
 
-Route::get('/PointSetting','PointController@setting',function () {
-    return view('admin/html.PointSetting');
-});
+
 
 Route::post('PointSetting/add','PointController@create');
 
 Route::get('PointSetting/add','PointController@edit');
 Route::post('PointSetting/add','PointController@update');
 
-Route::get('/StoreInfoDetail', 'ShopsController@store',function () {
-    return view('admin/html.StoreInfoDetail');
-})->name('setting');
+
 
 Route::post('/StoreInfoDetail/add','ShopsController@');
 
@@ -200,12 +216,9 @@ Route::post('/CouponDetail/delete','CouponController@delete');
 Route::get('/RequestComplete',function () {
     return view('admin/html.RequestComplete');
 });
-Route::get('/OrderCheck','OrderCheckController@view')->name('view');
-Route::post('/OrderCheck/chenge','OrderCheckController@updata')->name('update');
 
-Route::get('/MailChange','MailChangeController@MailCheck',function () {
-    return view('admin/html.MailChange');
-});
+
+
 
 Route::get('/MailChange/edit','MailChangeController@edit');
 Route::post('/MailChange/edit','MailChangeController@update');
