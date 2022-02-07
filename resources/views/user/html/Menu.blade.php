@@ -13,8 +13,8 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
 
 
   @section('contents')
-    <div class="category">
-      <h1>メニュー一覧</h1>
+    <div class="category-menu">
+      <h1>メニュー一覧</h1>  
     </div>
 
     <div class="field-card">
@@ -31,8 +31,9 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
       <form action=""></form>
 
       @endforeach
-      <a href="/Category">カテゴリー一覧</a>
-      
+      <div class="category-button">
+        <button><a href="/Category">カテゴリーに戻る</a></button>
+      </div>
 
     </div>
 

@@ -632,8 +632,37 @@ nav li.has-child ul ul {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0;
-  padding-left: 5px;
   font-size: 36px;
+}
+
+.category-menu {
+  margin-top: 20px;
+}
+
+.category-menu h1 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 36px;
+}
+
+.category-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.category-button button {
+height: 45px;
+width: 210px;
+border: 1px solid #696969;
+border-radius: 10px;
+background-color: rgba(30,144,255,0.8);
+}
+
+.category-button button a {
+  color: #fff;
+  font-size: 20px;
 }
 
 .field-card {
@@ -729,7 +758,8 @@ nav li.has-child ul ul {
 }
 
 
-.MenuDetail button {
+.cart-button input,
+ .Detail-button input {
   height: 45px;
   width: 260px;
   border: 1px solid #696969;
