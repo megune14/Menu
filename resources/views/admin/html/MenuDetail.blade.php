@@ -16,25 +16,27 @@
           <img src="{{asset('storage/images/'.$commodity->img)}}"><!--写真-->
         </span>
         <div class="namechange">
-          <p>商品名：
-	          <input type="text" name="name" value="{{$commodity->CommodityName}}">
-          </p>
+          <p>商品名：</p>
+	          <input type="text" name="name" value="{{$commodity->CommodityName}}
+            ">
+          
         </div>
 
         <div class="pricebutton">
-          <p>値段：
+          <p>値段：</p>
 	          <input type="number"   name="price" value="{{$commodity->Price}}" min="0" max="" step="10">
-          </p>
         </div>
 
-        <p>アレルギー：
-            <input type="text" name="allergy" value="{{$commodity->Allergy}}">
-        </p>
+        <div class="namechange">
+          <p>アレルギー：</p>
+              <input type="text" name="allergy" value="{{$commodity->Allergy}}">
+        </div>
 
-        <p>カロリー:
-            <input type="text" name="calory" value="{{$commodity->Calory}}">
-        </p><br>
-
+        <div class="namechange">
+          <p>カロリー:</p>
+              <input type="text" name="calory" value="{{$commodity->Calory}}">
+          
+</div>
 
         <div class="menudetail-pop">
           <button type="button" onclick=history.back()><a href="#">戻る</a></button>
