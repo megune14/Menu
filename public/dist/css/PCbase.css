@@ -384,11 +384,15 @@ nav li.has-child ul ul {
   margin-top: 10px;
 }
 
+.TRF {
+  display: flex;
+  justify-content: center;
+}
+
 .ml-3 {
-  width: 90%;
+  width: 85%;
   height: 90px;
   padding: 5px 2%;
-  margin-left: 20px;
   margin-top: 15px;
   border:1px solid #ccc;
   border-radius: 10px;
@@ -396,7 +400,7 @@ nav li.has-child ul ul {
   background-color: rgba(30,144,255,0.65);
   font-size: 20px;
   color: #000;
-  font-weight: bold;
+  
 }
 
 
