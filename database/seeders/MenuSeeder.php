@@ -25,7 +25,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
               ],
               [
                 'CommodityID' => 2 ,
@@ -37,7 +37,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -50,7 +50,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
 
@@ -64,7 +64,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -77,7 +77,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -90,7 +90,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -103,7 +103,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -116,7 +116,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -129,7 +129,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -142,7 +142,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -155,7 +155,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
               [
@@ -168,7 +168,7 @@ class MenuSeeder extends Seeder
                 'Allergy' => 'いか' ,
                 'Calory' => 1 ,
                 'StopFlag' => 0 ,
-                'img' => null ,
+                'img' => 'XsVqx6u41kMHz3YsB7au7p5R9K5GFDjvahhaxJGo.png' ,
 
               ],
 
