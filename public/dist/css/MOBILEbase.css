@@ -1334,12 +1334,13 @@ nav li.has-child ul ul {
   box-shadow: 2px 0px 2px 1px#696969;
 }
 
-.Coupon-box h1 {
+.Coupon-box .Coupon-Name {
   display: flex;
   justify-content: center;
+  font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 19px;
+  font-size: 21px;
 }
 
 .Coupon-img {
@@ -1356,7 +1357,7 @@ nav li.has-child ul ul {
 .Coupon-check {
   display: inline-block;
   width: 180px;
-  height: 40%;
+  height: 44%;
   margin-top: 0;
   border: solid 1px #000000;
   border-radius: 0 0 15px 15px;
@@ -1372,8 +1373,6 @@ nav li.has-child ul ul {
 }
 
 .Coupon-check p {
-  display: flex;
-  justify-content: center;
   margin: 0;
   font-size: 18px; 
 }
@@ -1417,7 +1416,6 @@ nav li.has-child ul ul {
   background-color: #1E90FF;
   border:1px solid #696969;
   border-radius: 15px;
-  
   font-size: 22px;
   font-weight: bold;
 }
@@ -1441,7 +1439,9 @@ nav li.has-child ul ul {
 
 .switch__label {
   width: 50px;
-  margin-left: 120px;
+  margin-top: 5px;
+  margin-left:70px;
+  margin-bottom: 0;
   position: relative;
   display: inline-block;
 }
@@ -1516,14 +1516,22 @@ nav li.has-child ul ul {
 }
 
 .switch__price {
-  
+  margin-left: 15px;
+}
+
+.switch__price p {
+  display: inline;
+  width: 70px;
+  font-size: 17px;
+  margin-right: 0;
+
 }
 
 .switch__price input {
-  font-size: 25px;
-  width: 160px;
-  padding-left: 10px;
-  text-align: center;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 26px;
+  width: 60px;
 }
 
 
