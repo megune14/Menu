@@ -39,7 +39,7 @@
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
-            <li><a href="/admin/auth/reset-password">パスワード変更</a></li>
+            <li><a href="/admin/forgot-password">パスワード変更</a></li>
             <li><a href="/admin/PointSetting">ポイント設定</a></li>
             <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
           </ul>
@@ -69,7 +69,7 @@
             <li class="has-child"><a href="#">　設定</a>
               <ul>
                 <li><a href="/admin/MailChange">　メールアドレス変更</a></li>
-                <li><a href="/admin/PassChangeCheck">　パスワード変更</a></li>
+                <li><a href="/admin/auth/forgot-password">　パスワード変更</a></li>
                 <li><a href="/admin/PointSetting">　ポイント設定</a></li>
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>

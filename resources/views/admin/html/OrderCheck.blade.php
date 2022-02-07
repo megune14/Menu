@@ -40,16 +40,20 @@
         <li class="active">デジタルメニュー表</li>
 
 
-        <li class="right-Product">
-            <form method="POST" action="{{ route('admin.logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('admin.logout')"
-                        onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                    {{ __('ログアウト') }}
-                </x-dropdown-link>
-            </form>
-        </li>
+        @if(Auth::guard('admin')->check())
+            <li class="right">
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('admin.logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('ログアウト') }}
+                    </x-dropdown-link>
+                </form>
+            </li>
+            @else
+            <li class="right"><a href="/admin/login">ログイン</a></li>
+            @endif
         <li class="pc-child-Product"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
@@ -88,14 +92,20 @@
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
-            <li><form method="POST" action="{{ route('admin.logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('admin.logout')"
-                        onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                    {{ __('ログアウト') }}
-                </x-dropdown-link>
-            </form></li>
+            @if(Auth::guard('admin')->check())
+            <li class="right">
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('admin.logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('ログアウト') }}
+                    </x-dropdown-link>
+                </form>
+            </li>
+            @else
+            <li class="right"><a href="/admin/login">ログイン</a></li>
+            @endif
           </ul>
         </nav>
 

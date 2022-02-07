@@ -31,6 +31,8 @@ $items = CommodityTable::where('CategoryID',$categoryid)->where('StoreID',$shopi
       <form action=""></form>
 
       @endforeach
+      <a href="/Category">カテゴリー一覧</a>
+      
 
     </div>
 
