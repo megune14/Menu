@@ -56,9 +56,11 @@
 
                     <a class="RTA" href="/admin/register">新規登録</a>
 
-                    <x-button class="ml-3">
-                        {{ __('ログイン') }}
-                    </x-button>
+                    <div class="TRF">
+                        <x-button class="ml-3">
+                            {{ __('ログイン') }}
+                        </x-button>
+                    </div>
                 </div>
             </div>
 

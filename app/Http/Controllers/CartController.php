@@ -24,7 +24,11 @@ class CartController extends Controller
                 'CouponFlag' => 0
             ]);
         }
-       return redirect()->route('user.cart.index');
+        if ($request->has('button1')) {
+            return view('user/html.Category');
+        }else{
+          return redirect()->route('user.cart.index');
+        }
 
     }
     public function index(){

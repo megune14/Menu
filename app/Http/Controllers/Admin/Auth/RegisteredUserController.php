@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
+use App\Models\Point;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -54,7 +55,11 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-
+        Point::create([
+            'StoreID' => Auth::id(),
+            'Price' => 100,
+            'Point' => 1,
+        ]);
         return redirect(RouteServiceProvider::ADMIN_HOME);
     }
 }

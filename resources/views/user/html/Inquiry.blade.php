@@ -5,22 +5,21 @@
   @section('title','お問い合わせ')
     <!--テキストサンプル-->
     @section('contents')
-    <form action="#" method="post"> 
+    <form action="Inquiry/add" method="post"> 
+    @csrf
       <div class="Inquiry">お問い合わせ 
         <div class="inquiryform">
           <p>お名前<br>
-            <input type="text" maxlength="500" size="30">
+            <input type="text" name="name" maxlength="500" size="30">
           </p>
           <p>電話番号
-            <input type="tel" maxlength="500" size="30">
+            <input type="tel" name="tell" maxlength="500" size="30">
           </p>
           <p>メールアドレス
-            <input type="email" maxlength="500" size="30">
+            <input type="email" name="email" maxlength="500" size="30">
           </p>
           <p>お問い合わせ内容
-            <div class="item-input">
-                <textarea rows="7" cols="15"></textarea>
-            </div>
+            <input type="text" name="inquiry">
           </p>
           <div class="formbutton">
             <button type="button" onclick=history.back()>閉じる</button>

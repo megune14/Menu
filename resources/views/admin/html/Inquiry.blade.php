@@ -19,7 +19,7 @@
           </p>
           <div class="formbutton">
             <button type="button" onclick=history.back()>閉じる</button>
-            <input type="submit">
+            <input type="submit" name=button2>
           </div>
         </div>
 

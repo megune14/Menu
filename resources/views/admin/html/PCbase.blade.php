@@ -22,24 +22,30 @@
         <li class="active">デジタルメニュー表</li>
 
 
-        <li class="right">
-            <form method="POST" action="{{ route('admin.logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('admin.logout')"
-                        onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                    {{ __('ログアウト') }}
-                </x-dropdown-link>
-            </form>
-        </li>
+            @if(Auth::guard('admin')->check())
+            <li class="right">
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('admin.logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('ログアウト') }}
+                    </x-dropdown-link>
+                </form>
+            </li>
+            @else
+            <li class="right"><a href="/admin/login">ログイン</a></li>
+            @endif
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
-            <li><a href="/admin/PassChangeCheck">パスワード変更</a></li>
+            <li><a href="/admin/forgot-password">パスワード変更</a></li>
             <li><a href="/admin/PointSetting">ポイント設定</a></li>
             <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
           </ul>
         </li>
+        
         <li class="right"><a href="/admin/OrderCheck">受注商品</a></li>
         <li class="right"><a href="/admin/StoreCouponList">クーポン</a></li>
         <li class="right"><a href="/admin/MenuCreate">メニュー一覧</a></li>
@@ -65,19 +71,25 @@
             <li class="has-child"><a href="#">　設定</a>
               <ul>
                 <li><a href="/admin/MailChange">　メールアドレス変更</a></li>
-                <li><a href="/admin/PassChangeCheck">　パスワード変更</a></li>
+                <li><a href="/admin/auth/forgot-password">　パスワード変更</a></li>
                 <li><a href="/admin/PointSetting">　ポイント設定</a></li>
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
-            <li><form method="POST" action="{{ route('admin.logout') }}">
-                @csrf
-                <x-dropdown-link :href="route('admin.logout')"
-                        onclick="event.preventDefault();
-                                this.closest('form').submit();">
-                    {{ __('ログアウト') }}
-                </x-dropdown-link>
-            </form></li>
+            @if(Auth::guard('admin')->check())
+            <li>
+                <form method="POST" action="{{ route('admin.logout') }}">
+                    @csrf
+                    <x-dropdown-link :href="route('admin.logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('ログアウト') }}
+                    </x-dropdown-link>
+                </form>
+            </li>
+            @else
+            <li><a href="/admin/login">ログイン</a></li>
+            @endif
           </ul>
         </nav>
 

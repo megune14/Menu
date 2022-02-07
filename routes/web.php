@@ -34,6 +34,26 @@ Route::group(['middleware' => 'auth:users'], function () {
     Route::get('/Category/Menu/{detail}','MenuController@detail',function () {
         return view('user/html.MenuDetail');
     })->name('menudetail');
+
+    Route::get('/UserInfo',function () {
+        return view('user/html.UserInfo');
+    });
+
+    Route::get('/MailChange','UserController@MailCheck',function () {
+        return view('user/html.MailChange');
+    });
+    
+    Route::get('/MailChange/edit','UserController@edit');
+    Route::post('/MailChange/edit','UserController@update');
+
+    Route::get('/PassChangeUserCheck',function () {
+        return view('user/html.PassChangeUserCheck');
+    });
+
+    Route::get('/UserDelete',function () {
+        return view('user/html.UserDelete');
+    });
+    Route::post('/UserDelete/delete','UserController@delete');
 });
 
 Route::get('/VoucherDetail',function () {
@@ -45,10 +65,7 @@ Route::get('/FoodDetail',function () {
     return view('user/html.FoodDetail');
 });
 
-Route::get('/UserDelete',function () {
-    return view('user/html.UserDelete');
-});
-Route::post('/UserDelete/delete','UserController@delete');
+
 
 
 Route::get('/ConfirmRegisterDetail','UserController@setting',function () {
@@ -68,12 +85,7 @@ Route::post('/VoucherDetail/end','VoucherController@end');
 
 
 
-Route::get('/MailChange','UserController@MailCheck',function () {
-    return view('user/html.MailChange');
-});
 
-Route::get('/MailChange/edit','UserController@edit');
-Route::post('/MailChange/edit','UserController@update');
 
 Route::get('/CouponList','CouponTableController@CouponOpen',function () {
     return view('user/html.CouponList');
@@ -82,10 +94,8 @@ Route::post('/CouponList/edit','CouponTableController@edit');
 //Route::post('/CouponList/edit','CouponTableController@add');
 //Route::post('/CouponList/edit','CouponTableController@update');
 
-Route::get('/UserInfo',function () {
-    return view('user/html.UserInfo');
-});
 
 Route::get('/Inquiry',function () {
-    return view('user/html.Inquiry');
+    return view('user/html.inquiry');
 });
+Route::post('/Inquiry/add','UserInquiryController@create');

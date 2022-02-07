@@ -26,17 +26,33 @@ textarea {
   position: fixed;
 	top: 0;
 	left: 0;
+  padding: 0%;
 	height: 75px;
 	width: 100%;
 	list-style-type: none;
 	background-color: #1E90FF; /* ヘッダー背景 */
+  z-index: 100;
   
 }
 
 .header li {
   text-align: center;
 	font-size: 20px;
-	padding: 24px 20px;
+	padding: 7px 20px;
+  height: 90px;
+}
+
+.header li p {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+
+
+.header li img {
+  float: right;
+  width: 60px;
+  height: 60px;
 }
 
 /*----------ハンバーガーメニュー----------*/
@@ -49,7 +65,7 @@ textarea {
   width: 60px;
   justify-content: center;
   align-items: center;
-  z-index: 90;
+  z-index: 110;
   cursor: pointer;
 }
 
@@ -431,15 +447,6 @@ nav li.has-child ul ul {
 /*----------reset-password----------*/
 
 
-
-
-
-
-
-
-
-
-
 /*----------reset-password終わり----------*/
 
 
@@ -471,6 +478,37 @@ nav li.has-child ul ul {
 
 
 /*----------verify-email終わり----------*/
+
+
+/*----------UserInfo----------*/
+.UserInfo h1 {
+  margin-left: 40px;
+  margin-bottom: 0;
+  font-size: 42px;
+}
+
+
+
+.UserInfo-table {
+  margin-top: 20px;
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 40px;
+  padding: 1em 1em;
+  border: solid 1px rgba(128,128,128,0.8);
+  border-radius: 15px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.UserInfo 
+
+
+
+
+
+
+/*----------UserInfo終わり----------*/
 
 
 /*----------UserDelete----------*/
@@ -609,8 +647,37 @@ nav li.has-child ul ul {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0;
-  padding-left: 5px;
   font-size: 36px;
+}
+
+.category-menu {
+  margin-top: 20px;
+}
+
+.category-menu h1 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 36px;
+}
+
+.category-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.category-button button {
+height: 45px;
+width: 210px;
+border: 1px solid #696969;
+border-radius: 10px;
+background-color: rgba(30,144,255,0.8);
+}
+
+.category-button button a {
+  color: #fff;
+  font-size: 20px;
 }
 
 .field-card {
@@ -706,7 +773,8 @@ nav li.has-child ul ul {
 }
 
 
-.MenuDetail button {
+.cart-button input,
+ .Detail-button input {
   height: 45px;
   width: 260px;
   border: 1px solid #696969;
@@ -1110,6 +1178,10 @@ nav li.has-child ul ul {
   font-size: 20px;
 }
 
+.passchange-check a {
+  color: #fff;
+}
+
 .passchange-check .submit {
   margin-top: 50px;
 }
@@ -1308,12 +1380,13 @@ nav li.has-child ul ul {
   box-shadow: 2px 0px 2px 1px#696969;
 }
 
-.Coupon-box h1 {
+.Coupon-box .Coupon-Name {
   display: flex;
   justify-content: center;
+  font-weight: bold;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-size: 19px;
+  font-size: 21px;
 }
 
 .Coupon-img {
@@ -1330,7 +1403,7 @@ nav li.has-child ul ul {
 .Coupon-check {
   display: inline-block;
   width: 180px;
-  height: 40%;
+  height: 44%;
   margin-top: 0;
   border: solid 1px #000000;
   border-radius: 0 0 15px 15px;
@@ -1346,8 +1419,6 @@ nav li.has-child ul ul {
 }
 
 .Coupon-check p {
-  display: flex;
-  justify-content: center;
   margin: 0;
   font-size: 18px; 
 }
@@ -1364,16 +1435,21 @@ nav li.has-child ul ul {
   margin-top: 5px;
 }
 
-.Coupon-check p input {
+.Coupon-check input {
   height: 19px;
   width: 19px;
   margin-right: 10px;
 }
 
-.Current-point h2{
+
+
+.Coupon-Total {
+  margin-top: 30px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .Coupon-confirm {
@@ -1387,9 +1463,12 @@ nav li.has-child ul ul {
   background-color: #1E90FF;
   border:1px solid #696969;
   border-radius: 15px;
-  color: #fff;
   font-size: 22px;
   font-weight: bold;
+}
+
+.Coupon-confirm a {
+  color: #fff;
 }
 
 .Coupon-confirm input {
@@ -1403,6 +1482,126 @@ nav li.has-child ul ul {
   font-size: 22px;
   font-weight: bold;
 }
+
+
+.switch__label {
+  width: 50px;
+  margin-top: 5px;
+  margin-left:70px;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  z-index: 70;
+}
+.switch__label input {
+  display: none;
+}
+
+.switch__content {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+  height: 31px;
+  overflow: hidden;
+}
+.switch__content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  top: 0;
+  left: 0;
+  border: 1.5px solid #E5E5EA;
+  border-radius: 30px;
+  background-color: #fff;
+}
+.switch__content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+      -ms-transition: all .5s;
+       -o-transition: all .5s;
+          transition: all .5s;
+}
+
+.switch__circle {
+  display: block;
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  -webkit-box-shadow: 0 2px 6px #999;
+          box-shadow: 0 2px 6px #999;
+  width: 27px;
+  height: 27px;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  background-color: #fff;
+  -webkit-transition: all .5s;
+     -moz-transition: all .5s;
+      -ms-transition: all .5s;
+       -o-transition: all .5s;
+          transition: all .5s;
+}
+.switch__label input:checked ~ .switch__circle {
+  left: 21px;
+}
+.switch__label input:checked ~ .switch__content:after {
+  background-color: #00c4cc;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.switch__price {
+  margin-left: 15px;
+}
+
+.switch__price p {
+  display: inline;
+  width: 70px;
+  font-size: 17px;
+  margin-right: 0;
+
+}
+
+.switch__price input {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 26px;
+  width: 60px;
+}
+
+
+.Current-point input {
+  width: 120px;
+  margin-left: 10px;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*---------------------CouponList終わり--------------------*/
