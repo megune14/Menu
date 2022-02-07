@@ -39,7 +39,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/PassChangeCheck',function () {
         return view('admin/html.PassChangeCheck');
     });
-    
+
 
     Route::get('/PointSetting','PointController@setting',function () {
         return view('admin/html.PointSetting');
@@ -53,6 +53,7 @@ Route::group(['middleware' => 'auth:admin'], function () {
         return view('admin/html.MenuCreate');
     });
     Route::post('/MenuCreate','MenuCreateController@create');
+    Route::post('/MenuCreate/stop','MenuCreateController@stop')->name('stop');
 
     Route::match(['post','get'],'/MenuCreate','MenuCreateController@create',function () {
         return view('admin/html.MenuCreate');

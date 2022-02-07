@@ -17,12 +17,12 @@
    foreach ($info as $info) {
    }
     
-    echo '<p>苗字：' . $info->firstname   ."</p>";
-    echo '<p>名前：' . $info->lastname   ."</p>\n";
-    echo '<p>メールアドレス：</p>' . $info->email   ."\n";
+    echo '<p>苗字:' . $info->firstname   .'　';
+    echo '名前:' . $info->lastname   ."</p>\n";
+    echo '<p>メールアドレス</p>' . $info->email   ."\n";
     $date = $info->birthday;
-    echo '<p>生年月日：</p>' . date('Y年n月j日', strtotime($date)) ."\n";
-    echo '<p>現在のポイント：' . $info->point   .'pt'."</p>\n";
+    echo '<p>生年月日</p>' . date('Y年n月j日', strtotime($date)) ."\n";
+    echo '<p>現在のポイント' . $info->point   .'pt'."</p>\n";
     ?>
   </div>
 
