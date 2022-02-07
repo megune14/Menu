@@ -36,6 +36,7 @@
             @else
             <li class="right"><a href="/admin/login">ログイン</a></li>
             @endif
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
@@ -44,6 +45,7 @@
             <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
           </ul>
         </li>
+        
         <li class="right"><a href="/admin/OrderCheck">受注商品</a></li>
         <li class="right"><a href="/admin/StoreCouponList">クーポン</a></li>
         <li class="right"><a href="/admin/MenuCreate">メニュー一覧</a></li>

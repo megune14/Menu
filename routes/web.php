@@ -95,7 +95,7 @@ Route::post('/CouponList/edit','CouponTableController@edit');
 //Route::post('/CouponList/edit','CouponTableController@update');
 
 
-
 Route::get('/Inquiry',function () {
-    return view('user/html.Inquiry');
+    return view('user/html.inquiry');
 });
+Route::post('/Inquiry/add','UserInquiryController@create');
