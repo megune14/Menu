@@ -53,6 +53,6 @@ class User extends Authenticatable
     ];
 
     public function commoditys(){
-        return $this->belongsToMany(CommodityTable::class,'carts')->withPivot(['id','quantity']);
+        return $this->belongsToMany(CommodityTable::class,'carts')->withPivot(['id','quantity','CouponFlag']);
     }
 }

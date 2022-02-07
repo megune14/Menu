@@ -128,6 +128,8 @@ class CouponTableController extends Controller
     unset($form['token']);
     $form['user_id'] = $id;
     $form['commodity_table_CommodityID'] = $request->commodity_id;
+    $form['CouponFlag'] = 1;
+    //dd($form['CouponFlag']);
     //dd($request->commodity_id);
     //dd($form['commodity_table_CommodityID']);
     $form['quantity'] = 1;

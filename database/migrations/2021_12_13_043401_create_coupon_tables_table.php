@@ -21,6 +21,7 @@ class CreateCouponTablesTable extends Migration
             $table->date('FirstDay');
             $table->date('LastDay');
             $table->timestamps();
+            
         });
     }
 
