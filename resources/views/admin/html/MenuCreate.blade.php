@@ -24,7 +24,7 @@
 
   <div class="field-Create">
 
-  
+
 
     @foreach ($Menu as $item)
     <div class="MenuCreate-card">
@@ -49,7 +49,10 @@
                     </form>
                     </li>
                     <li><input type="submit"  value="削除"></li>
-                    <li><a href="/admin/login">販売中止</a></li>
+                    <li><form action="{{route('admin.stop',['id'=>$item->CommodityID])}}" method="post">
+                        @csrf
+                    <button>販売中止</button>
+                    </form></li>
                   </ul>
 
                 </div>
@@ -66,9 +69,9 @@
         </div>
 
     </div>
-    
+
     @endforeach
-                  
+
 
   </div>
 
