@@ -30,7 +30,9 @@
 
           <div class="Coupon-box">
 
-            <label >{{$coupon->CommodityName}}</label>
+            <div class="Coupon-Name">
+              <label >{{$coupon->CommodityName}}</label>
+            </div>
 
             <div class="Coupon-img">
             <img src="{{ asset('storage/images/'. $coupon->img) }}"><!--写真-->
@@ -51,10 +53,11 @@
               <span class="switch__circle"></span>
   
             </label>
-            <p>必要ポイント</p>
+            
          
             <!--↓この辺があやしいよね↓-->
             <div class="switch__price">
+              <p>必要<br>ポイント:</p>
               <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
             </div>
             
