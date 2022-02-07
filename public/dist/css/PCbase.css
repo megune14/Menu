@@ -27,7 +27,12 @@ input[type=number]::-webkit-inner-spin-button {
   color:rgba(128,128,128,0.95);
 }
 
-
+.footerFixed {
+	min-height: 100vh; /* コンテンツの高さの最小値＝ブラウザの高さに指定 */
+	position: relative;/* 相対位置 */
+	padding-bottom: 60px; /* フッターの高さを指定 */
+	box-sizing: border-box;/* ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+}
 /* ---------------------全画面表示＋ヘッダー-------------------- */
 .header {
 	position: fixed;
@@ -113,6 +118,7 @@ input[type=number]::-webkit-inner-spin-button {
   visibility: hidden; /* はじめは非表示 */
   opacity: 0;
   transition: all .3s; /* アニメーション設定 */
+  z-index: 10;
 }
 
 .header li.pc-child:hover > ul,
@@ -219,7 +225,7 @@ nav {
   position: fixed;
   left: 60%;
   top: -100%;
-  z-index: auto;
+  z-index: 999;
   background-color: #ffac1e; /* ハンバーガーメニュー背景色 */
   transition: all 0.5s;
 }
@@ -262,7 +268,7 @@ nav li.has-child::before { /* liの矢印の設定 */
   content:'';
   position: absolute;
   left:10px;
-  top:243px;
+  top:275px;
   width:6px;
   height:6px;
   border-top: 2px solid #000;
@@ -356,6 +362,7 @@ nav li.has-child ul ul {
   padding-left: 10px;
   line-height: 26px;
   margin-top: 10px;
+  
 }
 
 .mt-2 span {
@@ -364,12 +371,17 @@ nav li.has-child ul ul {
 
 .mt-2 a {
   margin-left: 10px;
+  display: flex;
 }
 
 .mt-2 input {
   height: 20px;
   width: 20px;
   margin-bottom: 0;
+}
+
+.mt-2 .RTA {
+  margin-top: 10px;
 }
 
 .ml-3 {
@@ -565,9 +577,34 @@ nav li.has-child ul ul {
   margin-right: auto;
 }
 
-.MenuCreate h1 {
+.AK {
+  display: flex;
+  justify-content: space-between;
   margin-top: 40px;
 }
+
+.AK h1 {
+  font-size: 44px;
+}
+
+.AK button {
+  width: 230px;
+  height: 65px;
+  padding: 13px;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  
+  background-color: rgba(30,144,255,0.8);
+  border-color: transparent;
+}
+
+.AK button a {
+  color: #fff;
+  font-size: 24px;
+}
+
 
 .search input {
   width: 70px;
@@ -1552,6 +1589,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 .NewProduct {
   margin-top: 20px;
   margin-left: 20px;
+  margin-bottom: 50px;
 }
 
 .NewProduct p {
@@ -2201,8 +2239,9 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 
 /*---------------------OrderHistory--------------------*/
-.OrderHistory {
+#tehuda1 {
   margin-top: 60px;
+  z-index: 7;
 }
 
 .History-table {
@@ -2215,7 +2254,7 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 .History-table thead th {
-  /* 縦スクロール時に固定する *
+  /* 縦スクロール時に固定する */
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -2223,41 +2262,22 @@ input[type="checkbox"]:checked ~ .abc ul{
   z-index: 1;
 }
 
-
-
-.History-table tbody tr :hover{
-  color: #5bbee5;
-}
-
-
-
-
-.History-table button {
-  font-size: 20px;
-  height: 30px;
-  color: #000;
-  border: solid 1px transparent;
-  background-color: transparent;
-}
-
-
-
-table{
+.History-tehuda1 {
   width: 100%;
   border-collapse:separate;
   border-spacing: 0;
 }
 
-table th:first-child{
+.History-tehuda1 th:first-child{
   border-radius: 5px 0 0 0;
 }
 
-table th:last-child{
+.History-tehuda1 th:last-child{
   border-radius: 0 5px 0 0;
   border-right: 1px solid #3c6690;
 }
 
-table th{
+.History-tehuda1 th{
   text-align: center;
   color:white;
   background: linear-gradient(#829ebc,#225588);
@@ -2269,7 +2289,7 @@ table th{
   padding: 10px 0;
 }
 
-table td{
+.History-tehuda1 td{
   text-align: center;
   border-left: 1px solid #a8b7c5;
   border-bottom: 1px solid #a8b7c5;
@@ -2281,15 +2301,15 @@ table td{
   font-size: 20px;
 }
 
-table td:last-child{
+.History-tehuda1 td:last-child{
   border-right: 1px solid #a8b7c5;
 }
 
-table tr:last-child td:first-child {
+.History-tehuda1 tr:last-child td:first-child {
   border-radius: 0 0 0 5px;
 }
 
-table tr:last-child td:last-child {
+.History-tehuda1 tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
@@ -2298,38 +2318,251 @@ table tr:last-child td:last-child {
 
 
 /*---------------------OrderHistoryDetail--------------------*/
-.OrderHistoryDetail {
+#tehuda2 {
   margin-top: 60px;
 }
 
-table{
+.HistoryDetail-table {
+  height: 510px;
+  width:70%; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  overflow: auto;
+}
+
+
+/*---------------------OrderHistoryDetail終わり--------------------*/
+
+
+
+/*---------------------OrderCheck--------------------*/
+.header-check {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+  height: 80px;
+	list-style-type: none;
+	background-color: #ffc45e;
+  z-index: 999;
+}
+
+.header-check li {
+	float: left;
+  position: relative;
+}
+
+.header-check li a {
+	display: block;
+	padding: 22px 32px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+  transition:all .3s;
+}
+
+.header-check li.active {
+	text-align: center;
+	display: block;
+	padding: 24px 32px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 20px;
+}
+
+.header-check li.right {
+	float: right;
+}
+
+.header-check li.right-Product {
+	float: right;
+}
+
+.header-check li.right-Product form {
+	
+}
+
+.header-check li.pc-child-Product {
+  float: right;
+}
+
+.header-check .pc-child-Product ul {
+  margin-top: 18px;
+  padding-left: 0;
+}
+
+.header-check li.pc-child-Product a:hover,
+.header-check li.right-Product a:hover { /* ホバー時に色が変わる */
+  color:#fff;
+}
+
+.header-check li.pc-child-Product::before { /* liの矢印の設定 */
+  content:'';
+  position: absolute;
+  left:15px;
+  top:32px;
+  width:8px;
+  height:8px;
+  border-top: 2px solid #000;
+  border-right:2px solid #000;
+  transform: rotate(135deg);
+}
+
+.header-check li.pc-child-Product ul { /* 下の階層を持っているulの指定 */
+  position: absolute; /* 絶対配置で位置を指定 */
+  right:0;
+  top:60px;
+  background:#ffac1e;
+  width: 250px;
+  visibility: hidden; /* はじめは非表示 */
+  opacity: 0;
+  transition: all .3s; /* アニメーション設定 */
+}
+
+.header-check li.pc-child-Product:hover > ul,
+.header-check li.pc-child-Product ul li:hover > ul,
+.header-check li.pc-child-Product:active > ul,
+.header-check li.pc-child-Product ul li:active > ul { /* hoverしたら表示 */
+  visibility: visible;
+  opacity: 1;
+}
+
+.header-check li.pc-child-Product ul li a { /* ナビゲーションaタグの形状 */
+  color: #000;
+  border-bottom:solid 1px rgba(255,255,255,0.6);
+}
+
+.header-check li.pc-child-Product ul li:last-child a {
+  border-bottom:none;
+}
+
+.header-check li.pc-child-Product ul li a:hover,
+.header-check li.pc-child-Product ul li a:active {
+  background:#ff4500;
+}
+
+.header-check ul {
+  margin-top: 18px;
+  padding-left: 0;
+}
+
+.header-check ul li { /* 2階層目以降は横並びにしない */
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header-check ul li a {
+  display: block;
+}
+
+/*---------------------OrderCheckのcontents--------------------*/
+
+.OrderCheck {
+  margin-top: 60px;
+}
+
+.OrderCheck ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.OrderCheck p{
+  margin: 0;
+}
+
+.OrderCheck .wrap-tab{
+  overflow: hidden;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.OrderCheck .list-tab{
+  display: flex;
+  margin: 0 -2px;
+  border-bottom: 3px solid #5bbee5;
+}
+
+.OrderCheck .list-tab > li{
+  display: block;
+  padding: 0.5em 1em;
+  margin: 0 2px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: #ccc;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.OrderCheck .list-tab .active{
+  background: #5bbee5;
+}
+
+.OrderCheck .tab-content{
+  display: none;
+  padding: 1em;
+  border-bottom: 1px solid #5bbee5;
+  border-left: 1px solid #5bbee5;
+  border-right: 1px solid #5bbee5;
+}
+
+.OrderCheck .tab-content.active{
+  display: block;
+}
+
+
+.OrderCheck ul {
+  list-style: none;
+}
+
+.OrderCheck li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.OrderCheck .target-click-menuitem {
+  color: blue;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+.Order-tab{
   width: 100%;
   border-collapse:separate;
   border-spacing: 0;
 }
 
-table th:first-child{
+.Order-tab th:first-child{
   border-radius: 5px 0 0 0;
 }
 
-table th:last-child{
+.Order-tab th:last-child{
   border-radius: 0 5px 0 0;
-  border-right: 1px solid #3c6690;
+  
 }
 
-table th{
+.Order-tab th{
   text-align: center;
-  color:white;
-  background: linear-gradient(#829ebc,#225588);
-  border-left: 1px solid #3c6690;
-  border-top: 1px solid #3c6690;
-  border-bottom: 1px solid #3c6690;
+  color: #fff;
+  background: linear-gradient(#5bbee5,#5bbee5);
+
   box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
   width: 25%;
   padding: 10px 0;
 }
 
-table td{
+.Order-tab td{
   text-align: center;
   border-left: 1px solid #a8b7c5;
   border-bottom: 1px solid #a8b7c5;
@@ -2341,23 +2574,48 @@ table td{
   font-size: 20px;
 }
 
-table td:last-child{
+.Order-tab td:last-child{
   border-right: 1px solid #a8b7c5;
 }
 
-table tr:last-child td:first-child {
+.Order-tab tr:last-child td:first-child {
   border-radius: 0 0 0 5px;
 }
 
-table tr:last-child td:last-child {
+.Order-tab tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 
 
+.Order-tab select {
+  width: 60%;
+  cursor: pointer;
+  text-align: center;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  font-size: 20px;
+  
+  padding: 8px 38px 8px 8px;
+  
+  line-height: 1.5;
+}
 
 
 
-/*---------------------OrderHistoryDetail終わり--------------------*/
+
+
+
+
+
+
+/*---------------------OrderCheck終わり--------------------*/
+
+
 
 
 /*---------------------Inquiry--------------------*/
@@ -2423,8 +2681,16 @@ table tr:last-child td:last-child {
 
 /*---------------------フッター--------------------*/
 footer {
+  position: fixed;
 	width: 100%;
 	height: 70px;
+	background-color: #ffc45e;
+	color: black;
+	text-align: center;
+	position: absolute; /* 絶対位置 */
+	bottom: 0; /* 下に固定 */
+  z-index: 10;
+
 	background-color: #ffc45e; /*#a9ceec*/
 	color: black;
 	text-align: center;
@@ -2479,13 +2745,6 @@ ul{
   }
 
 
-
-
-
-
-
-
-
 ul {
     list-style: none;
 }
@@ -2500,3 +2759,20 @@ li {
     cursor: pointer;
     font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

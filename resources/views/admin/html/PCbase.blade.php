@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<div class="footerFixed">
   <!--header-->
   <header>
     <div class="header">
@@ -34,14 +34,14 @@
         </li>
         <li class="pc-child"><a href="#">設定</a>
           <ul>
-            <li><a href="#">メールアドレス変更</a></li>
-            <li><a href="#">パスワード変更</a></li>
-            <li><a href="#">ポイント設定</a></li>
-            <li><a href="#">　店舗情報</a></li>
+            <li><a href="/admin/MailChange">メールアドレス変更</a></li>
+            <li><a href="/admin/PassChangeCheck">パスワード変更</a></li>
+            <li><a href="/admin/PointSetting">ポイント設定</a></li>
+            <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
           </ul>
         </li>
-        <li class="right"><a href="#">受注商品</a></li>
-        <li class="right"><a href="#">クーポン</a></li>
+        <li class="right"><a href="/admin/OrderCheck">受注商品</a></li>
+        <li class="right"><a href="/admin/StoreCouponList">クーポン</a></li>
         <li class="right"><a href="/admin/MenuCreate">メニュー一覧</a></li>
       </div>
     </div>
@@ -59,18 +59,25 @@
 
         <nav>
           <ul>
-            <li><a href="#">メニュー一覧</a></li>
-            <li><a href="#">クーポン</a></li>
-            <li><a href="#">受注商品</a></li>
+            <li><a href="/admin/MenuCreate">メニュー一覧</a></li>
+            <li><a href="/admin/StoreCouponList">クーポン</a></li>
+            <li><a href="/admin/OrderCheck">受注商品</a></li>
             <li class="has-child"><a href="#">　設定</a>
               <ul>
-                <li><a href="#">　メールアドレス変更</a></li>
-                <li><a href="#">　パスワード変更</a></li>
-                <li><a href="#">　ポイント設定</a></li>
-                <li><a href="#">　店舗情報</a></li>
+                <li><a href="/admin/MailChange">　メールアドレス変更</a></li>
+                <li><a href="/admin/PassChangeCheck">　パスワード変更</a></li>
+                <li><a href="/admin/PointSetting">　ポイント設定</a></li>
+                <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
-            <li><a href="#">ログアウト</a></li>
+            <li><form method="POST" action="{{ route('admin.logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('admin.logout')"
+                        onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                    {{ __('ログアウト') }}
+                </x-dropdown-link>
+            </form></li>
           </ul>
         </nav>
 
@@ -99,6 +106,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="{{ asset('dist/js/PCbase.js') }}"></script>
 
+</div>    
 </body>
 
 </html>

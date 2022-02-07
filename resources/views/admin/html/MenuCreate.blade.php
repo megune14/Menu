@@ -9,9 +9,11 @@
   <!--テキストサンプル-->
   @section('contents')
 <div class="MenuCreate">
+  <div class="AK">
+    <h1>商品一覧</h1>
 
-  <h1>商品一覧</h1>
-
+    <button><a href="/admin/NewProduct">新規追加</a></button>
+  </div>
   <div class="search">
     {{csrf_field()}}
     {{ Form::open(['action' => 'MenuCreateController@create', 'method' => 'post']) }}
@@ -21,6 +23,8 @@
   </div>
 
   <div class="field-Create">
+
+  
 
     @foreach ($Menu as $item)
     <div class="MenuCreate-card">
@@ -34,6 +38,7 @@
               <input type="checkbox" id="Menubox{{$item->CommodityID}}"><!--データベースの数値-->
               <label for="Menubox{{$item->CommodityID}}" class="Menu-btn">
               </label>
+
 
                 <div class="Menu-abc">
                   <ul>
@@ -61,7 +66,9 @@
         </div>
 
     </div>
+    
     @endforeach
+                  
 
   </div>
 

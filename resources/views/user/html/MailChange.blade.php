@@ -3,7 +3,7 @@
 
 
 
-  @section('title','メールアドレス変更画面')
+  @section('title','メールアドレス変更')
 
     <!--テキストサンプル-->
     @section('contents')

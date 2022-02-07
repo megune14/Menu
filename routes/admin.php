@@ -35,6 +35,19 @@ Route::group(['middleware' => 'auth:admin'], function () {
     Route::get('/Inquiry',[InquiryController::class, 'create'],function () {
         return view('admin/html.Inquiry');
     });
+
+    Route::get('/PassChangeCheck',function () {
+        return view('admin/html.PassChangeCheck');
+    });
+    
+
+    Route::get('/PointSetting','PointController@setting',function () {
+        return view('admin/html.PointSetting');
+    });
+
+    Route::get('/MailChange',function () {
+        return view('user/html.MailChange');
+    });
              });
 
 
@@ -200,4 +213,10 @@ Route::get('/OrderHistory','OrderHistoryController@view');
 Route::post('/OrderHistory','OrderHistoryController@view');
 Route::get('/OrderHistoryDetail/{detail}','OrderHistoryController@detail')->name('historydetail');
 Route::post('/OrderHistoryDetail/{detail}','OrderHistoryController@detail');
+
+
+
+
+
+
 

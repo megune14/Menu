@@ -1,6 +1,6 @@
 @extends('user/html.MOBILEbase')
 
-@section('title','ログイン画面')
+@section('title','ログイン')
 
 @section('contents')
 
@@ -51,6 +51,8 @@
                             {{ __('パスワードを忘れた方はこちら') }}
                         </a>
                     @endif
+
+                    <a class="RTA" href="/register">新規登録</a>
 
                     <x-button class="ml-4">
                         {{ __('ログイン') }}

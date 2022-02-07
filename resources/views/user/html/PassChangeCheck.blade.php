@@ -3,12 +3,12 @@
 
 
 
-  @section('title','パスワード変更確認画面')
+  @section('title','パスワード変更')
 
   <!--テキストサンプル-->
     @section('contents')
       <div class = "passchange-check">
-        <h2>パスワード変更画面</h2>
+        <h2>パスワードの変更</h2>
 
         <form action="#" method="post">
           <p>現在のメールアドレス</p>

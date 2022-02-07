@@ -3,7 +3,7 @@
 
 
 
-  @section('title','店舗情報詳細画面')
+  @section('title','店舗情報詳細')
 
     <!--テキストサンプル-->
     @section('contents')

@@ -1,7 +1,7 @@
 @extends('user/html.MOBILEbase')
 
 
-  @section('title','注文完了')
+  @section('title','仮登録完了')
 
     <!--テキストサンプル-->
     @section('contents')

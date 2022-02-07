@@ -3,7 +3,7 @@
 
 
 
-  @section('title','クーポンリスト')
+  @section('title','クーポン一覧')
 
   <!--テキストサンプル-->
   @section('contents')
@@ -11,7 +11,7 @@
   <?php
       use App\Models\CouponTable;
       use App\Http\Controllers\CouponTableController;
-      use App\Models\Cart;
+      //use App\Models\Cart;
 
 
     
@@ -30,40 +30,33 @@
 
           <div class="Coupon-box">
 
-          <label >{{$coupon->CommodityName}}</label>
+            <label >{{$coupon->CommodityName}}</label>
 
             <div class="Coupon-img">
             <img src="{{ asset('storage/images/'. $coupon->img) }}"><!--写真-->
             </div>
       
           </div>
+
           <input type = "hidden" name = "id" value = "{{$user->id}}">
           
          
-          <div class="Coupon-check">必要ポイント：
-          <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
-           
+          <div class="Coupon-check">
+            
 
-          <input type = "hidden" name = "commodity_id" value = "{{$coupon->commodity_id}}">
-
-
-
-          <div class=" coupon-pop">
-          
-    
-          <label class="open" for="pop-up" >使用する</label>
-          <input type="checkbox" id="pop-up" class="check"  name="commodity_id" value="{{$coupon->commodity_id}}">
-          <div class="overlay">
-            <div class="window">
-              <label class="close" for="pop-up">×</label>
-              <p class="text">クーポンを使用しますが<br>
-               よろしいでしょうか？</p>            
-              <button type="button" onclick="history.back()">戻る</button>
-              <input type="submit" value="確定">
+            <label class="switch__label">
+            
+              <input class="check" data-price="{{$coupon->CommodityName}}" id="input" name="commodity_id" type="checkbox" value = "{{$coupon->CommodityID}}" >
+              <span class="switch__content"></span>
+              <span class="switch__circle"></span>
+  
+            </label>
+            <p>必要ポイント</p>
+         
+            <!--↓この辺があやしいよね↓-->
+            <div class="switch__price">
+              <input  class="price" id="{{$coupon->CommodityName}}" name="Point" readonly type="text" style="border:none" value="{{$coupon->Point}}">
             </div>
-   
-          </div>
-        </div>
             
           </div> 
 
@@ -74,18 +67,23 @@
         <?php } ?>
         
 
-        
+        <div class="Coupon-Total">
+          <label for="priceTotal"></label>
 
-<br>
-        <button type="button" onclick=history.back()><a href="#">戻る</a></button>
+          <div class="Current-point">現在のポイント：
+            <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none" >
+          </div>
 
-
-        <label for="priceTotal"></label>
-        <div class="Current-point">現在のポイント：
-        <input placeholder="" id="priceTotal" name="point" readonly type="text" style="border:none" ></td>
         </div>
 
-      </form>
+
+      <div class="Coupon-confirm">
+
+        <button type="button" onclick=history.back()><a href="#">戻る</a></button>
+
+        <input type="submit" value="確定">
+        
+      </div>
 
 
 
@@ -128,14 +126,46 @@ function calcPrice(){
   var price_total = {{$user->point}};
 //for文で配列を回して合計を出す
   for(var i = 0, len = price.length;i < len; i++){
-  price_total -= price[i];
-  }
+    if(price_total >= price[i]){
+      $("[name='commodity_id']").on("click", function(){
+                if ($(this).prop('checked')){
+                    $("[name='commodity_id']").prop('checked', false);
+                    $(this).prop('checked', true);
+                }
+            });
+    price_total -= price[i];
+    }else{
+      $("[name='commodity_id']").prop('checked', false);
+     // var obj = document.getElementById("input");
+     // obj.disabled = true;
+      //preventDefault();
+     
+
+    }
+      }
+  
   $("#priceTotal").val(price_total);
  }
 });
 
 
+
 </script>
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+
+
+
 
 
 

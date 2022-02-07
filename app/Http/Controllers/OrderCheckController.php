@@ -14,6 +14,10 @@ class OrderCheckController extends Controller
         $Flag0=false;
         $Flag1=false;
         $allorder = OrderTable::where('StoreID',Auth::id())->where('Flag',0)->get();
+
+        if(!isset($allorder)){
+            return view('admin.html/OrderCheck');
+        }
         foreach ($allorder as $order) {
             $details = OrderDetailTable::where('order_table_OrderID',$order->OrderID)->get();
             foreach ($details as $detail) {
