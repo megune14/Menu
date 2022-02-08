@@ -14,10 +14,10 @@
     <!--header-->
     <header>
       <div class="header">
-       <li><p>デジタルメニュー表</p><img src="../../images/カート.png"></img></li>
+       <li><p>デジタルメニュー表</p><a href="{{route(cart.index)}}"><img src="../../images/カート.png"></a></img></li>
       </div>
 
-      
+
 
       <div class="menu">
         <input type="checkbox" id="menu-btn-check">
@@ -52,7 +52,7 @@
           </ul>
         </nav>
 
-        
+
 
       </div>
     </header>
