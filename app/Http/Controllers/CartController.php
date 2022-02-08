@@ -5,6 +5,7 @@ use App\Models\Cart;
 use App\Models\User;
 use App\Models\OrderTable;
 use App\Models\OrderDetailTable;
+use App\Models\CouponTable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class CartController extends Controller
@@ -19,7 +20,8 @@ class CartController extends Controller
             Cart::create([
                 'user_id' => Auth::id(),
                 'commodity_table_CommodityID' => $request->commodity_id,
-                'quantity'=> $request->quantity
+                'quantity'=> $request->quantity,
+                'CouponFlag' => 0
             ]);
         }
         if ($request->has('button1')) {
@@ -31,11 +33,20 @@ class CartController extends Controller
     }
     public function index(){
         $user = User::findOrFail(Auth::id());
+       // dd($coupon);
         $products = $user->commoditys;
         $totalPrice=0;
         foreach($products as $product){
-            $totalPrice += $product->Price * $product->pivot->quantity;
+        //dd($product->pivot);
+            if($product->pivot->CouponFlag != 1){
+                $totalPrice += $product->Price * $product->pivot->quantity;
+                
+            }else{
+                $product->Price =0;
+            }
         }
+        
+
         return view('user/html.OrderList',compact('products','totalPrice'));
     }
 

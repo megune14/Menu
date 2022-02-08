@@ -14,8 +14,10 @@
     <!--header-->
     <header>
       <div class="header">
-       <li>デジタルメニュー表</li>
+       <li><p>デジタルメニュー表</p><a href="/cart"><img src="../../images/カート.png"></a></img></li>
       </div>
+
+
 
       <div class="menu">
         <input type="checkbox" id="menu-btn-check">
@@ -49,6 +51,8 @@
             @endif
           </ul>
         </nav>
+
+
 
       </div>
     </header>
