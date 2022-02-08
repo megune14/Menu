@@ -14,7 +14,7 @@
     <!--header-->
     <header>
       <div class="header">
-       <li><p>デジタルメニュー表</p><a href="{{route(cart.index)}}"><img src="../../images/カート.png"></a></img></li>
+       <li><p>デジタルメニュー表</p><a href="{{route( user.cart.index )}}"><img src="../../images/カート.png"></a></img></li>
       </div>
 
 
