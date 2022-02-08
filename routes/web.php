@@ -99,3 +99,4 @@ Route::get('/Inquiry',function () {
     return view('user/html.inquiry');
 });
 Route::post('/Inquiry/add','UserInquiryController@create');
+

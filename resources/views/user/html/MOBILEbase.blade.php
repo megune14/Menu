@@ -31,7 +31,7 @@
             <li class="has-child"><a href="#">　設定</a>
              <ul>
               <li><a href="/MailChange">メールアドレス変更</a></li>
-              <li><a href="/forgot-password">パスワード変更</a></li>
+              
               <li><a href="/UserDelete">アカウント削除</a></li>
              </ul>
             </li>
