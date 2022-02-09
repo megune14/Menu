@@ -1327,11 +1327,13 @@ input[type="checkbox"]:checked ~ .abc ul{
 
 /*---------------------StoreInfoDetail--------------------*/
 .StoreInfoDetail {
-  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .StoreInfoDetail h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 36px;
 }
 
@@ -1339,6 +1341,7 @@ input[type="checkbox"]:checked ~ .abc ul{
   border: solid 1px #000;
   border-radius: 15px;
   width: 430px;
+  height: 200px;
 }
 
 .col-sm-10 p {
@@ -1346,12 +1349,21 @@ input[type="checkbox"]:checked ~ .abc ul{
   font-size: 22px;
 }
 
+.form-control-plaintext p {
+  margin-top: 11px;
+  margin-left: 5px;
+}
+
 .submit-InfoDetail {
   margin-top: 30px;
   margin-bottom: 60px;
 }
 
-.submit-InfoDetail button {
+.InfoDetail-change {
+  display: inline;
+}
+
+.InfoDetail-change button {
   height: 45px;
   width: 140px;
   border:1px solid #696969;
@@ -1361,7 +1373,12 @@ input[type="checkbox"]:checked ~ .abc ul{
   color: #fff;
 }
 
-.submit-InfoDetail input {
+.InfoDetail-Delete {
+  display: inline;
+}
+
+.InfoDetail-Delete button {
+  display: inline;
   height: 100%;
   width: 140px;
   margin-top: 0;
