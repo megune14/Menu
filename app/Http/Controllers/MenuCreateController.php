@@ -16,7 +16,7 @@ class MenuCreateController extends Controller
         return view('admin/html.MenuCreate',['Menu'=>$items]);
     }
     public function stop(Request $request){
-        CommodityTable::where('CommosityID',$request->id)->update([
+        CommodityTable::where('CommodityID',$request->id)->update([
             'StopFlag' => 1,
         ]);
     }
