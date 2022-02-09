@@ -20,21 +20,7 @@
     {{ Form::select('FORM_NAME', CategoryTable::where('StoreID',Auth::id())->select('CategoryID', 'Category')->get()->pluck('Category','CategoryID')->prepend( "全て", "0"), null, ['class' => 'form-control']) }}
     {!! Form::submit('検索') !!}
     {{ Form::close() }}
-    <form action="MenuCreateController@create" method="post">
-        @if(isset($categorys))
-        <select name="FORM_NAME">
-        @foreach ($categorys as $category)
-        <option value="{{$category->CategoryID}}">{{$category->CategoryName}}</option>
-        @endforeach
-      </select>
-        @else
-        <select name="FORM_NAME">
-          <option value="0">全て</option>
-        </select>
-        @endif
-        <input type="submit" value="検索">
 
-    </form>
   </div>
 
   <div class="field-Create">

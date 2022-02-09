@@ -22,7 +22,7 @@
         <li class="active">デジタルメニュー表</li>
 
 
-            @if(Auth::guard('admin')->check())
+            @if(Auth::check())
             <li class="right">
                 <form method="POST" action="{{ route('admin.logout') }}">
                     @csrf
