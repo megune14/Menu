@@ -17,7 +17,7 @@
        <li><p>デジタルメニュー表</p><a href="/cart"><img src="../../images/カート.png"></img></a></li>
       </div>
 
-      
+
 
       <div class="menu">
         <input type="checkbox" id="menu-btn-check">
@@ -31,7 +31,7 @@
             <li class="has-child"><a href="#">　設定</a>
              <ul>
               <li><a href="/MailChange">メールアドレス変更</a></li>
-              <li><a href="/forgot-password">パスワード変更</a></li>
+              
               <li><a href="/UserDelete">アカウント削除</a></li>
              </ul>
             </li>
@@ -52,7 +52,7 @@
           </ul>
         </nav>
 
-        
+
 
       </div>
     </header>
