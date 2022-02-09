@@ -11,33 +11,33 @@
 use App\Models\CommodityTable;
 use App\Http\Controllers\CommodityTableController;
 //
-   
-$Coupon = CommodityTable::get();
+use Illuminate\Support\Facades\Auth;
+$Coupon = CommodityTable::where('StoreID',Auth::id())->get();
 
 ?>
-  
+
     <form action="/admin/CouponProduct/add"  method='post'  >
     @csrf
       <div class = CouponProduct>
-      
+
         <div class="coupon-product">
 
           <p>商品名：</p>
             <select name="CommodityID">
-            
-            
-        
+
+
+
         <?php foreach ($Coupon as $Coupon) {  ?>
           <option  value="{{$Coupon->CommodityID }}">{{$Coupon->CommodityName }}</option>
           <?php  } ?>
         </select>
-        
+
 
       </div>
 
-      
-  
-  
+
+
+
       <div>
           <p>必要ポイント：</p>
           <input type="number" name="Point" value="100" min="10" max="10000" step="10" required >
@@ -47,22 +47,22 @@ $Coupon = CommodityTable::get();
           <p>クーポン使用開始日：</p>
           <input type="date" name="FirstDay" value="" required>
         </div>
-          
+
         <div>
           <p>クーポン使用終了日：</p>
           <input type="date" name="LastDay" value="" required>
         </div>
-        
+
 
         <div class="submit-CouponProduct">
           <input type="submit"   value="確定"><!--送信ボタン-->
         </div>
-        
-      </div>  
+
+      </div>
 
     </form>
 
-   
+
 
 
 <!--
@@ -105,9 +105,9 @@ $Coupon = CommodityTable::get();
 
 
 var err_text={
- 
+
   "stop":{
-    
+
     "x2":"エラーだよはっはははははっは",
   }
 };
@@ -137,7 +137,7 @@ document.addEventListener('click',function(e){
         err_msg=err_text[n[i].name]["x2"];
         flg=true;
       }
-        
+
       if(flg) e.preventDefault();
       n[i].parentNode.querySelector('.err').innerHTML=err_msg;
     }
