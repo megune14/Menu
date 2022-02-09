@@ -1651,6 +1651,8 @@ background-color: rgba(30,144,255,0.8);
   font-size: 20px;
 }
 
+
+
 .formbutton {
   display: flex; /* 右揃え */
   justify-content: flex-end; /* 右揃え */

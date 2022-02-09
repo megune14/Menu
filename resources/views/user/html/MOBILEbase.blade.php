@@ -14,7 +14,7 @@
     <!--header-->
     <header>
       <div class="header">
-       <li><p>デジタルメニュー表</p><img src="../../images/カート.png"></img></li>
+       <li><p>デジタルメニュー表</p><a href="/cart"><img src="../../images/カート.png"></img></a></li>
       </div>
 
       
