@@ -21,11 +21,19 @@
     {!! Form::submit('検索') !!}
     {{ Form::close() }}
     <form action="MenuCreateController@create" method="post">
+        @if(isset($categorys))
+        <select name="FORM_NAME">
         @foreach ($categorys as $category)
-        <select name="{{$category->CategoryID}}">{{$category->CategoryName}}</select>
+        <option value="{{$category->CategoryID}}">{{$category->CategoryName}}</option>
         @endforeach
+      </select>
+        @else
+        <select name="FORM_NAME">
+          <option value="0">全て</option>
+        </select>
+        @endif
         <input type="submit" value="検索">
-        <select name="" id=""></select>
+
     </form>
   </div>
 
