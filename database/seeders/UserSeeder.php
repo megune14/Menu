@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;  // Hash使うなら追記
 use Illuminate\Support\Str;           // Str使うなら追記
 use App\Models\User;
+use App\Models\Point;
 use App\Models\Admin;
 class UserSeeder extends Seeder
 {
@@ -77,5 +78,6 @@ class UserSeeder extends Seeder
                 'password' => Hash::make('o-haramito'),
             ],
             ]);
+
     }
 }
