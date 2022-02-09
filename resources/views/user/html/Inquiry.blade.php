@@ -18,9 +18,11 @@
           <p>メールアドレス
             <input type="email" name="email" maxlength="500" size="30">
           </p>
-          <p>お問い合わせ内容
-            <input type="text" name="inquiry">
-          </p>
+          <div class="inquiry-text">
+            <p>お問い合わせ内容
+              <input type="text" name="inquiry">
+            </p>
+          </div>
           <div class="formbutton">
             <button type="button" onclick=history.back()>閉じる</button>
             <input type="submit">
