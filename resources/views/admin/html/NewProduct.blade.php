@@ -93,7 +93,7 @@
       <div class="pc-dsp">
         <li class="active">デジタルメニュー表</li>
 
-
+        @if(Auth::guard('admin')->check())
         <li class="right-Product">
             <form method="POST" action="{{ route('admin.logout') }}">
                 @csrf
@@ -104,6 +104,10 @@
                 </x-dropdown-link>
             </form>
         </li>
+          @else
+            <li class="right"><a href="/admin/login">ログイン</a></li>
+          @endif
+          <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
         <li class="pc-child-Product"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
@@ -140,6 +144,8 @@
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
+            @if(Auth::guard('admin')->check())
             <li><form method="POST" action="{{ route('admin.logout') }}">
                 @csrf
                 <x-dropdown-link :href="route('admin.logout')"
@@ -148,6 +154,9 @@
                     {{ __('ログアウト') }}
                 </x-dropdown-link>
             </form></li>
+            @else
+            <li><a href="/admin/login">ログイン</a></li>
+            @endif
           </ul>
         </nav>
 
