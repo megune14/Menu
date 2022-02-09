@@ -5,6 +5,7 @@
 @php
     use App\Models\CategoryTable;
     use Illuminate\Support\Facades\Auth;
+    $categorys=CategoryTable::where('StoreID',Auth::id())->select('CategoryID', 'Category')->get();
 @endphp
   <!--テキストサンプル-->
   @section('contents')
@@ -19,6 +20,13 @@
     {{ Form::select('FORM_NAME', CategoryTable::where('StoreID',Auth::id())->select('CategoryID', 'Category')->get()->pluck('Category','CategoryID')->prepend( "全て", "0"), null, ['class' => 'form-control']) }}
     {!! Form::submit('検索') !!}
     {{ Form::close() }}
+    <form action="MenuCreateController@create" method="post">
+        @foreach ($categorys as $category)
+        <select name="{{$category->CategoryID}}">{{$category->CategoryName}}</select>
+        @endforeach
+        <input type="submit" value="検索">
+        <select name="" id=""></select>
+    </form>
   </div>
 
   <div class="field-Create">
