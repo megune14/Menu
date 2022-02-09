@@ -76,6 +76,7 @@
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
             @if(Auth::guard('admin')->check())
             <li>
                 <form method="POST" action="{{ route('admin.logout') }}">
