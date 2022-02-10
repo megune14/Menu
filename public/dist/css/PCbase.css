@@ -2631,10 +2631,6 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 
-
-
-
-
 .Order-tab{
   width: 100%;
   border-collapse:separate;
@@ -2697,23 +2693,12 @@ input[type="checkbox"]:checked ~ .abc ul{
   background-image: none;
   box-shadow: none;
   font-size: 20px;
-  
   padding: 8px 38px 8px 8px;
-  
   line-height: 1.5;
 }
 
 
-
-
-
-
-
-
-
 /*---------------------OrderCheck終わり--------------------*/
-
-
 
 
 /*---------------------Inquiry--------------------*/
@@ -2857,6 +2842,144 @@ li {
     cursor: pointer;
     font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
