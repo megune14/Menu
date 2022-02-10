@@ -6,7 +6,7 @@ body {
 .pc-dsp { display: block; }
 .sp-dsp { display: none; }
 
-@media only screen and (max-width : 1000px) { /* 画面の大きさで表示切り替え */
+@media only screen and (max-width : 1167px) { /* 画面の大きさで表示切り替え */
   .pc-dsp { display: none; }
 	.sp-dsp { display: block; }
 }
@@ -526,19 +526,6 @@ nav li.has-child ul ul {
 
 
 /*----------forgot-password終わり----------*/
-
-
-/*----------reset-password----------*/
-
-
-
-
-
-
-
-
-
-/*----------reset-password終わり----------*/
 
 
 /*----------verify-email----------*/
@@ -2631,10 +2618,6 @@ input[type="checkbox"]:checked ~ .abc ul{
 }
 
 
-
-
-
-
 .Order-tab{
   width: 100%;
   border-collapse:separate;
@@ -2697,23 +2680,12 @@ input[type="checkbox"]:checked ~ .abc ul{
   background-image: none;
   box-shadow: none;
   font-size: 20px;
-  
   padding: 8px 38px 8px 8px;
-  
   line-height: 1.5;
 }
 
 
-
-
-
-
-
-
-
 /*---------------------OrderCheck終わり--------------------*/
-
-
 
 
 /*---------------------Inquiry--------------------*/
@@ -2857,6 +2829,157 @@ li {
     cursor: pointer;
     font-size: 1.2rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
