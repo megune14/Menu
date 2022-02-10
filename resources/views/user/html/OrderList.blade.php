@@ -37,13 +37,20 @@
         </div>
         @endforeach
 
-        <button type=“button” onclick="location.href='/CouponList'">クーポン一覧</button>
+        
 
         
 
     <div class="Voucher-all">
-      <h2>合計金額:{{$totalPrice}}円</h2>
+        <h2>
+        
+        合計金額:{{$totalPrice}}円
+        </h2>
     </div>
+
+    <div class ="OrderList-button">
+            <button type=“button” onclick="location.href='/CouponList'">クーポン一覧</button>
+        </div>
 
 
     <div class="submit-VoucherDetail">
