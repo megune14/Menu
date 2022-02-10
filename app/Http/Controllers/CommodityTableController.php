@@ -54,10 +54,10 @@ class CommodityTableController extends Controller
         $category = $CategoryTable->where('Category',$form['Category'])->first();
       };
       $form['CategoryID'] = $category->CategoryID;
-      $form['StoreID'] = $id;
+      $form['StoreID'] = Auth::id();
       unset($form['Category']);
       unset($form['token']);
-      
+
       if($request->file('img')){
         $filename=$request->file('img')->getClientOriginalName();
         $form['img']=$request->file('img')->store('public/images');
@@ -65,7 +65,7 @@ class CommodityTableController extends Controller
       }
       $form['StopFlag'] = 0;
       $CommodityTable->fill($form)->save();
-      
+
 
       return redirect('/admin/NewProduct');
 

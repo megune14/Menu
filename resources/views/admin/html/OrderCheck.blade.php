@@ -54,6 +54,7 @@
             @else
             <li class="right"><a href="/admin/login">ログイン</a></li>
             @endif
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
         <li class="pc-child-Product"><a href="#">設定</a>
           <ul>
             <li><a href="/admin/MailChange">メールアドレス変更</a></li>
@@ -90,6 +91,7 @@
                 <li><a href="/admin/StoreInfoDetail">　店舗情報</a></li>
               </ul>
             </li>
+            <li class="right"><a href="/admin/Inquiry">お問い合わせ</a></li>
             @if(Auth::guard('admin')->check())
             <li class="right">
                 <form method="POST" action="{{ route('admin.logout') }}">

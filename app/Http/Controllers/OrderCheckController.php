@@ -13,7 +13,7 @@ class OrderCheckController extends Controller
     public function view(){
         $Flag0=false;
         $Flag1=false;
-        $allorder = OrderTable::where('StoreID',Auth::id())->where('Flag',0)->get();
+        $allorder = OrderTable::where('StoreID',Auth::guard('admin')->id())->where('Flag',0)->get();
 
         if(!isset($allorder)){
             return view('admin.html/OrderCheck');

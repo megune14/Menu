@@ -21,8 +21,12 @@
                   </div>
 
                   <div class="submit-InfoDetail">
-                        <button type="button" onclick="location.href='/admin/StoreInfoSettings'">変更</button>
-                        <button type="button" onclick="location.href='/admin/StoreInfoDelete'">削除</button>
+                        <div class="InfoDetail-change">
+                              <button type="button" onclick="location.href='/admin/StoreInfoSettings'">変更</button>
+                        </div>
+                        <div class="InfoDetail-Delete">
+                              <button type="button" onclick="location.href='/admin/StoreInfoDelete'">削除</button>
+                        <div>
                   </div>
                         
             </form>

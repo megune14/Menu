@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;  // Hash使うなら追記
 use Illuminate\Support\Str;           // Str使うなら追記
 use App\Models\User;
+use App\Models\Point;
+use App\Models\Admin;
 class UserSeeder extends Seeder
 {
     /**
@@ -43,5 +45,39 @@ class UserSeeder extends Seeder
                 'birthday'=> '2022-01-04'
             ]
         ]);
+
+        Admin::insert([
+            [
+                'id' => 1,
+                'name' => '大原太郎',
+                'email' => 'o-haraadmin1@gmail.com',
+                'shopname' => '大原店1号',
+                'address' => '茨城県水戸市',
+                'tell' => '00000000000',
+                'point' => '0',
+                'password' => Hash::make('o-haramito'),
+            ],
+            [
+                'id' => 2,
+                'name' => '大原次郎',
+                'email' => 'o-haraadmin2@gmail.com',
+                'shopname' => '大原店2号',
+                'address' => '茨城県水戸市',
+                'tell' => '11111111111',
+                'point' => '0',
+                'password' => Hash::make('o-haramito'),
+            ],
+            [
+                'id' => 3,
+                'name' => '大原三郎',
+                'email' => 'o-haraadmin3@gmail.com',
+                'shopname' => '大原店3号',
+                'address' => '茨城県水戸市',
+                'tell' => '22222222222',
+                'point' => '0',
+                'password' => Hash::make('o-haramito'),
+            ],
+            ]);
+
     }
 }

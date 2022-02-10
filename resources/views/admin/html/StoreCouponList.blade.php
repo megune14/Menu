@@ -8,7 +8,7 @@
     @section('contents')
     
   
-      <div class = CouponList>
+      <div class = "CouponList">
         
 
         <div class="coupon-send">
