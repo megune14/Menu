@@ -15,9 +15,18 @@ class MenuCreateController extends Controller
         }
         return view('admin/html.MenuCreate',['Menu'=>$items]);
     }
+
+    public function delete(Request $request) {
+        ::find($request->id)->delete();
+        return redirect('/admin/MenuCreate');
+        /**return view('StoreCouponList.del',['form => $coupon']); */
+    }
+
+
     public function stop(Request $request){
-        CommodityTable::where('CommosityID',$request->id)->update([
-            'StopFlag' => 1,
+        CommodityTable::where('CommodityID',$request->id)->update([
+            'StopFlag' => 1
         ]);
+
     }
 }

@@ -47,9 +47,10 @@
                     <button>変更</button>
                     </form>
                     </li>
-                    <li><input type="submit"  value="削除"></li>
+                    <li><form action=/admin/MenuDelete/delete method="post">
+                      @csrf<input type="submit"  value="削除"></form></li>
                     <li><form action="{{route('admin.stop',['id'=>$item->CommodityID])}}" method="post">
-                        @csrf
+                      @csrf
                     <button>販売中止</button>
                     </form></li>
                   </ul>
