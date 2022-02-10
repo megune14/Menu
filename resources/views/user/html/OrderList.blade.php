@@ -37,6 +37,8 @@
         </div>
         @endforeach
 
+        <button type=“button” onclick="location.href='/CouponList'">クーポン一覧</button>
+
         
 
     <div class="Voucher-all">
