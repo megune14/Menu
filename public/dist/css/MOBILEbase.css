@@ -444,12 +444,6 @@ nav li.has-child ul ul {
 /*----------forgot-password終わり----------*/
 
 
-/*----------reset-password----------*/
-
-
-/*----------reset-password終わり----------*/
-
-
 /*----------verify-email----------*/
 .verify-email  {
   display: flex;
@@ -487,8 +481,6 @@ nav li.has-child ul ul {
   font-size: 42px;
 }
 
-
-
 .UserInfo-table {
   margin-top: 20px;
   margin-left: auto; 
@@ -500,12 +492,6 @@ nav li.has-child ul ul {
   width: 70%;
   font-size: 24px;
 }
-
-.UserInfo 
-
-
-
-
 
 
 /*----------UserInfo終わり----------*/
@@ -772,7 +758,6 @@ background-color: rgba(30,144,255,0.8);
   margin-top: 20px;
 }
 
-
 .cart-button input,
  .Detail-button input {
   height: 45px;
@@ -786,13 +771,7 @@ background-color: rgba(30,144,255,0.8);
 }
 
 
-
-
-
 /*----------MenuDetail終わり----------*/
-
-
-
 
 
 /*----------ConfirmRegisterDetail----------*/
@@ -1700,6 +1679,27 @@ background-color: rgba(30,144,255,0.8);
 	bottom: 0; /* 下に固定 */
   z-index: 10;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
