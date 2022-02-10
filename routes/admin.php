@@ -228,7 +228,7 @@ Route::post('/OrderHistory','OrderHistoryController@view');
 Route::get('/OrderHistoryDetail/{detail}','OrderHistoryController@detail')->name('historydetail');
 Route::post('/OrderHistoryDetail/{detail}','OrderHistoryController@detail');
 
-
+Route::post('/MenuDelete/delete','MenuCreateController@delete');
 
 
 
