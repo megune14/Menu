@@ -17,7 +17,9 @@ class MenuCreateController extends Controller
     }
 
     public function delete(Request $request) {
-        CommodityTable::find($request->id)->delete();
+
+   
+        CommodityTable::where('CommodityID',$request->id)->delete();
         return redirect('/admin/MenuCreate');
         /**return view('StoreCouponList.del',['form => $coupon']); */
     }
