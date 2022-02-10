@@ -6,7 +6,7 @@ body {
 .pc-dsp { display: block; }
 .sp-dsp { display: none; }
 
-@media only screen and (max-width : 1000px) { /* 画面の大きさで表示切り替え */
+@media only screen and (max-width : 1167px) { /* 画面の大きさで表示切り替え */
   .pc-dsp { display: none; }
 	.sp-dsp { display: block; }
 }
